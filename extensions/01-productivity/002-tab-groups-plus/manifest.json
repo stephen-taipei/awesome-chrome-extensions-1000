@@ -1,0 +1,47 @@
+{
+  "manifest_version": 3,
+  "name": "Tab Groups Plus",
+  "version": "1.0.0",
+  "description": "增強版標籤群組管理 - 自動分組、群組範本、一鍵收合展開、顏色自訂",
+  "author": "Awesome Chrome Extensions 1000",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "default_title": "Tab Groups Plus"
+  },
+  "permissions": [
+    "tabs",
+    "tabGroups",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "commands": {
+    "auto-group": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+G",
+        "mac": "Command+Shift+G"
+      },
+      "description": "自動分組所有標籤"
+    },
+    "collapse-all": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+C",
+        "mac": "Command+Shift+C"
+      },
+      "description": "收合所有群組"
+    }
+  },
+  "minimum_chrome_version": "116"
+}
