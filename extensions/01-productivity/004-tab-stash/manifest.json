@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "Tab Stash",
+  "version": "1.0.0",
+  "description": "一鍵暫存所有標籤，釋放記憶體。支援命名暫存組、匯出匯入、依日期自動整理。",
+  "author": "Awesome Chrome Extensions 1000",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "default_title": "Tab Stash"
+  },
+  "permissions": [
+    "tabs",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "commands": {
+    "stash-all": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+S",
+        "mac": "Command+Shift+S"
+      },
+      "description": "暫存所有標籤"
+    }
+  },
+  "minimum_chrome_version": "116"
+}
