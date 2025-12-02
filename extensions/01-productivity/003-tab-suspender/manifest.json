@@ -1,0 +1,46 @@
+{
+  "manifest_version": 3,
+  "name": "Tab Suspender",
+  "version": "1.0.0",
+  "description": "自動暫停閒置標籤以節省記憶體。支援白名單、自訂暫停時間、截圖預覽。",
+  "author": "Awesome Chrome Extensions 1000",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "default_title": "Tab Suspender"
+  },
+  "permissions": [
+    "tabs",
+    "storage",
+    "alarms",
+    "idle"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "commands": {
+    "suspend-current": {
+      "suggested_key": {
+        "default": "Alt+S"
+      },
+      "description": "暫停當前標籤"
+    },
+    "suspend-others": {
+      "suggested_key": {
+        "default": "Alt+Shift+S"
+      },
+      "description": "暫停其他標籤"
+    }
+  },
+  "minimum_chrome_version": "116"
+}
