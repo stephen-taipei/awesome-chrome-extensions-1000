@@ -1,0 +1,135 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 350px;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+.container {
+  padding: 16px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 20px;
+  color: #2c3e50;
+}
+
+.subtitle {
+  margin: 5px 0 0;
+  font-size: 12px;
+  color: #7f8c8d;
+}
+
+.dashboard {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  margin-bottom: 15px;
+}
+
+.stats-card {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.stats-card h3 {
+  margin: 0 0 5px;
+  font-size: 14px;
+  color: #7f8c8d;
+}
+
+.stat-value {
+  font-size: 24px;
+  font-weight: bold;
+  color: #3498db;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: background-color 0.2s;
+}
+
+.primary-btn {
+  background-color: #3498db;
+  color: white;
+}
+
+.primary-btn:hover {
+  background-color: #2980b9;
+}
+
+.secondary-btn {
+  background-color: #ecf0f1;
+  color: #2c3e50;
+}
+
+.secondary-btn:hover {
+  background-color: #bdc3c7;
+}
+
+.extensions-list-container h3 {
+  margin: 0 0 10px;
+  font-size: 14px;
+}
+
+#extensions-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 200px;
+  overflow-y: auto;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #ecf0f1;
+}
+
+.extension-item {
+  padding: 10px;
+  border-bottom: 1px solid #ecf0f1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.extension-item:last-child {
+  border-bottom: none;
+}
+
+.extension-name {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.extension-status {
+  font-size: 11px;
+  padding: 2px 6px;
+  border-radius: 10px;
+  background-color: #2ecc71;
+  color: white;
+}
+
+footer {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 11px;
+  color: #bdc3c7;
+}
