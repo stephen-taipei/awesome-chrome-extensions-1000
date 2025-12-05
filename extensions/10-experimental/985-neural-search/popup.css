@@ -1,0 +1,142 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 320px;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  color: #eee;
+}
+
+.container {
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  margin: 0 0 5px 0;
+  font-size: 18px;
+  color: #00d4ff;
+}
+
+.brain-icon {
+  font-size: 40px;
+  transition: transform 0.2s;
+}
+
+.search-box {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #3a3a5a;
+  border-radius: 8px;
+  background: #2a2a4a;
+  color: #fff;
+  font-size: 14px;
+}
+
+.search-box input:focus {
+  outline: none;
+  border-color: #00d4ff;
+}
+
+.search-box button {
+  padding: 10px 15px;
+  background: linear-gradient(135deg, #00d4ff, #0099cc);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.search-box button:hover {
+  transform: scale(1.05);
+}
+
+.intent-card, .engines-card {
+  background: rgba(255,255,255,0.05);
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.card-title {
+  font-size: 11px;
+  color: #888;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.intent-badges {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 11px;
+  background: #3a3a5a;
+  color: #888;
+  transition: all 0.3s;
+}
+
+.badge.active {
+  background: linear-gradient(135deg, #00d4ff, #0099cc);
+  color: white;
+}
+
+.engine-toggles {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.engine-toggles label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #ccc;
+}
+
+.settings {
+  margin-bottom: 15px;
+}
+
+.toggle-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #3a3a5a;
+  font-size: 13px;
+}
+
+.toggle-option input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #00d4ff;
+}
+
+.status-footer {
+  text-align: center;
+  font-size: 11px;
+  color: #666;
+}
+
+.status-active {
+  color: #00d4ff;
+  font-weight: bold;
+}

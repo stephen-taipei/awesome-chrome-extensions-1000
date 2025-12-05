@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neural Search</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Neural Search</h1>
+      <div class="brain-icon" id="brain-icon">🧠</div>
+    </div>
+
+    <div class="search-box">
+      <input type="text" id="search-input" placeholder="Enter your search...">
+      <button id="search-btn">Search</button>
+    </div>
+
+    <div class="intent-card">
+      <div class="card-title">Detected Intent</div>
+      <div class="intent-badges">
+        <span class="badge active" data-intent="informational">Informational</span>
+        <span class="badge" data-intent="navigational">Navigational</span>
+        <span class="badge" data-intent="transactional">Transactional</span>
+      </div>
+    </div>
+
+    <div class="engines-card">
+      <div class="card-title">Search Engines</div>
+      <div class="engine-toggles">
+        <label><input type="checkbox" checked data-engine="google"> Google</label>
+        <label><input type="checkbox" checked data-engine="bing"> Bing</label>
+        <label><input type="checkbox" checked data-engine="duckduckgo"> DuckDuckGo</label>
+      </div>
+    </div>
+
+    <div class="settings">
+      <label class="toggle-option">
+        <span>Semantic Matching</span>
+        <input type="checkbox" id="semantic-toggle" checked>
+      </label>
+      <label class="toggle-option">
+        <span>Learn from History</span>
+        <input type="checkbox" id="learn-toggle" checked>
+      </label>
+    </div>
+
+    <div class="status-footer">
+      Neural Network: <span class="status-active">Ready</span>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
