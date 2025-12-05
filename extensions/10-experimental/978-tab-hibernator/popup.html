@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tab Hibernator</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Tab Hibernator</h1>
+      <div class="sleep-icon">💤</div>
+    </div>
+
+    <div class="stats-card">
+      <div class="stat-item">
+        <span class="stat-value" id="active-tabs">0</span>
+        <span class="stat-label">Active</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-value" id="hibernated-tabs">0</span>
+        <span class="stat-label">Hibernated</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-value" id="memory-saved">0 MB</span>
+        <span class="stat-label">Saved</span>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button class="action-btn" id="hibernate-all">
+        <span>😴</span> Hibernate All
+      </button>
+      <button class="action-btn" id="wake-all">
+        <span>☀️</span> Wake All
+      </button>
+    </div>
+
+    <div class="tab-list">
+      <div class="card-title">Open Tabs</div>
+      <div class="tabs-container" id="tabs-container">
+        <div class="tab-item">
+          <span class="tab-favicon">🌐</span>
+          <span class="tab-title">Loading...</span>
+          <button class="hibernate-btn">💤</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="settings">
+      <label class="toggle-option">
+        <span>Auto-Hibernate</span>
+        <input type="checkbox" id="auto-hibernate" checked>
+      </label>
+      <div class="timeout-option">
+        <span>Idle Timeout</span>
+        <select id="idle-timeout">
+          <option value="15">15 min</option>
+          <option value="30" selected>30 min</option>
+          <option value="60">1 hour</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="status-footer">
+      Auto-hibernate: <span class="status-active">Active</span>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

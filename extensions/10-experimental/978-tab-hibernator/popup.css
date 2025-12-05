@@ -1,0 +1,181 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 300px;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  color: #ecf0f1;
+}
+
+.container {
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+h1 {
+  margin: 0 0 5px 0;
+  font-size: 18px;
+  color: #f1c40f;
+}
+
+.sleep-icon {
+  font-size: 35px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.stats-card {
+  display: flex;
+  justify-content: space-around;
+  background: rgba(255,255,255,0.1);
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-value {
+  display: block;
+  font-size: 22px;
+  font-weight: bold;
+  color: #f1c40f;
+}
+
+.stat-label {
+  font-size: 10px;
+  color: #bdc3c7;
+  text-transform: uppercase;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.action-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 10px;
+  background: rgba(241, 196, 15, 0.2);
+  border: 1px solid rgba(241, 196, 15, 0.5);
+  border-radius: 8px;
+  color: #f1c40f;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.action-btn:hover {
+  background: rgba(241, 196, 15, 0.4);
+}
+
+.tab-list {
+  background: rgba(255,255,255,0.05);
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.card-title {
+  font-size: 11px;
+  color: #bdc3c7;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.tabs-container {
+  max-height: 120px;
+  overflow-y: auto;
+}
+
+.tab-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 6px;
+  margin-bottom: 6px;
+}
+
+.tab-favicon {
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tab-favicon img {
+  width: 16px;
+  height: 16px;
+}
+
+.tab-title {
+  flex: 1;
+  font-size: 11px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.hibernate-btn {
+  padding: 4px 8px;
+  border: none;
+  background: rgba(241, 196, 15, 0.3);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.settings {
+  margin-bottom: 15px;
+}
+
+.toggle-option, .timeout-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  font-size: 13px;
+}
+
+.toggle-option input[type="checkbox"] {
+  accent-color: #f1c40f;
+}
+
+.timeout-option select {
+  padding: 4px 8px;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 4px;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  font-size: 12px;
+}
+
+.status-footer {
+  text-align: center;
+  font-size: 11px;
+  color: #7f8c8d;
+}
+
+.status-active {
+  color: #2ecc71;
+  font-weight: bold;
+}
