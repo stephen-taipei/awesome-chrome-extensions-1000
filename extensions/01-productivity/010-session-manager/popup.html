@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Session Manager</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Sessions</h1>
+      <div class="header-actions">
+        <button id="saveSession" class="btn-save" title="Save Current Session">Save</button>
+      </div>
+    </header>
+
+    <div id="currentSession" class="current-session">
+      <div class="section-title">Current Session</div>
+      <div id="currentTabs" class="tabs-preview"></div>
+    </div>
+
+    <div class="section-title">Saved Sessions</div>
+    <div id="sessionsList" class="sessions-list">
+      <!-- Sessions will be rendered here -->
+    </div>
+  </div>
+
+  <div id="saveModal" class="modal hidden">
+    <div class="modal-content">
+      <h2>Save Session</h2>
+      <input type="text" id="sessionName" placeholder="Session name...">
+      <div class="modal-actions">
+        <button id="confirmSave" class="btn primary">Save</button>
+        <button id="cancelSave" class="btn secondary">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
