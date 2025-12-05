@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sync Platform</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Cloud Sync</h1>
+      <div class="status-badge synced">Synced</div>
+    </div>
+
+    <div class="sync-info">
+      <div class="info-item">
+        <span class="label">Last Synced:</span>
+        <span class="value" id="last-synced">Just now</span>
+      </div>
+      <div class="info-item">
+        <span class="label">Devices:</span>
+        <span class="value">3 Active</span>
+      </div>
+    </div>
+
+    <div class="controls">
+      <h3>Sync Options</h3>
+      <div class="option">
+        <label>Auto-sync on change</label>
+        <div class="toggle">
+          <input type="checkbox" checked>
+          <span class="slider"></span>
+        </div>
+      </div>
+      <div class="option">
+        <label>Sync history</label>
+        <div class="toggle">
+          <input type="checkbox" checked>
+          <span class="slider"></span>
+        </div>
+      </div>
+    </div>
+
+    <button id="sync-btn" class="primary-btn">Sync Now</button>
+    <button id="conflict-btn" class="secondary-btn">Resolve Conflicts</button>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
