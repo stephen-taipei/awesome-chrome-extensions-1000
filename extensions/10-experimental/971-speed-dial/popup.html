@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Speed Dial</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Speed Dial</h1>
+      <div class="dial-icon">⚡</div>
+    </div>
+
+    <div class="quick-links">
+      <div class="card-title">Quick Links</div>
+      <div class="dial-grid" id="dial-grid">
+        <div class="dial-item" style="--color: #4285f4;">
+          <span class="dial-icon-letter">G</span>
+          <span class="dial-title">Google</span>
+        </div>
+        <div class="dial-item" style="--color: #ff0000;">
+          <span class="dial-icon-letter">Y</span>
+          <span class="dial-title">YouTube</span>
+        </div>
+        <div class="dial-item" style="--color: #333;">
+          <span class="dial-icon-letter">G</span>
+          <span class="dial-title">GitHub</span>
+        </div>
+        <div class="dial-item add-new" id="add-dial">
+          <span class="dial-icon-letter">+</span>
+          <span class="dial-title">Add New</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="add-form" id="add-form" style="display: none;">
+      <input type="text" id="dial-title" placeholder="Title">
+      <input type="url" id="dial-url" placeholder="https://...">
+      <div class="form-actions">
+        <button class="save-btn" id="save-dial">Save</button>
+        <button class="cancel-btn" id="cancel-dial">Cancel</button>
+      </div>
+    </div>
+
+    <div class="settings-section">
+      <div class="card-title">Settings</div>
+      <label class="toggle-option">
+        <span>Show Clock</span>
+        <input type="checkbox" id="show-clock" checked>
+      </label>
+      <label class="toggle-option">
+        <span>Show Weather</span>
+        <input type="checkbox" id="show-weather">
+      </label>
+      <div class="setting-row">
+        <span>Search Engine</span>
+        <select id="search-engine">
+          <option value="google">Google</option>
+          <option value="bing">Bing</option>
+          <option value="duckduckgo">DuckDuckGo</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button class="action-btn" id="import-bookmarks">📚 Import Bookmarks</button>
+      <button class="action-btn" id="import-top-sites">🔥 Add Top Sites</button>
+    </div>
+
+    <div class="status-footer">
+      <span id="dial-count">4</span> speed dials
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

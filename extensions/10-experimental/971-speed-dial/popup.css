@@ -1,0 +1,210 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 320px;
+  background: linear-gradient(135deg, #141e30 0%, #243b55 100%);
+  color: #ecf0f1;
+}
+
+.container {
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+h1 {
+  margin: 0 0 5px 0;
+  font-size: 18px;
+  color: #f1c40f;
+}
+
+.dial-icon {
+  font-size: 30px;
+}
+
+.quick-links {
+  margin-bottom: 15px;
+}
+
+.card-title {
+  font-size: 11px;
+  color: #7f8c8d;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.dial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.dial-item {
+  position: relative;
+  background: var(--color, #3498db);
+  border-radius: 10px;
+  padding: 15px 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.dial-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.dial-item.add-new {
+  background: rgba(255,255,255,0.1);
+  border: 2px dashed rgba(255,255,255,0.3);
+}
+
+.dial-icon-letter {
+  display: block;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.dial-title {
+  font-size: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.remove-dial {
+  position: absolute;
+  top: 2px;
+  right: 5px;
+  background: rgba(0,0,0,0.5);
+  border: none;
+  color: white;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 12px;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.dial-item:hover .remove-dial {
+  opacity: 1;
+}
+
+.add-form {
+  background: rgba(255,255,255,0.1);
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.add-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 6px;
+  background: rgba(255,255,255,0.1);
+  color: white;
+  font-size: 13px;
+  box-sizing: border-box;
+}
+
+.add-form input::placeholder {
+  color: rgba(255,255,255,0.5);
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.save-btn, .cancel-btn {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.save-btn {
+  background: #f1c40f;
+  color: #2c3e50;
+}
+
+.cancel-btn {
+  background: rgba(255,255,255,0.1);
+  color: white;
+}
+
+.settings-section {
+  background: rgba(255,255,255,0.05);
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.toggle-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  font-size: 13px;
+}
+
+.toggle-option input[type="checkbox"] {
+  accent-color: #f1c40f;
+}
+
+.setting-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  font-size: 13px;
+}
+
+.setting-row select {
+  padding: 5px 10px;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 4px;
+  background: rgba(255,255,255,0.1);
+  color: white;
+  font-size: 12px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.action-btn {
+  flex: 1;
+  padding: 10px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 8px;
+  color: white;
+  font-size: 11px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.action-btn:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+.status-footer {
+  text-align: center;
+  font-size: 11px;
+  color: #7f8c8d;
+}
