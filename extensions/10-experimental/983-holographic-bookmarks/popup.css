@@ -1,0 +1,170 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 320px;
+  background: linear-gradient(135deg, #0a192f 0%, #172a45 100%);
+  color: #ccd6f6;
+}
+
+.container {
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+h1 {
+  margin: 0 0 5px 0;
+  font-size: 17px;
+  background: linear-gradient(90deg, #64ffda, #00bcd4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.holo-icon {
+  font-size: 35px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.space-view {
+  position: relative;
+  height: 150px;
+  background: rgba(0,0,0,0.3);
+  border-radius: 12px;
+  margin-bottom: 15px;
+  perspective: 1000px;
+  overflow: hidden;
+}
+
+.bookmark-card {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  width: 60px;
+  padding: 8px;
+  background: linear-gradient(135deg, rgba(100, 255, 218, 0.2), rgba(0, 188, 212, 0.2));
+  border: 1px solid rgba(100, 255, 218, 0.3);
+  border-radius: 8px;
+  transform: translateZ(calc(var(--depth) * -30px));
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.bookmark-card:hover {
+  box-shadow: 0 0 20px rgba(100, 255, 218, 0.5);
+}
+
+.bookmark-card.highlight {
+  box-shadow: 0 0 30px rgba(100, 255, 218, 0.8);
+}
+
+.card-preview {
+  width: 100%;
+  height: 35px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 4px;
+  margin-bottom: 5px;
+}
+
+.bookmark-card .card-title {
+  font-size: 9px;
+  color: #64ffda;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  text-transform: none;
+}
+
+.search-holo {
+  margin-bottom: 15px;
+}
+
+.search-holo input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #233554;
+  border-radius: 8px;
+  background: rgba(35, 53, 84, 0.5);
+  color: #ccd6f6;
+  font-size: 13px;
+  box-sizing: border-box;
+}
+
+.search-holo input:focus {
+  outline: none;
+  border-color: #64ffda;
+  box-shadow: 0 0 10px rgba(100, 255, 218, 0.3);
+}
+
+.view-controls {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.view-btn {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #233554;
+  background: transparent;
+  border-radius: 6px;
+  color: #8892b0;
+  font-size: 11px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.view-btn.active, .view-btn:hover {
+  background: rgba(100, 255, 218, 0.1);
+  border-color: #64ffda;
+  color: #64ffda;
+}
+
+.depth-slider {
+  margin-bottom: 15px;
+}
+
+.depth-slider label {
+  display: block;
+  font-size: 11px;
+  color: #8892b0;
+  margin-bottom: 8px;
+}
+
+.depth-slider input[type="range"] {
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  background: #233554;
+  appearance: none;
+}
+
+.depth-slider input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #64ffda;
+  cursor: pointer;
+}
+
+.status-footer {
+  text-align: center;
+  font-size: 11px;
+  color: #495670;
+}
+
+.status-footer span {
+  color: #64ffda;
+  font-weight: bold;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Holographic Bookmarks</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Holographic Bookmarks</h1>
+      <div class="holo-icon">📚</div>
+    </div>
+
+    <div class="space-view">
+      <div class="bookmark-card" style="--depth: 0; --x: 20%; --y: 30%;">
+        <div class="card-preview"></div>
+        <span class="card-title">Bookmark 1</span>
+      </div>
+      <div class="bookmark-card" style="--depth: 1; --x: 50%; --y: 20%;">
+        <div class="card-preview"></div>
+        <span class="card-title">Bookmark 2</span>
+      </div>
+      <div class="bookmark-card" style="--depth: 2; --x: 70%; --y: 60%;">
+        <div class="card-preview"></div>
+        <span class="card-title">Bookmark 3</span>
+      </div>
+    </div>
+
+    <div class="search-holo">
+      <input type="text" id="holo-search" placeholder="Search in 3D space...">
+    </div>
+
+    <div class="view-controls">
+      <button class="view-btn active" data-view="3d">3D View</button>
+      <button class="view-btn" data-view="layers">Layers</button>
+      <button class="view-btn" data-view="timeline">Timeline</button>
+    </div>
+
+    <div class="depth-slider">
+      <label>Depth Focus</label>
+      <input type="range" id="depth-range" min="0" max="10" value="5">
+    </div>
+
+    <div class="status-footer">
+      <span id="bookmark-count">0</span> bookmarks in space
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
