@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Screenshot Master</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Screenshot Master</h1>
+      <div class="camera-icon">📸</div>
+    </div>
+
+    <div class="capture-options">
+      <button class="capture-btn primary" id="capture-visible">
+        <span class="btn-icon">🖼️</span>
+        <span>Visible Area</span>
+      </button>
+      <button class="capture-btn" id="capture-full">
+        <span class="btn-icon">📜</span>
+        <span>Full Page</span>
+      </button>
+      <button class="capture-btn" id="capture-area">
+        <span class="btn-icon">✂️</span>
+        <span>Select Area</span>
+      </button>
+    </div>
+
+    <div class="preview-section" id="preview-section" style="display: none;">
+      <div class="card-title">Preview</div>
+      <div class="preview-container">
+        <img id="preview-image" src="" alt="Screenshot preview">
+      </div>
+      <div class="preview-actions">
+        <button class="action-btn" id="download-btn">💾 Save</button>
+        <button class="action-btn" id="copy-btn">📋 Copy</button>
+        <button class="action-btn" id="edit-btn">✏️ Edit</button>
+      </div>
+    </div>
+
+    <div class="settings">
+      <div class="setting-row">
+        <span>Format</span>
+        <select id="format-select">
+          <option value="png">PNG</option>
+          <option value="jpeg">JPEG</option>
+          <option value="webp">WebP</option>
+        </select>
+      </div>
+      <div class="setting-row">
+        <span>Quality</span>
+        <input type="range" id="quality-slider" min="50" max="100" value="90">
+        <span id="quality-value">90%</span>
+      </div>
+    </div>
+
+    <div class="status-footer">
+      Ready to capture
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
