@@ -1,0 +1,93 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 300px;
+  background-color: #f3f4f6;
+  color: #1f2937;
+}
+
+.container {
+  padding: 16px;
+}
+
+.header {
+  margin-bottom: 20px;
+}
+
+h1 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  color: #111827;
+}
+
+.current-status {
+  background: #e0e7ff;
+  color: #4338ca;
+  padding: 8px 12px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.icon {
+  margin-right: 8px;
+}
+
+.rules-list {
+  margin-bottom: 16px;
+}
+
+.rule-item {
+  background: white;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 0.6;
+}
+
+.rule-item.active {
+  opacity: 1;
+  border-left: 4px solid #4f46e5;
+}
+
+.rule-name {
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.rule-desc {
+  font-size: 11px;
+  color: #6b7280;
+}
+
+.rule-action {
+  font-size: 10px;
+  background: #f3f4f6;
+  padding: 4px 8px;
+  border-radius: 4px;
+  color: #4b5563;
+  font-weight: 500;
+}
+
+.add-btn {
+  width: 100%;
+  padding: 10px;
+  background: white;
+  border: 1px dashed #9ca3af;
+  color: #6b7280;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.add-btn:hover {
+  background: #f9fafb;
+  border-color: #6b7280;
+}

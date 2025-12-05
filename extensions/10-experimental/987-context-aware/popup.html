@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Context Aware</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Context</h1>
+      <div class="current-status">
+        <span class="icon">🏠</span>
+        <span id="current-context">Home - Evening</span>
+      </div>
+    </div>
+
+    <div class="rules-list">
+      <div class="rule-item active">
+        <div class="rule-info">
+          <div class="rule-name">Work Mode</div>
+          <div class="rule-desc">Mon-Fri, 9AM - 5PM</div>
+        </div>
+        <div class="rule-action">Block Social</div>
+      </div>
+
+      <div class="rule-item active">
+        <div class="rule-info">
+          <div class="rule-name">Night Shift</div>
+          <div class="rule-desc">After 8PM</div>
+        </div>
+        <div class="rule-action">Dark Theme</div>
+      </div>
+
+      <div class="rule-item">
+        <div class="rule-info">
+          <div class="rule-name">Commute</div>
+          <div class="rule-desc">Location: Train Station</div>
+        </div>
+        <div class="rule-action">Read-it-Later</div>
+      </div>
+    </div>
+
+    <button id="add-rule-btn" class="add-btn">+ New Context Rule</button>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
