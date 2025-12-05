@@ -1,0 +1,154 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 300px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  color: #2c3e50;
+}
+
+.container {
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+h1 {
+  margin: 0 0 5px 0;
+  font-size: 18px;
+  color: #34495e;
+}
+
+.book-icon {
+  font-size: 35px;
+}
+
+.activate-btn {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 15px;
+  transition: all 0.3s;
+}
+
+.activate-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(52, 152, 219, 0.4);
+}
+
+.activate-btn.active {
+  background: linear-gradient(135deg, #27ae60, #2ecc71);
+}
+
+.theme-selector, .typography-settings, .tts-section {
+  background: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.card-title {
+  font-size: 11px;
+  color: #95a5a6;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.theme-options {
+  display: flex;
+  gap: 10px;
+}
+
+.theme-btn {
+  flex: 1;
+  padding: 15px;
+  border: 2px solid #ecf0f1;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.theme-btn.active {
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.3);
+}
+
+.setting-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+
+.setting-row select {
+  padding: 5px 10px;
+  border: 1px solid #ecf0f1;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.size-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.size-btn {
+  padding: 5px 10px;
+  border: 1px solid #ecf0f1;
+  border-radius: 4px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.size-btn:hover {
+  background: #ecf0f1;
+}
+
+.setting-row input[type="range"] {
+  width: 100px;
+}
+
+.tts-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.tts-btn {
+  padding: 8px 15px;
+  border: 1px solid #3498db;
+  border-radius: 6px;
+  background: #fff;
+  color: #3498db;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.tts-btn:hover {
+  background: #3498db;
+  color: #fff;
+}
+
+.tts-controls input[type="range"] {
+  flex: 1;
+}
+
+.status-footer {
+  text-align: center;
+  font-size: 11px;
+  color: #95a5a6;
+}

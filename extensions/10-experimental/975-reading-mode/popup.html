@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reading Mode</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Reading Mode</h1>
+      <div class="book-icon">📖</div>
+    </div>
+
+    <button class="activate-btn" id="activate-btn">
+      <span>Enable Reading Mode</span>
+    </button>
+
+    <div class="theme-selector">
+      <div class="card-title">Theme</div>
+      <div class="theme-options">
+        <button class="theme-btn active" data-theme="light" style="background: #fff; color: #333;">A</button>
+        <button class="theme-btn" data-theme="sepia" style="background: #f4ecd8; color: #5b4636;">A</button>
+        <button class="theme-btn" data-theme="dark" style="background: #1a1a1a; color: #e0e0e0;">A</button>
+      </div>
+    </div>
+
+    <div class="typography-settings">
+      <div class="card-title">Typography</div>
+      <div class="setting-row">
+        <span>Font</span>
+        <select id="font-select">
+          <option value="Georgia">Georgia</option>
+          <option value="Arial">Arial</option>
+          <option value="Times New Roman">Times</option>
+          <option value="Verdana">Verdana</option>
+        </select>
+      </div>
+      <div class="setting-row">
+        <span>Size</span>
+        <div class="size-controls">
+          <button class="size-btn" id="decrease-size">A-</button>
+          <span id="font-size">18px</span>
+          <button class="size-btn" id="increase-size">A+</button>
+        </div>
+      </div>
+      <div class="setting-row">
+        <span>Line Height</span>
+        <input type="range" id="line-height" min="1.2" max="2.5" step="0.1" value="1.8">
+      </div>
+    </div>
+
+    <div class="tts-section">
+      <div class="card-title">Text to Speech</div>
+      <div class="tts-controls">
+        <button class="tts-btn" id="play-btn">▶️ Play</button>
+        <button class="tts-btn" id="stop-btn">⏹️ Stop</button>
+        <input type="range" id="speed-slider" min="0.5" max="2" step="0.1" value="1">
+      </div>
+    </div>
+
+    <div class="status-footer">
+      <span id="reading-time">~0 min read</span>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
