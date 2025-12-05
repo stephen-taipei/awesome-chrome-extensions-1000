@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Manager</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h2>Profiles</h2>
+      <button id="add-profile-btn" class="icon-btn" title="Add Profile">+</button>
+    </header>
+    
+    <div class="profile-list" id="profile-list">
+      <!-- Profile items will be injected here -->
+      <div class="profile-item active" data-id="default">
+        <span class="profile-name">Default</span>
+        <span class="active-badge">Active</span>
+      </div>
+      <div class="profile-item" data-id="work">
+        <span class="profile-name">Work</span>
+        <button class="activate-btn">Switch</button>
+      </div>
+      <div class="profile-item" data-id="personal">
+        <span class="profile-name">Personal</span>
+        <button class="activate-btn">Switch</button>
+      </div>
+    </div>
+
+    <div class="settings">
+      <h3>Current Profile Settings</h3>
+      <div class="setting-item">
+        <label>Sync across devices</label>
+        <input type="checkbox" checked>
+      </div>
+      <div class="setting-item">
+        <label>Inherit global settings</label>
+        <input type="checkbox" checked>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
