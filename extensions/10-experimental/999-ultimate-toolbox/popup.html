@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ultimate Toolbox</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="search-bar">
+      <input type="text" id="search-input" placeholder="Search tools...">
+    </div>
+
+    <div class="categories">
+      <button class="category-btn active" data-category="all">All</button>
+      <button class="category-btn" data-category="productivity">Productivity</button>
+      <button class="category-btn" data-category="utils">Utils</button>
+      <button class="category-btn" data-category="dev">Dev</button>
+    </div>
+
+    <div class="tools-grid" id="tools-grid">
+      <!-- Tool items will be injected here -->
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
