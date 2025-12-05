@@ -1,0 +1,133 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 350px;
+  background-color: #fff;
+  color: #333;
+}
+
+.container {
+  padding: 16px;
+}
+
+.header {
+  margin-bottom: 16px;
+}
+
+h1 {
+  margin: 0 0 10px 0;
+  font-size: 20px;
+  color: #2c3e50;
+}
+
+.search-input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  background-color: #f8f9fa;
+  box-sizing: border-box;
+}
+
+.featured {
+  margin-bottom: 20px;
+}
+
+.banner {
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: white;
+  padding: 16px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.banner h3 {
+  margin: 0;
+  font-size: 14px;
+}
+
+.get-btn {
+  background: white;
+  color: #2980b9;
+  border: none;
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.section-title {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #7f8c8d;
+}
+
+.plugin-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.plugin-item {
+  display: flex;
+  align-items: center;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.plugin-item:last-child {
+  border-bottom: none;
+}
+
+.plugin-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  margin-right: 12px;
+}
+
+.plugin-info {
+  flex: 1;
+}
+
+.plugin-name {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.plugin-desc {
+  font-size: 12px;
+  color: #95a5a6;
+}
+
+.install-btn {
+  background-color: #ecf0f1;
+  color: #3498db;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.install-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.install-btn.installed {
+  background-color: transparent;
+  color: #bdc3c7;
+  cursor: default;
+}
