@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Focus Timer</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Focus Timer</h1>
+      <div class="timer-icon">🍅</div>
+    </div>
+
+    <div class="timer-display">
+      <div class="timer-circle">
+        <svg viewBox="0 0 100 100">
+          <circle class="timer-bg" cx="50" cy="50" r="45"></circle>
+          <circle class="timer-progress" id="timer-progress" cx="50" cy="50" r="45"></circle>
+        </svg>
+        <div class="timer-text">
+          <span class="time" id="time-display">25:00</span>
+          <span class="session-type" id="session-type">Focus</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="timer-controls">
+      <button class="control-btn" id="start-btn">▶️ Start</button>
+      <button class="control-btn" id="stop-btn" style="display: none;">⏹️ Stop</button>
+      <button class="control-btn secondary" id="skip-btn">⏭️ Skip</button>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat-item">
+        <span class="stat-value" id="session-count">0</span>
+        <span class="stat-label">Session</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-value" id="today-count">0</span>
+        <span class="stat-label">Today</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-value" id="total-count">0</span>
+        <span class="stat-label">Total</span>
+      </div>
+    </div>
+
+    <div class="settings-section">
+      <div class="card-title">Duration (minutes)</div>
+      <div class="duration-settings">
+        <div class="duration-item">
+          <label>Work</label>
+          <input type="number" id="work-duration" value="25" min="1" max="60">
+        </div>
+        <div class="duration-item">
+          <label>Break</label>
+          <input type="number" id="break-duration" value="5" min="1" max="30">
+        </div>
+        <div class="duration-item">
+          <label>Long</label>
+          <input type="number" id="long-break" value="15" min="1" max="60">
+        </div>
+      </div>
+    </div>
+
+    <div class="status-footer">
+      Stay focused, stay productive
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
