@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clipboard History</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Clipboard History</h1>
+      <button id="clearAll" class="btn-clear" title="Clear All">Clear</button>
+    </header>
+
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search clipboard...">
+    </div>
+
+    <div id="clipboardList" class="clipboard-list">
+      <!-- Clipboard items will be rendered here -->
+    </div>
+
+    <div class="footer">
+      <button id="captureBtn" class="btn-capture">Capture Current Clipboard</button>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
