@@ -1,0 +1,150 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 300px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+}
+
+.container {
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+h1 {
+  margin: 0 0 5px 0;
+  font-size: 18px;
+}
+
+.group-icon {
+  font-size: 30px;
+}
+
+.stats-bar {
+  display: flex;
+  justify-content: space-around;
+  background: rgba(255,255,255,0.15);
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat-value {
+  display: block;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.stat-label {
+  font-size: 11px;
+  opacity: 0.8;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.action-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.action-btn.primary {
+  background: rgba(255,255,255,0.25);
+  color: white;
+}
+
+.action-btn:not(.primary) {
+  background: rgba(255,255,255,0.1);
+  color: white;
+}
+
+.action-btn:hover {
+  transform: translateY(-2px);
+  background: rgba(255,255,255,0.35);
+}
+
+.settings-card {
+  background: rgba(255,255,255,0.1);
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.toggle-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  font-size: 13px;
+}
+
+.toggle-option:last-child {
+  border-bottom: none;
+}
+
+.toggle-option input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #feca57;
+}
+
+.categories-section {
+  background: rgba(255,255,255,0.1);
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.card-title {
+  font-size: 11px;
+  opacity: 0.7;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.category-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.category-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+}
+
+.category-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.status-footer {
+  text-align: center;
+  font-size: 11px;
+  opacity: 0.6;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tab Grouper</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Tab Grouper</h1>
+      <div class="group-icon">📁</div>
+    </div>
+
+    <div class="stats-bar">
+      <div class="stat">
+        <span class="stat-value" id="tab-count">0</span>
+        <span class="stat-label">Tabs</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value" id="group-count">0</span>
+        <span class="stat-label">Groups</span>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button class="action-btn primary" id="group-all">
+        <span>📊</span> Group All Tabs
+      </button>
+      <button class="action-btn" id="ungroup-all">
+        <span>📋</span> Ungroup All
+      </button>
+    </div>
+
+    <div class="settings-card">
+      <label class="toggle-option">
+        <span>Auto-Group New Tabs</span>
+        <input type="checkbox" id="auto-group" checked>
+      </label>
+      <label class="toggle-option">
+        <span>Group by Domain</span>
+        <input type="checkbox" id="group-domain" checked>
+      </label>
+    </div>
+
+    <div class="categories-section">
+      <div class="card-title">Category Colors</div>
+      <div class="category-list">
+        <div class="category-item">
+          <span class="category-dot" style="background: #4285f4;"></span>
+          <span>Social</span>
+        </div>
+        <div class="category-item">
+          <span class="category-dot" style="background: #34a853;"></span>
+          <span>Work</span>
+        </div>
+        <div class="category-item">
+          <span class="category-dot" style="background: #fbbc04;"></span>
+          <span>Shopping</span>
+        </div>
+        <div class="category-item">
+          <span class="category-dot" style="background: #ea4335;"></span>
+          <span>Entertainment</span>
+        </div>
+        <div class="category-item">
+          <span class="category-dot" style="background: #9c27b0;"></span>
+          <span>News</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="status-footer">
+      Smart tab organization
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
