@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emotion Engine</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Emotion Engine</h1>
+      <div class="mood-icon" id="mood-icon">😐</div>
+    </div>
+
+    <div class="analysis-card">
+      <div class="card-title">Page Sentiment</div>
+      <div class="sentiment-meter">
+        <div class="meter-fill" id="meter-fill" style="width: 50%;"></div>
+      </div>
+      <div class="sentiment-label">
+        <span>Negative</span>
+        <span>Neutral</span>
+        <span>Positive</span>
+      </div>
+      <div class="current-value" id="sentiment-text">Neutral</div>
+    </div>
+
+    <div class="actions">
+      <h3>Response</h3>
+      <div class="response-options">
+        <button class="response-btn active" data-mode="calm">Calm</button>
+        <button class="response-btn" data-mode="focus">Focus</button>
+        <button class="response-btn" data-mode="cheer">Cheer Up</button>
+      </div>
+    </div>
+    
+    <div class="status-footer">
+      Adaptive Theme: <span style="color: #2ecc71">Active</span>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
