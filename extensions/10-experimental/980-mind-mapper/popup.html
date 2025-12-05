@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mind Mapper</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Mind Mapper</h1>
+      <div class="map-icon">🧠</div>
+    </div>
+
+    <div class="map-preview">
+      <canvas id="map-canvas" width="260" height="150"></canvas>
+    </div>
+
+    <div class="stats-card">
+      <div class="stat-item">
+        <span class="stat-value" id="node-count">0</span>
+        <span class="stat-label">Nodes</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-value" id="connection-count">0</span>
+        <span class="stat-label">Connections</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-value" id="snapshot-count">0</span>
+        <span class="stat-label">Snapshots</span>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button class="action-btn" id="snapshot-btn">
+        <span>📸</span> Save Snapshot
+      </button>
+      <button class="action-btn" id="clear-btn">
+        <span>🗑️</span> Clear Session
+      </button>
+      <button class="action-btn" id="export-btn">
+        <span>📤</span> Export Map
+      </button>
+    </div>
+
+    <div class="settings">
+      <label class="toggle-option">
+        <span>Auto-Mapping</span>
+        <input type="checkbox" id="auto-toggle" checked>
+      </label>
+    </div>
+
+    <div class="status-footer">
+      Mapping: <span class="status-active">Active</span>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
