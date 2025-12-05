@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Link Preview</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Link Preview</h1>
+      <div class="preview-icon">👁️</div>
+    </div>
+
+    <div class="toggle-main">
+      <span>Enable Previews</span>
+      <label class="switch">
+        <input type="checkbox" id="enable-toggle" checked>
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <div class="settings-card">
+      <div class="card-title">Preview Size</div>
+      <div class="size-options">
+        <button class="size-btn" data-size="small">S</button>
+        <button class="size-btn active" data-size="medium">M</button>
+        <button class="size-btn" data-size="large">L</button>
+      </div>
+    </div>
+
+    <div class="settings-card">
+      <div class="card-title">Hover Delay</div>
+      <div class="delay-control">
+        <input type="range" id="delay-slider" min="200" max="1000" step="100" value="500">
+        <span id="delay-value">500ms</span>
+      </div>
+    </div>
+
+    <div class="settings-card">
+      <label class="toggle-option">
+        <span>Show Images</span>
+        <input type="checkbox" id="show-images" checked>
+      </label>
+    </div>
+
+    <div class="blacklist-section">
+      <div class="card-title">Blacklisted Domains</div>
+      <div class="blacklist" id="blacklist">
+        <span class="blacklist-item">localhost <button class="remove-btn">×</button></span>
+      </div>
+      <div class="add-blacklist">
+        <input type="text" id="blacklist-input" placeholder="domain.com">
+        <button id="add-blacklist-btn">Add</button>
+      </div>
+    </div>
+
+    <div class="status-footer">
+      Hover over links to preview
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

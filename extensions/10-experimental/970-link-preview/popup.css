@@ -1,0 +1,210 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 300px;
+  background: linear-gradient(135deg, #74ebd5 0%, #acb6e5 100%);
+  color: #2c3e50;
+}
+
+.container {
+  padding: 20px;
+  background: rgba(255,255,255,0.95);
+  margin: 10px;
+  border-radius: 15px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+h1 {
+  margin: 0 0 5px 0;
+  font-size: 18px;
+  color: #3498db;
+}
+
+.preview-icon {
+  font-size: 30px;
+}
+
+.toggle-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.switch {
+  position: relative;
+  width: 50px;
+  height: 26px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background: #ccc;
+  border-radius: 26px;
+  transition: 0.3s;
+}
+
+.slider:before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 3px;
+  bottom: 3px;
+  background: white;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+input:checked + .slider {
+  background: #3498db;
+}
+
+input:checked + .slider:before {
+  transform: translateX(24px);
+}
+
+.settings-card {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.card-title {
+  font-size: 11px;
+  color: #7f8c8d;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.size-options {
+  display: flex;
+  gap: 10px;
+}
+
+.size-btn {
+  flex: 1;
+  padding: 10px;
+  border: 2px solid #ecf0f1;
+  border-radius: 8px;
+  background: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.size-btn.active {
+  border-color: #3498db;
+  background: #3498db;
+  color: white;
+}
+
+.delay-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.delay-control input[type="range"] {
+  flex: 1;
+}
+
+#delay-value {
+  min-width: 50px;
+  font-weight: bold;
+  color: #3498db;
+}
+
+.toggle-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+}
+
+.toggle-option input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #3498db;
+}
+
+.blacklist-section {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.blacklist {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 10px;
+  min-height: 30px;
+}
+
+.blacklist-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 8px;
+  background: #e74c3c;
+  color: white;
+  border-radius: 15px;
+  font-size: 11px;
+}
+
+.remove-btn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 0;
+}
+
+.add-blacklist {
+  display: flex;
+  gap: 8px;
+}
+
+.add-blacklist input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.add-blacklist button {
+  padding: 8px 15px;
+  background: #3498db;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+}
+
+.status-footer {
+  text-align: center;
+  font-size: 11px;
+  color: #95a5a6;
+}
