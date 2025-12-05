@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Note Anywhere</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Note Anywhere</h1>
+      <div class="note-icon">📝</div>
+    </div>
+
+    <button class="add-note-btn" id="add-note-btn">
+      <span>➕</span> Add Note to Page
+    </button>
+
+    <div class="search-box">
+      <input type="text" id="search-input" placeholder="Search all notes...">
+    </div>
+
+    <div class="notes-section">
+      <div class="card-title">Notes on this page (<span id="note-count">0</span>)</div>
+      <div class="notes-list" id="notes-list">
+        <div class="empty-state">No notes on this page yet</div>
+      </div>
+    </div>
+
+    <div class="color-picker">
+      <div class="card-title">Note Color</div>
+      <div class="color-options" id="color-options">
+        <button class="color-btn active" style="background: #ffeb3b;" data-color="#ffeb3b"></button>
+        <button class="color-btn" style="background: #ff9800;" data-color="#ff9800"></button>
+        <button class="color-btn" style="background: #f44336;" data-color="#f44336"></button>
+        <button class="color-btn" style="background: #4caf50;" data-color="#4caf50"></button>
+        <button class="color-btn" style="background: #2196f3;" data-color="#2196f3"></button>
+        <button class="color-btn" style="background: #9c27b0;" data-color="#9c27b0"></button>
+      </div>
+    </div>
+
+    <div class="stats">
+      <span>Total notes: <strong id="total-notes">0</strong></span>
+      <span>Pages: <strong id="total-pages">0</strong></span>
+    </div>
+
+    <div class="status-footer">
+      Notes auto-save
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
