@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevKit</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>DevKit</h1>
+      <p>Extension Builder Assistant</p>
+    </header>
+
+    <div class="tools-section">
+      <h3>Generators</h3>
+      <div class="tool-group">
+        <button id="gen-manifest" class="tool-btn">Manifest V3 JSON</button>
+        <button id="gen-icons" class="tool-btn">Icon Placeholders</button>
+        <button id="gen-readme" class="tool-btn">README Template</button>
+      </div>
+    </div>
+
+    <div class="tools-section">
+      <h3>Utilities</h3>
+      <div class="tool-group">
+        <button id="reload-ext" class="tool-btn">Reload Extensions</button>
+        <button id="clear-storage" class="tool-btn">Clear Local Storage</button>
+      </div>
+    </div>
+
+    <div class="output-section">
+      <h3>Output / Snippet</h3>
+      <textarea id="output-area" readonly placeholder="Generated code will appear here..."></textarea>
+      <button id="copy-btn" class="copy-btn">Copy to Clipboard</button>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
