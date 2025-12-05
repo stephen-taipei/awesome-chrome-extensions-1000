@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Clipboard</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Smart Clipboard</h1>
+      <div class="clipboard-icon">📋</div>
+    </div>
+
+    <div class="search-box">
+      <input type="text" id="search-input" placeholder="Search clipboard history...">
+    </div>
+
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="history">History</button>
+      <button class="tab-btn" data-tab="snippets">Snippets</button>
+    </div>
+
+    <div class="tab-content" id="history-tab">
+      <div class="history-list" id="history-list">
+        <div class="history-item" data-type="text">
+          <span class="item-type">📝</span>
+          <span class="item-content">Sample text content...</span>
+          <span class="item-time">2m ago</span>
+        </div>
+        <div class="history-item" data-type="url">
+          <span class="item-type">🔗</span>
+          <span class="item-content">https://example.com</span>
+          <span class="item-time">5m ago</span>
+        </div>
+        <div class="history-item" data-type="code">
+          <span class="item-type">💻</span>
+          <span class="item-content">const foo = "bar";</span>
+          <span class="item-time">10m ago</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-content hidden" id="snippets-tab">
+      <button class="add-snippet-btn" id="add-snippet-btn">+ Add Snippet</button>
+      <div class="snippets-list" id="snippets-list">
+        <div class="snippet-item">
+          <span class="snippet-name">Email signature</span>
+          <button class="paste-btn">Paste</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="settings">
+      <label class="toggle-option">
+        <span>Auto Format</span>
+        <input type="checkbox" id="auto-format" checked>
+      </label>
+    </div>
+
+    <div class="status-footer">
+      <span id="item-count">3</span> items in history
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
