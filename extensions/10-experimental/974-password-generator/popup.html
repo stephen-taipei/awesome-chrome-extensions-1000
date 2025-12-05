@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Password Generator</h1>
+      <div class="lock-icon">🔐</div>
+    </div>
+
+    <div class="password-display">
+      <input type="text" id="password-output" readonly value="Click Generate">
+      <button class="copy-btn" id="copy-btn">📋</button>
+    </div>
+
+    <div class="strength-meter">
+      <div class="strength-bar" id="strength-bar"></div>
+      <span class="strength-label" id="strength-label">--</span>
+    </div>
+
+    <div class="length-control">
+      <span>Length: <strong id="length-value">16</strong></span>
+      <input type="range" id="length-slider" min="8" max="32" value="16">
+    </div>
+
+    <div class="options">
+      <label class="option-item">
+        <input type="checkbox" id="uppercase" checked>
+        <span>Uppercase (A-Z)</span>
+      </label>
+      <label class="option-item">
+        <input type="checkbox" id="lowercase" checked>
+        <span>Lowercase (a-z)</span>
+      </label>
+      <label class="option-item">
+        <input type="checkbox" id="numbers" checked>
+        <span>Numbers (0-9)</span>
+      </label>
+      <label class="option-item">
+        <input type="checkbox" id="symbols" checked>
+        <span>Symbols (!@#$)</span>
+      </label>
+    </div>
+
+    <div class="actions">
+      <button class="generate-btn" id="generate-btn">🎲 Generate Password</button>
+      <button class="passphrase-btn" id="passphrase-btn">📝 Generate Passphrase</button>
+    </div>
+
+    <div class="status-footer">
+      Secure password generation
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
