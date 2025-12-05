@@ -1,0 +1,123 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 300px;
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  color: #ecf0f1;
+}
+
+.container {
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+h1 {
+  margin: 0 0 5px 0;
+  font-size: 18px;
+  color: #3498db;
+}
+
+.gesture-icon {
+  font-size: 35px;
+}
+
+.gesture-canvas-container {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+#gesture-canvas {
+  width: 100%;
+  background: rgba(0,0,0,0.3);
+  border-radius: 12px;
+  cursor: crosshair;
+}
+
+.gesture-hint {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #7f8c8d;
+  font-size: 12px;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+.gesture-list {
+  background: rgba(255,255,255,0.05);
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.card-title {
+  font-size: 11px;
+  color: #95a5a6;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.gesture-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  font-size: 12px;
+}
+
+.gesture-item:last-child {
+  border-bottom: none;
+}
+
+.gesture-pattern {
+  color: #3498db;
+  font-weight: bold;
+}
+
+.gesture-action {
+  color: #95a5a6;
+}
+
+.settings {
+  margin-bottom: 15px;
+}
+
+.toggle-option, .color-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  font-size: 13px;
+}
+
+.toggle-option input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #3498db;
+}
+
+.color-option input[type="color"] {
+  width: 30px;
+  height: 24px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.status-footer {
+  text-align: center;
+  font-size: 11px;
+  color: #7f8c8d;
+}
+
+.status-active {
+  color: #2ecc71;
+  font-weight: bold;
+}

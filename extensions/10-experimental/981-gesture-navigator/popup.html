@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gesture Navigator</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Gesture Navigator</h1>
+      <div class="gesture-icon">👆</div>
+    </div>
+
+    <div class="gesture-canvas-container">
+      <canvas id="gesture-canvas" width="260" height="120"></canvas>
+      <div class="gesture-hint">Draw a gesture here to test</div>
+    </div>
+
+    <div class="gesture-list">
+      <div class="card-title">Gesture Library</div>
+      <div class="gesture-item">
+        <span class="gesture-pattern">← Left</span>
+        <span class="gesture-action">Go Back</span>
+      </div>
+      <div class="gesture-item">
+        <span class="gesture-pattern">→ Right</span>
+        <span class="gesture-action">Go Forward</span>
+      </div>
+      <div class="gesture-item">
+        <span class="gesture-pattern">↓→ Down-Right</span>
+        <span class="gesture-action">Close Tab</span>
+      </div>
+      <div class="gesture-item">
+        <span class="gesture-pattern">↓← Down-Left</span>
+        <span class="gesture-action">New Tab</span>
+      </div>
+      <div class="gesture-item">
+        <span class="gesture-pattern">↑↓ Up-Down</span>
+        <span class="gesture-action">Refresh</span>
+      </div>
+    </div>
+
+    <div class="settings">
+      <label class="toggle-option">
+        <span>Show Gesture Trail</span>
+        <input type="checkbox" id="trail-toggle" checked>
+      </label>
+      <div class="color-option">
+        <span>Trail Color</span>
+        <input type="color" id="trail-color" value="#3498db">
+      </div>
+    </div>
+
+    <div class="status-footer">
+      Gestures: <span class="status-active">Enabled</span>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
