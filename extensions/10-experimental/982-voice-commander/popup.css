@@ -1,0 +1,172 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 300px;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  color: #eee;
+}
+
+.container {
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+h1 {
+  margin: 0 0 5px 0;
+  font-size: 18px;
+  color: #e74c3c;
+}
+
+.mic-icon {
+  font-size: 35px;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+.status-card {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.listening-indicator {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  color: #888;
+  font-size: 13px;
+}
+
+.listening-indicator.active {
+  color: #e74c3c;
+}
+
+.pulse-ring {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid transparent;
+  border-radius: 25px;
+}
+
+.listening-indicator.active .pulse-ring {
+  border-color: rgba(231, 76, 60, 0.5);
+  animation: pulse-ring 1.5s infinite;
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(1.3); opacity: 0; }
+}
+
+.listen-btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.listen-btn:hover {
+  transform: scale(1.02);
+  box-shadow: 0 5px 20px rgba(231, 76, 60, 0.4);
+}
+
+.listen-btn.active {
+  background: linear-gradient(135deg, #27ae60, #2ecc71);
+}
+
+.command-display {
+  background: rgba(255,255,255,0.05);
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.card-title {
+  font-size: 11px;
+  color: #888;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.command-text {
+  font-size: 16px;
+  font-style: italic;
+  color: #ccc;
+  min-height: 24px;
+}
+
+.command-result {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #888;
+}
+
+.quick-commands {
+  background: rgba(255,255,255,0.05);
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.command-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.command-item {
+  padding: 8px;
+  background: rgba(231, 76, 60, 0.2);
+  border-radius: 6px;
+  font-size: 11px;
+  text-align: center;
+  color: #e74c3c;
+}
+
+.settings {
+  margin-bottom: 15px;
+}
+
+.toggle-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  font-size: 13px;
+}
+
+.toggle-option input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #e74c3c;
+}
+
+.status-footer {
+  text-align: center;
+  font-size: 11px;
+  color: #666;
+}
+
+.status-active {
+  color: #2ecc71;
+  font-weight: bold;
+}

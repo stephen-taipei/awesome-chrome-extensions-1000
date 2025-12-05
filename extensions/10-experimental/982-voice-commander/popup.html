@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voice Commander</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Voice Commander</h1>
+      <div class="mic-icon" id="mic-icon">🎤</div>
+    </div>
+
+    <div class="status-card">
+      <div class="listening-indicator" id="listening-indicator">
+        <div class="pulse-ring"></div>
+        <span>Ready to Listen</span>
+      </div>
+      <button class="listen-btn" id="listen-btn">Start Listening</button>
+    </div>
+
+    <div class="command-display">
+      <div class="card-title">Last Command</div>
+      <div class="command-text" id="command-text">Say something...</div>
+      <div class="command-result" id="command-result"></div>
+    </div>
+
+    <div class="quick-commands">
+      <div class="card-title">Quick Commands</div>
+      <div class="command-list">
+        <div class="command-item">"New tab"</div>
+        <div class="command-item">"Close tab"</div>
+        <div class="command-item">"Go back"</div>
+        <div class="command-item">"Refresh"</div>
+      </div>
+    </div>
+
+    <div class="settings">
+      <label class="toggle-option">
+        <span>Continuous Listening</span>
+        <input type="checkbox" id="continuous-toggle">
+      </label>
+      <label class="toggle-option">
+        <span>Voice Feedback</span>
+        <input type="checkbox" id="feedback-toggle" checked>
+      </label>
+    </div>
+
+    <div class="status-footer">
+      Voice Engine: <span class="status-active">Ready</span>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
