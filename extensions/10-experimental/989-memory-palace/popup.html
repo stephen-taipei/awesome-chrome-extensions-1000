@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memory Palace</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Memory Palace</h1>
+      <button class="add-room-btn">New Room</button>
+    </div>
+
+    <div class="palace-view">
+      <!-- Conceptual 3D View Placeholder -->
+      <div class="room-placeholder">
+        <div class="wall back"></div>
+        <div class="wall left"></div>
+        <div class="wall right"></div>
+        <div class="floor"></div>
+        
+        <div class="memory-object" style="top: 40%; left: 30%;" title="Meeting Notes">📄</div>
+        <div class="memory-object" style="top: 60%; left: 70%;" title="Project Idea">💡</div>
+        <div class="memory-object" style="top: 30%; left: 60%;" title="Shopping List">🛒</div>
+      </div>
+      <div class="overlay-text">3D View (Preview)</div>
+    </div>
+
+    <div class="controls">
+      <button id="enter-vr" class="vr-btn">Enter VR Mode</button>
+      <div class="memory-list">
+        <h3>Stored Memories</h3>
+        <ul>
+          <li>Monday Meeting Notes</li>
+          <li>Startup Idea #42</li>
+          <li>Groceries</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
