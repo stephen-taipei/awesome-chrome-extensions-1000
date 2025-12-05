@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reading List</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Reading List</h1>
+      <button id="addPage" class="btn-add" title="Add Current Page">+</button>
+    </header>
+
+    <div class="tabs">
+      <button class="tab active" data-tab="unread">Unread</button>
+      <button class="tab" data-tab="read">Read</button>
+    </div>
+
+    <div id="articlesList" class="articles-list">
+      <!-- Articles will be rendered here -->
+    </div>
+
+    <div class="footer">
+      <span id="articleCount">0 articles</span>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
