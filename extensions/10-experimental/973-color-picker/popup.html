@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Picker</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Color Picker</h1>
+      <div class="palette-icon">🎨</div>
+    </div>
+
+    <div class="color-preview">
+      <div class="preview-box" id="preview-box"></div>
+      <button class="eyedropper-btn" id="eyedropper-btn">🔍 Pick Color</button>
+    </div>
+
+    <div class="color-input">
+      <input type="color" id="color-input" value="#3498db">
+      <input type="text" id="hex-input" value="#3498db" placeholder="#RRGGBB">
+    </div>
+
+    <div class="color-formats">
+      <div class="format-row">
+        <span class="format-label">HEX</span>
+        <span class="format-value" id="hex-value">#3498db</span>
+        <button class="copy-btn" data-format="hex">📋</button>
+      </div>
+      <div class="format-row">
+        <span class="format-label">RGB</span>
+        <span class="format-value" id="rgb-value">rgb(52, 152, 219)</span>
+        <button class="copy-btn" data-format="rgb">📋</button>
+      </div>
+      <div class="format-row">
+        <span class="format-label">HSL</span>
+        <span class="format-value" id="hsl-value">hsl(204, 70%, 53%)</span>
+        <button class="copy-btn" data-format="hsl">📋</button>
+      </div>
+    </div>
+
+    <div class="color-history">
+      <div class="card-title">Recent Colors</div>
+      <div class="history-swatches" id="history-swatches"></div>
+    </div>
+
+    <div class="palette-section">
+      <div class="card-title">My Palette</div>
+      <div class="palette-swatches" id="palette-swatches"></div>
+      <button class="add-palette-btn" id="add-to-palette">+ Add to Palette</button>
+    </div>
+
+    <div class="status-footer">
+      Click a swatch to copy
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
