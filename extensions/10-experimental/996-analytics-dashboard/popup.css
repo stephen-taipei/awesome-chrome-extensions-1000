@@ -1,0 +1,146 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 360px;
+  background-color: #f4f6f8;
+  color: #333;
+}
+
+.container {
+  padding: 16px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+h2 {
+  margin: 0;
+  font-size: 18px;
+  color: #2c3e50;
+}
+
+.period {
+  font-size: 12px;
+  color: #7f8c8d;
+  background: #ecf0f1;
+  padding: 4px 8px;
+  border-radius: 12px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.stat-card {
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.stat-title {
+  font-size: 10px;
+  color: #95a5a6;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.stat-value {
+  font-size: 16px;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 2px;
+}
+
+.stat-trend {
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.stat-trend.up { color: #27ae60; }
+.stat-trend.down { color: #e74c3c; }
+
+.chart-section {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  margin-bottom: 20px;
+}
+
+h3 {
+  margin: 0 0 15px;
+  font-size: 14px;
+  color: #34495e;
+}
+
+.chart-placeholder {
+  height: 100px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 0 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.bar {
+  width: 20px;
+  background-color: #3498db;
+  border-radius: 3px 3px 0 0;
+  opacity: 0.8;
+  transition: height 0.5s ease;
+}
+
+.bar:hover {
+  opacity: 1;
+}
+
+.chart-labels {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px 0;
+  font-size: 10px;
+  color: #95a5a6;
+}
+
+.suggestions-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.suggestion-item {
+  background: white;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: flex-start;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.suggestion-icon {
+  margin-right: 12px;
+  font-size: 16px;
+}
+
+.suggestion-title {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+
+.suggestion-desc {
+  font-size: 11px;
+  color: #7f8c8d;
+  line-height: 1.4;
+}

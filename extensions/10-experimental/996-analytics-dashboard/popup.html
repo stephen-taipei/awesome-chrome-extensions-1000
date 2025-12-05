@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analytics Dashboard</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h2>Extension Analytics</h2>
+      <span class="period">Last 7 Days</span>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-title">Active Exts</div>
+        <div class="stat-value">24</div>
+        <div class="stat-trend up">↑ 2</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-title">Memory Saved</div>
+        <div class="stat-value">1.2 GB</div>
+        <div class="stat-trend up">↑ 15%</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-title">Avg Load Time</div>
+        <div class="stat-value">0.8s</div>
+        <div class="stat-trend down">↓ 0.1s</div>
+      </div>
+    </div>
+
+    <div class="chart-section">
+      <h3>Usage Activity</h3>
+      <div class="chart-placeholder">
+        <!-- Mock Chart Bars -->
+        <div class="bar" style="height: 40%"></div>
+        <div class="bar" style="height: 70%"></div>
+        <div class="bar" style="height: 50%"></div>
+        <div class="bar" style="height: 90%"></div>
+        <div class="bar" style="height: 30%"></div>
+        <div class="bar" style="height: 60%"></div>
+        <div class="bar" style="height: 80%"></div>
+      </div>
+      <div class="chart-labels">
+        <span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span>
+      </div>
+    </div>
+
+    <div class="suggestions-section">
+      <h3>Optimization Suggestions</h3>
+      <ul class="suggestions-list">
+        <li class="suggestion-item">
+          <div class="suggestion-icon warning">⚠️</div>
+          <div class="suggestion-content">
+            <div class="suggestion-title">High Memory Usage</div>
+            <div class="suggestion-desc">"Video Downloader" is using significant RAM. Consider disabling when not in use.</div>
+          </div>
+        </li>
+        <li class="suggestion-item">
+          <div class="suggestion-icon info">ℹ️</div>
+          <div class="suggestion-content">
+            <div class="suggestion-title">Unused Extension</div>
+            <div class="suggestion-desc">You haven't used "Color Picker" in 30 days.</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
