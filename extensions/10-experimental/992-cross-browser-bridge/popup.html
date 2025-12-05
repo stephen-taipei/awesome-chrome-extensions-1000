@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cross-Browser Bridge</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Bridge</h1>
+      <p>Migration Assistant</p>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Export Settings</div>
+      <p class="card-desc">Package your configuration into a universal JSON file.</p>
+      <div class="options">
+        <label>
+          <input type="checkbox" checked> Include Passwords (Encrypted)
+        </label>
+        <label>
+          <input type="checkbox" checked> Include Preferences
+        </label>
+      </div>
+      <button id="export-btn" class="action-btn export">Export to File</button>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Import Settings</div>
+      <p class="card-desc">Restore configuration from a previous export.</p>
+      <div class="file-upload">
+        <input type="file" id="file-input" accept=".json">
+        <label for="file-input" class="file-label">Choose File</label>
+        <span id="file-name">No file chosen</span>
+      </div>
+      <button id="import-btn" class="action-btn import" disabled>Import</button>
+    </div>
+
+    <div class="status-area" id="status-area"></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
