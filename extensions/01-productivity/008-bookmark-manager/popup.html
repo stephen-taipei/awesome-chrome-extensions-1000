@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookmark Manager</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Bookmarks</h1>
+      <button id="addBookmark" class="btn-icon" title="Add Current Page">+</button>
+    </header>
+
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search bookmarks...">
+    </div>
+
+    <div class="folders-nav" id="foldersNav">
+      <button class="folder-btn active" data-folder="all">All</button>
+      <button class="folder-btn" data-folder="recent">Recent</button>
+    </div>
+
+    <div id="bookmarksList" class="bookmarks-list">
+      <!-- Bookmarks will be rendered here -->
+    </div>
+
+    <div id="stats" class="stats">
+      <span id="bookmarkCount">0 bookmarks</span>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
