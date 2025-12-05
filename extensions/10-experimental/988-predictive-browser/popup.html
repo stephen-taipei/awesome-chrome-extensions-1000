@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Predictive Browser</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h2>Predictions</h2>
+      <span class="accuracy">92% Accuracy</span>
+    </div>
+
+    <div class="prediction-card main">
+      <div class="label">Next Likely Visit</div>
+      <div class="site-name">GitHub</div>
+      <div class="site-url">github.com</div>
+      <button class="go-btn">Go Now</button>
+    </div>
+
+    <div class="suggestions-list">
+      <div class="suggestion-item">
+        <div class="suggestion-info">
+          <div class="s-name">Gmail</div>
+          <div class="s-prob">85% probability</div>
+        </div>
+        <button class="s-btn">➔</button>
+      </div>
+      <div class="suggestion-item">
+        <div class="suggestion-info">
+          <div class="s-name">Stack Overflow</div>
+          <div class="s-prob">70% probability</div>
+        </div>
+        <button class="s-btn">➔</button>
+      </div>
+    </div>
+
+    <div class="footer">
+      <label>
+        <input type="checkbox" checked> Auto-preload top hit
+      </label>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 300px;
+  background-color: #fdfefe;
+  color: #2c3e50;
+}
+
+.container {
+  padding: 16px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+h2 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.accuracy {
+  font-size: 11px;
+  color: #27ae60;
+  background: #eafaf1;
+  padding: 3px 6px;
+  border-radius: 4px;
+}
+
+.prediction-card.main {
+  background: linear-gradient(135deg, #6c5ce7, #a55eea);
+  color: white;
+  padding: 16px;
+  border-radius: 12px;
+  text-align: center;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(108, 92, 231, 0.2);
+}
+
+.label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.8;
+  margin-bottom: 5px;
+}
+
+.site-name {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+
+.site-url {
+  font-size: 12px;
+  opacity: 0.8;
+  margin-bottom: 12px;
+}
+
+.go-btn {
+  background: white;
+  color: #6c5ce7;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+.go-btn:hover {
+  transform: scale(1.05);
+}
+
+.suggestion-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.suggestion-item:last-child {
+  border-bottom: none;
+}
+
+.s-name {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.s-prob {
+  font-size: 11px;
+  color: #95a5a6;
+}
+
+.s-btn {
+  background: none;
+  border: none;
+  color: #bdc3c7;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.s-btn:hover {
+  color: #6c5ce7;
+}
+
+.footer {
+  margin-top: 15px;
+  font-size: 12px;
+  color: #7f8c8d;
+  text-align: center;
+}
