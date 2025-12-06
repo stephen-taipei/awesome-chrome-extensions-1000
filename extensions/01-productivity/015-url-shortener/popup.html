@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>URL Shortener</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>URL Shortener</h1>
+    </header>
+
+    <div class="current-url">
+      <label>Current Page URL:</label>
+      <div class="url-display" id="currentUrl"></div>
+    </div>
+
+    <div class="shorten-section">
+      <button id="shortenBtn" class="btn-shorten">Shorten URL</button>
+    </div>
+
+    <div id="resultSection" class="result-section hidden">
+      <label>Shortened URL:</label>
+      <div class="result-box">
+        <input type="text" id="shortUrl" readonly>
+        <button id="copyBtn" class="btn-copy">Copy</button>
+      </div>
+      <div id="copySuccess" class="copy-success hidden">Copied!</div>
+    </div>
+
+    <div class="history-section">
+      <div class="section-header">
+        <label>Recent Links</label>
+        <button id="clearHistory" class="btn-clear">Clear</button>
+      </div>
+      <div id="historyList" class="history-list">
+        <!-- History will be rendered here -->
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
