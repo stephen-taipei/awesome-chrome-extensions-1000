@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site Blocked</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: white;
+    }
+    .container {
+      text-align: center;
+      padding: 40px;
+    }
+    .icon {
+      font-size: 80px;
+      margin-bottom: 24px;
+    }
+    h1 {
+      font-size: 32px;
+      margin-bottom: 16px;
+      color: #ff4757;
+    }
+    p {
+      font-size: 18px;
+      color: #a0a0a0;
+      margin-bottom: 8px;
+    }
+    .site-name {
+      font-size: 20px;
+      color: #ff4757;
+      font-weight: 600;
+      margin-bottom: 32px;
+    }
+    .message {
+      font-size: 16px;
+      color: #666;
+      max-width: 400px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="icon">🚫</div>
+    <h1>Site Blocked</h1>
+    <p>You've blocked access to</p>
+    <div class="site-name" id="siteName"></div>
+    <p class="message">Stay focused! This site was blocked to help you be more productive.</p>
+  </div>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const site = params.get('site') || 'this website';
+    document.getElementById('siteName').textContent = site;
+  </script>
+</body>
+</html>

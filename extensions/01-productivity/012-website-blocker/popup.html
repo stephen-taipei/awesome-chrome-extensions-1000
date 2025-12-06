@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Blocker</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Website Blocker</h1>
+      <label class="toggle">
+        <input type="checkbox" id="masterToggle">
+        <span class="slider"></span>
+      </label>
+    </header>
+
+    <div class="add-site">
+      <input type="text" id="siteInput" placeholder="Enter website (e.g., facebook.com)">
+      <button id="addSite" class="btn-add">+</button>
+    </div>
+
+    <div class="quick-add">
+      <span>Quick add:</span>
+      <button class="quick-btn" data-site="facebook.com">Facebook</button>
+      <button class="quick-btn" data-site="twitter.com">Twitter</button>
+      <button class="quick-btn" data-site="youtube.com">YouTube</button>
+    </div>
+
+    <div id="blockedList" class="blocked-list">
+      <!-- Blocked sites will be rendered here -->
+    </div>
+
+    <div class="stats">
+      <span id="blockCount">0 sites blocked</span>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
