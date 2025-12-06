@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Highlighter</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Page Highlighter</h1>
+      <label class="toggle">
+        <input type="checkbox" id="enableToggle" checked>
+        <span class="slider"></span>
+      </label>
+    </header>
+
+    <div class="color-picker">
+      <label>Highlight Color:</label>
+      <div class="colors">
+        <button class="color-btn active" data-color="#ffeb3b" style="background: #ffeb3b"></button>
+        <button class="color-btn" data-color="#4caf50" style="background: #4caf50"></button>
+        <button class="color-btn" data-color="#2196f3" style="background: #2196f3"></button>
+        <button class="color-btn" data-color="#e91e63" style="background: #e91e63"></button>
+        <button class="color-btn" data-color="#ff9800" style="background: #ff9800"></button>
+        <button class="color-btn" data-color="#9c27b0" style="background: #9c27b0"></button>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button id="highlightBtn" class="btn primary">Highlight Selection</button>
+      <button id="clearBtn" class="btn secondary">Clear All</button>
+    </div>
+
+    <div class="section-title">Saved Highlights</div>
+    <div id="highlightsList" class="highlights-list">
+      <!-- Highlights will be rendered here -->
+    </div>
+
+    <div class="stats">
+      <span id="highlightCount">0 highlights</span>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
