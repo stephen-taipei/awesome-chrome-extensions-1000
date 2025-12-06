@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dark Mode Toggle</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Dark Mode</h1>
+    </header>
+
+    <div class="toggle-section">
+      <div class="moon-icon" id="moonIcon">🌙</div>
+      <label class="big-toggle">
+        <input type="checkbox" id="darkModeToggle">
+        <span class="slider"></span>
+      </label>
+      <div id="statusText" class="status-text">Off</div>
+    </div>
+
+    <div class="settings">
+      <div class="setting-item">
+        <label>Brightness</label>
+        <input type="range" id="brightness" min="50" max="100" value="90">
+        <span id="brightnessValue">90%</span>
+      </div>
+
+      <div class="setting-item">
+        <label>Contrast</label>
+        <input type="range" id="contrast" min="80" max="120" value="100">
+        <span id="contrastValue">100%</span>
+      </div>
+
+      <div class="setting-item">
+        <label>Sepia</label>
+        <input type="range" id="sepia" min="0" max="50" value="10">
+        <span id="sepiaValue">10%</span>
+      </div>
+    </div>
+
+    <div class="presets">
+      <label>Presets:</label>
+      <div class="preset-buttons">
+        <button class="preset-btn" data-preset="dark">Dark</button>
+        <button class="preset-btn" data-preset="dim">Dim</button>
+        <button class="preset-btn" data-preset="sepia">Sepia</button>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
