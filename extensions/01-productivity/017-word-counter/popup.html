@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Word Counter</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Word Counter</h1>
+    </header>
+
+    <div class="source-toggle">
+      <button class="source-btn active" data-source="selection">Selection</button>
+      <button class="source-btn" data-source="page">Entire Page</button>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-value" id="wordCount">0</div>
+        <div class="stat-label">Words</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="charCount">0</div>
+        <div class="stat-label">Characters</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="charNoSpaceCount">0</div>
+        <div class="stat-label">Chars (no spaces)</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="sentenceCount">0</div>
+        <div class="stat-label">Sentences</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="paragraphCount">0</div>
+        <div class="stat-label">Paragraphs</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="readingTime">0</div>
+        <div class="stat-label">Min to read</div>
+      </div>
+    </div>
+
+    <div class="text-preview">
+      <label>Text Preview:</label>
+      <div id="textPreview" class="preview-box">Select text on the page or click "Entire Page"</div>
+    </div>
+
+    <button id="refreshBtn" class="btn-refresh">Refresh Count</button>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
