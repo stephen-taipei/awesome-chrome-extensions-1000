@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Screenshot Capture</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Screenshot</h1>
+    </header>
+
+    <div class="capture-options">
+      <button id="captureVisible" class="capture-btn">
+        <span class="icon">📷</span>
+        <span class="label">Visible Area</span>
+      </button>
+    </div>
+
+    <div id="previewSection" class="preview-section hidden">
+      <label>Preview:</label>
+      <div class="preview-container">
+        <img id="previewImage" src="" alt="Screenshot preview">
+      </div>
+      <div class="actions">
+        <button id="downloadBtn" class="action-btn primary">
+          <span>⬇️</span> Download
+        </button>
+        <button id="copyBtn" class="action-btn secondary">
+          <span>📋</span> Copy
+        </button>
+      </div>
+    </div>
+
+    <div class="format-options">
+      <label>Format:</label>
+      <div class="format-buttons">
+        <button class="format-btn active" data-format="png">PNG</button>
+        <button class="format-btn" data-format="jpeg">JPEG</button>
+      </div>
+    </div>
+
+    <div id="historySection" class="history-section">
+      <label>Recent Screenshots</label>
+      <div id="historyList" class="history-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
