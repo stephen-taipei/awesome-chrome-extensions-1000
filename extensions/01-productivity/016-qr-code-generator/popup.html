@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QR Code Generator</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>QR Code Generator</h1>
+    </header>
+
+    <div class="tabs">
+      <button class="tab active" data-tab="url">Current URL</button>
+      <button class="tab" data-tab="custom">Custom Text</button>
+    </div>
+
+    <div id="customInput" class="custom-input hidden">
+      <textarea id="customText" placeholder="Enter text or URL..."></textarea>
+      <button id="generateBtn" class="btn-generate">Generate QR</button>
+    </div>
+
+    <div class="qr-display">
+      <div id="qrCode" class="qr-code"></div>
+      <div id="qrText" class="qr-text"></div>
+    </div>
+
+    <div class="actions">
+      <button id="downloadBtn" class="btn-action">
+        <span>⬇️</span> Download
+      </button>
+      <button id="copyBtn" class="btn-action">
+        <span>📋</span> Copy
+      </button>
+    </div>
+
+    <div class="size-selector">
+      <label>Size:</label>
+      <div class="sizes">
+        <button class="size-btn" data-size="128">S</button>
+        <button class="size-btn active" data-size="200">M</button>
+        <button class="size-btn" data-size="300">L</button>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
