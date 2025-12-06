@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tab Counter</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Tab Counter</h1>
+    </header>
+
+    <div class="main-count">
+      <div id="totalTabs" class="count-number">0</div>
+      <div class="count-label">Open Tabs</div>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-value" id="windowCount">0</div>
+        <div class="stat-label">Windows</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="pinnedCount">0</div>
+        <div class="stat-label">Pinned</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="audioCount">0</div>
+        <div class="stat-label">Playing Audio</div>
+      </div>
+    </div>
+
+    <div class="domains-section">
+      <label>Top Domains</label>
+      <div id="domainsList" class="domains-list"></div>
+    </div>
+
+    <div class="actions">
+      <button id="closeAllDupes" class="action-btn">
+        Close Duplicate Tabs
+        <span id="dupeCount" class="badge">0</span>
+      </button>
+    </div>
+
+    <div class="memory-indicator">
+      <label>Estimated Memory Usage</label>
+      <div class="memory-bar">
+        <div id="memoryFill" class="memory-fill"></div>
+      </div>
+      <div id="memoryText" class="memory-text">Calculating...</div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
