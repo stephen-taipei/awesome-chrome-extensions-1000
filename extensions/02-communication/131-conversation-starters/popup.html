@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conversation Starters</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Conversations</h1>
+    </header>
+
+    <!-- Situation Selector -->
+    <div class="selector-section">
+      <select id="situation">
+        <option value="networking">Networking Event</option>
+        <option value="party">Party/Social</option>
+        <option value="date">First Date</option>
+        <option value="coworker">New Coworker</option>
+        <option value="neighbor">Neighbor</option>
+      </select>
+      <button id="getStarter" class="get-btn">Get Starter</button>
+    </div>
+
+    <!-- Result -->
+    <div id="starterResult" class="starter-result hidden"></div>
+
+    <!-- Add Custom -->
+    <div class="add-section">
+      <input type="text" id="customStarter" placeholder="Add custom starter...">
+      <button id="addBtn" class="add-btn">+</button>
+    </div>
+
+    <!-- Favorites -->
+    <div class="section">
+      <div class="section-title">Saved Favorites</div>
+      <div id="favoritesList" class="favorites-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

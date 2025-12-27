@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#22c55e"/>
+      <stop offset="100%" style="stop-color:#16a34a"/>
+    </linearGradient>
+  </defs>
+  <circle cx="64" cy="64" r="60" fill="url(#grad)"/>
+
+  <!-- Speech bubbles -->
+  <ellipse cx="50" cy="54" rx="26" ry="20" fill="white"/>
+  <polygon points="42,70 50,74 46,62" fill="white"/>
+
+  <ellipse cx="78" cy="74" rx="22" ry="16" fill="#dcfce7"/>
+  <polygon points="86,86 78,90 82,80" fill="#dcfce7"/>
+
+  <!-- Dots in first bubble -->
+  <circle cx="42" cy="54" r="3" fill="#22c55e"/>
+  <circle cx="50" cy="54" r="3" fill="#22c55e"/>
+  <circle cx="58" cy="54" r="3" fill="#22c55e"/>
+</svg>
