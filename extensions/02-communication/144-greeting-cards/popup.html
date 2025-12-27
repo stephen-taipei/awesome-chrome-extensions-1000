@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Greeting Cards</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🎴 Greeting Cards</h1>
+      <div class="header-sub">Messages for every occasion</div>
+    </header>
+
+    <!-- Occasion Selector -->
+    <div class="occasion-section">
+      <div class="section-label">Select Occasion</div>
+      <div class="occasion-grid">
+        <button class="occasion-btn active" data-occasion="birthday">🎂 Birthday</button>
+        <button class="occasion-btn" data-occasion="holiday">🎄 Holiday</button>
+        <button class="occasion-btn" data-occasion="congrats">🎉 Congrats</button>
+        <button class="occasion-btn" data-occasion="thanks">💝 Thanks</button>
+        <button class="occasion-btn" data-occasion="sympathy">💐 Sympathy</button>
+        <button class="occasion-btn" data-occasion="love">❤️ Love</button>
+      </div>
+    </div>
+
+    <!-- Card Builder -->
+    <div class="builder">
+      <input type="text" id="recipient" placeholder="Recipient's name">
+      <textarea id="message" placeholder="Your personal message..."></textarea>
+      <input type="text" id="sender" placeholder="Your name">
+    </div>
+
+    <!-- Actions -->
+    <div class="actions">
+      <button id="copyCard" class="copy-btn">Copy Card</button>
+      <button id="saveCard" class="save-btn">Save</button>
+    </div>
+
+    <!-- Saved Cards -->
+    <div class="section">
+      <div class="section-title">Saved Cards</div>
+      <div id="cardList" class="card-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
