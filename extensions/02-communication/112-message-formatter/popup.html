@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Message Formatter</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Message Formatter</h1>
+    </header>
+
+    <!-- Input -->
+    <div class="input-section">
+      <textarea id="inputText" placeholder="Enter your text..."></textarea>
+    </div>
+
+    <!-- Style Buttons -->
+    <div class="styles-section">
+      <button class="style-btn" data-style="bold">𝗕𝗼𝗹𝗱</button>
+      <button class="style-btn" data-style="italic">𝘐𝘵𝘢𝘭𝘪𝘤</button>
+      <button class="style-btn" data-style="bolditalic">𝘽𝙤𝙡𝙙 𝙄𝙩𝙖𝙡𝙞𝙘</button>
+      <button class="style-btn" data-style="script">𝓢𝓬𝓻𝓲𝓹𝓽</button>
+      <button class="style-btn" data-style="fraktur">𝔉𝔯𝔞𝔨𝔱𝔲𝔯</button>
+      <button class="style-btn" data-style="double">𝔻𝕠𝕦𝕓𝕝𝕖</button>
+      <button class="style-btn" data-style="mono">𝙼𝚘𝚗𝚘</button>
+      <button class="style-btn" data-style="circled">Ⓒⓘⓡⓒⓛⓔⓓ</button>
+      <button class="style-btn" data-style="squared">🅂🅀🅄🄰🅁🄴🄳</button>
+      <button class="style-btn" data-style="flip">dılℲ</button>
+      <button class="style-btn" data-style="mirror">ɿoɿɿiM</button>
+      <button class="style-btn" data-style="strikethrough">S̶t̶r̶i̶k̶e̶</button>
+    </div>
+
+    <!-- Output -->
+    <div class="output-section">
+      <div class="output-label">Formatted Text</div>
+      <div id="outputText" class="output-text"></div>
+      <button id="copyBtn" class="copy-btn">Copy to Clipboard</button>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
