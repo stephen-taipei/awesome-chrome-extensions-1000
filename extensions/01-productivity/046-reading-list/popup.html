@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reading List</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📚 Reading List</h1>
+      <button id="addCurrentBtn" class="add-btn" title="加入目前頁面">+</button>
+    </header>
+
+    <div class="tabs">
+      <button class="tab active" data-tab="unread">
+        待讀 <span id="unreadCount" class="count">0</span>
+      </button>
+      <button class="tab" data-tab="read">
+        已讀 <span id="readCount" class="count">0</span>
+      </button>
+    </div>
+
+    <main>
+      <div id="unreadList" class="article-list"></div>
+      <div id="readList" class="article-list hidden"></div>
+      <div id="emptyState" class="empty-state">
+        <div class="empty-icon">📖</div>
+        <div>沒有待讀文章</div>
+        <div class="empty-hint">點擊 + 加入目前頁面</div>
+      </div>
+    </main>
+
+    <footer>
+      <button id="clearReadBtn" class="footer-btn" disabled>
+        🗑️ 清除已讀
+      </button>
+    </footer>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1"/>
+      <stop offset="100%" style="stop-color:#4f46e5"/>
+    </linearGradient>
+  </defs>
+  <circle cx="64" cy="64" r="60" fill="url(#grad)"/>
+  <!-- Book pages stack -->
+  <rect x="28" y="35" width="56" height="8" rx="2" fill="#c7d2fe"/>
+  <rect x="32" y="40" width="56" height="8" rx="2" fill="#a5b4fc"/>
+  <rect x="36" y="45" width="56" height="8" rx="2" fill="#818cf8"/>
+  <!-- Open book -->
+  <path d="M24 55 Q24 52 28 52 L60 52 Q64 52 64 56 L64 96 Q64 92 60 92 L28 92 Q24 92 24 88 Z" fill="white"/>
+  <path d="M104 55 Q104 52 100 52 L68 52 Q64 52 64 56 L64 96 Q64 92 68 92 L100 92 Q104 92 104 88 Z" fill="white"/>
+  <!-- Book spine -->
+  <line x1="64" y1="52" x2="64" y2="96" stroke="#e0e7ff" stroke-width="2"/>
+  <!-- Text lines -->
+  <line x1="32" y1="62" x2="56" y2="62" stroke="#c7d2fe" stroke-width="2"/>
+  <line x1="32" y1="70" x2="52" y2="70" stroke="#c7d2fe" stroke-width="2"/>
+  <line x1="32" y1="78" x2="54" y2="78" stroke="#c7d2fe" stroke-width="2"/>
+  <line x1="72" y1="62" x2="96" y2="62" stroke="#c7d2fe" stroke-width="2"/>
+  <line x1="72" y1="70" x2="92" y2="70" stroke="#c7d2fe" stroke-width="2"/>
+  <line x1="72" y1="78" x2="94" y2="78" stroke="#c7d2fe" stroke-width="2"/>
+  <!-- Bookmark -->
+  <path d="M82 45 L82 60 L86 56 L90 60 L90 45" fill="#f43f5e"/>
+</svg>
