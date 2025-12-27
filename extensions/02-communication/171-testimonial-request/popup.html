@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testimonial Request</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Testimonial Request</h1>
+      <div class="header-sub">Get great reviews from clients</div>
+    </header>
+
+    <!-- Request Form -->
+    <div class="request-form">
+      <select id="requestType">
+        <option value="product">Product Review</option>
+        <option value="service">Service Review</option>
+        <option value="linkedin">LinkedIn Recommendation</option>
+        <option value="video">Video Testimonial</option>
+        <option value="case-study">Case Study Participation</option>
+      </select>
+
+      <input type="text" id="clientName" placeholder="Client's name">
+      <input type="text" id="productService" placeholder="Product/Service they used">
+      <textarea id="context" placeholder="What they achieved or experienced..."></textarea>
+      <input type="text" id="platform" placeholder="Where to leave review (optional)">
+    </div>
+
+    <!-- Actions -->
+    <div class="actions">
+      <button id="copyRequest" class="copy-btn">Copy Request</button>
+      <button id="saveRequest" class="save-btn">Save</button>
+    </div>
+
+    <!-- Saved -->
+    <div class="section">
+      <div class="section-title">Saved Requests</div>
+      <div id="requestList" class="request-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

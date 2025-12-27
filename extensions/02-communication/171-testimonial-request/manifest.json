@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Testimonial Request",
+  "version": "1.0.0",
+  "description": "Request testimonials and reviews",
+  "permissions": [
+    "storage"
+  ],
+  "action": {
+    "default_title": "Testimonial Request",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
