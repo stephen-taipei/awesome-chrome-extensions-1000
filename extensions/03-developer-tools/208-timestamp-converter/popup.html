@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Timestamp Converter</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <div class="container">
+    <header><h1>Timestamp Converter</h1><div class="header-sub">Unix timestamp tools</div></header>
+    <div class="current-time"><div class="label">Current Unix Timestamp</div><div id="currentTs" class="timestamp"></div></div>
+    <div class="converter-section">
+      <div class="section-title">Unix to Date</div>
+      <div class="input-row"><input type="text" id="unixInput" placeholder="Enter Unix timestamp"><button id="toDateBtn">Convert</button></div>
+      <input type="text" id="dateOutput" readonly placeholder="Result...">
+    </div>
+    <div class="converter-section">
+      <div class="section-title">Date to Unix</div>
+      <input type="datetime-local" id="dateInput">
+      <div class="input-row"><button id="toUnixBtn">Convert</button><input type="text" id="unixOutput" readonly placeholder="Result..."></div>
+    </div>
+    <div id="status" class="status"></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

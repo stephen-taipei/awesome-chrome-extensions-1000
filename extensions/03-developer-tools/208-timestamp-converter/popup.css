@@ -1,0 +1,18 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Monaco', 'Menlo', monospace; font-size: 13px; background: linear-gradient(180deg, #1e1e1e 0%, #2d2d2d 100%); color: #d4d4d4; }
+.container { width: 360px; min-height: 460px; }
+header { text-align: center; padding: 14px 16px; background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%); color: white; }
+header h1 { font-size: 18px; font-weight: 600; }
+.header-sub { font-size: 11px; opacity: 0.9; margin-top: 4px; }
+.current-time { text-align: center; padding: 16px; background: #252526; margin: 12px 16px; border-radius: 8px; }
+.current-time .label { font-size: 10px; color: #a1a1aa; text-transform: uppercase; margin-bottom: 6px; }
+.current-time .timestamp { font-size: 20px; font-weight: 600; color: #818cf8; cursor: pointer; }
+.converter-section { padding: 12px 16px; }
+.section-title { font-size: 10px; font-weight: 600; color: #6366f1; text-transform: uppercase; margin-bottom: 8px; }
+.input-row { display: flex; gap: 8px; margin-bottom: 8px; }
+.input-row input { flex: 1; }
+.converter-section input { width: 100%; padding: 10px; border: 2px solid #3c3c3c; border-radius: 6px; font-family: inherit; font-size: 11px; background: #252526; color: #d4d4d4; margin-bottom: 8px; }
+.converter-section input:focus { outline: none; border-color: #6366f1; }
+.converter-section input[readonly] { color: #818cf8; }
+.converter-section button { padding: 10px 16px; border: none; border-radius: 6px; font-size: 11px; font-weight: 600; cursor: pointer; background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%); color: white; white-space: nowrap; }
+.status { padding: 8px 16px; font-size: 11px; text-align: center; color: #4ade80; }
