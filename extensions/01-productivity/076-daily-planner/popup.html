@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Planner</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <button id="prevDay" class="nav-btn">◀</button>
+      <div class="header-center">
+        <h1>📅 Daily Planner</h1>
+        <div id="currentDate" class="current-date"></div>
+      </div>
+      <button id="nextDay" class="nav-btn">▶</button>
+    </header>
+
+    <!-- Progress -->
+    <div class="progress-section">
+      <div class="progress-bar">
+        <div id="progressFill" class="progress-fill"></div>
+      </div>
+      <span id="progressText" class="progress-text">0% 完成</span>
+    </div>
+
+    <!-- Time Blocks -->
+    <div id="timeBlocks" class="time-blocks"></div>
+
+    <!-- Add Block -->
+    <div class="add-section">
+      <input type="text" id="taskInput" placeholder="新增任務...">
+      <div class="add-row">
+        <input type="time" id="startTime" value="09:00">
+        <select id="duration">
+          <option value="30">30分</option>
+          <option value="60" selected>1小時</option>
+          <option value="90">1.5小時</option>
+          <option value="120">2小時</option>
+        </select>
+        <button id="addBtn" class="add-btn">+</button>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
