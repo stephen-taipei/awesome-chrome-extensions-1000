@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pitch Deck Notes</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🎯 Pitch Deck Notes</h1>
+      <div class="header-sub">Ace your presentations</div>
+    </header>
+
+    <!-- Pitch Section Selector -->
+    <div class="section-selector">
+      <button class="section-btn active" data-section="problem">Problem</button>
+      <button class="section-btn" data-section="solution">Solution</button>
+      <button class="section-btn" data-section="market">Market</button>
+      <button class="section-btn" data-section="traction">Traction</button>
+      <button class="section-btn" data-section="ask">Ask</button>
+    </div>
+
+    <!-- Notes Area -->
+    <div class="notes-area">
+      <div class="current-section">
+        <span id="sectionIcon">💡</span>
+        <span id="sectionName">Problem</span>
+      </div>
+      <textarea id="notes" placeholder="Enter your talking points for this section..."></textarea>
+    </div>
+
+    <!-- Actions -->
+    <div class="actions">
+      <button id="saveNotes" class="save-btn">Save Notes</button>
+      <button id="copyAll" class="copy-btn">Copy All</button>
+    </div>
+
+    <!-- Saved Pitches -->
+    <div class="section">
+      <div class="section-title">Saved Pitches</div>
+      <div id="pitchList" class="pitch-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
