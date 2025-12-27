@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#84cc16"/>
+      <stop offset="100%" style="stop-color:#65a30d"/>
+    </linearGradient>
+  </defs>
+  <circle cx="64" cy="64" r="60" fill="url(#grad)"/>
+
+  <!-- Clipboard -->
+  <rect x="35" y="30" width="58" height="70" rx="4" fill="white"/>
+  <rect x="48" y="24" width="32" height="12" rx="4" fill="#d9f99d"/>
+  <circle cx="64" cy="30" r="4" fill="#65a30d"/>
+
+  <!-- Checkboxes -->
+  <rect x="42" y="45" width="12" height="12" rx="2" fill="#ecfccb" stroke="#84cc16" stroke-width="2"/>
+  <path d="M45 51 L48 54 L53 48" stroke="#65a30d" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="42" y="62" width="12" height="12" rx="2" fill="#ecfccb" stroke="#84cc16" stroke-width="2"/>
+  <path d="M45 68 L48 71 L53 65" stroke="#65a30d" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="42" y="79" width="12" height="12" rx="2" fill="#ecfccb" stroke="#84cc16" stroke-width="2"/>
+
+  <!-- Lines -->
+  <rect x="60" y="48" width="26" height="6" rx="2" fill="#d9f99d"/>
+  <rect x="60" y="65" width="26" height="6" rx="2" fill="#d9f99d"/>
+  <rect x="60" y="82" width="26" height="6" rx="2" fill="#d9f99d"/>
+
+  <!-- Star rating -->
+  <g transform="translate(72, 35) scale(0.4)">
+    <path d="M12 2 L15 8 L22 9 L17 14 L18 21 L12 18 L6 21 L7 14 L2 9 L9 8 Z" fill="#fbbf24"/>
+  </g>
+</svg>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Peer Review</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Peer Review</h1>
+      <div class="header-sub">Constructive feedback templates</div>
+    </header>
+
+    <!-- Review Form -->
+    <div class="review-form">
+      <select id="reviewType">
+        <option value="performance">Performance Review</option>
+        <option value="code">Code Review</option>
+        <option value="project">Project Review</option>
+        <option value="360">360 Feedback</option>
+        <option value="skills">Skills Assessment</option>
+        <option value="general">General Feedback</option>
+      </select>
+
+      <input type="text" id="colleague" placeholder="Colleague's name">
+      <textarea id="strengths" placeholder="Key strengths observed..."></textarea>
+      <textarea id="achievements" placeholder="Notable achievements..."></textarea>
+      <textarea id="improvements" placeholder="Areas for improvement..."></textarea>
+      <textarea id="suggestions" placeholder="Suggestions for growth..."></textarea>
+    </div>
+
+    <!-- Actions -->
+    <div class="actions">
+      <button id="copyReview" class="copy-btn">Copy Review</button>
+      <button id="saveReview" class="save-btn">Save</button>
+    </div>
+
+    <!-- Saved -->
+    <div class="section">
+      <div class="section-title">Saved Reviews</div>
+      <div id="reviewList" class="review-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
