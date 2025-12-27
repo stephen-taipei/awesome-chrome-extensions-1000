@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Note Templates</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Note Templates</h1>
+      <button id="createBtn" class="icon-btn" title="Create template">+</button>
+    </header>
+
+    <main>
+      <div class="tabs">
+        <button class="tab active" data-tab="templates">範本庫</button>
+        <button class="tab" data-tab="custom">自訂範本</button>
+      </div>
+
+      <!-- Templates List -->
+      <div id="templatesView" class="tab-content active">
+        <div id="templatesList" class="templates-list"></div>
+      </div>
+
+      <!-- Custom Templates -->
+      <div id="customView" class="tab-content">
+        <div id="customList" class="templates-list"></div>
+      </div>
+
+      <!-- Preview/Editor Modal -->
+      <div id="previewModal" class="modal hidden">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 id="modalTitle">範本預覽</h2>
+            <button id="closeModalBtn" class="close-btn">×</button>
+          </div>
+          <div class="modal-body">
+            <textarea id="previewContent" readonly></textarea>
+          </div>
+          <div class="modal-footer">
+            <button id="copyBtn" class="btn">📋 複製</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Editor Modal -->
+      <div id="editorModal" class="modal hidden">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 id="editorTitle">新增範本</h2>
+            <button id="closeEditorBtn" class="close-btn">×</button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label>範本名稱</label>
+              <input type="text" id="templateName" placeholder="輸入範本名稱...">
+            </div>
+            <div class="form-group">
+              <label>分類</label>
+              <select id="templateCategory">
+                <option value="meeting">會議</option>
+                <option value="report">報告</option>
+                <option value="note">筆記</option>
+                <option value="journal">日記</option>
+                <option value="other">其他</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>內容 <span class="hint">(可用變數: {{date}}, {{time}}, {{weekday}})</span></label>
+              <textarea id="templateContent" rows="8" placeholder="輸入範本內容..."></textarea>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button id="deleteTemplateBtn" class="btn btn-danger hidden">刪除</button>
+            <button id="saveTemplateBtn" class="btn btn-primary">儲存</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div id="toast" class="toast hidden"></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
