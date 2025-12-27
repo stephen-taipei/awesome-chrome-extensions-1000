@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Journal</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Daily Journal</h1>
+      <div class="header-actions">
+        <button id="calendarBtn" class="icon-btn" title="Calendar view">📅</button>
+        <button id="statsBtn" class="icon-btn" title="Statistics">📊</button>
+      </div>
+    </header>
+
+    <main id="mainView">
+      <!-- Today's Journal View -->
+      <div id="journalView" class="view active">
+        <div class="date-header">
+          <button id="prevDay" class="nav-btn">◀</button>
+          <span id="currentDate"></span>
+          <button id="nextDay" class="nav-btn">▶</button>
+        </div>
+
+        <div class="mood-section">
+          <label>今天心情如何？</label>
+          <div class="mood-picker" id="moodPicker">
+            <button class="mood-btn" data-mood="great" title="很棒">😄</button>
+            <button class="mood-btn" data-mood="good" title="不錯">🙂</button>
+            <button class="mood-btn" data-mood="neutral" title="普通">😐</button>
+            <button class="mood-btn" data-mood="bad" title="不好">😔</button>
+            <button class="mood-btn" data-mood="terrible" title="很糟">😢</button>
+          </div>
+        </div>
+
+        <div class="journal-section">
+          <label for="journalContent">今日記事</label>
+          <textarea id="journalContent" placeholder="今天發生了什麼事？你有什麼想法或感受？"></textarea>
+        </div>
+
+        <div class="tags-section">
+          <label>標籤</label>
+          <div class="tags-container">
+            <div id="selectedTags" class="selected-tags"></div>
+            <input type="text" id="tagInput" placeholder="新增標籤..." maxlength="20">
+          </div>
+          <div id="suggestedTags" class="suggested-tags"></div>
+        </div>
+
+        <div class="actions">
+          <span id="saveStatus" class="save-status"></span>
+          <button id="exportBtn" class="action-btn">匯出</button>
+        </div>
+      </div>
+
+      <!-- Calendar View -->
+      <div id="calendarView" class="view">
+        <div class="calendar-header">
+          <button id="prevMonth" class="nav-btn">◀</button>
+          <span id="calendarMonth"></span>
+          <button id="nextMonth" class="nav-btn">▶</button>
+        </div>
+        <div class="calendar-weekdays">
+          <span>日</span><span>一</span><span>二</span><span>三</span><span>四</span><span>五</span><span>六</span>
+        </div>
+        <div id="calendarDays" class="calendar-days"></div>
+        <button id="backToJournal" class="back-btn">返回日記</button>
+      </div>
+
+      <!-- Stats View -->
+      <div id="statsView" class="view">
+        <h2>心情統計</h2>
+        <div class="stats-period">
+          <button class="period-btn active" data-period="week">本週</button>
+          <button class="period-btn" data-period="month">本月</button>
+          <button class="period-btn" data-period="year">今年</button>
+        </div>
+        <div id="moodChart" class="mood-chart"></div>
+        <div id="statsDetails" class="stats-details"></div>
+        <div class="top-tags">
+          <h3>常用標籤</h3>
+          <div id="topTags"></div>
+        </div>
+        <button id="backFromStats" class="back-btn">返回日記</button>
+      </div>
+    </main>
+
+    <div id="toast" class="toast hidden"></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
