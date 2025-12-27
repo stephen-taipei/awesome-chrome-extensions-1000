@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work Log</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📋 Work Log</h1>
+      <div id="dateDisplay" class="date-display"></div>
+    </header>
+
+    <!-- Stats -->
+    <div class="stats-card">
+      <div class="stat">
+        <span id="todayCount" class="stat-value">0</span>
+        <span class="stat-label">Today</span>
+      </div>
+      <div class="stat">
+        <span id="weekCount" class="stat-value">0</span>
+        <span class="stat-label">This Week</span>
+      </div>
+      <div class="stat">
+        <span id="todayHours" class="stat-value">0h</span>
+        <span class="stat-label">Hours</span>
+      </div>
+    </div>
+
+    <!-- Quick Log -->
+    <div class="log-section">
+      <textarea id="logEntry" placeholder="What did you work on?"></textarea>
+      <div class="log-row">
+        <select id="category">
+          <option value="development">💻 Development</option>
+          <option value="meeting">👥 Meeting</option>
+          <option value="planning">📝 Planning</option>
+          <option value="review">🔍 Review</option>
+          <option value="research">📚 Research</option>
+          <option value="admin">📁 Admin</option>
+          <option value="other">📌 Other</option>
+        </select>
+        <input type="number" id="duration" placeholder="Duration (min)" min="1">
+        <button id="logBtn" class="log-btn">Log</button>
+      </div>
+    </div>
+
+    <!-- Today's Logs -->
+    <div class="section">
+      <div class="section-title">Today's Activity</div>
+      <div id="logsList" class="logs-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
