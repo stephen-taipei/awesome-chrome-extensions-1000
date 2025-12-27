@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>URL Encoder</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <div class="container">
+    <header><h1>URL Encoder</h1><div class="header-sub">Encode & decode URLs</div></header>
+    <div class="encoder-form">
+      <div class="section-title">Input</div>
+      <textarea id="input" placeholder="Enter URL or text..."></textarea>
+      <div class="options"><label><input type="checkbox" id="encodeComponent" checked> Component mode</label></div>
+    </div>
+    <div class="actions">
+      <button id="encodeBtn" class="action-btn">Encode</button>
+      <button id="decodeBtn" class="action-btn">Decode</button>
+      <button id="copyBtn" class="action-btn secondary">Copy</button>
+    </div>
+    <div id="status" class="status"></div>
+    <div class="output-section"><div class="section-title">Output</div><textarea id="output" readonly placeholder="Result..."></textarea></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
