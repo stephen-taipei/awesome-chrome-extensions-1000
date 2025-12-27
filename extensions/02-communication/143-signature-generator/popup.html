@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signature Generator</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>✍️ Signature</h1>
+      <div class="header-sub">Professional email signatures</div>
+    </header>
+
+    <!-- Builder -->
+    <div class="builder">
+      <div class="form-row">
+        <input type="text" id="name" placeholder="Full Name">
+      </div>
+      <div class="form-row">
+        <input type="text" id="title" placeholder="Job Title">
+      </div>
+      <div class="form-row">
+        <input type="text" id="company" placeholder="Company">
+      </div>
+      <div class="form-row half">
+        <input type="text" id="phone" placeholder="Phone">
+        <input type="text" id="email" placeholder="Email">
+      </div>
+      <div class="form-row">
+        <input type="text" id="website" placeholder="Website (optional)">
+      </div>
+    </div>
+
+    <!-- Style -->
+    <div class="style-section">
+      <div class="section-label">Style</div>
+      <div class="style-options">
+        <button class="style-btn active" data-style="professional">Professional</button>
+        <button class="style-btn" data-style="minimal">Minimal</button>
+        <button class="style-btn" data-style="creative">Creative</button>
+      </div>
+    </div>
+
+    <!-- Actions -->
+    <div class="actions">
+      <button id="copySignature" class="copy-btn">Copy Signature</button>
+      <button id="saveSignature" class="save-btn">Save</button>
+    </div>
+
+    <!-- Saved Signatures -->
+    <div class="section">
+      <div class="section-title">Saved Signatures</div>
+      <div id="signatureList" class="signature-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
