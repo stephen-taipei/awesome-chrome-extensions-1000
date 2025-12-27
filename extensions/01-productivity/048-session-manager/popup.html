@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Session Manager</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>💾 Session Manager</h1>
+      <button id="saveSessionBtn" class="save-btn">儲存目前分頁</button>
+    </header>
+
+    <div class="current-info">
+      <span id="currentTabCount">0</span> 個分頁開啟中
+    </div>
+
+    <main>
+      <div id="sessionList" class="session-list"></div>
+      <div id="emptyState" class="empty-state">
+        <div class="empty-icon">📁</div>
+        <div>沒有已儲存的工作階段</div>
+        <div class="empty-hint">點擊上方按鈕儲存目前分頁</div>
+      </div>
+    </main>
+
+    <!-- Save Session Modal -->
+    <div id="saveModal" class="modal hidden">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>儲存工作階段</h2>
+          <button class="close-btn" data-close="saveModal">×</button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label>名稱</label>
+            <input type="text" id="sessionName" placeholder="例如：工作專案、研究資料...">
+          </div>
+          <div class="tab-preview">
+            <div class="preview-header">將儲存 <span id="previewCount">0</span> 個分頁</div>
+            <div id="tabPreviewList" class="preview-list"></div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button id="confirmSaveBtn" class="btn btn-primary">儲存</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Restore Options Modal -->
+    <div id="restoreModal" class="modal hidden">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 id="restoreModalTitle">還原工作階段</h2>
+          <button class="close-btn" data-close="restoreModal">×</button>
+        </div>
+        <div class="modal-body">
+          <div class="restore-options">
+            <button class="restore-option" data-action="add">
+              <span class="option-icon">➕</span>
+              <span class="option-text">
+                <strong>新增分頁</strong>
+                <small>保留目前分頁，新增工作階段的分頁</small>
+              </span>
+            </button>
+            <button class="restore-option" data-action="replace">
+              <span class="option-icon">🔄</span>
+              <span class="option-text">
+                <strong>取代分頁</strong>
+                <small>關閉目前分頁，只開啟工作階段的分頁</small>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
