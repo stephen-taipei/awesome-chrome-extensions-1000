@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>ASCII Table</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <div class="container">
+    <header><h1>ASCII Table</h1><div class="header-sub">Character code reference</div></header>
+    <div class="search-section"><input type="text" id="search" placeholder="Search character or code..."></div>
+    <div class="converter">
+      <input type="text" id="charInput" placeholder="Char" maxlength="1">
+      <span>=</span>
+      <input type="text" id="decInput" placeholder="Dec">
+      <span>=</span>
+      <input type="text" id="hexInput" placeholder="Hex">
+    </div>
+    <div class="table-section"><div id="asciiTable" class="ascii-table"></div></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

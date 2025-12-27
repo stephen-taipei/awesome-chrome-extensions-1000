@@ -1,0 +1,19 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Monaco', 'Menlo', monospace; font-size: 13px; background: linear-gradient(180deg, #1e1e1e 0%, #2d2d2d 100%); color: #d4d4d4; }
+.container { width: 380px; min-height: 500px; }
+header { text-align: center; padding: 12px 16px; background: linear-gradient(135deg, #84cc16 0%, #65a30d 100%); color: white; }
+header h1 { font-size: 18px; font-weight: 600; }
+.header-sub { font-size: 11px; opacity: 0.9; margin-top: 4px; }
+.search-section { padding: 12px 16px 8px; }
+.search-section input { width: 100%; padding: 10px; border: 2px solid #3c3c3c; border-radius: 6px; font-family: inherit; font-size: 11px; background: #252526; color: #d4d4d4; }
+.search-section input:focus { outline: none; border-color: #84cc16; }
+.converter { display: flex; align-items: center; gap: 8px; padding: 0 16px 12px; }
+.converter input { flex: 1; padding: 8px; border: 2px solid #3c3c3c; border-radius: 6px; font-family: inherit; font-size: 11px; background: #252526; color: #84cc16; text-align: center; }
+.converter input:focus { outline: none; border-color: #84cc16; }
+.converter span { color: #a1a1aa; }
+.table-section { padding: 0 16px 16px; }
+.ascii-table { display: grid; grid-template-columns: repeat(8, 1fr); gap: 4px; max-height: 280px; overflow-y: auto; }
+.ascii-cell { background: #252526; padding: 8px 4px; border-radius: 4px; text-align: center; cursor: pointer; font-size: 10px; }
+.ascii-cell:hover { background: #3c3c3c; }
+.ascii-cell .char { color: #84cc16; font-size: 12px; font-weight: bold; }
+.ascii-cell .code { color: #a1a1aa; font-size: 9px; }
