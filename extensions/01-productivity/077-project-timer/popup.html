@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Timer</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>⏱️ Project Timer</h1>
+    </header>
+
+    <!-- Active Timer -->
+    <div id="activeTimer" class="active-timer hidden">
+      <div class="timer-project" id="timerProject"></div>
+      <div class="timer-display" id="timerDisplay">00:00:00</div>
+      <div class="timer-controls">
+        <button id="pauseBtn" class="control-btn pause">⏸️</button>
+        <button id="stopBtn" class="control-btn stop">⏹️</button>
+      </div>
+    </div>
+
+    <!-- Projects List -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-title">專案列表</span>
+        <button id="addProjectBtn" class="add-btn">+</button>
+      </div>
+      <div id="projectsList" class="projects-list"></div>
+    </div>
+
+    <!-- Today's Summary -->
+    <div class="summary-section">
+      <div class="section-title">今日統計</div>
+      <div class="summary-stats">
+        <div class="summary-stat">
+          <span id="todayTotal" class="summary-value">0h 0m</span>
+          <span class="summary-label">總時數</span>
+        </div>
+        <div class="summary-stat">
+          <span id="todayProjects" class="summary-value">0</span>
+          <span class="summary-label">專案數</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add Project Form (hidden) -->
+    <div id="addForm" class="add-form hidden">
+      <input type="text" id="projectName" placeholder="專案名稱">
+      <div class="color-options">
+        <button class="color-btn" data-color="#ef4444" style="background:#ef4444"></button>
+        <button class="color-btn" data-color="#f59e0b" style="background:#f59e0b"></button>
+        <button class="color-btn" data-color="#22c55e" style="background:#22c55e"></button>
+        <button class="color-btn" data-color="#3b82f6" style="background:#3b82f6"></button>
+        <button class="color-btn selected" data-color="#8b5cf6" style="background:#8b5cf6"></button>
+        <button class="color-btn" data-color="#ec4899" style="background:#ec4899"></button>
+      </div>
+      <button id="saveProjectBtn" class="save-btn">建立專案</button>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
