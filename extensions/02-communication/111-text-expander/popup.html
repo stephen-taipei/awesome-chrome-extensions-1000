@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text Expander</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Text Expander</h1>
+    </header>
+
+    <!-- Add Snippet -->
+    <div class="add-section">
+      <div class="input-row">
+        <input type="text" id="shortcut" placeholder="Shortcut (e.g. /addr)">
+        <span class="arrow">→</span>
+      </div>
+      <textarea id="expansion" placeholder="Expansion text..."></textarea>
+      <button id="addSnippet" class="add-btn">Add Snippet</button>
+    </div>
+
+    <!-- Search -->
+    <div class="search-section">
+      <input type="text" id="search" placeholder="Search snippets...">
+    </div>
+
+    <!-- Snippets List -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-title">Your Snippets</span>
+        <span id="snippetCount" class="count-badge">0</span>
+      </div>
+      <div id="snippetsList" class="snippets-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
