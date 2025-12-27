@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>XML Formatter</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <div class="container">
+    <header><h1>XML Formatter</h1><div class="header-sub">Format & validate XML</div></header>
+    <div class="xml-form">
+      <textarea id="xmlInput" placeholder="Paste XML here..."></textarea>
+    </div>
+    <div class="actions">
+      <button id="formatBtn" class="action-btn">Format</button>
+      <button id="minifyBtn" class="action-btn">Minify</button>
+      <button id="copyBtn" class="action-btn secondary">Copy</button>
+    </div>
+    <div id="status" class="status"></div>
+    <div class="output-section"><div class="section-title">Output</div><textarea id="xmlOutput" readonly placeholder="Formatted output..."></textarea></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
