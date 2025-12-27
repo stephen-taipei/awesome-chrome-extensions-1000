@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quick Links</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🔗 Quick Links</h1>
+      <button id="addCurrentBtn" class="add-current-btn" title="添加當前頁面">+</button>
+    </header>
+
+    <!-- Search -->
+    <div class="search-section">
+      <input type="text" id="searchInput" placeholder="搜尋連結...">
+    </div>
+
+    <!-- Category Tabs -->
+    <div class="category-tabs">
+      <button class="cat-tab active" data-category="all">全部</button>
+      <button class="cat-tab" data-category="work">工作</button>
+      <button class="cat-tab" data-category="social">社交</button>
+      <button class="cat-tab" data-category="tools">工具</button>
+      <button class="cat-tab" data-category="other">其他</button>
+    </div>
+
+    <!-- Links Grid -->
+    <div id="linksGrid" class="links-grid"></div>
+
+    <!-- Add Form (hidden by default) -->
+    <div id="addForm" class="add-form hidden">
+      <div class="form-header">
+        <span>添加連結</span>
+        <button id="closeFormBtn" class="close-btn">×</button>
+      </div>
+      <input type="text" id="linkName" placeholder="連結名稱">
+      <input type="url" id="linkUrl" placeholder="網址">
+      <select id="linkCategory">
+        <option value="work">工作</option>
+        <option value="social">社交</option>
+        <option value="tools">工具</option>
+        <option value="other">其他</option>
+      </select>
+      <button id="saveBtn" class="save-btn">儲存</button>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
