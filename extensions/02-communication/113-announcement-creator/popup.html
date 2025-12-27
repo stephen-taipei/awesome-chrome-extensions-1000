@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Announcement Creator</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Announcement</h1>
+    </header>
+
+    <!-- Templates -->
+    <div class="templates">
+      <button class="template-btn active" data-template="news">📢 News</button>
+      <button class="template-btn" data-template="event">🎉 Event</button>
+      <button class="template-btn" data-template="update">🔄 Update</button>
+      <button class="template-btn" data-template="alert">⚠️ Alert</button>
+    </div>
+
+    <!-- Form -->
+    <div class="form-section">
+      <input type="text" id="title" placeholder="Announcement title...">
+      <textarea id="content" placeholder="Main content..."></textarea>
+      <input type="text" id="details" placeholder="Date, time, or extra details...">
+      <input type="text" id="cta" placeholder="Call to action (optional)...">
+    </div>
+
+    <!-- Preview -->
+    <div class="preview-section">
+      <div class="preview-label">Preview</div>
+      <div id="preview" class="preview-box"></div>
+    </div>
+
+    <!-- Actions -->
+    <div class="actions">
+      <button id="copyBtn" class="copy-btn">Copy Announcement</button>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
