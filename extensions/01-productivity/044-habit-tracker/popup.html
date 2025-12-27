@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Habit Tracker</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="header-left">
+        <h1>✨ Habit Tracker</h1>
+        <span id="dateDisplay" class="date-display"></span>
+      </div>
+      <button id="addBtn" class="icon-btn" title="新增習慣">+</button>
+    </header>
+
+    <div class="stats-bar">
+      <div class="stat">
+        <span class="stat-value" id="todayCount">0</span>
+        <span class="stat-label">今日完成</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value" id="totalHabits">0</span>
+        <span class="stat-label">習慣數量</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value" id="bestStreak">0</span>
+        <span class="stat-label">最佳連續</span>
+      </div>
+    </div>
+
+    <main>
+      <div id="habitList" class="habit-list"></div>
+      <div id="emptyState" class="empty-state">
+        <div class="empty-icon">🌱</div>
+        <div>開始培養好習慣</div>
+        <div class="empty-hint">點擊 + 新增第一個習慣</div>
+      </div>
+    </main>
+
+    <!-- Add Habit Modal -->
+    <div id="habitModal" class="modal hidden">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 id="modalTitle">新增習慣</h2>
+          <button id="closeModalBtn" class="close-btn">×</button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label>習慣名稱</label>
+            <input type="text" id="habitName" placeholder="例如：每天運動30分鐘">
+          </div>
+          <div class="form-group">
+            <label>圖示</label>
+            <div class="emoji-picker" id="emojiPicker">
+              <button class="emoji-btn selected" data-emoji="💪">💪</button>
+              <button class="emoji-btn" data-emoji="📖">📖</button>
+              <button class="emoji-btn" data-emoji="🧘">🧘</button>
+              <button class="emoji-btn" data-emoji="🏃">🏃</button>
+              <button class="emoji-btn" data-emoji="💤">💤</button>
+              <button class="emoji-btn" data-emoji="🥗">🥗</button>
+              <button class="emoji-btn" data-emoji="💧">💧</button>
+              <button class="emoji-btn" data-emoji="🎯">🎯</button>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button id="deleteHabitBtn" class="btn btn-danger hidden">刪除</button>
+          <button id="saveHabitBtn" class="btn btn-primary">儲存</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981"/>
+      <stop offset="100%" style="stop-color:#059669"/>
+    </linearGradient>
+  </defs>
+  <circle cx="64" cy="64" r="60" fill="url(#grad)"/>
+  <!-- Calendar/chart base -->
+  <rect x="28" y="38" width="72" height="56" rx="8" fill="white"/>
+  <!-- Week row indicators -->
+  <circle cx="40" cy="54" r="6" fill="#d1fae5"/>
+  <circle cx="56" cy="54" r="6" fill="#10b981"/>
+  <circle cx="72" cy="54" r="6" fill="#10b981"/>
+  <circle cx="88" cy="54" r="6" fill="#d1fae5"/>
+  <circle cx="40" cy="70" r="6" fill="#10b981"/>
+  <circle cx="56" cy="70" r="6" fill="#d1fae5"/>
+  <circle cx="72" cy="70" r="6" fill="#10b981"/>
+  <circle cx="88" cy="70" r="6" fill="#10b981"/>
+  <!-- Check marks -->
+  <path d="M53 52 L56 55 L60 50" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M69 52 L72 55 L76 50" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M37 68 L40 71 L44 66" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M69 68 L72 71 L76 66" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M85 68 L88 71 L92 66" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Flame for streak -->
+  <path d="M64 86 C60 82, 56 78, 56 74 C56 70, 60 68, 64 72 C68 68, 72 70, 72 74 C72 78, 68 82, 64 86" fill="#f97316"/>
+</svg>
