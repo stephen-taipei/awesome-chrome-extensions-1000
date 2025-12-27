@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Receipt Scanner</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🧾 Receipt Scanner</h1>
+    </header>
+
+    <!-- Stats -->
+    <div class="stats-card">
+      <div class="stat">
+        <span class="stat-value" id="totalReceipts">0</span>
+        <span class="stat-label">Receipts</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value" id="totalAmount">$0</span>
+        <span class="stat-label">This Month</span>
+      </div>
+    </div>
+
+    <!-- Add Receipt Form -->
+    <div class="add-section">
+      <div class="form-row">
+        <input type="text" id="storeName" placeholder="Store name">
+        <input type="number" id="amount" placeholder="Amount" step="0.01">
+      </div>
+      <div class="form-row">
+        <select id="category">
+          <option value="grocery">🛒 Grocery</option>
+          <option value="restaurant">🍽️ Restaurant</option>
+          <option value="gas">⛽ Gas</option>
+          <option value="shopping">🛍️ Shopping</option>
+          <option value="medical">💊 Medical</option>
+          <option value="utilities">💡 Utilities</option>
+          <option value="other">📌 Other</option>
+        </select>
+        <input type="date" id="receiptDate">
+      </div>
+      <textarea id="notes" placeholder="Notes (optional)"></textarea>
+      <button id="addBtn" class="add-btn">Save Receipt</button>
+    </div>
+
+    <!-- Filter -->
+    <div class="filter-section">
+      <select id="filterCategory">
+        <option value="all">All Categories</option>
+        <option value="grocery">🛒 Grocery</option>
+        <option value="restaurant">🍽️ Restaurant</option>
+        <option value="gas">⛽ Gas</option>
+        <option value="shopping">🛍️ Shopping</option>
+        <option value="medical">💊 Medical</option>
+        <option value="utilities">💡 Utilities</option>
+        <option value="other">📌 Other</option>
+      </select>
+    </div>
+
+    <!-- Receipts List -->
+    <div class="section">
+      <div class="section-title">Recent Receipts</div>
+      <div id="receiptsList" class="receipts-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
