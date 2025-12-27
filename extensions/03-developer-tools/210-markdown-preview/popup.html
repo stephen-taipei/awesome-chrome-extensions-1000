@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Markdown Preview</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <div class="container">
+    <header><h1>Markdown Preview</h1><div class="header-sub">Write and preview markdown</div></header>
+    <div class="tabs"><button id="writeTab" class="tab active">Write</button><button id="previewTab" class="tab">Preview</button></div>
+    <div id="writePane" class="pane active"><textarea id="markdown" placeholder="# Enter Markdown here..."></textarea></div>
+    <div id="previewPane" class="pane"><div id="preview" class="preview"></div></div>
+    <div class="actions"><button id="copyBtn" class="action-btn">Copy Markdown</button><button id="copyHtmlBtn" class="action-btn secondary">Copy HTML</button></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

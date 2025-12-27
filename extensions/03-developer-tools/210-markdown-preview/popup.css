@@ -1,0 +1,29 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 14px; background: #1a1a2e; color: #eaeaea; }
+.container { width: 400px; min-height: 500px; }
+header { text-align: center; padding: 12px 16px; background: linear-gradient(135deg, #0f3460 0%, #16213e 100%); color: white; }
+header h1 { font-size: 18px; font-weight: 600; }
+.header-sub { font-size: 11px; opacity: 0.8; margin-top: 4px; }
+.tabs { display: flex; border-bottom: 2px solid #16213e; }
+.tab { flex: 1; padding: 10px; border: none; background: transparent; color: #a1a1aa; font-size: 12px; font-weight: 600; cursor: pointer; }
+.tab.active { color: #e94560; border-bottom: 2px solid #e94560; margin-bottom: -2px; }
+.pane { display: none; }
+.pane.active { display: block; }
+#writePane textarea { width: 100%; height: 300px; padding: 16px; border: none; font-family: 'Monaco', 'Menlo', monospace; font-size: 12px; background: #16213e; color: #eaeaea; resize: none; }
+#writePane textarea:focus { outline: none; }
+.preview { padding: 16px; min-height: 300px; max-height: 300px; overflow-y: auto; background: #16213e; line-height: 1.6; }
+.preview h1, .preview h2, .preview h3 { color: #e94560; margin: 12px 0 8px; }
+.preview h1 { font-size: 20px; }
+.preview h2 { font-size: 17px; }
+.preview h3 { font-size: 15px; }
+.preview p { margin: 8px 0; }
+.preview code { background: #0f3460; padding: 2px 6px; border-radius: 4px; font-family: monospace; font-size: 12px; }
+.preview pre { background: #0f3460; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 10px 0; }
+.preview pre code { background: none; padding: 0; }
+.preview ul, .preview ol { margin: 8px 0 8px 20px; }
+.preview blockquote { border-left: 3px solid #e94560; padding-left: 12px; color: #a1a1aa; margin: 10px 0; }
+.preview a { color: #e94560; }
+.preview strong { color: #fff; }
+.actions { padding: 12px 16px; display: flex; gap: 8px; }
+.action-btn { flex: 1; padding: 10px; border: none; border-radius: 6px; font-size: 11px; font-weight: 600; cursor: pointer; background: linear-gradient(135deg, #e94560 0%, #0f3460 100%); color: white; }
+.action-btn.secondary { background: #16213e; border: 1px solid #0f3460; }
