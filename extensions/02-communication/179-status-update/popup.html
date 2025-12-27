@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Status Update</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Status Update</h1>
+      <div class="header-sub">Share your progress</div>
+    </header>
+
+    <!-- Status Form -->
+    <div class="status-form">
+      <select id="statusType">
+        <option value="daily">Daily Standup</option>
+        <option value="weekly">Weekly Report</option>
+        <option value="project">Project Update</option>
+        <option value="milestone">Milestone Achieved</option>
+        <option value="blocker">Blocker Alert</option>
+        <option value="general">General Status</option>
+      </select>
+
+      <input type="text" id="project" placeholder="Project or team name">
+      <textarea id="completed" placeholder="What did you complete?"></textarea>
+      <textarea id="inProgress" placeholder="What are you working on?"></textarea>
+      <textarea id="blockers" placeholder="Any blockers or concerns?"></textarea>
+    </div>
+
+    <!-- Actions -->
+    <div class="actions">
+      <button id="copyUpdate" class="copy-btn">Copy Update</button>
+      <button id="saveUpdate" class="save-btn">Save</button>
+    </div>
+
+    <!-- Saved -->
+    <div class="section">
+      <div class="section-title">Recent Updates</div>
+      <div id="updateList" class="update-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

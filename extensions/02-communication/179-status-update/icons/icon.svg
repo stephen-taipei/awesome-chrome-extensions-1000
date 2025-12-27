@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6"/>
+      <stop offset="100%" style="stop-color:#7c3aed"/>
+    </linearGradient>
+  </defs>
+  <circle cx="64" cy="64" r="60" fill="url(#grad)"/>
+
+  <!-- Progress chart -->
+  <rect x="30" y="45" width="68" height="45" rx="4" fill="white"/>
+
+  <!-- Progress bars -->
+  <rect x="36" y="52" width="45" height="8" rx="2" fill="#c4b5fd"/>
+  <rect x="36" y="52" width="35" height="8" rx="2" fill="#7c3aed"/>
+
+  <rect x="36" y="64" width="45" height="8" rx="2" fill="#c4b5fd"/>
+  <rect x="36" y="64" width="28" height="8" rx="2" fill="#7c3aed"/>
+
+  <rect x="36" y="76" width="45" height="8" rx="2" fill="#c4b5fd"/>
+  <rect x="36" y="76" width="40" height="8" rx="2" fill="#7c3aed"/>
+
+  <!-- Checkmarks -->
+  <circle cx="90" cy="56" r="6" fill="#22c55e"/>
+  <path d="M87 56 L89 58 L93 54" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <circle cx="90" cy="68" r="6" fill="#f59e0b"/>
+  <circle cx="90" cy="68" r="2" fill="white"/>
+
+  <circle cx="90" cy="80" r="6" fill="#22c55e"/>
+  <path d="M87 80 L89 82 L93 78" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Arrow up -->
+  <path d="M64 25 L72 35 L67 35 L67 42 L61 42 L61 35 L56 35 Z" fill="white" opacity="0.9"/>
+</svg>
