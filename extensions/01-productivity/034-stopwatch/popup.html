@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stopwatch</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>⏱ Stopwatch</h1>
+      <button id="exportBtn" class="icon-btn" title="匯出記錄">📥</button>
+    </header>
+
+    <main>
+      <!-- Timer Display -->
+      <div class="timer-display">
+        <div id="timerTime" class="timer-time">00:00:00</div>
+        <div id="timerMs" class="timer-ms">.000</div>
+      </div>
+
+      <!-- Controls -->
+      <div class="controls">
+        <button id="startBtn" class="control-btn primary">▶ 開始</button>
+        <button id="lapBtn" class="control-btn" disabled>🏁 分圈</button>
+        <button id="resetBtn" class="control-btn">↻ 重置</button>
+      </div>
+
+      <!-- Laps -->
+      <div class="laps-section">
+        <div class="laps-header">
+          <span>分圈記錄</span>
+          <span id="lapCount" class="lap-count">0</span>
+        </div>
+        <div id="lapsList" class="laps-list"></div>
+      </div>
+
+      <!-- History -->
+      <div class="history-section">
+        <div class="history-header">
+          <span>歷史記錄</span>
+          <button id="clearHistoryBtn" class="clear-btn" title="清除歷史">🗑️</button>
+        </div>
+        <div id="historyList" class="history-list"></div>
+      </div>
+    </main>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

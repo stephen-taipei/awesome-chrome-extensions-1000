@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Stopwatch",
+  "version": "1.0.0",
+  "description": "Precise stopwatch with lap timing, millisecond accuracy, and history export to CSV.",
+  "permissions": ["storage"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
