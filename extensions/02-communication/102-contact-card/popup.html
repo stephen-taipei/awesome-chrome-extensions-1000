@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Card</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Contact Card</h1>
+    </header>
+
+    <!-- Tabs -->
+    <div class="tabs">
+      <button class="tab active" data-tab="edit">Edit</button>
+      <button class="tab" data-tab="preview">Preview</button>
+    </div>
+
+    <!-- Edit Section -->
+    <div id="editSection" class="tab-content active">
+      <div class="form-grid">
+        <div class="form-group full">
+          <label>Name</label>
+          <input type="text" id="name" placeholder="Your Name">
+        </div>
+        <div class="form-group full">
+          <label>Title</label>
+          <input type="text" id="title" placeholder="Job Title">
+        </div>
+        <div class="form-group full">
+          <label>Company</label>
+          <input type="text" id="company" placeholder="Company Name">
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" id="email" placeholder="email@example.com">
+        </div>
+        <div class="form-group">
+          <label>Phone</label>
+          <input type="tel" id="phone" placeholder="+1 234 567 890">
+        </div>
+        <div class="form-group">
+          <label>Website</label>
+          <input type="url" id="website" placeholder="example.com">
+        </div>
+        <div class="form-group">
+          <label>LinkedIn</label>
+          <input type="text" id="linkedin" placeholder="username">
+        </div>
+      </div>
+
+      <div class="color-section">
+        <label>Card Color</label>
+        <div class="color-options">
+          <button class="color-btn active" data-color="#8b5cf6" style="background:#8b5cf6"></button>
+          <button class="color-btn" data-color="#3b82f6" style="background:#3b82f6"></button>
+          <button class="color-btn" data-color="#10b981" style="background:#10b981"></button>
+          <button class="color-btn" data-color="#f59e0b" style="background:#f59e0b"></button>
+          <button class="color-btn" data-color="#ef4444" style="background:#ef4444"></button>
+          <button class="color-btn" data-color="#ec4899" style="background:#ec4899"></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Preview Section -->
+    <div id="previewSection" class="tab-content">
+      <div id="cardPreview" class="card-preview"></div>
+      <button id="copyCard" class="copy-btn">Copy as Text</button>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
