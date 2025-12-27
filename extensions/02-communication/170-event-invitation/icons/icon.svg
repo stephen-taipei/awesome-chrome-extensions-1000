@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6"/>
+      <stop offset="100%" style="stop-color:#7c3aed"/>
+    </linearGradient>
+  </defs>
+  <circle cx="64" cy="64" r="60" fill="url(#grad)"/>
+
+  <!-- Envelope -->
+  <rect x="24" y="38" width="80" height="52" rx="4" fill="white"/>
+  <path d="M24 42 L64 68 L104 42" stroke="#ddd6fe" stroke-width="2" fill="none"/>
+
+  <!-- Ticket/Card popping out -->
+  <rect x="36" y="28" width="56" height="30" rx="3" fill="#ede9fe"/>
+  <rect x="40" y="33" width="32" height="3" rx="1" fill="#7c3aed"/>
+  <rect x="40" y="40" width="48" height="2" rx="1" fill="#ddd6fe"/>
+  <rect x="40" y="46" width="40" height="2" rx="1" fill="#ddd6fe"/>
+
+  <!-- Stars -->
+  <circle cx="30" cy="30" r="4" fill="white" opacity="0.8"/>
+  <circle cx="98" cy="28" r="3" fill="white" opacity="0.7"/>
+  <circle cx="94" cy="40" r="2" fill="white" opacity="0.6"/>
+
+  <!-- Confetti -->
+  <rect x="26" y="75" width="4" height="8" rx="1" fill="#fde68a" transform="rotate(-20 28 79)"/>
+  <rect x="96" y="70" width="4" height="8" rx="1" fill="#86efac" transform="rotate(25 98 74)"/>
+</svg>
