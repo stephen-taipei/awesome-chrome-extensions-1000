@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stretch Reminder</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🤸 Stretch Reminder</h1>
+      <label class="toggle">
+        <input type="checkbox" id="enableToggle" checked>
+        <span class="slider"></span>
+      </label>
+    </header>
+
+    <!-- Main View -->
+    <div id="mainView">
+      <!-- Status -->
+      <div class="status-section">
+        <div id="statusEmoji" class="status-emoji">🧘</div>
+        <div id="nextStretch" class="next-stretch">下次伸展：30 分鐘後</div>
+        <button id="stretchNowBtn" class="stretch-now-btn">現在伸展</button>
+      </div>
+
+      <!-- Stretch Categories -->
+      <section class="section">
+        <div class="section-title">選擇伸展部位</div>
+        <div class="category-grid">
+          <button class="category-btn selected" data-category="neck">
+            <span class="category-icon">🦒</span>
+            <span>頸部</span>
+          </button>
+          <button class="category-btn selected" data-category="shoulders">
+            <span class="category-icon">💪</span>
+            <span>肩膀</span>
+          </button>
+          <button class="category-btn selected" data-category="back">
+            <span class="category-icon">🦴</span>
+            <span>背部</span>
+          </button>
+          <button class="category-btn" data-category="wrists">
+            <span class="category-icon">🖐️</span>
+            <span>手腕</span>
+          </button>
+          <button class="category-btn" data-category="legs">
+            <span class="category-icon">🦵</span>
+            <span>腿部</span>
+          </button>
+          <button class="category-btn" data-category="full">
+            <span class="category-icon">🏃</span>
+            <span>全身</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- Settings -->
+      <section class="section">
+        <div class="section-title">提醒間隔</div>
+        <div class="interval-options">
+          <button class="interval-btn" data-minutes="20">20 分</button>
+          <button class="interval-btn selected" data-minutes="30">30 分</button>
+          <button class="interval-btn" data-minutes="45">45 分</button>
+          <button class="interval-btn" data-minutes="60">60 分</button>
+        </div>
+      </section>
+
+      <!-- Stats -->
+      <section class="section stats">
+        <div class="stat-item">
+          <div class="stat-value" id="todayStretches">0</div>
+          <div class="stat-label">今日伸展</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value" id="totalStretches">0</div>
+          <div class="stat-label">累計次數</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value" id="streak">0</div>
+          <div class="stat-label">連續天數</div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Stretch View (hidden by default) -->
+    <div id="stretchView" class="hidden">
+      <div class="stretch-header">
+        <button id="backBtn" class="back-btn">← 返回</button>
+        <span id="stretchProgress">1/5</span>
+      </div>
+
+      <div class="stretch-content">
+        <div id="stretchIcon" class="stretch-icon">🧘</div>
+        <h2 id="stretchName" class="stretch-name">頸部伸展</h2>
+        <p id="stretchDesc" class="stretch-desc">慢慢將頭向右傾斜，保持 15 秒</p>
+        <div id="stretchTimer" class="stretch-timer">15</div>
+      </div>
+
+      <div class="stretch-controls">
+        <button id="skipBtn" class="control-btn skip">跳過</button>
+        <button id="nextBtn" class="control-btn next">下一個</button>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
