@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client Questionnaire</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Client Questionnaire</h1>
+      <div class="header-sub">Gather client information</div>
+    </header>
+
+    <!-- Questionnaire Form -->
+    <div class="q-form">
+      <select id="category">
+        <option value="discovery">Discovery Call</option>
+        <option value="project">Project Brief</option>
+        <option value="onboarding">Client Onboarding</option>
+        <option value="feedback">Feedback Survey</option>
+        <option value="custom">Custom</option>
+      </select>
+
+      <input type="text" id="title" placeholder="Questionnaire title">
+      <input type="text" id="intro" placeholder="Introduction message">
+      <textarea id="questions" placeholder="Questions (one per line)"></textarea>
+      <input type="text" id="closing" placeholder="Closing message (optional)">
+    </div>
+
+    <!-- Actions -->
+    <div class="actions">
+      <button id="copyQ" class="copy-btn">Copy Questionnaire</button>
+      <button id="saveQ" class="save-btn">Save</button>
+    </div>
+
+    <!-- Saved -->
+    <div class="section">
+      <div class="section-title">Saved Questionnaires</div>
+      <div id="qList" class="q-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  background: linear-gradient(180deg, #f0fdf4 0%, #bbf7d0 100%);
+  color: #166534;
+}
+
+.container {
+  width: 340px;
+  min-height: 500px;
+}
+
+header {
+  text-align: center;
+  padding: 14px 16px;
+  background: linear-gradient(135deg, #22c55e 0%, #15803d 100%);
+  color: white;
+}
+
+header h1 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.header-sub {
+  font-size: 11px;
+  opacity: 0.9;
+  margin-top: 4px;
+}
+
+/* Questionnaire Form */
+.q-form {
+  padding: 14px 16px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.q-form select {
+  padding: 10px 12px;
+  border: 2px solid #bbf7d0;
+  border-radius: 8px;
+  font-size: 12px;
+  color: #166534;
+  background: white;
+}
+
+.q-form input {
+  padding: 10px 12px;
+  border: 2px solid #bbf7d0;
+  border-radius: 8px;
+  font-size: 12px;
+  color: #166534;
+}
+
+.q-form textarea {
+  padding: 10px 12px;
+  border: 2px solid #bbf7d0;
+  border-radius: 8px;
+  font-size: 11px;
+  font-family: inherit;
+  color: #166534;
+  height: 80px;
+  resize: none;
+}
+
+.q-form select:focus,
+.q-form input:focus,
+.q-form textarea:focus {
+  outline: none;
+  border-color: #22c55e;
+}
+
+/* Actions */
+.actions {
+  padding: 6px 16px 12px;
+  display: flex;
+  gap: 8px;
+}
+
+.copy-btn {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #22c55e 0%, #15803d 100%);
+  color: white;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.save-btn {
+  padding: 10px 16px;
+  border: 2px solid #bbf7d0;
+  border-radius: 8px;
+  background: white;
+  color: #166534;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Section */
+.section {
+  padding: 0 16px 16px;
+}
+
+.section-title {
+  font-size: 11px;
+  font-weight: 600;
+  color: #15803d;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+/* Questionnaire List */
+.q-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-height: 100px;
+  overflow-y: auto;
+}
+
+.q-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  border-radius: 6px;
+  padding: 10px 12px;
+  box-shadow: 0 1px 4px rgba(34, 197, 94, 0.15);
+}
+
+.q-info {
+  flex: 1;
+}
+
+.q-title {
+  font-size: 11px;
+  font-weight: 600;
+  color: #166534;
+}
+
+.q-category {
+  font-size: 9px;
+  color: #a1a1aa;
+  text-transform: uppercase;
+}
+
+.q-actions button {
+  padding: 4px 8px;
+  border: none;
+  border-radius: 4px;
+  font-size: 9px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 4px;
+}
+
+.load-btn {
+  background: #22c55e;
+  color: white;
+}
+
+.delete-btn {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 14px;
+  color: #a1a1aa;
+  font-size: 11px;
+}
