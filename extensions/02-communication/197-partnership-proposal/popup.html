@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Partnership Proposal</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <div class="container">
+    <header><h1>Partnership Proposal</h1><div class="header-sub">Build business relationships</div></header>
+    <div class="proposal-form">
+      <select id="partnerType"><option value="strategic">Strategic Partnership</option><option value="affiliate">Affiliate Program</option><option value="integration">Integration Partner</option><option value="reseller">Reseller Partnership</option><option value="comarketing">Co-Marketing</option></select>
+      <input type="text" id="partner" placeholder="Potential partner name">
+      <input type="text" id="company" placeholder="Your company">
+      <textarea id="opportunity" placeholder="Partnership opportunity..."></textarea>
+      <textarea id="benefits" placeholder="Mutual benefits..."></textarea>
+    </div>
+    <div class="actions"><button id="copyProposal" class="copy-btn">Copy Proposal</button><button id="saveProposal" class="save-btn">Save</button></div>
+    <div class="section"><div class="section-title">Saved Proposals</div><div id="proposalList" class="proposal-list"></div></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
