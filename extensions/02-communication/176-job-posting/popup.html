@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Posting</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Job Posting</h1>
+      <div class="header-sub">Attract top talent</div>
+    </header>
+
+    <!-- Job Form -->
+    <div class="job-form">
+      <input type="text" id="title" placeholder="Job title">
+      <input type="text" id="company" placeholder="Company name">
+      <div class="row">
+        <input type="text" id="location" placeholder="Location">
+        <select id="type">
+          <option value="full-time">Full-time</option>
+          <option value="part-time">Part-time</option>
+          <option value="contract">Contract</option>
+          <option value="remote">Remote</option>
+        </select>
+      </div>
+      <textarea id="responsibilities" placeholder="Responsibilities (one per line)"></textarea>
+      <textarea id="requirements" placeholder="Requirements (one per line)"></textarea>
+      <input type="text" id="benefits" placeholder="Benefits/Perks (optional)">
+    </div>
+
+    <!-- Actions -->
+    <div class="actions">
+      <button id="copyJob" class="copy-btn">Copy Posting</button>
+      <button id="saveJob" class="save-btn">Save</button>
+    </div>
+
+    <!-- Saved -->
+    <div class="section">
+      <div class="section-title">Saved Postings</div>
+      <div id="jobList" class="job-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
