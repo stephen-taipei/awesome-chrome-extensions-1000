@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Onboarding Message</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Onboarding Message</h1>
+      <div class="header-sub">Welcome new team members</div>
+    </header>
+
+    <!-- Message Form -->
+    <div class="message-form">
+      <select id="messageType">
+        <option value="welcome">Welcome Message</option>
+        <option value="intro">Team Introduction</option>
+        <option value="firstday">First Day Info</option>
+        <option value="resources">Resources List</option>
+        <option value="checklist">Onboarding Checklist</option>
+        <option value="buddy">Buddy Introduction</option>
+      </select>
+
+      <input type="text" id="newHire" placeholder="New hire's name">
+      <input type="text" id="role" placeholder="Their role">
+      <textarea id="welcome" placeholder="Welcome message..."></textarea>
+      <textarea id="info" placeholder="Important info to share..."></textarea>
+      <input type="text" id="contact" placeholder="Who they can contact">
+    </div>
+
+    <!-- Actions -->
+    <div class="actions">
+      <button id="copyMessage" class="copy-btn">Copy Message</button>
+      <button id="saveMessage" class="save-btn">Save</button>
+    </div>
+
+    <!-- Saved -->
+    <div class="section">
+      <div class="section-title">Saved Messages</div>
+      <div id="messageList" class="message-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

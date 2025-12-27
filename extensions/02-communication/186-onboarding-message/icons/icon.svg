@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0ea5e9"/>
+      <stop offset="100%" style="stop-color:#0284c7"/>
+    </linearGradient>
+  </defs>
+  <circle cx="64" cy="64" r="60" fill="url(#grad)"/>
+
+  <!-- Person with plus -->
+  <circle cx="55" cy="45" r="16" fill="white"/>
+  <path d="M30 90 C30 68 55 60 55 60 C55 60 80 68 80 90" fill="white"/>
+
+  <!-- Plus sign -->
+  <circle cx="85" cy="45" r="15" fill="#bae6fd"/>
+  <path d="M85 38 L85 52 M78 45 L92 45" stroke="#0284c7" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Welcome stars -->
+  <path d="M25 35 L27 40 L32 40 L28 43 L30 48 L25 45 L20 48 L22 43 L18 40 L23 40 Z" fill="white" opacity="0.8"/>
+  <path d="M100 70 L101.5 74 L106 74 L102.5 76.5 L104 81 L100 78 L96 81 L97.5 76.5 L94 74 L98.5 74 Z" fill="white" opacity="0.8"/>
+
+  <!-- Door opening -->
+  <rect x="38" y="75" width="5" height="20" fill="#bae6fd" opacity="0.6"/>
+</svg>
