@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site Blocker</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🚫 Site Blocker</h1>
+      <label class="toggle">
+        <input type="checkbox" id="enableToggle">
+        <span class="slider"></span>
+      </label>
+    </header>
+
+    <!-- Quick Block -->
+    <div class="quick-section">
+      <button id="blockCurrentBtn" class="block-current-btn">封鎖當前網站</button>
+    </div>
+
+    <!-- Add Site -->
+    <div class="add-section">
+      <input type="text" id="siteInput" placeholder="輸入網址 (如: facebook.com)">
+      <button id="addBtn" class="add-btn">+</button>
+    </div>
+
+    <!-- Blocked Sites List -->
+    <div class="section">
+      <div class="section-title">已封鎖網站</div>
+      <div id="sitesList" class="sites-list"></div>
+    </div>
+
+    <!-- Schedule -->
+    <div class="schedule-section">
+      <div class="section-title">封鎖時段</div>
+      <div class="schedule-row">
+        <input type="time" id="startTime" value="09:00">
+        <span>至</span>
+        <input type="time" id="endTime" value="18:00">
+      </div>
+      <label class="checkbox-label">
+        <input type="checkbox" id="scheduleEnabled">
+        <span>僅在指定時段封鎖</span>
+      </label>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
