@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hashtag Manager</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1># Hashtag Manager</h1>
+      <div class="header-sub">Organize your hashtags</div>
+    </header>
+
+    <!-- New Set -->
+    <div class="new-set">
+      <input type="text" id="setName" placeholder="Set name (e.g., Travel, Food)">
+      <textarea id="hashtags" placeholder="Enter hashtags (e.g., #travel #wanderlust #adventure)"></textarea>
+      <button id="saveSet" class="save-btn">Save Hashtag Set</button>
+    </div>
+
+    <!-- Hashtag Sets -->
+    <div class="section">
+      <div class="section-title">Saved Sets</div>
+      <div id="setList" class="set-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
