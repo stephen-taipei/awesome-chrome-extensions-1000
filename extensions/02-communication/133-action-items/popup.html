@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Action Items</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Action Items</h1>
+    </header>
+
+    <!-- Add Action -->
+    <div class="add-section">
+      <input type="text" id="action" placeholder="Action item...">
+      <input type="text" id="owner" placeholder="Owner...">
+      <input type="date" id="dueDate">
+      <button id="addAction" class="add-btn">Add Action</button>
+    </div>
+
+    <!-- Filter -->
+    <div class="filter-section">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="pending">Pending</button>
+      <button class="filter-btn" data-filter="done">Done</button>
+    </div>
+
+    <!-- Actions List -->
+    <div class="section">
+      <div id="actionsList" class="actions-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
