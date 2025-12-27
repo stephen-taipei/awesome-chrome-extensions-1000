@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RSVP Response</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>RSVP Response</h1>
+      <div class="header-sub">Respond to invitations</div>
+    </header>
+
+    <!-- RSVP Form -->
+    <div class="rsvp-form">
+      <select id="responseType">
+        <option value="accept">Accept with Thanks</option>
+        <option value="decline">Politely Decline</option>
+        <option value="tentative">Tentative/Maybe</option>
+        <option value="plusone">Accept with Guest</option>
+        <option value="reschedule">Request Reschedule</option>
+        <option value="question">Need More Info</option>
+      </select>
+
+      <input type="text" id="host" placeholder="Host/Organizer name">
+      <input type="text" id="event" placeholder="Event name">
+      <textarea id="message" placeholder="Your personal message..."></textarea>
+      <input type="text" id="guests" placeholder="Number of guests (if applicable)">
+    </div>
+
+    <!-- Actions -->
+    <div class="actions">
+      <button id="copyResponse" class="copy-btn">Copy Response</button>
+      <button id="saveResponse" class="save-btn">Save</button>
+    </div>
+
+    <!-- Saved -->
+    <div class="section">
+      <div class="section-title">Saved Responses</div>
+      <div id="responseList" class="response-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

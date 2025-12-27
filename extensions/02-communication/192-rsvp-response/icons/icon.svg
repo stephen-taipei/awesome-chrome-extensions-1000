@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#d946ef"/>
+      <stop offset="100%" style="stop-color:#c026d3"/>
+    </linearGradient>
+  </defs>
+  <circle cx="64" cy="64" r="60" fill="url(#grad)"/>
+
+  <!-- Envelope -->
+  <rect x="25" y="40" width="78" height="50" rx="4" fill="white"/>
+  <path d="M25 44 L64 70 L103 44" stroke="#f5d0fe" stroke-width="3" fill="none"/>
+
+  <!-- Envelope flap -->
+  <path d="M25 40 L64 65 L103 40" fill="#fae8ff"/>
+
+  <!-- Check mark badge -->
+  <circle cx="90" cy="35" r="15" fill="#22c55e"/>
+  <path d="M83 35 L88 40 L97 31" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Decorative confetti -->
+  <circle cx="30" cy="30" r="3" fill="white" opacity="0.8"/>
+  <circle cx="98" cy="85" r="2" fill="white" opacity="0.8"/>
+  <rect x="38" y="28" width="5" height="5" rx="1" fill="white" opacity="0.6" transform="rotate(15 40 30)"/>
+
+  <!-- RSVP text -->
+  <text x="64" y="98" text-anchor="middle" fill="white" font-size="12" font-weight="bold">RSVP</text>
+</svg>
