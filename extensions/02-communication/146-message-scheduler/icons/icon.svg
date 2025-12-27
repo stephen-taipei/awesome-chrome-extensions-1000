@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6"/>
+      <stop offset="100%" style="stop-color:#7c3aed"/>
+    </linearGradient>
+  </defs>
+  <circle cx="64" cy="64" r="60" fill="url(#grad)"/>
+
+  <!-- Calendar -->
+  <rect x="30" y="35" width="50" height="50" rx="6" fill="white"/>
+  <rect x="30" y="35" width="50" height="14" rx="6" fill="#ddd6fe"/>
+  <circle cx="42" cy="42" r="3" fill="#7c3aed"/>
+  <circle cx="55" cy="42" r="3" fill="#7c3aed"/>
+  <circle cx="68" cy="42" r="3" fill="#7c3aed"/>
+
+  <!-- Clock -->
+  <circle cx="82" cy="72" r="20" fill="white"/>
+  <circle cx="82" cy="72" r="16" fill="#ddd6fe"/>
+  <path d="M82 62 L82 72 L90 76" stroke="#7c3aed" stroke-width="3" fill="none" stroke-linecap="round"/>
+</svg>

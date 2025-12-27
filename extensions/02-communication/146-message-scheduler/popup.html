@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Message Scheduler</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📅 Message Scheduler</h1>
+      <div class="header-sub">Plan messages for later</div>
+    </header>
+
+    <!-- Schedule Form -->
+    <div class="schedule-form">
+      <input type="text" id="recipient" placeholder="Recipient">
+      <textarea id="message" placeholder="Your message..."></textarea>
+      <div class="datetime-row">
+        <input type="date" id="scheduleDate">
+        <input type="time" id="scheduleTime">
+      </div>
+      <select id="platform">
+        <option value="email">📧 Email</option>
+        <option value="slack">💬 Slack</option>
+        <option value="sms">📱 SMS</option>
+        <option value="other">📝 Other</option>
+      </select>
+      <button id="scheduleBtn" class="schedule-btn">Schedule Message</button>
+    </div>
+
+    <!-- Scheduled Messages -->
+    <div class="section">
+      <div class="section-title">Scheduled Messages</div>
+      <div id="messageList" class="message-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
