@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mentorship Request</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Mentorship Request</h1>
+      <div class="header-sub">Find guidance and grow</div>
+    </header>
+
+    <!-- Request Form -->
+    <div class="request-form">
+      <select id="mentorType">
+        <option value="career">Career Mentorship</option>
+        <option value="technical">Technical Mentorship</option>
+        <option value="leadership">Leadership Mentorship</option>
+        <option value="startup">Startup Mentorship</option>
+        <option value="academic">Academic Mentorship</option>
+        <option value="general">General Guidance</option>
+      </select>
+
+      <input type="text" id="mentor" placeholder="Mentor's name">
+      <textarea id="background" placeholder="Your background briefly..."></textarea>
+      <textarea id="goals" placeholder="What are your goals?"></textarea>
+      <textarea id="whyThem" placeholder="Why are you reaching out to them?"></textarea>
+      <input type="text" id="commitment" placeholder="Time commitment you're asking for">
+    </div>
+
+    <!-- Actions -->
+    <div class="actions">
+      <button id="copyRequest" class="copy-btn">Copy Request</button>
+      <button id="saveRequest" class="save-btn">Save</button>
+    </div>
+
+    <!-- Saved -->
+    <div class="section">
+      <div class="section-title">Saved Requests</div>
+      <div id="requestList" class="request-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

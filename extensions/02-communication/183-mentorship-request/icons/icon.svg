@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1"/>
+      <stop offset="100%" style="stop-color:#4f46e5"/>
+    </linearGradient>
+  </defs>
+  <circle cx="64" cy="64" r="60" fill="url(#grad)"/>
+
+  <!-- Mentor figure (larger) -->
+  <circle cx="45" cy="42" r="14" fill="white"/>
+  <path d="M25 80 C25 60 45 55 45 55 C45 55 65 60 65 80" fill="white"/>
+
+  <!-- Mentee figure (smaller) -->
+  <circle cx="85" cy="50" r="10" fill="#c7d2fe"/>
+  <path d="M70 80 C70 65 85 62 85 62 C85 62 100 65 100 80" fill="#c7d2fe"/>
+
+  <!-- Connection arrow -->
+  <path d="M58 55 L72 55" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  <path d="M68 50 L74 55 L68 60" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Growth sparkles -->
+  <path d="M90 35 L90 28 M86 31 L94 31" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="100" cy="42" r="2" fill="white"/>
+  <circle cx="78" cy="32" r="1.5" fill="white"/>
+</svg>
