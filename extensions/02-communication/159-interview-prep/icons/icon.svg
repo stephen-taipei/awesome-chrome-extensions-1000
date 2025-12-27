@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b"/>
+      <stop offset="100%" style="stop-color:#d97706"/>
+    </linearGradient>
+  </defs>
+  <circle cx="64" cy="64" r="60" fill="url(#grad)"/>
+
+  <!-- Person -->
+  <circle cx="64" cy="38" r="14" fill="white"/>
+  <path d="M40 70 Q40 55 64 55 Q88 55 88 70 L88 75 L40 75 Z" fill="white"/>
+
+  <!-- Speech bubble -->
+  <rect x="70" y="50" width="30" height="22" rx="4" fill="#fef3c7"/>
+  <path d="M75 72 L80 80 L85 72" fill="#fef3c7"/>
+
+  <!-- Question mark -->
+  <text x="85" y="67" font-family="Arial" font-size="16" font-weight="bold" fill="#d97706" text-anchor="middle">?</text>
+
+  <!-- Checkmarks -->
+  <path d="M28 85 L33 90 L42 78" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M28 98 L33 103 L42 91" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Lines -->
+  <rect x="48" y="82" width="50" height="4" rx="2" fill="white" opacity="0.9"/>
+  <rect x="48" y="95" width="40" height="4" rx="2" fill="white" opacity="0.9"/>
+</svg>

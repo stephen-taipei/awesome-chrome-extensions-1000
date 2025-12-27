@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interview Prep</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Interview Prep</h1>
+      <div class="header-sub">Prepare your best answers</div>
+    </header>
+
+    <!-- Add Q&A -->
+    <div class="qa-form">
+      <select id="category">
+        <option value="behavioral">Behavioral</option>
+        <option value="technical">Technical</option>
+        <option value="situational">Situational</option>
+        <option value="company">Company-Specific</option>
+      </select>
+      <input type="text" id="question" placeholder="Interview question...">
+      <textarea id="answer" placeholder="Your prepared answer..."></textarea>
+      <button id="addQA" class="add-btn">Add Q&A</button>
+    </div>
+
+    <!-- Filter -->
+    <div class="filter-row">
+      <select id="filterCategory">
+        <option value="all">All Categories</option>
+        <option value="behavioral">Behavioral</option>
+        <option value="technical">Technical</option>
+        <option value="situational">Situational</option>
+        <option value="company">Company-Specific</option>
+      </select>
+    </div>
+
+    <!-- Q&A List -->
+    <div class="section">
+      <div class="section-title">Prepared Answers</div>
+      <div id="qaList" class="qa-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
