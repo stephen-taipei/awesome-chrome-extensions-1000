@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Savings Goal</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🎯 Savings Goal</h1>
+    </header>
+
+    <!-- Main Goal Display -->
+    <div class="goal-card">
+      <div id="goalName" class="goal-name">No goal set</div>
+      <div class="piggy-container">
+        <div class="piggy-bank">
+          <div id="fillLevel" class="fill-level"></div>
+          <span class="piggy-icon">🐷</span>
+        </div>
+      </div>
+      <div class="goal-progress">
+        <span id="currentAmount" class="current">$0</span>
+        <span class="separator">of</span>
+        <span id="targetAmount" class="target">$0</span>
+      </div>
+      <div id="percentage" class="percentage">0%</div>
+    </div>
+
+    <!-- Add Savings -->
+    <div class="add-section">
+      <input type="number" id="addAmount" placeholder="Add amount" step="0.01">
+      <button id="addBtn" class="add-btn">+ Add</button>
+      <button id="withdrawBtn" class="withdraw-btn">- Withdraw</button>
+    </div>
+
+    <!-- Goals List -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-title">Your Goals</span>
+        <button id="newGoalBtn" class="new-btn">+ New</button>
+      </div>
+      <div id="goalsList" class="goals-list"></div>
+    </div>
+
+    <!-- New Goal Modal -->
+    <div id="modal" class="modal hidden">
+      <div class="modal-content">
+        <h3>New Savings Goal</h3>
+        <input type="text" id="newGoalName" placeholder="Goal name (e.g., Vacation)">
+        <input type="number" id="newGoalTarget" placeholder="Target amount">
+        <div class="modal-actions">
+          <button id="cancelBtn" class="modal-btn cancel">Cancel</button>
+          <button id="saveBtn" class="modal-btn save">Create</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

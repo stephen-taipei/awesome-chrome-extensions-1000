@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ec4899"/>
+      <stop offset="100%" style="stop-color:#db2777"/>
+    </linearGradient>
+  </defs>
+  <circle cx="64" cy="64" r="60" fill="url(#grad)"/>
+
+  <!-- Piggy bank body -->
+  <ellipse cx="64" cy="68" rx="36" ry="28" fill="#fce7f3"/>
+
+  <!-- Piggy bank fill -->
+  <ellipse cx="64" cy="78" rx="32" ry="18" fill="#f9a8d4"/>
+
+  <!-- Coin slot -->
+  <rect x="56" y="42" width="16" height="4" rx="2" fill="#be185d"/>
+
+  <!-- Ears -->
+  <ellipse cx="38" cy="52" rx="8" ry="10" fill="#fce7f3"/>
+  <ellipse cx="90" cy="52" rx="8" ry="10" fill="#fce7f3"/>
+
+  <!-- Eyes -->
+  <circle cx="52" cy="62" r="4" fill="#831843"/>
+  <circle cx="76" cy="62" r="4" fill="#831843"/>
+
+  <!-- Snout -->
+  <ellipse cx="64" cy="74" rx="12" ry="8" fill="#fbcfe8"/>
+  <circle cx="60" cy="74" r="2" fill="#be185d"/>
+  <circle cx="68" cy="74" r="2" fill="#be185d"/>
+
+  <!-- Coin -->
+  <circle cx="96" cy="36" r="14" fill="#fbbf24"/>
+  <text x="96" y="41" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#92400e" text-anchor="middle">$</text>
+</svg>
