@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tab Groups</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📑 Tab Groups</h1>
+      <span id="tabCount" class="tab-count">0 分頁</span>
+    </header>
+
+    <div class="quick-actions">
+      <button id="groupByDomainBtn" class="action-btn">
+        <span>🌐</span> 依網域分組
+      </button>
+      <button id="ungroupAllBtn" class="action-btn">
+        <span>📤</span> 解除所有群組
+      </button>
+    </div>
+
+    <main>
+      <div class="section">
+        <div class="section-header">目前群組</div>
+        <div id="groupList" class="group-list"></div>
+        <div id="noGroups" class="no-groups">沒有分頁群組</div>
+      </div>
+
+      <div class="section">
+        <div class="section-header">未分組的分頁</div>
+        <div id="ungroupedTabs" class="tab-list"></div>
+        <div id="noUngrouped" class="no-groups">所有分頁都已分組</div>
+      </div>
+    </main>
+
+    <!-- Create Group Modal -->
+    <div id="createModal" class="modal hidden">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>建立新群組</h2>
+          <button class="close-btn" data-close="createModal">×</button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label>群組名稱</label>
+            <input type="text" id="groupName" placeholder="輸入群組名稱...">
+          </div>
+          <div class="form-group">
+            <label>顏色</label>
+            <div class="color-picker" id="colorPicker">
+              <button class="color-btn selected" data-color="blue" style="background:#3b82f6"></button>
+              <button class="color-btn" data-color="red" style="background:#ef4444"></button>
+              <button class="color-btn" data-color="yellow" style="background:#eab308"></button>
+              <button class="color-btn" data-color="green" style="background:#22c55e"></button>
+              <button class="color-btn" data-color="pink" style="background:#ec4899"></button>
+              <button class="color-btn" data-color="purple" style="background:#a855f7"></button>
+              <button class="color-btn" data-color="cyan" style="background:#06b6d4"></button>
+              <button class="color-btn" data-color="orange" style="background:#f97316"></button>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button id="createGroupBtn" class="btn btn-primary">建立群組</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
