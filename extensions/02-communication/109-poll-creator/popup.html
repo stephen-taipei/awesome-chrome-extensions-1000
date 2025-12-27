@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Poll Creator</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Poll Creator</h1>
+    </header>
+
+    <!-- Create Poll -->
+    <div class="create-section">
+      <input type="text" id="question" placeholder="Enter your question...">
+      <div id="options" class="options-list">
+        <input type="text" class="option-input" placeholder="Option 1">
+        <input type="text" class="option-input" placeholder="Option 2">
+      </div>
+      <div class="create-actions">
+        <button id="addOption" class="add-option-btn">+ Add Option</button>
+        <button id="createPoll" class="create-btn">Create Poll</button>
+      </div>
+    </div>
+
+    <!-- Active Poll -->
+    <div id="activePoll" class="poll-section" style="display: none;">
+      <div class="section-title">Current Poll</div>
+      <div id="pollView" class="poll-view"></div>
+    </div>
+
+    <!-- Saved Polls -->
+    <div class="section">
+      <div class="section-title">Saved Polls</div>
+      <div id="pollsList" class="polls-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
