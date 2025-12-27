@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Collaboration Request</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Collaboration Request</h1>
+      <div class="header-sub">Build powerful partnerships</div>
+    </header>
+
+    <!-- Request Form -->
+    <div class="request-form">
+      <select id="collabType">
+        <option value="content">Content Collaboration</option>
+        <option value="product">Product Partnership</option>
+        <option value="marketing">Marketing Collab</option>
+        <option value="event">Event Co-hosting</option>
+        <option value="research">Research Partnership</option>
+        <option value="influencer">Influencer Partnership</option>
+      </select>
+
+      <input type="text" id="partnerName" placeholder="Partner's name/company">
+      <input type="text" id="yourBrand" placeholder="Your brand/company">
+      <textarea id="proposal" placeholder="What you're proposing..."></textarea>
+      <textarea id="benefits" placeholder="Benefits for them..."></textarea>
+    </div>
+
+    <!-- Actions -->
+    <div class="actions">
+      <button id="copyRequest" class="copy-btn">Copy Request</button>
+      <button id="saveRequest" class="save-btn">Save</button>
+    </div>
+
+    <!-- Saved -->
+    <div class="section">
+      <div class="section-title">Saved Requests</div>
+      <div id="requestList" class="request-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
