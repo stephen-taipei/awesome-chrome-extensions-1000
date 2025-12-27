@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clipboard Manager</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📋 Clipboard</h1>
+      <button id="clearAllBtn" class="clear-all-btn">清空</button>
+    </header>
+
+    <!-- Quick Add -->
+    <div class="add-section">
+      <textarea id="newClipInput" placeholder="輸入文字以儲存到剪貼簿..."></textarea>
+      <div class="add-actions">
+        <button id="pasteBtn" class="action-btn">📥 貼上</button>
+        <button id="saveBtn" class="action-btn primary">💾 儲存</button>
+      </div>
+    </div>
+
+    <!-- Filter -->
+    <div class="filter-section">
+      <input type="text" id="searchInput" placeholder="搜尋...">
+      <div class="filter-tabs">
+        <button class="filter-tab active" data-filter="all">全部</button>
+        <button class="filter-tab" data-filter="pinned">已釘選</button>
+      </div>
+    </div>
+
+    <!-- Clips List -->
+    <div id="clipsList" class="clips-list"></div>
+
+    <!-- Stats -->
+    <div class="stats-bar">
+      <span id="clipCount">0 個項目</span>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
