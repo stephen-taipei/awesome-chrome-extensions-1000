@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Response Timer</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Response Timer</h1>
+    </header>
+
+    <!-- New Timer -->
+    <div class="add-section">
+      <input type="text" id="label" placeholder="Message/Email label...">
+      <select id="priority">
+        <option value="normal">Normal Priority</option>
+        <option value="high">High Priority</option>
+        <option value="urgent">Urgent</option>
+      </select>
+      <button id="startTimer" class="start-btn">Start Timer</button>
+    </div>
+
+    <!-- Active Timers -->
+    <div class="section">
+      <div class="section-title">Active Timers</div>
+      <div id="activeList" class="timers-list"></div>
+    </div>
+
+    <!-- Completed -->
+    <div class="section">
+      <div class="section-title">Completed</div>
+      <div id="completedList" class="timers-list completed"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
