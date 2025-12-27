@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Status Message</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Status Message</h1>
+      <div class="header-sub">Manage your availability</div>
+    </header>
+
+    <!-- Current Status -->
+    <div class="current-status">
+      <div class="section-label">Current Status</div>
+      <div class="status-options">
+        <button class="status-btn active" data-status="available">🟢 Available</button>
+        <button class="status-btn" data-status="busy">🔴 Busy</button>
+        <button class="status-btn" data-status="away">🟡 Away</button>
+        <button class="status-btn" data-status="dnd">⛔ DND</button>
+      </div>
+    </div>
+
+    <!-- Status Message -->
+    <div class="message-section">
+      <div class="section-label">Status Message</div>
+      <input type="text" id="statusMessage" placeholder="What's your status?">
+      <div class="actions">
+        <button id="copyStatus" class="copy-btn">Copy Status</button>
+        <button id="savePreset" class="save-btn">Save</button>
+      </div>
+    </div>
+
+    <!-- Presets -->
+    <div class="section">
+      <div class="section-title">Quick Presets</div>
+      <div id="presetList" class="preset-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
