@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Podcast Notes</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🎙️ Podcast Notes</h1>
+      <div class="header-sub">Plan your episodes</div>
+    </header>
+
+    <!-- Episode Info -->
+    <div class="episode-info">
+      <input type="text" id="episodeTitle" placeholder="Episode title">
+      <input type="text" id="guest" placeholder="Guest name (optional)">
+    </div>
+
+    <!-- Sections -->
+    <div class="notes-section">
+      <div class="section-label">🎯 Topics to Cover</div>
+      <textarea id="topics" placeholder="Main talking points..."></textarea>
+    </div>
+
+    <div class="notes-section">
+      <div class="section-label">❓ Questions to Ask</div>
+      <textarea id="questions" placeholder="Interview questions..."></textarea>
+    </div>
+
+    <div class="notes-section">
+      <div class="section-label">📝 Key Takeaways</div>
+      <textarea id="takeaways" placeholder="What should listeners learn?"></textarea>
+    </div>
+
+    <!-- Actions -->
+    <div class="actions">
+      <button id="copyNotes" class="copy-btn">Copy Notes</button>
+      <button id="saveEpisode" class="save-btn">Save</button>
+    </div>
+
+    <!-- Saved -->
+    <div class="section">
+      <div class="section-title">Saved Episodes</div>
+      <div id="episodeList" class="episode-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
