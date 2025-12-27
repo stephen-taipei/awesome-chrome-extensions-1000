@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meeting Scheduler</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📅 Meeting Scheduler</h1>
+    </header>
+
+    <!-- Today's Meetings -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-title">今日會議</span>
+        <span id="todayDate" class="today-date"></span>
+      </div>
+      <div id="todayMeetings" class="meetings-list"></div>
+    </div>
+
+    <!-- Add Meeting -->
+    <div class="add-section">
+      <div class="section-title">新增會議</div>
+      <input type="text" id="meetingTitle" placeholder="會議標題">
+      <div class="form-row">
+        <input type="date" id="meetingDate">
+        <input type="time" id="meetingTime" value="09:00">
+      </div>
+      <div class="form-row">
+        <select id="meetingDuration">
+          <option value="15">15 分鐘</option>
+          <option value="30" selected>30 分鐘</option>
+          <option value="45">45 分鐘</option>
+          <option value="60">1 小時</option>
+          <option value="90">1.5 小時</option>
+          <option value="120">2 小時</option>
+        </select>
+        <select id="reminderTime">
+          <option value="5">5 分鐘前提醒</option>
+          <option value="10" selected>10 分鐘前提醒</option>
+          <option value="15">15 分鐘前提醒</option>
+          <option value="30">30 分鐘前提醒</option>
+        </select>
+      </div>
+      <input type="text" id="meetingLink" placeholder="會議連結 (選填)">
+      <button id="addBtn" class="add-btn">新增會議</button>
+    </div>
+
+    <!-- Upcoming Meetings -->
+    <div class="section">
+      <div class="section-title">即將到來</div>
+      <div id="upcomingMeetings" class="meetings-list compact"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
