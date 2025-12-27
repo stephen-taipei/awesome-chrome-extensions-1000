@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team Update</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Team Update</h1>
+      <div class="header-sub">Quick status sharing</div>
+    </header>
+
+    <!-- New Update -->
+    <div class="new-update">
+      <select id="statusType">
+        <option value="progress">📈 Progress</option>
+        <option value="completed">✅ Completed</option>
+        <option value="blocked">🚧 Blocked</option>
+        <option value="help">🙋 Need Help</option>
+        <option value="announcement">📢 Announcement</option>
+      </select>
+      <textarea id="updateText" placeholder="What's your update?"></textarea>
+      <div class="update-actions">
+        <button id="postUpdate" class="post-btn">Post Update</button>
+        <button id="copyUpdate" class="copy-btn">Copy</button>
+      </div>
+    </div>
+
+    <!-- Updates -->
+    <div class="section">
+      <div class="section-title">Recent Updates</div>
+      <div id="updateList" class="update-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
