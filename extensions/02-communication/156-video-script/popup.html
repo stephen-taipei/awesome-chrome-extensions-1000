@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Script</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🎬 Video Script</h1>
+      <div class="header-sub">Plan your content</div>
+    </header>
+
+    <!-- Script Sections -->
+    <div class="script-section">
+      <div class="section-label">Hook / Intro</div>
+      <textarea id="hook" placeholder="Grab attention in the first 3 seconds..."></textarea>
+    </div>
+
+    <div class="script-section">
+      <div class="section-label">Main Content</div>
+      <textarea id="content" placeholder="Your main points..."></textarea>
+    </div>
+
+    <div class="script-section">
+      <div class="section-label">Call to Action</div>
+      <textarea id="cta" placeholder="What do you want viewers to do?"></textarea>
+    </div>
+
+    <!-- Actions -->
+    <div class="actions">
+      <button id="copyScript" class="copy-btn">Copy Script</button>
+      <button id="saveScript" class="save-btn">Save</button>
+    </div>
+
+    <!-- Saved -->
+    <div class="section">
+      <div class="section-title">Saved Scripts</div>
+      <div id="scriptList" class="script-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
