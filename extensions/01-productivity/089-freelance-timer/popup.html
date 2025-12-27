@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Freelance Timer</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>⏱️ Freelance Timer</h1>
+    </header>
+
+    <!-- Timer Display -->
+    <div class="timer-card">
+      <div id="timerDisplay" class="timer-display">00:00:00</div>
+      <div id="currentProject" class="current-project">Select a client</div>
+      <div class="timer-controls">
+        <button id="startBtn" class="control-btn start">▶ Start</button>
+        <button id="stopBtn" class="control-btn stop" disabled>⏹ Stop</button>
+      </div>
+    </div>
+
+    <!-- Client Select -->
+    <div class="select-section">
+      <select id="clientSelect">
+        <option value="">Select Client...</option>
+      </select>
+      <button id="addClientBtn" class="add-btn">+</button>
+    </div>
+
+    <!-- Earnings -->
+    <div class="earnings-card">
+      <div class="earning">
+        <span class="earning-label">Today</span>
+        <span id="todayEarnings" class="earning-value">$0</span>
+      </div>
+      <div class="earning">
+        <span class="earning-label">This Week</span>
+        <span id="weekEarnings" class="earning-value">$0</span>
+      </div>
+      <div class="earning">
+        <span class="earning-label">This Month</span>
+        <span id="monthEarnings" class="earning-value">$0</span>
+      </div>
+    </div>
+
+    <!-- Recent Sessions -->
+    <div class="section">
+      <div class="section-title">Recent Sessions</div>
+      <div id="sessionsList" class="sessions-list"></div>
+    </div>
+
+    <!-- Add Client Modal -->
+    <div id="modal" class="modal hidden">
+      <div class="modal-content">
+        <h3>Add Client</h3>
+        <input type="text" id="clientName" placeholder="Client name">
+        <input type="number" id="hourlyRate" placeholder="Hourly rate ($)">
+        <div class="modal-actions">
+          <button id="cancelBtn" class="modal-btn cancel">Cancel</button>
+          <button id="saveBtn" class="modal-btn save">Add</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
