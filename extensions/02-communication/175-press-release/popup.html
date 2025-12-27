@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Press Release</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Press Release</h1>
+      <div class="header-sub">Share your news with the world</div>
+    </header>
+
+    <!-- Press Form -->
+    <div class="press-form">
+      <input type="text" id="headline" placeholder="Headline">
+      <input type="text" id="subhead" placeholder="Subheadline (optional)">
+      <div class="row">
+        <input type="text" id="location" placeholder="City, State">
+        <input type="date" id="releaseDate">
+      </div>
+      <textarea id="lead" placeholder="Opening paragraph (who, what, when, where, why)"></textarea>
+      <textarea id="body" placeholder="Supporting details and quotes"></textarea>
+      <input type="text" id="contact" placeholder="Media contact info">
+    </div>
+
+    <!-- Actions -->
+    <div class="actions">
+      <button id="copyRelease" class="copy-btn">Copy Release</button>
+      <button id="saveRelease" class="save-btn">Save</button>
+    </div>
+
+    <!-- Saved -->
+    <div class="section">
+      <div class="section-title">Saved Releases</div>
+      <div id="releaseList" class="release-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
