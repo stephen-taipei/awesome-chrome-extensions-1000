@@ -1,0 +1,279 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  background: linear-gradient(180deg, #1e1b4b 0%, #312e81 100%);
+  color: white;
+}
+
+.container {
+  width: 320px;
+  min-height: 520px;
+}
+
+header {
+  text-align: center;
+  padding: 16px;
+}
+
+header h1 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* Log Section */
+.log-section {
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  margin: 0 16px;
+}
+
+.log-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.time-inputs {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.time-group {
+  flex: 1;
+}
+
+.time-group label {
+  display: block;
+  font-size: 11px;
+  opacity: 0.8;
+  margin-bottom: 6px;
+}
+
+.time-group input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 16px;
+  text-align: center;
+}
+
+.time-group input::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
+.quality-section {
+  margin-bottom: 12px;
+}
+
+.quality-section > label {
+  display: block;
+  font-size: 11px;
+  opacity: 0.8;
+  margin-bottom: 8px;
+}
+
+.quality-options {
+  display: flex;
+  justify-content: space-between;
+}
+
+.quality-btn {
+  width: 44px;
+  height: 44px;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  font-size: 24px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.quality-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.quality-btn.selected {
+  border-color: #818cf8;
+  background: rgba(129, 140, 248, 0.3);
+}
+
+.log-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #6366f1 0%, #818cf8 100%);
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.log-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
+}
+
+/* Stats Section */
+.stats-section {
+  padding: 16px;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 12px;
+  text-align: center;
+}
+
+.stat-card.main {
+  margin-bottom: 10px;
+}
+
+.stat-row {
+  display: flex;
+  gap: 10px;
+}
+
+.stat-row .stat-card {
+  flex: 1;
+}
+
+.stat-label {
+  display: block;
+  font-size: 11px;
+  opacity: 0.7;
+  margin-bottom: 4px;
+}
+
+.stat-value {
+  font-size: 28px;
+  font-weight: 700;
+  color: #a5b4fc;
+}
+
+.stat-value.small {
+  font-size: 20px;
+}
+
+/* Chart Section */
+.chart-section {
+  padding: 16px;
+}
+
+.section-title {
+  font-size: 12px;
+  font-weight: 600;
+  opacity: 0.8;
+  margin-bottom: 12px;
+}
+
+.week-chart {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 80px;
+  padding: 0 8px;
+}
+
+.chart-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  width: 30px;
+}
+
+.chart-bar .bar {
+  width: 24px;
+  background: linear-gradient(180deg, #818cf8 0%, #6366f1 100%);
+  border-radius: 4px 4px 0 0;
+  transition: height 0.3s;
+}
+
+.chart-bar span {
+  font-size: 10px;
+  opacity: 0.7;
+}
+
+.chart-legend {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 11px;
+  opacity: 0.6;
+}
+
+/* History Section */
+.history-section {
+  padding: 16px;
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 100px;
+  overflow-y: auto;
+}
+
+.history-list:empty::after {
+  content: '開始記錄你的睡眠吧！';
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 12px;
+  text-align: center;
+}
+
+.history-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+}
+
+.history-quality {
+  font-size: 20px;
+}
+
+.history-info {
+  flex: 1;
+}
+
+.history-date {
+  font-size: 11px;
+  opacity: 0.7;
+}
+
+.history-duration {
+  font-size: 14px;
+  font-weight: 600;
+  color: #a5b4fc;
+}
+
+/* Scrollbar */
+.history-list::-webkit-scrollbar {
+  width: 4px;
+}
+
+.history-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.history-list::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
+}

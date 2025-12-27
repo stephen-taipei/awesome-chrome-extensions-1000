@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#312e81"/>
+      <stop offset="100%" style="stop-color:#4c1d95"/>
+    </linearGradient>
+  </defs>
+  <circle cx="64" cy="64" r="60" fill="url(#grad)"/>
+
+  <!-- Moon -->
+  <circle cx="55" cy="55" r="30" fill="#fef3c7"/>
+  <circle cx="42" cy="55" r="25" fill="url(#grad)"/>
+
+  <!-- Stars -->
+  <circle cx="90" cy="35" r="3" fill="white"/>
+  <circle cx="100" cy="55" r="2" fill="white" opacity="0.8"/>
+  <circle cx="85" cy="70" r="2" fill="white" opacity="0.6"/>
+  <circle cx="105" cy="80" r="3" fill="white" opacity="0.7"/>
+  <circle cx="75" cy="25" r="2" fill="white" opacity="0.5"/>
+
+  <!-- Zzz -->
+  <text x="70" y="95" fill="white" font-size="16" font-weight="bold" opacity="0.8">z</text>
+  <text x="82" y="88" fill="white" font-size="20" font-weight="bold" opacity="0.9">z</text>
+  <text x="96" y="78" fill="white" font-size="24" font-weight="bold">Z</text>
+</svg>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sleep Logger</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🌙 Sleep Logger</h1>
+    </header>
+
+    <!-- Log Sleep -->
+    <div class="log-section">
+      <div class="log-title">記錄昨晚睡眠</div>
+      <div class="time-inputs">
+        <div class="time-group">
+          <label>入睡時間</label>
+          <input type="time" id="bedTime" value="23:00">
+        </div>
+        <div class="time-group">
+          <label>起床時間</label>
+          <input type="time" id="wakeTime" value="07:00">
+        </div>
+      </div>
+
+      <div class="quality-section">
+        <label>睡眠品質</label>
+        <div class="quality-options">
+          <button class="quality-btn" data-quality="1">😫</button>
+          <button class="quality-btn" data-quality="2">😔</button>
+          <button class="quality-btn" data-quality="3">😐</button>
+          <button class="quality-btn selected" data-quality="4">😊</button>
+          <button class="quality-btn" data-quality="5">😴</button>
+        </div>
+      </div>
+
+      <button id="logBtn" class="log-btn">記錄睡眠</button>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats-section">
+      <div class="stat-card main">
+        <span class="stat-label">平均睡眠</span>
+        <span id="avgSleep" class="stat-value">0h 0m</span>
+      </div>
+      <div class="stat-row">
+        <div class="stat-card">
+          <span class="stat-label">平均入睡</span>
+          <span id="avgBedtime" class="stat-value small">--:--</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">平均起床</span>
+          <span id="avgWaketime" class="stat-value small">--:--</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Week Chart -->
+    <div class="chart-section">
+      <div class="section-title">本週睡眠</div>
+      <div id="weekChart" class="week-chart">
+        <div class="chart-bar" data-day="0"><div class="bar"></div><span>日</span></div>
+        <div class="chart-bar" data-day="1"><div class="bar"></div><span>一</span></div>
+        <div class="chart-bar" data-day="2"><div class="bar"></div><span>二</span></div>
+        <div class="chart-bar" data-day="3"><div class="bar"></div><span>三</span></div>
+        <div class="chart-bar" data-day="4"><div class="bar"></div><span>四</span></div>
+        <div class="chart-bar" data-day="5"><div class="bar"></div><span>五</span></div>
+        <div class="chart-bar" data-day="6"><div class="bar"></div><span>六</span></div>
+      </div>
+      <div class="chart-legend">
+        <span>目標: 8 小時</span>
+      </div>
+    </div>
+
+    <!-- Recent Logs -->
+    <div class="history-section">
+      <div class="section-title">最近紀錄</div>
+      <div id="historyList" class="history-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

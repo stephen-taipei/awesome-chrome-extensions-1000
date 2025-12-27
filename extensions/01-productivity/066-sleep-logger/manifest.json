@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Sleep Logger",
+  "version": "1.0.0",
+  "description": "Track your sleep patterns and improve your rest quality",
+  "permissions": [
+    "storage"
+  ],
+  "action": {
+    "default_title": "Sleep Logger",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
