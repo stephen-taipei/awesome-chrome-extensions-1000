@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Policy Update</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Policy Update</h1>
+      <div class="header-sub">Communicate policy changes</div>
+    </header>
+
+    <!-- Policy Form -->
+    <div class="policy-form">
+      <select id="policyType">
+        <option value="privacy">Privacy Policy</option>
+        <option value="terms">Terms of Service</option>
+        <option value="hr">HR Policy</option>
+        <option value="security">Security Policy</option>
+        <option value="company">Company Policy</option>
+        <option value="compliance">Compliance Update</option>
+      </select>
+
+      <input type="text" id="policyName" placeholder="Policy name">
+      <input type="text" id="effectiveDate" placeholder="Effective date">
+      <textarea id="changes" placeholder="Summary of changes..."></textarea>
+      <textarea id="impact" placeholder="How this affects you..."></textarea>
+    </div>
+
+    <!-- Actions -->
+    <div class="actions">
+      <button id="copyUpdate" class="copy-btn">Copy Update</button>
+      <button id="saveUpdate" class="save-btn">Save</button>
+    </div>
+
+    <!-- Saved -->
+    <div class="section">
+      <div class="section-title">Saved Updates</div>
+      <div id="updateList" class="update-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
