@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bug Report</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Bug Report</h1>
+      <div class="header-sub">Report issues clearly</div>
+    </header>
+    <div class="bug-form">
+      <select id="severity">
+        <option value="critical">Critical</option>
+        <option value="high">High</option>
+        <option value="medium">Medium</option>
+        <option value="low">Low</option>
+      </select>
+      <input type="text" id="title" placeholder="Bug title">
+      <textarea id="description" placeholder="What happened?"></textarea>
+      <textarea id="steps" placeholder="Steps to reproduce..."></textarea>
+      <input type="text" id="expected" placeholder="Expected behavior">
+      <input type="text" id="environment" placeholder="Environment (browser, OS)">
+    </div>
+    <div class="actions">
+      <button id="copyReport" class="copy-btn">Copy Report</button>
+      <button id="saveReport" class="save-btn">Save</button>
+    </div>
+    <div class="section">
+      <div class="section-title">Saved Reports</div>
+      <div id="reportList" class="report-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
