@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Lorem Ipsum</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <div class="container">
+    <header><h1>Lorem Ipsum</h1><div class="header-sub">Generate placeholder text</div></header>
+    <div class="generator-form">
+      <div class="options-row">
+        <select id="type"><option value="paragraphs">Paragraphs</option><option value="sentences">Sentences</option><option value="words">Words</option></select>
+        <input type="number" id="count" value="3" min="1" max="50">
+      </div>
+      <label class="checkbox-label"><input type="checkbox" id="startLorem" checked> Start with "Lorem ipsum"</label>
+    </div>
+    <div class="actions"><button id="generateBtn" class="action-btn">Generate</button><button id="copyBtn" class="action-btn secondary">Copy</button></div>
+    <div class="output-section"><div class="section-title">Generated Text</div><textarea id="output" readonly placeholder="Click Generate..."></textarea></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

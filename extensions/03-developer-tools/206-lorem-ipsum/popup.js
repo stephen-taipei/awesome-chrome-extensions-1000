@@ -1,0 +1,13 @@
+// Lorem Ipsum - Popup Script
+class LoremIpsum {
+  constructor() { this.words = ['lorem','ipsum','dolor','sit','amet','consectetur','adipiscing','elit','sed','do','eiusmod','tempor','incididunt','ut','labore','et','dolore','magna','aliqua','enim','ad','minim','veniam','quis','nostrud','exercitation','ullamco','laboris','nisi','aliquip','ex','ea','commodo','consequat','duis','aute','irure','in','reprehenderit','voluptate','velit','esse','cillum','fugiat','nulla','pariatur','excepteur','sint','occaecat','cupidatat','non','proident','sunt','culpa','qui','officia','deserunt','mollit','anim','id','est','laborum']; this.initElements(); this.bindEvents(); }
+  initElements() { this.typeEl = document.getElementById('type'); this.countEl = document.getElementById('count'); this.startLoremEl = document.getElementById('startLorem'); this.generateBtn = document.getElementById('generateBtn'); this.copyBtn = document.getElementById('copyBtn'); this.outputEl = document.getElementById('output'); }
+  bindEvents() { this.generateBtn.addEventListener('click', () => this.generate()); this.copyBtn.addEventListener('click', () => this.copy()); }
+  randomWord() { return this.words[Math.floor(Math.random() * this.words.length)]; }
+  capitalize(s) { return s.charAt(0).toUpperCase() + s.slice(1); }
+  generateSentence(wordCount = null) { const count = wordCount || Math.floor(Math.random() * 10) + 5; let words = []; for (let i = 0; i < count; i++) words.push(this.randomWord()); return this.capitalize(words.join(' ')) + '.'; }
+  generateParagraph() { const count = Math.floor(Math.random() * 4) + 3; let sentences = []; for (let i = 0; i < count; i++) sentences.push(this.generateSentence()); return sentences.join(' '); }
+  generate() { const type = this.typeEl.value; const count = parseInt(this.countEl.value) || 1; let result = ''; if (type === 'words') { let words = []; for (let i = 0; i < count; i++) words.push(this.randomWord()); result = words.join(' '); } else if (type === 'sentences') { let sentences = []; for (let i = 0; i < count; i++) sentences.push(this.generateSentence()); result = sentences.join(' '); } else { let paragraphs = []; for (let i = 0; i < count; i++) paragraphs.push(this.generateParagraph()); result = paragraphs.join('\n\n'); } if (this.startLoremEl.checked && result.length > 0) { result = 'Lorem ipsum dolor sit amet, ' + result.charAt(0).toLowerCase() + result.slice(1); } this.outputEl.value = result; }
+  async copy() { if (!this.outputEl.value) return; await navigator.clipboard.writeText(this.outputEl.value); const o = this.copyBtn.textContent; this.copyBtn.textContent = 'Copied!'; setTimeout(() => { this.copyBtn.textContent = o; }, 1500); }
+}
+document.addEventListener('DOMContentLoaded', () => new LoremIpsum());
