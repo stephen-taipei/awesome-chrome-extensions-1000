@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Inbox</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📥 Task Inbox</h1>
+      <span id="taskCount" class="count">0</span>
+    </header>
+
+    <div class="input-area">
+      <input type="text" id="taskInput" placeholder="快速新增任務或想法..." autofocus>
+      <button id="addBtn" class="add-btn">+</button>
+    </div>
+
+    <main>
+      <div id="taskList" class="task-list"></div>
+      <div id="emptyState" class="empty-state">
+        <div class="empty-icon">📭</div>
+        <div>收件匣是空的</div>
+        <div class="empty-hint">輸入任務或想法，按 Enter 新增</div>
+      </div>
+    </main>
+
+    <footer>
+      <button id="clearAllBtn" class="footer-btn" disabled>
+        <span>🗑️</span> 清空全部
+      </button>
+      <button id="exportBtn" class="footer-btn" disabled>
+        <span>📋</span> 複製全部
+      </button>
+    </footer>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
