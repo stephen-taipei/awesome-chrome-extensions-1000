@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Template</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📧 Email Template</h1>
+    </header>
+
+    <!-- Search -->
+    <div class="search-section">
+      <input type="text" id="searchInput" placeholder="搜尋模板...">
+      <button id="addNewBtn" class="new-btn">+</button>
+    </div>
+
+    <!-- Category Tabs -->
+    <div class="category-tabs">
+      <button class="cat-tab active" data-category="all">全部</button>
+      <button class="cat-tab" data-category="work">工作</button>
+      <button class="cat-tab" data-category="personal">個人</button>
+      <button class="cat-tab" data-category="sales">銷售</button>
+      <button class="cat-tab" data-category="support">客服</button>
+    </div>
+
+    <!-- Templates List -->
+    <div id="templatesList" class="templates-list"></div>
+
+    <!-- Add/Edit Form (hidden by default) -->
+    <div id="formSection" class="form-section hidden">
+      <div class="form-header">
+        <span id="formTitle">新增模板</span>
+        <button id="closeFormBtn" class="close-btn">×</button>
+      </div>
+      <input type="text" id="templateName" placeholder="模板名稱">
+      <select id="templateCategory">
+        <option value="work">工作</option>
+        <option value="personal">個人</option>
+        <option value="sales">銷售</option>
+        <option value="support">客服</option>
+      </select>
+      <input type="text" id="templateSubject" placeholder="郵件主旨">
+      <textarea id="templateContent" placeholder="郵件內容...支援變數如 {{name}}, {{date}}"></textarea>
+      <button id="saveBtn" class="save-btn">儲存模板</button>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
