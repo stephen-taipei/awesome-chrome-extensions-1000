@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intro Script</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Intro Script</h1>
+      <div class="header-sub">Perfect your self-introduction</div>
+    </header>
+
+    <!-- Intro Form -->
+    <div class="intro-form">
+      <select id="occasion">
+        <option value="networking">Networking Event</option>
+        <option value="interview">Job Interview</option>
+        <option value="meeting">Meeting</option>
+        <option value="pitch">Elevator Pitch</option>
+        <option value="social">Social Gathering</option>
+        <option value="conference">Conference</option>
+      </select>
+
+      <input type="text" id="name" placeholder="Your name">
+      <input type="text" id="role" placeholder="Your role/title">
+      <input type="text" id="company" placeholder="Company/Organization">
+      <textarea id="expertise" placeholder="What you do / specialize in..."></textarea>
+      <textarea id="interest" placeholder="Why you're here / what you're looking for..."></textarea>
+    </div>
+
+    <!-- Actions -->
+    <div class="actions">
+      <button id="copyIntro" class="copy-btn">Copy Script</button>
+      <button id="saveIntro" class="save-btn">Save</button>
+    </div>
+
+    <!-- Saved -->
+    <div class="section">
+      <div class="section-title">Saved Intros</div>
+      <div id="introList" class="intro-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
