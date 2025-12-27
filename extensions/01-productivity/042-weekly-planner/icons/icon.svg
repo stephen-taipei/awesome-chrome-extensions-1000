@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6"/>
+      <stop offset="100%" style="stop-color:#6d28d9"/>
+    </linearGradient>
+  </defs>
+  <circle cx="64" cy="64" r="60" fill="url(#grad)"/>
+  <!-- Calendar base -->
+  <rect x="24" y="32" width="80" height="68" rx="8" fill="white"/>
+  <!-- Header bar -->
+  <rect x="24" y="32" width="80" height="18" rx="8" ry="8" fill="#e9d5ff"/>
+  <!-- Calendar rings -->
+  <circle cx="40" cy="32" r="5" fill="white" stroke="#8b5cf6" stroke-width="2"/>
+  <circle cx="88" cy="32" r="5" fill="white" stroke="#8b5cf6" stroke-width="2"/>
+  <line x1="40" y1="26" x2="40" y2="38" stroke="#8b5cf6" stroke-width="2"/>
+  <line x1="88" y1="26" x2="88" y2="38" stroke="#8b5cf6" stroke-width="2"/>
+  <!-- Week grid (7 columns) -->
+  <line x1="32" y1="55" x2="96" y2="55" stroke="#e9d5ff" stroke-width="1"/>
+  <line x1="32" y1="70" x2="96" y2="70" stroke="#e9d5ff" stroke-width="1"/>
+  <line x1="32" y1="85" x2="96" y2="85" stroke="#e9d5ff" stroke-width="1"/>
+  <!-- Today highlight -->
+  <rect x="52" y="57" width="12" height="11" rx="2" fill="#8b5cf6"/>
+  <!-- Check marks -->
+  <path d="M33 62 L36 65 L41 58" fill="none" stroke="#8b5cf6" stroke-width="2" stroke-linecap="round"/>
+  <path d="M73 77 L76 80 L81 73" fill="none" stroke="#8b5cf6" stroke-width="2" stroke-linecap="round"/>
+</svg>

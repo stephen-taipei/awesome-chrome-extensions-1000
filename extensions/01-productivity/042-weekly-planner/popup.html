@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weekly Planner</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <button id="prevWeekBtn" class="nav-btn">‹</button>
+      <div class="header-center">
+        <h1>📅 Weekly Planner</h1>
+        <span id="weekRange" class="week-range"></span>
+      </div>
+      <button id="nextWeekBtn" class="nav-btn">›</button>
+    </header>
+
+    <div class="progress-bar">
+      <div id="progressFill" class="progress-fill"></div>
+    </div>
+    <div id="progressText" class="progress-text">0 / 0 完成</div>
+
+    <main>
+      <div id="weekDays" class="week-days"></div>
+    </main>
+
+    <!-- Add Task Modal -->
+    <div id="addModal" class="modal hidden">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 id="modalDayTitle">新增任務</h2>
+          <button id="closeModalBtn" class="close-btn">×</button>
+        </div>
+        <div class="modal-body">
+          <input type="text" id="taskInput" placeholder="輸入任務..." autofocus>
+        </div>
+        <div class="modal-footer">
+          <button id="saveTaskBtn" class="btn btn-primary">新增</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
