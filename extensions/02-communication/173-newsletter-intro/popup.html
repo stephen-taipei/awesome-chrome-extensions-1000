@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Newsletter Intro</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Newsletter Intro</h1>
+      <div class="header-sub">Hook your readers from the start</div>
+    </header>
+
+    <!-- Intro Form -->
+    <div class="intro-form">
+      <select id="tone">
+        <option value="professional">Professional</option>
+        <option value="friendly">Friendly/Casual</option>
+        <option value="urgent">Urgent/Important</option>
+        <option value="story">Story-telling</option>
+        <option value="question">Question-based</option>
+        <option value="news">News/Update</option>
+      </select>
+
+      <input type="text" id="topic" placeholder="Main topic of this newsletter">
+      <input type="text" id="hook" placeholder="Attention-grabbing hook (optional)">
+      <textarea id="preview" placeholder="Quick preview of what's inside..."></textarea>
+      <input type="text" id="brand" placeholder="Newsletter name (optional)">
+    </div>
+
+    <!-- Actions -->
+    <div class="actions">
+      <button id="copyIntro" class="copy-btn">Copy Intro</button>
+      <button id="saveIntro" class="save-btn">Save</button>
+    </div>
+
+    <!-- Saved -->
+    <div class="section">
+      <div class="section-title">Saved Intros</div>
+      <div id="introList" class="intro-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
