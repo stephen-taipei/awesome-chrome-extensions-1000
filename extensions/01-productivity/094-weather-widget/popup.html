@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Widget</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Current Weather Display -->
+    <div class="weather-card">
+      <div id="weatherIcon" class="weather-icon">☀️</div>
+      <div class="weather-info">
+        <div id="temperature" class="temperature">--°</div>
+        <div id="condition" class="condition">No data</div>
+      </div>
+      <div id="location" class="location">Set your location</div>
+    </div>
+
+    <!-- Log Weather -->
+    <div class="log-section">
+      <div class="section-title">Log Weather</div>
+      <div class="weather-options">
+        <button class="weather-btn" data-condition="sunny" data-icon="☀️">☀️</button>
+        <button class="weather-btn" data-condition="cloudy" data-icon="☁️">☁️</button>
+        <button class="weather-btn" data-condition="partly-cloudy" data-icon="⛅">⛅</button>
+        <button class="weather-btn" data-condition="rainy" data-icon="🌧️">🌧️</button>
+        <button class="weather-btn" data-condition="stormy" data-icon="⛈️">⛈️</button>
+        <button class="weather-btn" data-condition="snowy" data-icon="❄️">❄️</button>
+        <button class="weather-btn" data-condition="windy" data-icon="💨">💨</button>
+        <button class="weather-btn" data-condition="foggy" data-icon="🌫️">🌫️</button>
+      </div>
+      <div class="temp-input">
+        <input type="number" id="tempInput" placeholder="Temperature">
+        <select id="unitSelect">
+          <option value="C">°C</option>
+          <option value="F">°F</option>
+        </select>
+        <button id="saveBtn" class="save-btn">Save</button>
+      </div>
+    </div>
+
+    <!-- Settings -->
+    <div class="settings-section">
+      <input type="text" id="locationInput" placeholder="Your location (city)">
+    </div>
+
+    <!-- History -->
+    <div class="section">
+      <div class="section-title">Recent Weather</div>
+      <div id="historyList" class="history-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
