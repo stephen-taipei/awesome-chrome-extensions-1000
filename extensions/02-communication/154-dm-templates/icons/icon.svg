@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6"/>
+      <stop offset="100%" style="stop-color:#2563eb"/>
+    </linearGradient>
+  </defs>
+  <circle cx="64" cy="64" r="60" fill="url(#grad)"/>
+
+  <!-- Chat bubbles -->
+  <rect x="28" y="35" width="50" height="35" rx="8" fill="white"/>
+  <polygon points="35,70 45,70 35,82" fill="white"/>
+
+  <!-- Reply bubble -->
+  <rect x="50" y="58" width="50" height="30" rx="8" fill="#dbeafe"/>
+  <polygon points="93,88 83,88 93,98" fill="#dbeafe"/>
+
+  <!-- Lines in bubbles -->
+  <rect x="35" y="45" width="30" height="4" rx="2" fill="#dbeafe"/>
+  <rect x="35" y="53" width="22" height="4" rx="2" fill="#dbeafe"/>
+
+  <rect x="57" y="68" width="28" height="3" rx="1" fill="#3b82f6"/>
+  <rect x="57" y="75" width="20" height="3" rx="1" fill="#3b82f6"/>
+</svg>

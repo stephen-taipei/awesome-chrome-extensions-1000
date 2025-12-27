@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DM Templates</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>💬 DM Templates</h1>
+      <div class="header-sub">Quick message templates</div>
+    </header>
+
+    <!-- Category Filter -->
+    <div class="category-filter">
+      <button class="cat-btn active" data-category="all">All</button>
+      <button class="cat-btn" data-category="intro">👋 Intro</button>
+      <button class="cat-btn" data-category="collab">🤝 Collab</button>
+      <button class="cat-btn" data-category="business">💼 Business</button>
+    </div>
+
+    <!-- Add Template -->
+    <div class="add-template">
+      <input type="text" id="templateName" placeholder="Template name">
+      <select id="templateCategory">
+        <option value="intro">👋 Introduction</option>
+        <option value="collab">🤝 Collaboration</option>
+        <option value="business">💼 Business</option>
+        <option value="other">📝 Other</option>
+      </select>
+      <textarea id="templateText" placeholder="Your message template..."></textarea>
+      <button id="saveTemplate" class="save-btn">Save Template</button>
+    </div>
+
+    <!-- Templates -->
+    <div class="section">
+      <div class="section-title">Your Templates</div>
+      <div id="templateList" class="template-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  background: linear-gradient(180deg, #eff6ff 0%, #dbeafe 100%);
+  color: #1e40af;
+}
+
+.container {
+  width: 340px;
+  min-height: 480px;
+}
+
+header {
+  text-align: center;
+  padding: 14px 16px;
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  color: white;
+}
+
+header h1 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.header-sub {
+  font-size: 11px;
+  opacity: 0.9;
+  margin-top: 4px;
+}
+
+/* Category Filter */
+.category-filter {
+  padding: 12px 16px;
+  display: flex;
+  gap: 6px;
+}
+
+.cat-btn {
+  flex: 1;
+  padding: 8px 6px;
+  border: 2px solid #dbeafe;
+  border-radius: 6px;
+  background: white;
+  color: #1e40af;
+  font-size: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cat-btn.active {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  color: white;
+  border-color: transparent;
+}
+
+/* Add Template */
+.add-template {
+  padding: 0 16px 12px;
+}
+
+.add-template input,
+.add-template select,
+.add-template textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 2px solid #dbeafe;
+  border-radius: 8px;
+  font-size: 12px;
+  color: #1e40af;
+  font-family: inherit;
+  background: white;
+  margin-bottom: 8px;
+}
+
+.add-template textarea {
+  height: 60px;
+  resize: none;
+}
+
+.add-template input:focus,
+.add-template select:focus,
+.add-template textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+.save-btn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Section */
+.section {
+  padding: 0 16px 16px;
+}
+
+.section-title {
+  font-size: 11px;
+  font-weight: 600;
+  color: #2563eb;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+/* Template List */
+.template-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.template-item {
+  background: white;
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 1px 4px rgba(59, 130, 246, 0.1);
+}
+
+.template-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.template-name {
+  font-size: 12px;
+  font-weight: 600;
+  color: #1e40af;
+}
+
+.template-category {
+  font-size: 10px;
+}
+
+.template-preview {
+  font-size: 11px;
+  color: #78716c;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 8px;
+}
+
+.template-actions button {
+  padding: 5px 12px;
+  border: none;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-right: 4px;
+}
+
+.copy-btn {
+  background: #3b82f6;
+  color: white;
+}
+
+.delete-btn {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 25px;
+  color: #a1a1aa;
+  font-size: 12px;
+}
