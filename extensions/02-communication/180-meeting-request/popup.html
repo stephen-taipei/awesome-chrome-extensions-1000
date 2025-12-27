@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meeting Request</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Meeting Request</h1>
+      <div class="header-sub">Schedule with ease</div>
+    </header>
+
+    <!-- Meeting Form -->
+    <div class="meeting-form">
+      <select id="meetingType">
+        <option value="intro">Introduction Call</option>
+        <option value="followup">Follow-up Meeting</option>
+        <option value="review">Review Session</option>
+        <option value="brainstorm">Brainstorming</option>
+        <option value="interview">Interview</option>
+        <option value="general">General Meeting</option>
+      </select>
+
+      <input type="text" id="attendee" placeholder="Who are you inviting?">
+      <input type="text" id="subject" placeholder="Meeting subject">
+      <input type="text" id="duration" placeholder="Duration (e.g., 30 minutes)">
+      <textarea id="agenda" placeholder="Meeting agenda or topics..."></textarea>
+      <input type="text" id="proposedTimes" placeholder="Proposed times">
+    </div>
+
+    <!-- Actions -->
+    <div class="actions">
+      <button id="copyRequest" class="copy-btn">Copy Request</button>
+      <button id="saveRequest" class="save-btn">Save</button>
+    </div>
+
+    <!-- Saved -->
+    <div class="section">
+      <div class="section-title">Saved Requests</div>
+      <div id="requestList" class="request-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
