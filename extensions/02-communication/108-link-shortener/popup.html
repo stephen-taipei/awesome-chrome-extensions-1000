@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Link Shortener</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Link Shortener</h1>
+    </header>
+
+    <!-- Add Link -->
+    <div class="add-section">
+      <div class="input-row">
+        <input type="url" id="longUrl" placeholder="Enter or paste long URL...">
+        <button id="getCurrentPage" class="page-btn" title="Use current page">📄</button>
+      </div>
+      <input type="text" id="alias" placeholder="Custom alias (optional)">
+      <button id="shortenBtn" class="shorten-btn">Create Short Link</button>
+    </div>
+
+    <!-- Result -->
+    <div id="result" class="result-section" style="display: none;">
+      <div class="result-label">Your short link:</div>
+      <div class="result-link" id="resultLink"></div>
+      <button id="copyResult" class="copy-btn">Copy to Clipboard</button>
+    </div>
+
+    <!-- Saved Links -->
+    <div class="section">
+      <div class="section-title">Saved Links</div>
+      <div id="linksList" class="links-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
