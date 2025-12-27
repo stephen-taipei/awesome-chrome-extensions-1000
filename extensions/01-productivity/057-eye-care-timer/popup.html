@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eye Care Timer</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>👁️ Eye Care</h1>
+      <label class="toggle">
+        <input type="checkbox" id="enableToggle" checked>
+        <span class="slider"></span>
+      </label>
+    </header>
+
+    <!-- Timer Display -->
+    <div class="timer-section">
+      <div class="eye-animation" id="eyeAnimation">
+        <div class="eye">
+          <div class="pupil"></div>
+        </div>
+      </div>
+      <div id="timerDisplay" class="timer-display">20:00</div>
+      <div id="statusText" class="status-text">距離下次眼睛休息</div>
+    </div>
+
+    <!-- 20-20-20 Rule Info -->
+    <div class="rule-info">
+      <div class="rule-title">20-20-20 護眼法則</div>
+      <div class="rule-items">
+        <div class="rule-item">
+          <span class="rule-number">20</span>
+          <span class="rule-unit">分鐘</span>
+          <span class="rule-desc">使用螢幕</span>
+        </div>
+        <div class="rule-item">
+          <span class="rule-number">20</span>
+          <span class="rule-unit">英尺</span>
+          <span class="rule-desc">看遠方物體</span>
+        </div>
+        <div class="rule-item">
+          <span class="rule-number">20</span>
+          <span class="rule-unit">秒</span>
+          <span class="rule-desc">休息眼睛</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Actions -->
+    <div class="actions">
+      <button id="restNowBtn" class="action-btn primary">
+        👀 現在休息
+      </button>
+      <button id="resetBtn" class="action-btn secondary">
+        🔄 重設計時
+      </button>
+    </div>
+
+    <!-- Settings -->
+    <section class="section">
+      <div class="section-title">提醒間隔</div>
+      <div class="interval-options">
+        <button class="interval-btn" data-minutes="15">15 分</button>
+        <button class="interval-btn selected" data-minutes="20">20 分</button>
+        <button class="interval-btn" data-minutes="30">30 分</button>
+        <button class="interval-btn" data-minutes="45">45 分</button>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="section stats">
+      <div class="stat-item">
+        <div class="stat-value" id="todayRests">0</div>
+        <div class="stat-label">今日休息</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value" id="totalRests">0</div>
+        <div class="stat-label">累計休息</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value" id="eyeHealth">100%</div>
+        <div class="stat-label">護眼指數</div>
+      </div>
+    </section>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

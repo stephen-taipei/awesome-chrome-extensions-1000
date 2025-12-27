@@ -1,0 +1,278 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  background: #f0f9ff;
+  color: #333;
+}
+
+.container {
+  width: 320px;
+  min-height: 480px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  background: linear-gradient(135deg, #0ea5e9 0%, #38bdf8 100%);
+  color: white;
+}
+
+header h1 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Toggle */
+.toggle {
+  position: relative;
+  width: 44px;
+  height: 24px;
+}
+
+.toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background-color: rgba(255,255,255,0.3);
+  transition: 0.3s;
+  border-radius: 24px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background: white;
+  transition: 0.3s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: rgba(255,255,255,0.5);
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+/* Timer Section */
+.timer-section {
+  text-align: center;
+  padding: 24px 16px;
+  background: white;
+  border-bottom: 1px solid #e0f2fe;
+}
+
+/* Eye Animation */
+.eye-animation {
+  margin-bottom: 16px;
+}
+
+.eye {
+  width: 60px;
+  height: 40px;
+  background: white;
+  border: 4px solid #0ea5e9;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  animation: blink 4s infinite;
+}
+
+.pupil {
+  width: 20px;
+  height: 20px;
+  background: #0c4a6e;
+  border-radius: 50%;
+  animation: lookAround 4s infinite;
+}
+
+@keyframes blink {
+  0%, 45%, 55%, 100% { transform: scaleY(1); }
+  50% { transform: scaleY(0.1); }
+}
+
+@keyframes lookAround {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(8px); }
+  75% { transform: translateX(-8px); }
+}
+
+.timer-display {
+  font-size: 48px;
+  font-weight: 700;
+  color: #0c4a6e;
+  font-variant-numeric: tabular-nums;
+}
+
+.status-text {
+  font-size: 13px;
+  color: #64748b;
+  margin-top: 8px;
+}
+
+/* Rule Info */
+.rule-info {
+  padding: 16px;
+  background: #f0f9ff;
+  border-bottom: 1px solid #e0f2fe;
+}
+
+.rule-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: #0369a1;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.rule-items {
+  display: flex;
+  justify-content: space-around;
+}
+
+.rule-item {
+  text-align: center;
+}
+
+.rule-number {
+  display: block;
+  font-size: 28px;
+  font-weight: 700;
+  color: #0ea5e9;
+}
+
+.rule-unit {
+  display: block;
+  font-size: 11px;
+  color: #64748b;
+}
+
+.rule-desc {
+  display: block;
+  font-size: 10px;
+  color: #94a3b8;
+  margin-top: 2px;
+}
+
+/* Actions */
+.actions {
+  display: flex;
+  gap: 8px;
+  padding: 12px 16px;
+  background: white;
+  border-bottom: 1px solid #e0f2fe;
+}
+
+.action-btn {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.action-btn.primary {
+  background: linear-gradient(135deg, #0ea5e9 0%, #38bdf8 100%);
+  color: white;
+}
+
+.action-btn.primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3);
+}
+
+.action-btn.secondary {
+  background: #f0f9ff;
+  color: #0369a1;
+}
+
+.action-btn.secondary:hover {
+  background: #e0f2fe;
+}
+
+/* Section */
+.section {
+  padding: 12px 16px;
+  background: white;
+  border-bottom: 1px solid #e0f2fe;
+}
+
+.section-title {
+  font-size: 11px;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+/* Interval Options */
+.interval-options {
+  display: flex;
+  gap: 8px;
+}
+
+.interval-btn {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #e0f2fe;
+  border-radius: 8px;
+  background: white;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.interval-btn:hover {
+  border-color: #38bdf8;
+}
+
+.interval-btn.selected {
+  background: #f0f9ff;
+  border-color: #0ea5e9;
+  color: #0369a1;
+  font-weight: 500;
+}
+
+/* Stats */
+.stats {
+  display: flex;
+  justify-content: space-around;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-value {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0ea5e9;
+}
+
+.stat-label {
+  font-size: 11px;
+  color: #64748b;
+  margin-top: 2px;
+}
