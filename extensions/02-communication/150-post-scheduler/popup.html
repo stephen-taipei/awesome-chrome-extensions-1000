@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post Scheduler</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📱 Post Scheduler</h1>
+      <div class="header-sub">Plan your content</div>
+    </header>
+
+    <!-- New Post -->
+    <div class="new-post">
+      <div class="platform-select">
+        <button class="platform-btn active" data-platform="twitter">𝕏</button>
+        <button class="platform-btn" data-platform="instagram">📷</button>
+        <button class="platform-btn" data-platform="facebook">📘</button>
+        <button class="platform-btn" data-platform="linkedin">💼</button>
+        <button class="platform-btn" data-platform="tiktok">🎵</button>
+      </div>
+      <textarea id="postContent" placeholder="What's on your mind?"></textarea>
+      <div class="schedule-row">
+        <input type="date" id="postDate">
+        <input type="time" id="postTime">
+      </div>
+      <button id="scheduleBtn" class="schedule-btn">Schedule Post</button>
+    </div>
+
+    <!-- Scheduled Posts -->
+    <div class="section">
+      <div class="section-title">Scheduled Posts</div>
+      <div id="postList" class="post-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
