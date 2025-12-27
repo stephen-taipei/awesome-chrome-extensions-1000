@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Retention</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Customer Retention</h1>
+      <div class="header-sub">Keep customers engaged</div>
+    </header>
+
+    <!-- Retention Form -->
+    <div class="retention-form">
+      <select id="retentionType">
+        <option value="winback">Win-Back Campaign</option>
+        <option value="discount">Special Discount</option>
+        <option value="loyalty">Loyalty Reward</option>
+        <option value="feedback">Request Feedback</option>
+        <option value="upgrade">Upgrade Offer</option>
+        <option value="reactivate">Reactivation</option>
+      </select>
+
+      <input type="text" id="customer" placeholder="Customer name">
+      <input type="text" id="offer" placeholder="Offer details (e.g., 20% off)">
+      <textarea id="message" placeholder="Personal message..."></textarea>
+      <input type="text" id="deadline" placeholder="Offer deadline (if any)">
+    </div>
+
+    <!-- Actions -->
+    <div class="actions">
+      <button id="copyRetention" class="copy-btn">Copy Message</button>
+      <button id="saveRetention" class="save-btn">Save</button>
+    </div>
+
+    <!-- Saved -->
+    <div class="section">
+      <div class="section-title">Saved Messages</div>
+      <div id="retentionList" class="retention-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
