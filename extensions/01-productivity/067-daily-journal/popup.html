@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Journal</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📔 Daily Journal</h1>
+    </header>
+
+    <!-- View Toggle -->
+    <div class="view-toggle">
+      <button class="toggle-btn active" data-view="write">撰寫</button>
+      <button class="toggle-btn" data-view="entries">日記列表</button>
+    </div>
+
+    <!-- Write View -->
+    <div id="writeView" class="view active">
+      <div class="date-nav">
+        <button id="prevDay" class="nav-btn">◀</button>
+        <span id="currentDate"></span>
+        <button id="nextDay" class="nav-btn">▶</button>
+      </div>
+
+      <div class="editor-section">
+        <textarea id="journalContent" placeholder="今天發生了什麼事？你有什麼感受？"></textarea>
+
+        <div class="mood-section">
+          <span class="mood-label">今日心情</span>
+          <div class="mood-options">
+            <button class="mood-btn" data-mood="happy">😊</button>
+            <button class="mood-btn" data-mood="excited">🤩</button>
+            <button class="mood-btn" data-mood="calm">😌</button>
+            <button class="mood-btn" data-mood="tired">😴</button>
+            <button class="mood-btn" data-mood="sad">😢</button>
+            <button class="mood-btn" data-mood="angry">😠</button>
+          </div>
+        </div>
+
+        <div class="tags-section">
+          <input type="text" id="tagInput" placeholder="添加標籤 (按 Enter)">
+          <div id="tagsList" class="tags-list"></div>
+        </div>
+
+        <button id="saveBtn" class="save-btn">儲存日記</button>
+      </div>
+    </div>
+
+    <!-- Entries View -->
+    <div id="entriesView" class="view">
+      <div class="search-section">
+        <input type="text" id="searchInput" placeholder="搜尋日記...">
+      </div>
+      <div id="entriesList" class="entries-list"></div>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats-bar">
+      <div class="stat">
+        <span class="stat-value" id="totalEntries">0</span>
+        <span class="stat-label">日記數</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value" id="streakDays">0</span>
+        <span class="stat-label">連續天數</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value" id="totalWords">0</span>
+        <span class="stat-label">總字數</span>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b"/>
+      <stop offset="100%" style="stop-color:#d97706"/>
+    </linearGradient>
+  </defs>
+  <circle cx="64" cy="64" r="60" fill="url(#grad)"/>
+
+  <!-- Book -->
+  <rect x="30" y="28" width="68" height="72" rx="4" fill="#fef3c7"/>
+  <rect x="30" y="28" width="10" height="72" fill="#fde68a"/>
+
+  <!-- Lines -->
+  <line x1="48" y1="45" x2="88" y2="45" stroke="#d97706" stroke-width="2" opacity="0.4"/>
+  <line x1="48" y1="55" x2="88" y2="55" stroke="#d97706" stroke-width="2" opacity="0.4"/>
+  <line x1="48" y1="65" x2="78" y2="65" stroke="#d97706" stroke-width="2" opacity="0.4"/>
+  <line x1="48" y1="75" x2="85" y2="75" stroke="#d97706" stroke-width="2" opacity="0.4"/>
+  <line x1="48" y1="85" x2="70" y2="85" stroke="#d97706" stroke-width="2" opacity="0.4"/>
+
+  <!-- Pen -->
+  <g transform="rotate(30, 85, 85)">
+    <rect x="82" y="50" width="6" height="45" rx="1" fill="#78350f"/>
+    <polygon points="85,95 82,105 88,105" fill="#78350f"/>
+  </g>
+
+  <!-- Bookmark -->
+  <polygon points="75,28 85,28 85,48 80,42 75,48" fill="#ef4444"/>
+</svg>
