@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weekly Report</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Weekly Report</h1>
+      <div id="weekRange" class="header-week"></div>
+    </header>
+
+    <!-- Report Sections -->
+    <div class="report-section">
+      <div class="section-label">Accomplishments</div>
+      <textarea id="accomplishments" placeholder="What did you accomplish this week?"></textarea>
+    </div>
+
+    <div class="report-section">
+      <div class="section-label">Next Week Plans</div>
+      <textarea id="nextWeek" placeholder="What are your plans for next week?"></textarea>
+    </div>
+
+    <div class="report-section">
+      <div class="section-label">Highlights / Wins</div>
+      <textarea id="highlights" placeholder="Any highlights or wins to share?"></textarea>
+    </div>
+
+    <div class="report-section">
+      <div class="section-label">Challenges</div>
+      <textarea id="challenges" placeholder="Any challenges or concerns?"></textarea>
+    </div>
+
+    <!-- Actions -->
+    <div class="actions">
+      <button id="copyReport" class="copy-btn">Copy Report</button>
+      <button id="clearReport" class="clear-btn">Clear</button>
+    </div>
+
+    <!-- History -->
+    <div class="section">
+      <div class="section-title">Recent Reports</div>
+      <div id="historyList" class="history-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
