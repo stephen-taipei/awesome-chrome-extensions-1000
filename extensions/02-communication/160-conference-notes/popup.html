@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conference Notes</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Conference Notes</h1>
+      <div class="header-sub">Capture insights from events</div>
+    </header>
+
+    <!-- Session Form -->
+    <div class="session-form">
+      <input type="text" id="conference" placeholder="Conference name...">
+      <input type="text" id="session" placeholder="Session/Talk title...">
+      <input type="text" id="speaker" placeholder="Speaker name...">
+      <textarea id="notes" placeholder="Key takeaways and notes..."></textarea>
+      <div class="form-actions">
+        <button id="copyNotes" class="copy-btn">Copy</button>
+        <button id="saveSession" class="save-btn">Save Session</button>
+      </div>
+    </div>
+
+    <!-- Saved Sessions -->
+    <div class="section">
+      <div class="section-title">Saved Sessions</div>
+      <div id="sessionList" class="session-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  background: linear-gradient(180deg, #e0e7ff 0%, #c7d2fe 100%);
+  color: #4338ca;
+}
+
+.container {
+  width: 340px;
+  min-height: 500px;
+}
+
+header {
+  text-align: center;
+  padding: 14px 16px;
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+  color: white;
+}
+
+header h1 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.header-sub {
+  font-size: 11px;
+  opacity: 0.9;
+  margin-top: 4px;
+}
+
+/* Session Form */
+.session-form {
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.session-form input {
+  padding: 10px 12px;
+  border: 2px solid #c7d2fe;
+  border-radius: 8px;
+  font-size: 12px;
+  color: #4338ca;
+}
+
+.session-form textarea {
+  padding: 10px 12px;
+  border: 2px solid #c7d2fe;
+  border-radius: 8px;
+  font-size: 12px;
+  font-family: inherit;
+  color: #4338ca;
+  height: 80px;
+  resize: none;
+}
+
+.session-form input:focus,
+.session-form textarea:focus {
+  outline: none;
+  border-color: #6366f1;
+}
+
+.form-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.copy-btn {
+  padding: 10px 16px;
+  border: 2px solid #c7d2fe;
+  border-radius: 8px;
+  background: white;
+  color: #4338ca;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.save-btn {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+  color: white;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Section */
+.section {
+  padding: 0 16px 16px;
+}
+
+.section-title {
+  font-size: 11px;
+  font-weight: 600;
+  color: #4f46e5;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+/* Session List */
+.session-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 180px;
+  overflow-y: auto;
+}
+
+.session-item {
+  background: white;
+  border-radius: 8px;
+  padding: 10px 12px;
+  box-shadow: 0 1px 4px rgba(99, 102, 241, 0.15);
+}
+
+.session-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 4px;
+}
+
+.session-title {
+  font-size: 11px;
+  font-weight: 600;
+  color: #4338ca;
+}
+
+.session-conf {
+  font-size: 9px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: #e0e7ff;
+  color: #4f46e5;
+  font-weight: 600;
+}
+
+.session-speaker {
+  font-size: 10px;
+  color: #78716c;
+  margin-bottom: 4px;
+}
+
+.session-notes {
+  font-size: 10px;
+  color: #a1a1aa;
+  line-height: 1.3;
+  white-space: pre-wrap;
+  max-height: 40px;
+  overflow: hidden;
+}
+
+.session-actions {
+  display: flex;
+  gap: 4px;
+  margin-top: 8px;
+}
+
+.session-actions button {
+  padding: 4px 8px;
+  border: none;
+  border-radius: 4px;
+  font-size: 9px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.load-btn {
+  background: #6366f1;
+  color: white;
+}
+
+.delete-btn {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 20px;
+  color: #a1a1aa;
+  font-size: 11px;
+}
