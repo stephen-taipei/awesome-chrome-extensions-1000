@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Social Bio</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>✨ Social Bio</h1>
+      <div class="header-sub">Craft your perfect bio</div>
+    </header>
+
+    <!-- Platform Selector -->
+    <div class="platform-section">
+      <div class="platform-btns">
+        <button class="platform-btn active" data-platform="twitter">𝕏 Twitter</button>
+        <button class="platform-btn" data-platform="instagram">📷 Instagram</button>
+        <button class="platform-btn" data-platform="linkedin">💼 LinkedIn</button>
+        <button class="platform-btn" data-platform="tiktok">🎵 TikTok</button>
+      </div>
+    </div>
+
+    <!-- Bio Builder -->
+    <div class="bio-builder">
+      <textarea id="bioText" placeholder="Write your bio here..."></textarea>
+      <div class="char-count">
+        <span id="charCount">0</span> / <span id="charLimit">160</span>
+      </div>
+    </div>
+
+    <!-- Actions -->
+    <div class="actions">
+      <button id="copyBio" class="copy-btn">Copy Bio</button>
+      <button id="saveBio" class="save-btn">Save</button>
+    </div>
+
+    <!-- Saved Bios -->
+    <div class="section">
+      <div class="section-title">Saved Bios</div>
+      <div id="bioList" class="bio-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
