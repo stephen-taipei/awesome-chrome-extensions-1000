@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Debt Tracker</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📉 Debt Tracker</h1>
+    </header>
+
+    <!-- Overview -->
+    <div class="overview-card">
+      <div class="overview-main">
+        <span class="overview-label">Total Debt</span>
+        <span id="totalDebt" class="overview-value">$0</span>
+      </div>
+      <div class="overview-row">
+        <div class="overview-item">
+          <span class="item-label">Paid Off</span>
+          <span id="totalPaid" class="item-value paid">$0</span>
+        </div>
+        <div class="overview-item">
+          <span class="item-label">Progress</span>
+          <span id="overallProgress" class="item-value">0%</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add Debt Button -->
+    <div class="action-section">
+      <button id="addDebtBtn" class="add-debt-btn">+ Add New Debt</button>
+    </div>
+
+    <!-- Debts List -->
+    <div class="section">
+      <div class="section-title">Your Debts</div>
+      <div id="debtsList" class="debts-list"></div>
+    </div>
+
+    <!-- Add Debt Modal -->
+    <div id="addModal" class="modal hidden">
+      <div class="modal-content">
+        <h3>Add New Debt</h3>
+        <input type="text" id="debtName" placeholder="Debt name (e.g., Credit Card)">
+        <input type="number" id="originalAmount" placeholder="Original amount">
+        <input type="number" id="currentBalance" placeholder="Current balance">
+        <div class="modal-actions">
+          <button id="cancelAddBtn" class="modal-btn cancel">Cancel</button>
+          <button id="saveAddBtn" class="modal-btn save">Add</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Payment Modal -->
+    <div id="paymentModal" class="modal hidden">
+      <div class="modal-content">
+        <h3>Make Payment</h3>
+        <p id="paymentDebtName" class="payment-info"></p>
+        <input type="number" id="paymentAmount" placeholder="Payment amount">
+        <div class="modal-actions">
+          <button id="cancelPayBtn" class="modal-btn cancel">Cancel</button>
+          <button id="confirmPayBtn" class="modal-btn save">Pay</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
