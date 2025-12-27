@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Habit Streak</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🔥 Habit Streak</h1>
+      <div id="todayDate" class="today-date"></div>
+    </header>
+
+    <!-- Add Habit -->
+    <div class="add-section">
+      <input type="text" id="habitInput" placeholder="添加新習慣...">
+      <button id="addBtn">+</button>
+    </div>
+
+    <!-- Habits List -->
+    <div id="habitsList" class="habits-list"></div>
+
+    <!-- Stats -->
+    <div class="stats-section">
+      <div class="stat-card">
+        <div class="stat-icon">🔥</div>
+        <div class="stat-info">
+          <span id="longestStreak" class="stat-value">0</span>
+          <span class="stat-label">最長連續</span>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">✅</div>
+        <div class="stat-info">
+          <span id="todayCompleted" class="stat-value">0/0</span>
+          <span class="stat-label">今日完成</span>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">📊</div>
+        <div class="stat-info">
+          <span id="weeklyRate" class="stat-value">0%</span>
+          <span class="stat-label">本週達成率</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

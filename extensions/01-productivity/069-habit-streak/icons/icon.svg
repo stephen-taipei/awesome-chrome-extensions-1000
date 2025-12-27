@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ef4444"/>
+      <stop offset="100%" style="stop-color:#f97316"/>
+    </linearGradient>
+  </defs>
+  <circle cx="64" cy="64" r="60" fill="url(#grad)"/>
+
+  <!-- Fire flame -->
+  <path d="M64 20
+           C45 45 35 60 35 80
+           C35 95 48 105 64 105
+           C80 105 93 95 93 80
+           C93 60 83 45 64 20
+           Z" fill="#fef3c7"/>
+
+  <path d="M64 40
+           C52 55 45 65 45 80
+           C45 90 53 97 64 97
+           C75 97 83 90 83 80
+           C83 65 76 55 64 40
+           Z" fill="#fbbf24"/>
+
+  <path d="M64 55
+           C56 65 52 72 52 82
+           C52 88 57 92 64 92
+           C71 92 76 88 76 82
+           C76 72 72 65 64 55
+           Z" fill="#f97316"/>
+
+  <path d="M64 70
+           C60 76 57 80 57 85
+           C57 88 60 90 64 90
+           C68 90 71 88 71 85
+           C71 80 68 76 64 70
+           Z" fill="#ef4444"/>
+</svg>
