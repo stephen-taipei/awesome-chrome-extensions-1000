@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Survey Invitation</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Survey Invitation</h1>
+      <div class="header-sub">Request feedback</div>
+    </header>
+    <div class="survey-form">
+      <select id="surveyType">
+        <option value="customer">Customer Survey</option>
+        <option value="employee">Employee Survey</option>
+        <option value="product">Product Feedback</option>
+        <option value="research">Research Study</option>
+        <option value="nps">NPS Survey</option>
+        <option value="event">Event Feedback</option>
+      </select>
+      <input type="text" id="recipient" placeholder="Recipient name">
+      <input type="text" id="surveyName" placeholder="Survey name">
+      <textarea id="purpose" placeholder="Survey purpose..."></textarea>
+      <input type="text" id="duration" placeholder="Time to complete">
+      <input type="text" id="incentive" placeholder="Incentive (if any)">
+    </div>
+    <div class="actions">
+      <button id="copyInvitation" class="copy-btn">Copy Invitation</button>
+      <button id="saveInvitation" class="save-btn">Save</button>
+    </div>
+    <div class="section">
+      <div class="section-title">Saved Invitations</div>
+      <div id="invitationList" class="invitation-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
