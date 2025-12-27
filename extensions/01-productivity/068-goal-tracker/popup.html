@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Goal Tracker</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🎯 Goal Tracker</h1>
+    </header>
+
+    <!-- Add Goal Form -->
+    <div id="addForm" class="add-form">
+      <input type="text" id="goalInput" placeholder="輸入新目標...">
+      <div class="form-row">
+        <select id="categorySelect">
+          <option value="personal">個人成長</option>
+          <option value="health">健康</option>
+          <option value="career">職業</option>
+          <option value="finance">財務</option>
+          <option value="learning">學習</option>
+        </select>
+        <input type="date" id="deadlineInput">
+      </div>
+      <button id="addBtn" class="add-btn">添加目標</button>
+    </div>
+
+    <!-- Category Filter -->
+    <div class="category-tabs">
+      <button class="cat-tab active" data-category="all">全部</button>
+      <button class="cat-tab" data-category="personal">個人</button>
+      <button class="cat-tab" data-category="health">健康</button>
+      <button class="cat-tab" data-category="career">職業</button>
+      <button class="cat-tab" data-category="finance">財務</button>
+      <button class="cat-tab" data-category="learning">學習</button>
+    </div>
+
+    <!-- Goals List -->
+    <div id="goalsList" class="goals-list"></div>
+
+    <!-- Stats -->
+    <div class="stats-section">
+      <div class="stat">
+        <span id="activeGoals" class="stat-value">0</span>
+        <span class="stat-label">進行中</span>
+      </div>
+      <div class="stat">
+        <span id="completedGoals" class="stat-value">0</span>
+        <span class="stat-label">已完成</span>
+      </div>
+      <div class="stat">
+        <span id="successRate" class="stat-value">0%</span>
+        <span class="stat-label">達成率</span>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
