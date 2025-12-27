@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Break Reminder</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>☕ Break Reminder</h1>
+      <button id="toggleBtn" class="icon-btn" title="暫停">⏸</button>
+    </header>
+
+    <main>
+      <!-- Next Break -->
+      <div class="next-break-card">
+        <div class="next-label">下次休息</div>
+        <div id="countdown" class="countdown">20:00</div>
+        <div class="progress-bar">
+          <div id="progressFill" class="progress-fill"></div>
+        </div>
+        <button id="breakNowBtn" class="break-now-btn">立即休息</button>
+      </div>
+
+      <!-- Quick Settings -->
+      <div class="interval-section">
+        <div class="section-label">提醒間隔</div>
+        <div class="interval-options">
+          <button class="interval-btn" data-minutes="20">20 分鐘</button>
+          <button class="interval-btn active" data-minutes="30">30 分鐘</button>
+          <button class="interval-btn" data-minutes="45">45 分鐘</button>
+          <button class="interval-btn" data-minutes="60">1 小時</button>
+        </div>
+      </div>
+
+      <!-- Break Duration -->
+      <div class="duration-section">
+        <div class="section-label">休息時長</div>
+        <div class="duration-options">
+          <button class="duration-btn" data-seconds="20">20 秒</button>
+          <button class="duration-btn active" data-seconds="60">1 分鐘</button>
+          <button class="duration-btn" data-seconds="300">5 分鐘</button>
+        </div>
+      </div>
+
+      <!-- Break Suggestions -->
+      <div class="suggestions-section">
+        <div class="section-label">休息活動建議</div>
+        <div id="suggestionCard" class="suggestion-card">
+          <div class="suggestion-icon">👀</div>
+          <div class="suggestion-text">
+            <div class="suggestion-title">20-20-20 護眼</div>
+            <div class="suggestion-desc">看向 20 呎外 20 秒</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Today Stats -->
+      <div class="stats-section">
+        <div class="stat-item">
+          <div class="stat-value" id="todayBreaks">0</div>
+          <div class="stat-label">今日休息</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value" id="todayMinutes">0</div>
+          <div class="stat-label">休息分鐘</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value" id="skippedBreaks">0</div>
+          <div class="stat-label">跳過次數</div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
