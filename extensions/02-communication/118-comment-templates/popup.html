@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comment Templates</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Comments</h1>
+    </header>
+
+    <!-- Categories -->
+    <div class="category-tabs">
+      <button class="tab active" data-category="all">All</button>
+      <button class="tab" data-category="praise">Praise</button>
+      <button class="tab" data-category="feedback">Feedback</button>
+      <button class="tab" data-category="question">Question</button>
+    </div>
+
+    <!-- Add New -->
+    <div class="add-section">
+      <select id="category">
+        <option value="praise">Praise</option>
+        <option value="feedback">Feedback</option>
+        <option value="question">Question</option>
+      </select>
+      <input type="text" id="name" placeholder="Template name...">
+      <textarea id="content" placeholder="Comment text..."></textarea>
+      <button id="addTemplate" class="add-btn">Save Template</button>
+    </div>
+
+    <!-- Templates List -->
+    <div class="section">
+      <div class="section-title">Templates</div>
+      <div id="templatesList" class="templates-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
