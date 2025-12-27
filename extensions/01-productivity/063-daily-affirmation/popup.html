@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Affirmation</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Affirmation Card -->
+    <div class="card">
+      <div class="card-header">
+        <span class="date" id="currentDate"></span>
+        <button id="refreshBtn" class="refresh-btn" title="換一個">🔄</button>
+      </div>
+
+      <div class="affirmation-section">
+        <div class="quote-mark">"</div>
+        <p id="affirmationText" class="affirmation-text"></p>
+        <div class="quote-mark end">"</div>
+      </div>
+
+      <div class="actions">
+        <button id="favoriteBtn" class="action-btn">
+          <span id="favoriteIcon">🤍</span>
+          <span>收藏</span>
+        </button>
+        <button id="shareBtn" class="action-btn">
+          <span>📋</span>
+          <span>複製</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Category Selection -->
+    <div class="categories">
+      <button class="category-btn selected" data-category="motivation">💪 勵志</button>
+      <button class="category-btn" data-category="self-love">💖 自愛</button>
+      <button class="category-btn" data-category="success">🌟 成功</button>
+      <button class="category-btn" data-category="peace">🕊️ 平靜</button>
+    </div>
+
+    <!-- Favorites Section -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-title">收藏的語錄</span>
+        <span id="favoriteCount" class="count">0</span>
+      </div>
+      <div id="favoritesList" class="favorites-list"></div>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats">
+      <div class="stat">
+        <span class="stat-value" id="daysStreak">0</span>
+        <span class="stat-label">連續天數</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value" id="totalViewed">0</span>
+        <span class="stat-label">已閱讀</span>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
