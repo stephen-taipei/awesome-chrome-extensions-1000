@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exit Interview</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Exit Interview</h1>
+      <div class="header-sub">Professional departure notes</div>
+    </header>
+
+    <!-- Interview Form -->
+    <div class="interview-form">
+      <select id="interviewType">
+        <option value="invitation">Interview Invitation</option>
+        <option value="questions">Question Template</option>
+        <option value="summary">Interview Summary</option>
+        <option value="farewell">Farewell Message</option>
+        <option value="handoff">Handoff Notes</option>
+        <option value="feedback">Departure Feedback</option>
+      </select>
+
+      <input type="text" id="employee" placeholder="Employee name">
+      <input type="text" id="department" placeholder="Department/Team">
+      <textarea id="content" placeholder="Main content..."></textarea>
+      <textarea id="notes" placeholder="Additional notes..."></textarea>
+    </div>
+
+    <!-- Actions -->
+    <div class="actions">
+      <button id="copyInterview" class="copy-btn">Copy Content</button>
+      <button id="saveInterview" class="save-btn">Save</button>
+    </div>
+
+    <!-- Saved -->
+    <div class="section">
+      <div class="section-title">Saved Items</div>
+      <div id="interviewList" class="interview-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
