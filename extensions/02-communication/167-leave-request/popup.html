@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leave Request</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Leave Request</h1>
+      <div class="header-sub">Request time off professionally</div>
+    </header>
+
+    <!-- Request Form -->
+    <div class="request-form">
+      <select id="leaveType">
+        <option value="vacation">Vacation/PTO</option>
+        <option value="sick">Sick Leave</option>
+        <option value="personal">Personal Day</option>
+        <option value="family">Family Emergency</option>
+        <option value="medical">Medical Appointment</option>
+        <option value="bereavement">Bereavement</option>
+      </select>
+
+      <input type="text" id="manager" placeholder="Manager's name">
+      <div class="date-row">
+        <input type="date" id="startDate" placeholder="Start date">
+        <input type="date" id="endDate" placeholder="End date">
+      </div>
+      <textarea id="reason" placeholder="Reason (optional)"></textarea>
+      <textarea id="coverage" placeholder="Work coverage plan..."></textarea>
+    </div>
+
+    <!-- Actions -->
+    <div class="actions">
+      <button id="copyRequest" class="copy-btn">Copy Request</button>
+      <button id="saveRequest" class="save-btn">Save</button>
+    </div>
+
+    <!-- Saved -->
+    <div class="section">
+      <div class="section-title">Saved Requests</div>
+      <div id="requestList" class="request-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
