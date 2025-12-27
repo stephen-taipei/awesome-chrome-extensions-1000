@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6"/>
+      <stop offset="100%" style="stop-color:#2563eb"/>
+    </linearGradient>
+  </defs>
+  <circle cx="64" cy="64" r="60" fill="url(#grad)"/>
+
+  <!-- Envelope -->
+  <rect x="24" y="40" width="80" height="50" rx="4" fill="white"/>
+  <path d="M24 44 L64 70 L104 44" stroke="#bfdbfe" stroke-width="2" fill="none"/>
+
+  <!-- Ice/Cold effect -->
+  <path d="M28 32 L32 40" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  <path d="M38 28 L38 38" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  <path d="M48 32 L44 40" stroke="white" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Snowflake -->
+  <circle cx="95" cy="32" r="10" fill="white" opacity="0.9"/>
+  <path d="M95 24 L95 40" stroke="#2563eb" stroke-width="2"/>
+  <path d="M87 32 L103 32" stroke="#2563eb" stroke-width="2"/>
+  <path d="M89 26 L101 38" stroke="#2563eb" stroke-width="1.5"/>
+  <path d="M89 38 L101 26" stroke="#2563eb" stroke-width="1.5"/>
+
+  <!-- Send arrow -->
+  <path d="M70 95 L90 95 L85 90" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M85 100 L90 95" stroke="white" stroke-width="3" fill="none" stroke-linecap="round"/>
+</svg>

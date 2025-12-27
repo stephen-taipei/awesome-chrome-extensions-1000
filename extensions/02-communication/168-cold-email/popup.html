@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cold Email</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Cold Email</h1>
+      <div class="header-sub">Outreach that gets replies</div>
+    </header>
+
+    <!-- Email Form -->
+    <div class="email-form">
+      <select id="emailType">
+        <option value="sales">Sales Outreach</option>
+        <option value="networking">Networking</option>
+        <option value="partnership">Partnership</option>
+        <option value="job">Job Inquiry</option>
+        <option value="press">Press/Media</option>
+        <option value="investor">Investor Outreach</option>
+      </select>
+
+      <input type="text" id="recipient" placeholder="Recipient's name">
+      <input type="text" id="company" placeholder="Their company">
+      <input type="text" id="hook" placeholder="Personal hook (something specific about them)">
+      <textarea id="value" placeholder="What value you can provide..."></textarea>
+      <input type="text" id="cta" placeholder="Call to action (e.g., 15-min call?)">
+    </div>
+
+    <!-- Actions -->
+    <div class="actions">
+      <button id="copyEmail" class="copy-btn">Copy Email</button>
+      <button id="saveEmail" class="save-btn">Save</button>
+    </div>
+
+    <!-- Saved -->
+    <div class="section">
+      <div class="section-title">Saved Templates</div>
+      <div id="emailList" class="email-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
