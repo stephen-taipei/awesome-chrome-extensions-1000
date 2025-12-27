@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Morning Routine</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="header-info">
+        <h1>🌅 Morning Routine</h1>
+        <span id="greeting" class="greeting"></span>
+      </div>
+      <button id="editBtn" class="icon-btn" title="編輯項目">✎</button>
+    </header>
+
+    <div class="progress-section">
+      <div class="progress-ring">
+        <svg viewBox="0 0 100 100">
+          <circle class="progress-bg" cx="50" cy="50" r="45"/>
+          <circle id="progressCircle" class="progress-bar" cx="50" cy="50" r="45"/>
+        </svg>
+        <div class="progress-text">
+          <span id="progressPercent" class="progress-percent">0%</span>
+          <span class="progress-label">完成</span>
+        </div>
+      </div>
+      <div class="time-info">
+        <div class="time-item">
+          <span class="time-icon">⏱️</span>
+          <span id="elapsedTime" class="time-value">0:00</span>
+          <span class="time-label">已用時間</span>
+        </div>
+        <div class="time-item">
+          <span class="time-icon">🎯</span>
+          <span id="streakCount" class="time-value">0</span>
+          <span class="time-label">天連續</span>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <div id="routineList" class="routine-list"></div>
+      <div id="completedState" class="completed-state hidden">
+        <div class="completed-icon">🎉</div>
+        <div class="completed-text">今日晨間例行完成！</div>
+        <div class="completed-time">用時 <span id="completionTime">0:00</span></div>
+      </div>
+    </main>
+
+    <footer>
+      <button id="resetBtn" class="footer-btn">
+        <span>🔄</span> 重置今日
+      </button>
+      <button id="startBtn" class="footer-btn primary" disabled>
+        <span>▶️</span> 開始
+      </button>
+    </footer>
+
+    <!-- Edit Modal -->
+    <div id="editModal" class="modal hidden">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>編輯例行項目</h2>
+          <button id="closeModalBtn" class="close-btn">×</button>
+        </div>
+        <div class="modal-body">
+          <div class="edit-list" id="editList"></div>
+          <div class="add-item">
+            <input type="text" id="newItemInput" placeholder="新增項目...">
+            <button id="addItemBtn" class="add-btn">+</button>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button id="saveEditBtn" class="btn btn-primary">儲存</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
