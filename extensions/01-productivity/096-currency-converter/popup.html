@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currency Converter</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>💱 Currency Converter</h1>
+    </header>
+
+    <!-- Converter -->
+    <div class="converter-card">
+      <div class="amount-group">
+        <input type="number" id="fromAmount" placeholder="Amount" value="1">
+        <select id="fromCurrency"></select>
+      </div>
+
+      <button id="swapBtn" class="swap-btn">⇅</button>
+
+      <div class="amount-group">
+        <input type="number" id="toAmount" placeholder="Result" readonly>
+        <select id="toCurrency"></select>
+      </div>
+
+      <div class="rate-display">
+        <span id="rateText">1 USD = 1.00 USD</span>
+      </div>
+    </div>
+
+    <!-- Quick Convert -->
+    <div class="quick-section">
+      <div class="section-title">Quick Convert</div>
+      <div class="quick-amounts">
+        <button class="quick-btn" data-amount="10">10</button>
+        <button class="quick-btn" data-amount="50">50</button>
+        <button class="quick-btn" data-amount="100">100</button>
+        <button class="quick-btn" data-amount="500">500</button>
+        <button class="quick-btn" data-amount="1000">1K</button>
+      </div>
+    </div>
+
+    <!-- Recent Conversions -->
+    <div class="section">
+      <div class="section-title">Recent</div>
+      <div id="historyList" class="history-list"></div>
+    </div>
+
+    <!-- Edit Rate Modal -->
+    <div id="modal" class="modal hidden">
+      <div class="modal-content">
+        <h3>Edit Exchange Rate</h3>
+        <p id="rateInfo"></p>
+        <input type="number" id="rateInput" step="0.0001">
+        <div class="modal-actions">
+          <button id="cancelBtn" class="modal-btn cancel">Cancel</button>
+          <button id="saveBtn" class="modal-btn save">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
