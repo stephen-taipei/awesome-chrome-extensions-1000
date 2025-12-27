@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Focus Mode</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🎯 Focus Mode</h1>
+    </header>
+
+    <main>
+      <!-- Focus Toggle -->
+      <div class="focus-section">
+        <div id="focusStatus" class="focus-status off">
+          <div class="status-icon">😴</div>
+          <div class="status-text">專注模式已關閉</div>
+        </div>
+
+        <div id="timerDisplay" class="timer-display hidden">
+          <div class="timer-value" id="timerValue">00:00</div>
+          <div class="timer-label">剩餘時間</div>
+        </div>
+
+        <div class="focus-controls">
+          <button id="focusBtn" class="focus-btn">開始專注</button>
+        </div>
+
+        <!-- Duration Selector -->
+        <div id="durationSection" class="duration-section">
+          <div class="duration-label">專注時長</div>
+          <div class="duration-options">
+            <button class="duration-btn" data-minutes="25">25分</button>
+            <button class="duration-btn active" data-minutes="45">45分</button>
+            <button class="duration-btn" data-minutes="60">1小時</button>
+            <button class="duration-btn" data-minutes="120">2小時</button>
+          </div>
+        </div>
+
+        <!-- Strict Mode Toggle -->
+        <div class="strict-toggle">
+          <label class="toggle-label">
+            <input type="checkbox" id="strictMode">
+            <span class="toggle-text">嚴格模式</span>
+            <span class="toggle-hint">（無法中途關閉）</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Blocked Sites -->
+      <div class="blocked-section">
+        <div class="section-header">
+          <span>封鎖網站</span>
+          <span id="blockedCount" class="blocked-count">0</span>
+        </div>
+
+        <div class="add-site">
+          <input type="text" id="siteInput" placeholder="輸入網址，如 facebook.com">
+          <button id="addSiteBtn" class="add-btn">+</button>
+        </div>
+
+        <div id="sitesList" class="sites-list"></div>
+
+        <!-- Preset Sites -->
+        <div class="preset-sites">
+          <div class="preset-label">快速新增</div>
+          <div class="preset-btns">
+            <button class="preset-btn" data-site="facebook.com">Facebook</button>
+            <button class="preset-btn" data-site="twitter.com">Twitter</button>
+            <button class="preset-btn" data-site="youtube.com">YouTube</button>
+            <button class="preset-btn" data-site="instagram.com">Instagram</button>
+            <button class="preset-btn" data-site="tiktok.com">TikTok</button>
+            <button class="preset-btn" data-site="reddit.com">Reddit</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="stats-section">
+        <div class="stat-item">
+          <div class="stat-value" id="todaySessions">0</div>
+          <div class="stat-label">今日專注</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value" id="todayMinutes">0</div>
+          <div class="stat-label">專注分鐘</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value" id="blockedAttempts">0</div>
+          <div class="stat-label">已攔截</div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
