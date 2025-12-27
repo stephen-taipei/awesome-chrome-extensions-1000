@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voice Memo</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Voice Memo</h1>
+    </header>
+
+    <!-- Recording Section -->
+    <div class="record-section">
+      <div id="visualizer" class="visualizer">
+        <div class="visualizer-bars">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      </div>
+      <div id="timer" class="timer">00:00</div>
+      <button id="recordBtn" class="record-btn">
+        <span class="record-icon"></span>
+      </button>
+      <div class="record-label">Tap to Record</div>
+    </div>
+
+    <!-- Current Recording -->
+    <div id="currentRecording" class="current-section" style="display: none;">
+      <div class="section-title">New Recording</div>
+      <div class="recording-controls">
+        <audio id="audioPlayer" controls></audio>
+        <input type="text" id="memoName" placeholder="Name this memo...">
+        <div class="recording-actions">
+          <button id="saveMemo" class="save-btn">Save</button>
+          <button id="discardMemo" class="discard-btn">Discard</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Saved Memos -->
+    <div class="section">
+      <div class="section-title">Saved Memos</div>
+      <div id="memosList" class="memos-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
