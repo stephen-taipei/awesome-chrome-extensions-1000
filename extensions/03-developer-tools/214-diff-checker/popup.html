@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Diff Checker</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <div class="container">
+    <header><h1>Diff Checker</h1><div class="header-sub">Compare text differences</div></header>
+    <div class="diff-inputs">
+      <div class="input-col"><div class="section-title">Original</div><textarea id="original" placeholder="Original text..."></textarea></div>
+      <div class="input-col"><div class="section-title">Modified</div><textarea id="modified" placeholder="Modified text..."></textarea></div>
+    </div>
+    <div class="actions"><button id="compareBtn" class="action-btn">Compare</button><button id="clearBtn" class="action-btn secondary">Clear</button></div>
+    <div id="stats" class="stats"></div>
+    <div class="result-section"><div class="section-title">Differences</div><div id="diffResult" class="diff-result"></div></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
