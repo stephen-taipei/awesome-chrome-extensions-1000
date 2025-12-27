@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Season Greeting</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <div class="container">
+    <header><h1>Season Greeting</h1><div class="header-sub">Spread holiday cheer</div></header>
+    <div class="greeting-form">
+      <select id="season"><option value="christmas">Christmas</option><option value="newyear">New Year</option><option value="thanksgiving">Thanksgiving</option><option value="easter">Easter</option><option value="hanukkah">Hanukkah</option><option value="diwali">Diwali</option><option value="lunar">Lunar New Year</option><option value="generic">Generic Holiday</option></select>
+      <input type="text" id="recipient" placeholder="Recipient name">
+      <input type="text" id="relationship" placeholder="Relationship (colleague, friend, etc.)">
+      <textarea id="personalNote" placeholder="Personal note or memories..."></textarea>
+      <input type="text" id="wishes" placeholder="Special wishes">
+    </div>
+    <div class="actions"><button id="copyGreeting" class="copy-btn">Copy Greeting</button><button id="saveGreeting" class="save-btn">Save</button></div>
+    <div class="section"><div class="section-title">Saved Greetings</div><div id="greetingList" class="greeting-list"></div></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
