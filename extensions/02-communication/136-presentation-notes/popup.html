@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Presentation Notes</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Presentation Notes</h1>
+    </header>
+
+    <!-- Presentation -->
+    <div class="pres-section">
+      <input type="text" id="presTitle" placeholder="Presentation title...">
+    </div>
+
+    <!-- Add Slide -->
+    <div class="add-section">
+      <input type="text" id="slideTitle" placeholder="Slide title...">
+      <textarea id="slideNotes" placeholder="Speaker notes..."></textarea>
+      <button id="addSlide" class="add-btn">Add Slide</button>
+    </div>
+
+    <!-- Slides -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-title">Slides</span>
+        <button id="exportNotes" class="export-btn">Export</button>
+      </div>
+      <div id="slidesList" class="slides-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
