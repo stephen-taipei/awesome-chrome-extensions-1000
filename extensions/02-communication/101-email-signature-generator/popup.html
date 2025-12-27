@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Signature Generator</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Email Signature</h1>
+    </header>
+
+    <!-- Form -->
+    <div class="form-section">
+      <div class="form-group">
+        <label>Full Name</label>
+        <input type="text" id="fullName" placeholder="John Doe">
+      </div>
+      <div class="form-group">
+        <label>Job Title</label>
+        <input type="text" id="jobTitle" placeholder="Software Engineer">
+      </div>
+      <div class="form-group">
+        <label>Company</label>
+        <input type="text" id="company" placeholder="Acme Inc.">
+      </div>
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" id="email" placeholder="john@acme.com">
+      </div>
+      <div class="form-group">
+        <label>Phone</label>
+        <input type="tel" id="phone" placeholder="+1 234 567 8900">
+      </div>
+      <div class="form-group">
+        <label>Website</label>
+        <input type="url" id="website" placeholder="https://acme.com">
+      </div>
+    </div>
+
+    <!-- Preview -->
+    <div class="section">
+      <div class="section-title">Preview</div>
+      <div id="preview" class="signature-preview"></div>
+    </div>
+
+    <!-- Actions -->
+    <div class="actions">
+      <button id="copyHtml" class="action-btn">Copy HTML</button>
+      <button id="copyText" class="action-btn secondary">Copy Text</button>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
