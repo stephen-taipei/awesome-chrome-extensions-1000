@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Broadcast Message</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Broadcast</h1>
+    </header>
+
+    <!-- Compose -->
+    <div class="compose-section">
+      <select id="messageType">
+        <option value="info">ℹ️ Information</option>
+        <option value="urgent">🚨 Urgent</option>
+        <option value="reminder">⏰ Reminder</option>
+        <option value="update">🔄 Update</option>
+        <option value="celebrate">🎉 Celebration</option>
+      </select>
+      <input type="text" id="subject" placeholder="Subject line...">
+      <textarea id="message" placeholder="Your message..."></textarea>
+      <div class="compose-actions">
+        <button id="saveTemplate" class="save-btn">Save as Template</button>
+        <button id="copyMessage" class="copy-btn">Copy Message</button>
+      </div>
+    </div>
+
+    <!-- Templates -->
+    <div class="section">
+      <div class="section-title">Saved Templates</div>
+      <div id="templatesList" class="templates-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
