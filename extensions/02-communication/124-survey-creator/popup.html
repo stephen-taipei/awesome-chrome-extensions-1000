@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Survey Creator</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Survey Creator</h1>
+    </header>
+
+    <!-- Create Survey -->
+    <div class="create-section">
+      <input type="text" id="surveyTitle" placeholder="Survey title...">
+      <div class="question-input">
+        <input type="text" id="questionText" placeholder="Add a question...">
+        <button id="addQuestion" class="add-q-btn">+</button>
+      </div>
+    </div>
+
+    <!-- Questions Preview -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-title">Questions</span>
+        <span id="questionCount" class="count-badge">0</span>
+      </div>
+      <div id="questionsList" class="questions-list"></div>
+    </div>
+
+    <!-- Actions -->
+    <div class="actions">
+      <button id="copySurvey" class="copy-btn">Copy Survey</button>
+      <button id="clearSurvey" class="clear-btn">Clear</button>
+    </div>
+
+    <!-- Saved Surveys -->
+    <div class="section">
+      <div class="section-title">Saved Surveys</div>
+      <div id="surveysList" class="surveys-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#14b8a6"/>
+      <stop offset="100%" style="stop-color:#0d9488"/>
+    </linearGradient>
+  </defs>
+  <circle cx="64" cy="64" r="60" fill="url(#grad)"/>
+
+  <!-- Survey form -->
+  <rect x="32" y="28" width="64" height="76" rx="6" fill="white"/>
+
+  <!-- Header bar -->
+  <rect x="32" y="28" width="64" height="16" rx="6" fill="#99f6e4"/>
+  <rect x="32" y="38" width="64" height="6" fill="#99f6e4"/>
+
+  <!-- Question rows -->
+  <circle cx="44" cy="56" r="5" fill="none" stroke="#14b8a6" stroke-width="2"/>
+  <rect x="54" y="53" width="34" height="6" rx="3" fill="#ccfbf1"/>
+
+  <circle cx="44" cy="72" r="5" fill="#14b8a6"/>
+  <rect x="54" y="69" width="30" height="6" rx="3" fill="#ccfbf1"/>
+
+  <circle cx="44" cy="88" r="5" fill="none" stroke="#14b8a6" stroke-width="2"/>
+  <rect x="54" y="85" width="26" height="6" rx="3" fill="#ccfbf1"/>
+</svg>
