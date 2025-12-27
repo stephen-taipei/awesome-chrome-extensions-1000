@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Brief</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Project Brief</h1>
+      <div class="header-sub">Structure your project scope</div>
+    </header>
+
+    <!-- Brief Form -->
+    <div class="brief-form">
+      <input type="text" id="projectName" placeholder="Project name...">
+
+      <div class="section-label">Objective</div>
+      <textarea id="objective" placeholder="What's the goal?"></textarea>
+
+      <div class="section-label">Scope</div>
+      <textarea id="scope" placeholder="What's included?"></textarea>
+
+      <div class="section-label">Timeline</div>
+      <textarea id="timeline" placeholder="Key milestones..."></textarea>
+
+      <div class="section-label">Stakeholders</div>
+      <textarea id="stakeholders" placeholder="Who's involved?"></textarea>
+    </div>
+
+    <!-- Actions -->
+    <div class="actions">
+      <button id="copyBrief" class="copy-btn">Copy Brief</button>
+      <button id="saveBrief" class="save-btn">Save</button>
+    </div>
+
+    <!-- Saved -->
+    <div class="section">
+      <div class="section-title">Saved Briefs</div>
+      <div id="briefList" class="brief-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
