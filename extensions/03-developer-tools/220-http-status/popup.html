@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>HTTP Status Codes</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <div class="container">
+    <header><h1>HTTP Status Codes</h1><div class="header-sub">Quick reference guide</div></header>
+    <div class="search-section"><input type="text" id="search" placeholder="Search code or description..."></div>
+    <div class="filters"><button class="filter active" data-filter="all">All</button><button class="filter" data-filter="2">2xx</button><button class="filter" data-filter="3">3xx</button><button class="filter" data-filter="4">4xx</button><button class="filter" data-filter="5">5xx</button></div>
+    <div id="statusList" class="status-list"></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
