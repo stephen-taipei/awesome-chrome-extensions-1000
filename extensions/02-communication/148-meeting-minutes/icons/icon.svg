@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#059669"/>
+      <stop offset="100%" style="stop-color:#047857"/>
+    </linearGradient>
+  </defs>
+  <circle cx="64" cy="64" r="60" fill="url(#grad)"/>
+
+  <!-- Clipboard -->
+  <rect x="35" y="30" width="58" height="72" rx="6" fill="white"/>
+  <rect x="48" y="24" width="32" height="12" rx="4" fill="#d1fae5"/>
+
+  <!-- Lines -->
+  <rect x="45" y="48" width="38" height="4" rx="2" fill="#d1fae5"/>
+  <rect x="45" y="58" width="32" height="4" rx="2" fill="#d1fae5"/>
+  <rect x="45" y="68" width="36" height="4" rx="2" fill="#d1fae5"/>
+  <rect x="45" y="78" width="28" height="4" rx="2" fill="#d1fae5"/>
+  <rect x="45" y="88" width="34" height="4" rx="2" fill="#d1fae5"/>
+
+  <!-- Checkmarks -->
+  <path d="M45 50 L48 53 L54 47" stroke="#059669" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" transform="translate(-7, 0)"/>
+  <path d="M45 60 L48 63 L54 57" stroke="#059669" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" transform="translate(-7, 0)"/>
+</svg>

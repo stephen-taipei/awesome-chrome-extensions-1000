@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meeting Minutes</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📝 Meeting Minutes</h1>
+      <div id="meetingDate" class="header-date"></div>
+    </header>
+
+    <!-- Meeting Info -->
+    <div class="meeting-info">
+      <input type="text" id="meetingTitle" placeholder="Meeting title">
+      <input type="text" id="attendees" placeholder="Attendees (comma separated)">
+    </div>
+
+    <!-- Sections -->
+    <div class="minutes-section">
+      <div class="section-label">Discussion Points</div>
+      <textarea id="discussion" placeholder="Key discussion topics..."></textarea>
+    </div>
+
+    <div class="minutes-section">
+      <div class="section-label">Decisions Made</div>
+      <textarea id="decisions" placeholder="Decisions and agreements..."></textarea>
+    </div>
+
+    <div class="minutes-section">
+      <div class="section-label">Action Items</div>
+      <textarea id="actions" placeholder="Action items and owners..."></textarea>
+    </div>
+
+    <!-- Actions -->
+    <div class="actions">
+      <button id="copyMinutes" class="copy-btn">Copy Minutes</button>
+      <button id="saveMinutes" class="save-btn">Save</button>
+    </div>
+
+    <!-- Saved -->
+    <div class="section">
+      <div class="section-title">Recent Meetings</div>
+      <div id="meetingList" class="meeting-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
