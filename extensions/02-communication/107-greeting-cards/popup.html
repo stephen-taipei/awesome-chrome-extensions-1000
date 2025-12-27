@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Greeting Cards</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Greeting Cards</h1>
+    </header>
+
+    <!-- Categories -->
+    <div class="categories">
+      <button class="cat-btn active" data-category="birthday">🎂 Birthday</button>
+      <button class="cat-btn" data-category="thanks">🙏 Thanks</button>
+      <button class="cat-btn" data-category="congrats">🎉 Congrats</button>
+      <button class="cat-btn" data-category="love">💕 Love</button>
+    </div>
+
+    <!-- Card Preview -->
+    <div id="cardPreview" class="card-preview">
+      <div class="card-message" id="cardMessage"></div>
+    </div>
+
+    <!-- Customize -->
+    <div class="customize-section">
+      <input type="text" id="recipientName" placeholder="Recipient's name">
+      <input type="text" id="senderName" placeholder="Your name">
+    </div>
+
+    <!-- Actions -->
+    <div class="actions">
+      <button id="randomBtn" class="action-btn secondary">🔀 Random</button>
+      <button id="copyBtn" class="action-btn primary">📋 Copy</button>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
