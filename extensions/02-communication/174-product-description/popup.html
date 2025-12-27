@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Description</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Product Description</h1>
+      <div class="header-sub">Sell with words</div>
+    </header>
+
+    <!-- Product Form -->
+    <div class="product-form">
+      <input type="text" id="productName" placeholder="Product name">
+      <input type="text" id="tagline" placeholder="Tagline or hook">
+      <textarea id="features" placeholder="Key features (one per line)"></textarea>
+      <textarea id="benefits" placeholder="Benefits for the customer"></textarea>
+      <input type="text" id="cta" placeholder="Call to action (e.g., Buy Now)">
+    </div>
+
+    <!-- Actions -->
+    <div class="actions">
+      <button id="copyDesc" class="copy-btn">Copy Description</button>
+      <button id="saveProduct" class="save-btn">Save</button>
+    </div>
+
+    <!-- Saved -->
+    <div class="section">
+      <div class="section-title">Saved Products</div>
+      <div id="productList" class="product-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
