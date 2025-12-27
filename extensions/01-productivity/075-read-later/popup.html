@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Read Later</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📚 Read Later</h1>
+      <button id="saveCurrentBtn" class="save-current-btn">+ 儲存</button>
+    </header>
+
+    <!-- Stats -->
+    <div class="stats-bar">
+      <div class="stat">
+        <span id="unreadCount" class="stat-value">0</span>
+        <span class="stat-label">待讀</span>
+      </div>
+      <div class="stat">
+        <span id="readCount" class="stat-value">0</span>
+        <span class="stat-label">已讀</span>
+      </div>
+      <div class="stat">
+        <span id="totalTime" class="stat-value">0</span>
+        <span class="stat-label">分鐘</span>
+      </div>
+    </div>
+
+    <!-- Filter -->
+    <div class="filter-section">
+      <input type="text" id="searchInput" placeholder="搜尋文章...">
+      <div class="filter-tabs">
+        <button class="filter-tab active" data-filter="unread">待讀</button>
+        <button class="filter-tab" data-filter="read">已讀</button>
+        <button class="filter-tab" data-filter="all">全部</button>
+      </div>
+    </div>
+
+    <!-- Articles List -->
+    <div id="articlesList" class="articles-list"></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

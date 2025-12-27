@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#a855f7"/>
+      <stop offset="100%" style="stop-color:#9333ea"/>
+    </linearGradient>
+  </defs>
+  <circle cx="64" cy="64" r="60" fill="url(#grad)"/>
+
+  <!-- Book -->
+  <rect x="30" y="28" width="68" height="72" rx="4" fill="white"/>
+  <rect x="30" y="28" width="12" height="72" fill="#f3e8ff"/>
+
+  <!-- Lines -->
+  <rect x="50" y="42" width="38" height="4" rx="2" fill="#e9d5ff"/>
+  <rect x="50" y="52" width="32" height="4" rx="2" fill="#e9d5ff"/>
+  <rect x="50" y="62" width="36" height="4" rx="2" fill="#e9d5ff"/>
+  <rect x="50" y="72" width="28" height="4" rx="2" fill="#e9d5ff"/>
+
+  <!-- Bookmark -->
+  <polygon points="76,28 92,28 92,55 84,48 76,55" fill="#a855f7"/>
+
+  <!-- Clock icon -->
+  <circle cx="88" cy="88" r="18" fill="white" stroke="#a855f7" stroke-width="3"/>
+  <line x1="88" y1="88" x2="88" y2="78" stroke="#9333ea" stroke-width="3" stroke-linecap="round"/>
+  <line x1="88" y1="88" x2="96" y2="88" stroke="#9333ea" stroke-width="3" stroke-linecap="round"/>
+</svg>
