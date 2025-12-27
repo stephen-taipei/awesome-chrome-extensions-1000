@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Time Zone Converter</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🌍 Time Zone</h1>
+      <div id="currentTime" class="current-time"></div>
+    </header>
+
+    <!-- Converter -->
+    <div class="converter-section">
+      <div class="time-input-group">
+        <label>轉換時間</label>
+        <input type="datetime-local" id="sourceTime">
+        <select id="sourceZone"></select>
+      </div>
+
+      <div class="arrow">↓</div>
+
+      <div class="time-input-group">
+        <label>目標時區</label>
+        <select id="targetZone"></select>
+        <div id="convertedTime" class="converted-time">--:--</div>
+      </div>
+    </div>
+
+    <!-- Quick Zones -->
+    <div class="quick-section">
+      <div class="section-title">常用時區</div>
+      <div id="quickZones" class="quick-zones"></div>
+      <button id="addQuickZone" class="add-zone-btn">+ 添加時區</button>
+    </div>
+
+    <!-- World Clock -->
+    <div class="world-clock-section">
+      <div class="section-title">世界時鐘</div>
+      <div id="worldClock" class="world-clock"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
