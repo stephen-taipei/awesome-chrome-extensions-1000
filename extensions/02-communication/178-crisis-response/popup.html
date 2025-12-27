@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crisis Response</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Crisis Response</h1>
+      <div class="header-sub">Handle difficult situations</div>
+    </header>
+
+    <!-- Crisis Form -->
+    <div class="crisis-form">
+      <select id="crisisType">
+        <option value="service">Service Outage</option>
+        <option value="security">Security Incident</option>
+        <option value="pr">PR Crisis</option>
+        <option value="product">Product Issue</option>
+        <option value="internal">Internal Emergency</option>
+        <option value="customer">Customer Complaint</option>
+      </select>
+
+      <input type="text" id="situation" placeholder="Brief situation summary">
+      <textarea id="acknowledgment" placeholder="Acknowledge the issue..."></textarea>
+      <textarea id="action" placeholder="What action are you taking?"></textarea>
+      <input type="text" id="update" placeholder="When will you update?">
+    </div>
+
+    <!-- Actions -->
+    <div class="actions">
+      <button id="copyResponse" class="copy-btn">Copy Response</button>
+      <button id="saveResponse" class="save-btn">Save</button>
+    </div>
+
+    <!-- Saved -->
+    <div class="section">
+      <div class="section-title">Saved Responses</div>
+      <div id="responseList" class="response-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

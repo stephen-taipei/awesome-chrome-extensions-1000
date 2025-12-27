@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#dc2626"/>
+      <stop offset="100%" style="stop-color:#b91c1c"/>
+    </linearGradient>
+  </defs>
+  <circle cx="64" cy="64" r="60" fill="url(#grad)"/>
+
+  <!-- Warning triangle -->
+  <path d="M64 28 L100 88 L28 88 Z" fill="white"/>
+  <path d="M64 36 L92 82 L36 82 Z" fill="#fecaca"/>
+
+  <!-- Exclamation mark -->
+  <rect x="60" y="48" width="8" height="20" rx="2" fill="#b91c1c"/>
+  <circle cx="64" cy="74" r="4" fill="#b91c1c"/>
+
+  <!-- Lightning bolts -->
+  <path d="M22 40 L30 50 L26 50 L32 62" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+  <path d="M106 40 L98 50 L102 50 L96 62" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+
+  <!-- Megaphone -->
+  <g transform="translate(75, 85) scale(0.5)">
+    <path d="M0 15 L25 5 L25 35 L0 25 Z" fill="white"/>
+    <rect x="-6" y="15" width="8" height="10" rx="2" fill="white"/>
+  </g>
+</svg>
