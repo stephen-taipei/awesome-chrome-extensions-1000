@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Speaker Bio</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Speaker Bio</h1>
+      <div class="header-sub">Craft your event introduction</div>
+    </header>
+
+    <!-- Bio Form -->
+    <div class="bio-form">
+      <select id="bioLength">
+        <option value="short">Short (50 words)</option>
+        <option value="medium">Medium (100 words)</option>
+        <option value="long">Long (200+ words)</option>
+      </select>
+
+      <input type="text" id="name" placeholder="Your name">
+      <input type="text" id="title" placeholder="Title/Role">
+      <input type="text" id="company" placeholder="Company/Organization">
+      <textarea id="expertise" placeholder="Areas of expertise..."></textarea>
+      <textarea id="achievements" placeholder="Key achievements/credentials..."></textarea>
+      <input type="text" id="personal" placeholder="Fun fact (optional)">
+    </div>
+
+    <!-- Actions -->
+    <div class="actions">
+      <button id="copyBio" class="copy-btn">Copy Bio</button>
+      <button id="saveBio" class="save-btn">Save</button>
+    </div>
+
+    <!-- Saved -->
+    <div class="section">
+      <div class="section-title">Saved Bios</div>
+      <div id="bioList" class="bio-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
