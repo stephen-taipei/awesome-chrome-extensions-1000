@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Delegator</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📋 Task Delegator</h1>
+    </header>
+
+    <!-- Stats -->
+    <div class="stats-row">
+      <div class="stat-item">
+        <span id="pendingCount" class="stat-value">0</span>
+        <span class="stat-label">Pending</span>
+      </div>
+      <div class="stat-item">
+        <span id="inProgressCount" class="stat-value">0</span>
+        <span class="stat-label">In Progress</span>
+      </div>
+      <div class="stat-item">
+        <span id="completedCount" class="stat-value">0</span>
+        <span class="stat-label">Done</span>
+      </div>
+    </div>
+
+    <!-- Add Task -->
+    <div class="add-section">
+      <input type="text" id="taskTitle" placeholder="Task title">
+      <div class="add-row">
+        <select id="assignee">
+          <option value="">Assign to...</option>
+        </select>
+        <select id="priority">
+          <option value="low">🟢 Low</option>
+          <option value="medium">🟡 Medium</option>
+          <option value="high">🔴 High</option>
+        </select>
+        <button id="addTaskBtn" class="add-btn">+</button>
+      </div>
+    </div>
+
+    <!-- Team Members -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-title">Team</span>
+        <button id="addMemberBtn" class="small-btn">+ Add</button>
+      </div>
+      <div id="teamList" class="team-list"></div>
+    </div>
+
+    <!-- Tasks List -->
+    <div class="section">
+      <div class="section-title">Active Tasks</div>
+      <div id="tasksList" class="tasks-list"></div>
+    </div>
+
+    <!-- Add Member Modal -->
+    <div id="modal" class="modal hidden">
+      <div class="modal-content">
+        <h3>Add Team Member</h3>
+        <input type="text" id="memberName" placeholder="Name">
+        <div class="modal-actions">
+          <button id="cancelBtn" class="modal-btn cancel">Cancel</button>
+          <button id="saveBtn" class="modal-btn save">Add</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
