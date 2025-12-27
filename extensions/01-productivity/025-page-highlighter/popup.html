@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Highlighter</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Page Highlighter</h1>
+    </header>
+
+    <main>
+      <div class="color-section">
+        <label>螢光筆顏色</label>
+        <div class="color-picker" id="colorPicker">
+          <button class="color-btn active" data-color="#FFEB3B" style="background:#FFEB3B" title="黃色"></button>
+          <button class="color-btn" data-color="#4CAF50" style="background:#4CAF50" title="綠色"></button>
+          <button class="color-btn" data-color="#2196F3" style="background:#2196F3" title="藍色"></button>
+          <button class="color-btn" data-color="#FF5722" style="background:#FF5722" title="橘色"></button>
+          <button class="color-btn" data-color="#E91E63" style="background:#E91E63" title="粉紅色"></button>
+          <button class="color-btn" data-color="#9C27B0" style="background:#9C27B0" title="紫色"></button>
+        </div>
+      </div>
+
+      <div class="toggle-section">
+        <label class="toggle">
+          <input type="checkbox" id="enableToggle" checked>
+          <span class="toggle-slider"></span>
+          <span class="toggle-label">啟用螢光筆</span>
+        </label>
+      </div>
+
+      <div class="page-highlights">
+        <div class="section-header">
+          <h2>本頁標記 (<span id="highlightCount">0</span>)</h2>
+          <button id="clearPageBtn" class="clear-btn" title="Clear all on this page">清除本頁</button>
+        </div>
+        <div id="highlightList" class="highlight-list">
+          <p class="empty-message">此頁面尚無標記</p>
+        </div>
+      </div>
+
+      <div class="stats">
+        <span>總共 <strong id="totalCount">0</strong> 個標記</span>
+        <button id="exportBtn" class="export-btn">匯出全部</button>
+      </div>
+    </main>
+
+    <div id="toast" class="toast hidden"></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

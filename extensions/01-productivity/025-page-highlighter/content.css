@@ -1,0 +1,10 @@
+/* Page Highlighter - Content Styles */
+
+.page-highlighter-mark {
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.page-highlighter-mark:hover {
+  opacity: 0.8;
+}
