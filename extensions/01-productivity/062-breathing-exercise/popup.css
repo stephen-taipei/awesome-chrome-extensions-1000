@@ -1,0 +1,199 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  background: linear-gradient(180deg, #0f766e 0%, #14b8a6 100%);
+  color: white;
+}
+
+.container {
+  width: 320px;
+  min-height: 480px;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  text-align: center;
+  padding: 16px;
+}
+
+header h1 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* Breathing Section */
+.breathing-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 20px;
+  position: relative;
+}
+
+.breath-circle {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.1s linear, background 0.3s;
+}
+
+.breath-circle.inhale {
+  animation: expand 4s ease-in-out forwards;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.breath-circle.hold {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.breath-circle.exhale {
+  animation: contract 4s ease-in-out forwards;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+@keyframes expand {
+  from { transform: scale(1); }
+  to { transform: scale(1.3); }
+}
+
+@keyframes contract {
+  from { transform: scale(1.3); }
+  to { transform: scale(1); }
+}
+
+.breath-instruction {
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.counter {
+  font-size: 48px;
+  font-weight: 700;
+  margin-top: 20px;
+  font-variant-numeric: tabular-nums;
+  opacity: 0.9;
+}
+
+/* Techniques */
+.techniques {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0 16px;
+}
+
+.technique-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: left;
+}
+
+.technique-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.technique-btn.selected {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.technique-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.technique-name {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.technique-timing {
+  font-size: 11px;
+  opacity: 0.7;
+}
+
+.technique-benefit {
+  font-size: 11px;
+  padding: 4px 8px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+}
+
+/* Controls */
+.controls {
+  padding: 16px;
+}
+
+.control-btn {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.control-btn.start {
+  background: white;
+  color: #0f766e;
+}
+
+.control-btn.start:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+}
+
+.control-btn.stop {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.control-btn.hidden {
+  display: none;
+}
+
+/* Cycles */
+.cycles-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 16px;
+  margin-top: auto;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.cycles-label {
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+.cycle-count {
+  font-size: 20px;
+  font-weight: 700;
+}

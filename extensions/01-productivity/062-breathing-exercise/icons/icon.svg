@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f766e"/>
+      <stop offset="100%" style="stop-color:#14b8a6"/>
+    </linearGradient>
+  </defs>
+  <circle cx="64" cy="64" r="60" fill="url(#grad)"/>
+
+  <!-- Wind/breath swirls -->
+  <path d="M30 55 Q50 45 70 55 Q90 65 100 55" fill="none" stroke="white" stroke-width="4" stroke-linecap="round" opacity="0.8"/>
+  <path d="M25 70 Q45 60 65 70 Q85 80 105 70" fill="none" stroke="white" stroke-width="4" stroke-linecap="round" opacity="0.6"/>
+  <path d="M35 85 Q55 75 75 85 Q95 95 110 85" fill="none" stroke="white" stroke-width="4" stroke-linecap="round" opacity="0.4"/>
+
+  <!-- Lungs silhouette -->
+  <ellipse cx="50" cy="65" rx="15" ry="20" fill="white" opacity="0.3"/>
+  <ellipse cx="78" cy="65" rx="15" ry="20" fill="white" opacity="0.3"/>
+  <path d="M64 45 L64 75" stroke="white" stroke-width="4" stroke-linecap="round" opacity="0.3"/>
+</svg>

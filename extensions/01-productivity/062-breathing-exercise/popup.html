@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Breathing Exercise</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🌬️ Breathing</h1>
+    </header>
+
+    <!-- Breathing Animation -->
+    <div class="breathing-section">
+      <div id="breathCircle" class="breath-circle">
+        <div id="breathInstruction" class="breath-instruction">開始</div>
+      </div>
+      <div id="counter" class="counter">4</div>
+    </div>
+
+    <!-- Technique Selection -->
+    <div class="techniques">
+      <button class="technique-btn selected" data-technique="box">
+        <div class="technique-info">
+          <span class="technique-name">方塊呼吸</span>
+          <span class="technique-timing">4-4-4-4</span>
+        </div>
+        <span class="technique-benefit">減壓專注</span>
+      </button>
+      <button class="technique-btn" data-technique="relaxing">
+        <div class="technique-info">
+          <span class="technique-name">放鬆呼吸</span>
+          <span class="technique-timing">4-7-8</span>
+        </div>
+        <span class="technique-benefit">助眠放鬆</span>
+      </button>
+      <button class="technique-btn" data-technique="energizing">
+        <div class="technique-info">
+          <span class="technique-name">活力呼吸</span>
+          <span class="technique-timing">6-0-2</span>
+        </div>
+        <span class="technique-benefit">提神醒腦</span>
+      </button>
+      <button class="technique-btn" data-technique="calming">
+        <div class="technique-info">
+          <span class="technique-name">平靜呼吸</span>
+          <span class="technique-timing">5-5-5-5</span>
+        </div>
+        <span class="technique-benefit">焦慮緩解</span>
+      </button>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls">
+      <button id="startBtn" class="control-btn start">開始練習</button>
+      <button id="stopBtn" class="control-btn stop hidden">停止</button>
+    </div>
+
+    <!-- Cycles -->
+    <div class="cycles-section">
+      <span class="cycles-label">已完成循環</span>
+      <span id="cycleCount" class="cycle-count">0</span>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
