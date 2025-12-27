@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Outline Notes</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Outline Notes</h1>
+      <div class="header-actions">
+        <button id="expandAllBtn" class="icon-btn" title="Expand all">⊞</button>
+        <button id="collapseAllBtn" class="icon-btn" title="Collapse all">⊟</button>
+        <button id="exportBtn" class="icon-btn" title="Export">📤</button>
+      </div>
+    </header>
+
+    <main>
+      <div class="toolbar">
+        <input type="text" id="searchInput" placeholder="搜尋..." class="search-input">
+      </div>
+
+      <div id="outline" class="outline">
+        <!-- Outline items will be rendered here -->
+      </div>
+
+      <button id="addRootBtn" class="add-root-btn">+ 新增項目</button>
+    </main>
+
+    <footer>
+      <div class="shortcuts-hint">
+        <span>Enter: 新增</span>
+        <span>Tab: 縮排</span>
+        <span>Shift+Tab: 取消縮排</span>
+      </div>
+    </footer>
+
+    <div id="toast" class="toast hidden"></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
