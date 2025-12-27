@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Distraction Blocker</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🛡️ Distraction Blocker</h1>
+      <div class="header-toggle">
+        <label class="toggle">
+          <input type="checkbox" id="enableToggle" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
+    </header>
+
+    <!-- Quick Stats -->
+    <div class="stats-bar">
+      <div class="stat">
+        <span class="stat-value" id="blockedToday">0</span>
+        <span class="stat-label">今日封鎖</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value" id="sitesCount">0</span>
+        <span class="stat-label">封鎖網站</span>
+      </div>
+    </div>
+
+    <!-- Schedule Section -->
+    <section class="section">
+      <div class="section-header">
+        <span class="section-title">封鎖時段</span>
+        <label class="mini-toggle">
+          <input type="checkbox" id="scheduleToggle">
+          <span class="slider"></span>
+        </label>
+      </div>
+      <div id="scheduleSettings" class="schedule-settings">
+        <div class="time-row">
+          <label>開始時間</label>
+          <input type="time" id="startTime" value="09:00">
+        </div>
+        <div class="time-row">
+          <label>結束時間</label>
+          <input type="time" id="endTime" value="17:00">
+        </div>
+        <div class="weekdays">
+          <button class="day-btn selected" data-day="1">一</button>
+          <button class="day-btn selected" data-day="2">二</button>
+          <button class="day-btn selected" data-day="3">三</button>
+          <button class="day-btn selected" data-day="4">四</button>
+          <button class="day-btn selected" data-day="5">五</button>
+          <button class="day-btn" data-day="6">六</button>
+          <button class="day-btn" data-day="0">日</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blocked Sites -->
+    <section class="section">
+      <div class="section-header">
+        <span class="section-title">封鎖清單</span>
+        <button id="addSiteBtn" class="add-btn">+</button>
+      </div>
+      <div id="addForm" class="add-form hidden">
+        <input type="text" id="siteInput" placeholder="輸入網域，如 facebook.com">
+        <button id="saveBtn" class="save-btn">新增</button>
+      </div>
+      <div id="siteList" class="site-list"></div>
+    </section>
+
+    <!-- Strict Mode -->
+    <section class="section">
+      <div class="section-header">
+        <span class="section-title">嚴格模式</span>
+        <label class="mini-toggle">
+          <input type="checkbox" id="strictToggle">
+          <span class="slider"></span>
+        </label>
+      </div>
+      <p class="hint">啟用後將無法臨時停用封鎖</p>
+    </section>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
