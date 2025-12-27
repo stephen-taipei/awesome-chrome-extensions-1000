@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workspace Manager</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🗂️ Workspace</h1>
+      <button id="newWorkspaceBtn" class="icon-btn" title="新增工作區">+</button>
+    </header>
+
+    <div id="currentWorkspace" class="current-workspace">
+      <span class="current-label">目前工作區</span>
+      <span id="currentName" class="current-name">無</span>
+    </div>
+
+    <main>
+      <div id="workspaceList" class="workspace-list"></div>
+      <div id="emptyState" class="empty-state">
+        <div class="empty-icon">🏢</div>
+        <div>沒有工作區</div>
+        <div class="empty-hint">點擊 + 建立第一個工作區</div>
+      </div>
+    </main>
+
+    <!-- New Workspace Modal -->
+    <div id="newModal" class="modal hidden">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 id="modalTitle">新增工作區</h2>
+          <button class="close-btn" data-close="newModal">×</button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label>工作區名稱</label>
+            <input type="text" id="workspaceName" placeholder="例如：專案開發、研究資料...">
+          </div>
+          <div class="form-group">
+            <label>圖示顏色</label>
+            <div class="color-picker" id="colorPicker">
+              <button class="color-btn selected" data-color="#3b82f6" style="background:#3b82f6"></button>
+              <button class="color-btn" data-color="#ef4444" style="background:#ef4444"></button>
+              <button class="color-btn" data-color="#22c55e" style="background:#22c55e"></button>
+              <button class="color-btn" data-color="#f59e0b" style="background:#f59e0b"></button>
+              <button class="color-btn" data-color="#8b5cf6" style="background:#8b5cf6"></button>
+              <button class="color-btn" data-color="#ec4899" style="background:#ec4899"></button>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="checkbox-label">
+              <input type="checkbox" id="saveCurrentTabs" checked>
+              <span>儲存目前分頁到此工作區</span>
+            </label>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button id="deleteWorkspaceBtn" class="btn btn-danger hidden">刪除</button>
+          <button id="saveWorkspaceBtn" class="btn btn-primary">建立</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
