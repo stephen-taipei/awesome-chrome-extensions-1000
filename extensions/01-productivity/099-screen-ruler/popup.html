@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Screen Ruler</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Screen Ruler</h1>
+    </header>
+
+    <!-- Actions -->
+    <div class="actions">
+      <button id="startMeasure" class="action-btn primary">
+        <span class="icon">📏</span>
+        Start Measuring
+      </button>
+    </div>
+
+    <!-- Measurements -->
+    <div class="measurements-card">
+      <div class="measurement-row">
+        <span class="measurement-label">Width</span>
+        <span id="widthValue" class="measurement-value">— px</span>
+      </div>
+      <div class="measurement-row">
+        <span class="measurement-label">Height</span>
+        <span id="heightValue" class="measurement-value">— px</span>
+      </div>
+      <div class="measurement-row">
+        <span class="measurement-label">Diagonal</span>
+        <span id="diagonalValue" class="measurement-value">— px</span>
+      </div>
+    </div>
+
+    <!-- History -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-title">History</span>
+        <button id="clearHistory" class="clear-btn">Clear</button>
+      </div>
+      <div id="historyList" class="history-list"></div>
+    </div>
+
+    <!-- Instructions -->
+    <div class="instructions">
+      <p>Click "Start Measuring" then drag on the page to measure dimensions.</p>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
