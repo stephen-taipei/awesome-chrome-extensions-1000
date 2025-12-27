@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voice Note</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Voice Note</h1>
+      <select id="language" title="Select language">
+        <option value="zh-TW">繁體中文</option>
+        <option value="zh-CN">简体中文</option>
+        <option value="en-US">English (US)</option>
+        <option value="en-GB">English (UK)</option>
+        <option value="ja-JP">日本語</option>
+        <option value="ko-KR">한국어</option>
+        <option value="es-ES">Español</option>
+        <option value="fr-FR">Français</option>
+        <option value="de-DE">Deutsch</option>
+      </select>
+    </header>
+
+    <main>
+      <div class="record-section">
+        <button id="recordBtn" class="record-btn" title="Click to start recording">
+          <span class="mic-icon">🎤</span>
+          <span class="status-text">點擊開始錄音</span>
+        </button>
+        <div id="waveform" class="waveform hidden">
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+      </div>
+
+      <div class="transcript-section">
+        <label for="currentTranscript">即時轉錄：</label>
+        <textarea id="currentTranscript" placeholder="語音內容將顯示在這裡..." readonly></textarea>
+        <div class="actions">
+          <button id="copyBtn" class="action-btn" title="Copy to clipboard">複製</button>
+          <button id="saveBtn" class="action-btn primary" title="Save note">儲存</button>
+          <button id="clearBtn" class="action-btn" title="Clear current text">清除</button>
+        </div>
+      </div>
+
+      <div class="history-section">
+        <div class="history-header">
+          <h2>歷史記錄</h2>
+          <button id="clearAllBtn" class="clear-all-btn" title="Clear all notes">清除全部</button>
+        </div>
+        <div id="notesList" class="notes-list">
+          <p class="empty-message">尚無儲存的筆記</p>
+        </div>
+      </div>
+    </main>
+
+    <div id="toast" class="toast hidden"></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
