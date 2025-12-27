@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6"/>
+      <stop offset="100%" style="stop-color:#1d4ed8"/>
+    </linearGradient>
+  </defs>
+  <circle cx="64" cy="64" r="60" fill="url(#grad)"/>
+  <!-- 2x2 Matrix Grid -->
+  <rect x="22" y="22" width="40" height="40" rx="6" fill="#fef2f2" stroke="white" stroke-width="2"/>
+  <rect x="66" y="22" width="40" height="40" rx="6" fill="#eff6ff" stroke="white" stroke-width="2"/>
+  <rect x="22" y="66" width="40" height="40" rx="6" fill="#fefce8" stroke="white" stroke-width="2"/>
+  <rect x="66" y="66" width="40" height="40" rx="6" fill="#f1f5f9" stroke="white" stroke-width="2"/>
+  <!-- Quadrant symbols -->
+  <text x="42" y="48" text-anchor="middle" font-size="20">🔥</text>
+  <text x="86" y="48" text-anchor="middle" font-size="20">📅</text>
+  <text x="42" y="92" text-anchor="middle" font-size="20">👥</text>
+  <text x="86" y="92" text-anchor="middle" font-size="20">🗑️</text>
+</svg>

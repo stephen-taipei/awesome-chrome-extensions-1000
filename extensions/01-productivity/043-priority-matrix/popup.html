@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Priority Matrix</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🎯 Priority Matrix</h1>
+      <button id="addBtn" class="add-btn" title="新增任務">+</button>
+    </header>
+
+    <div class="matrix">
+      <!-- Quadrant 1: Do First (Urgent & Important) -->
+      <div class="quadrant q1" data-quadrant="do">
+        <div class="quadrant-header">
+          <span class="quadrant-icon">🔥</span>
+          <span class="quadrant-title">立即執行</span>
+          <span class="quadrant-count" id="doCount">0</span>
+        </div>
+        <div class="quadrant-desc">緊急且重要</div>
+        <div class="task-list" id="doList"></div>
+      </div>
+
+      <!-- Quadrant 2: Schedule (Not Urgent & Important) -->
+      <div class="quadrant q2" data-quadrant="schedule">
+        <div class="quadrant-header">
+          <span class="quadrant-icon">📅</span>
+          <span class="quadrant-title">安排時間</span>
+          <span class="quadrant-count" id="scheduleCount">0</span>
+        </div>
+        <div class="quadrant-desc">重要不緊急</div>
+        <div class="task-list" id="scheduleList"></div>
+      </div>
+
+      <!-- Quadrant 3: Delegate (Urgent & Not Important) -->
+      <div class="quadrant q3" data-quadrant="delegate">
+        <div class="quadrant-header">
+          <span class="quadrant-icon">👥</span>
+          <span class="quadrant-title">委派他人</span>
+          <span class="quadrant-count" id="delegateCount">0</span>
+        </div>
+        <div class="quadrant-desc">緊急不重要</div>
+        <div class="task-list" id="delegateList"></div>
+      </div>
+
+      <!-- Quadrant 4: Delete (Not Urgent & Not Important) -->
+      <div class="quadrant q4" data-quadrant="delete">
+        <div class="quadrant-header">
+          <span class="quadrant-icon">🗑️</span>
+          <span class="quadrant-title">考慮刪除</span>
+          <span class="quadrant-count" id="deleteCount">0</span>
+        </div>
+        <div class="quadrant-desc">不緊急不重要</div>
+        <div class="task-list" id="deleteList"></div>
+      </div>
+    </div>
+
+    <!-- Add Task Modal -->
+    <div id="addModal" class="modal hidden">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 id="modalTitle">新增任務</h2>
+          <button id="closeModalBtn" class="close-btn">×</button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label>任務內容</label>
+            <input type="text" id="taskText" placeholder="輸入任務...">
+          </div>
+          <div class="form-group">
+            <label>分類</label>
+            <div class="quadrant-options">
+              <label class="radio-option q1-bg">
+                <input type="radio" name="quadrant" value="do" checked>
+                <span>🔥 立即執行</span>
+              </label>
+              <label class="radio-option q2-bg">
+                <input type="radio" name="quadrant" value="schedule">
+                <span>📅 安排時間</span>
+              </label>
+              <label class="radio-option q3-bg">
+                <input type="radio" name="quadrant" value="delegate">
+                <span>👥 委派他人</span>
+              </label>
+              <label class="radio-option q4-bg">
+                <input type="radio" name="quadrant" value="delete">
+                <span>🗑️ 考慮刪除</span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button id="deleteTaskBtn" class="btn btn-danger hidden">刪除</button>
+          <button id="saveTaskBtn" class="btn btn-primary">儲存</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
