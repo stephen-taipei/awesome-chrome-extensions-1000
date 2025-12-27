@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Out of Office</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🏖️ Out of Office</h1>
+      <div class="header-sub">Create OOO messages</div>
+    </header>
+
+    <!-- Quick Templates -->
+    <div class="templates">
+      <div class="section-label">Quick Templates</div>
+      <div class="template-btns">
+        <button class="template-btn" data-template="vacation">🌴 Vacation</button>
+        <button class="template-btn" data-template="sick">🤒 Sick Day</button>
+        <button class="template-btn" data-template="meeting">📅 In Meeting</button>
+        <button class="template-btn" data-template="holiday">🎉 Holiday</button>
+      </div>
+    </div>
+
+    <!-- Message Builder -->
+    <div class="builder">
+      <div class="form-row">
+        <label>Return Date</label>
+        <input type="date" id="returnDate">
+      </div>
+      <div class="form-row">
+        <label>Contact Person</label>
+        <input type="text" id="contact" placeholder="Name or email (optional)">
+      </div>
+      <div class="form-row">
+        <label>Custom Message</label>
+        <textarea id="message" placeholder="Your out-of-office message..."></textarea>
+      </div>
+      <div class="actions">
+        <button id="copyMessage" class="copy-btn">Copy Message</button>
+        <button id="saveTemplate" class="save-btn">Save</button>
+      </div>
+    </div>
+
+    <!-- Saved Templates -->
+    <div class="section">
+      <div class="section-title">Saved Messages</div>
+      <div id="savedList" class="saved-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
