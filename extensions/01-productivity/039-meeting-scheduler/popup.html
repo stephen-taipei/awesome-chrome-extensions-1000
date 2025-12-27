@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meeting Scheduler</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📅 Meeting Scheduler</h1>
+      <button id="addBtn" class="icon-btn" title="新增會議">+</button>
+    </header>
+
+    <main>
+      <!-- Today's Meetings -->
+      <div class="meetings-section">
+        <div class="section-header">
+          <span id="todayLabel">今日會議</span>
+          <span id="meetingCount" class="meeting-count">0</span>
+        </div>
+        <div id="meetingsList" class="meetings-list"></div>
+      </div>
+
+      <!-- Upcoming -->
+      <div class="upcoming-section">
+        <div class="section-header">
+          <span>即將到來</span>
+        </div>
+        <div id="upcomingList" class="meetings-list"></div>
+      </div>
+    </main>
+
+    <!-- Add Meeting Modal -->
+    <div id="addModal" class="modal hidden">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 id="modalTitle">新增會議</h2>
+          <button id="closeModalBtn" class="close-btn">×</button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label>會議名稱</label>
+            <input type="text" id="meetingTitle" placeholder="輸入會議名稱">
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>日期</label>
+              <input type="date" id="meetingDate">
+            </div>
+            <div class="form-group">
+              <label>時間</label>
+              <input type="time" id="meetingTime">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>會議連結 (選填)</label>
+            <input type="url" id="meetingLink" placeholder="https://meet.google.com/...">
+          </div>
+          <div class="form-group">
+            <label>提前提醒</label>
+            <select id="meetingReminder">
+              <option value="5">5 分鐘前</option>
+              <option value="10" selected>10 分鐘前</option>
+              <option value="15">15 分鐘前</option>
+              <option value="30">30 分鐘前</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>備註 (選填)</label>
+            <textarea id="meetingNotes" rows="2" placeholder="會議備註..."></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button id="deleteMeetingBtn" class="btn btn-danger hidden">刪除</button>
+          <button id="saveMeetingBtn" class="btn btn-primary">儲存</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
