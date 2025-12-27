@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Posture Check</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🧍 Posture Check</h1>
+      <label class="toggle">
+        <input type="checkbox" id="enableToggle" checked>
+        <span class="slider"></span>
+      </label>
+    </header>
+
+    <!-- Posture Display -->
+    <div class="posture-section">
+      <div class="posture-figure">
+        <div class="figure-body">
+          <div class="figure-head"></div>
+          <div class="figure-torso"></div>
+          <div class="figure-arms"></div>
+        </div>
+      </div>
+      <div class="posture-status">
+        <div id="statusEmoji" class="status-emoji">😊</div>
+        <div id="statusText" class="status-text">記得保持好姿勢！</div>
+        <div id="nextCheck" class="next-check">下次提醒：20 分鐘後</div>
+      </div>
+    </div>
+
+    <!-- Posture Tips -->
+    <section class="section tips-section">
+      <div class="section-title">姿勢要點</div>
+      <div class="tips-grid">
+        <div class="tip-item">
+          <span class="tip-icon">👀</span>
+          <span class="tip-text">眼睛與螢幕平視</span>
+        </div>
+        <div class="tip-item">
+          <span class="tip-icon">🦴</span>
+          <span class="tip-text">背部挺直靠椅背</span>
+        </div>
+        <div class="tip-item">
+          <span class="tip-icon">💪</span>
+          <span class="tip-text">肩膀放鬆下沉</span>
+        </div>
+        <div class="tip-item">
+          <span class="tip-icon">🦶</span>
+          <span class="tip-text">雙腳平放地面</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Check -->
+    <div class="quick-check">
+      <button id="goodPostureBtn" class="check-btn good">
+        <span>👍</span>
+        姿勢正確
+      </button>
+      <button id="badPostureBtn" class="check-btn bad">
+        <span>👎</span>
+        需要調整
+      </button>
+    </div>
+
+    <!-- Settings -->
+    <section class="section">
+      <div class="section-title">提醒間隔</div>
+      <div class="interval-options">
+        <button class="interval-btn" data-minutes="15">15 分</button>
+        <button class="interval-btn selected" data-minutes="20">20 分</button>
+        <button class="interval-btn" data-minutes="30">30 分</button>
+        <button class="interval-btn" data-minutes="45">45 分</button>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="section stats">
+      <div class="stat-item">
+        <div class="stat-value" id="goodCount">0</div>
+        <div class="stat-label">姿勢正確</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value" id="badCount">0</div>
+        <div class="stat-label">需要調整</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value" id="postureScore">100%</div>
+        <div class="stat-label">今日評分</div>
+      </div>
+    </section>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
