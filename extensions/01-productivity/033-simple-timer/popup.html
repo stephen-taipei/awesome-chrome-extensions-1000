@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Timer</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>⏲️ Simple Timer</h1>
+    </header>
+
+    <main>
+      <!-- Quick Presets -->
+      <div class="presets-section">
+        <div class="presets-label">快速計時</div>
+        <div class="presets-grid">
+          <button class="preset-btn" data-minutes="1">1 分鐘</button>
+          <button class="preset-btn" data-minutes="3">3 分鐘</button>
+          <button class="preset-btn" data-minutes="5">5 分鐘</button>
+          <button class="preset-btn" data-minutes="10">10 分鐘</button>
+          <button class="preset-btn" data-minutes="15">15 分鐘</button>
+          <button class="preset-btn" data-minutes="30">30 分鐘</button>
+        </div>
+      </div>
+
+      <!-- Custom Timer Input -->
+      <div class="custom-section">
+        <div class="custom-label">自訂計時</div>
+        <div class="custom-input">
+          <div class="time-input-group">
+            <input type="number" id="hoursInput" min="0" max="23" value="0" placeholder="0">
+            <span class="time-label">時</span>
+          </div>
+          <span class="time-separator">:</span>
+          <div class="time-input-group">
+            <input type="number" id="minutesInput" min="0" max="59" value="5" placeholder="0">
+            <span class="time-label">分</span>
+          </div>
+          <span class="time-separator">:</span>
+          <div class="time-input-group">
+            <input type="number" id="secondsInput" min="0" max="59" value="0" placeholder="0">
+            <span class="time-label">秒</span>
+          </div>
+        </div>
+        <div class="custom-actions">
+          <input type="text" id="timerLabel" placeholder="計時器名稱（選填）" class="label-input">
+          <button id="addTimerBtn" class="add-btn">+ 新增計時器</button>
+        </div>
+      </div>
+
+      <!-- Active Timers -->
+      <div class="timers-section">
+        <div class="timers-header">
+          <span>進行中的計時器</span>
+          <span id="timerCount" class="timer-count">0</span>
+        </div>
+        <div id="timersList" class="timers-list"></div>
+      </div>
+    </main>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
