@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Budget Planner</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📊 Budget Planner</h1>
+      <div id="monthDisplay" class="month-display"></div>
+    </header>
+
+    <!-- Overview -->
+    <div class="overview-card">
+      <div class="overview-item">
+        <span class="overview-label">Total Budget</span>
+        <span id="totalBudget" class="overview-value">$0</span>
+      </div>
+      <div class="overview-item">
+        <span class="overview-label">Spent</span>
+        <span id="totalSpent" class="overview-value spent">$0</span>
+      </div>
+      <div class="overview-item">
+        <span class="overview-label">Remaining</span>
+        <span id="totalRemaining" class="overview-value remaining">$0</span>
+      </div>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="progress-section">
+      <div class="progress-bar">
+        <div id="progressFill" class="progress-fill"></div>
+      </div>
+      <span id="progressText" class="progress-text">0%</span>
+    </div>
+
+    <!-- Categories -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-title">Categories</span>
+        <button id="addCategoryBtn" class="add-btn">+ Add</button>
+      </div>
+      <div id="categoriesList" class="categories-list"></div>
+    </div>
+
+    <!-- Add Spending -->
+    <div class="section">
+      <div class="section-title">Add Spending</div>
+      <div class="add-spending">
+        <select id="spendCategory"></select>
+        <input type="number" id="spendAmount" placeholder="Amount" step="0.01">
+        <button id="spendBtn" class="spend-btn">Add</button>
+      </div>
+    </div>
+
+    <!-- Add Category Modal -->
+    <div id="modal" class="modal hidden">
+      <div class="modal-content">
+        <h3>Add Budget Category</h3>
+        <input type="text" id="categoryName" placeholder="Category name">
+        <input type="number" id="categoryBudget" placeholder="Monthly budget">
+        <div class="modal-actions">
+          <button id="cancelBtn" class="modal-btn cancel">Cancel</button>
+          <button id="saveBtn" class="modal-btn save">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
