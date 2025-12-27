@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reading List</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Reading List</h1>
+      <button id="addCurrentBtn" class="add-btn" title="Add current page">+ 加入</button>
+    </header>
+
+    <main>
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">全部</button>
+        <button class="filter-btn" data-filter="unread">未讀</button>
+        <button class="filter-btn" data-filter="reading">閱讀中</button>
+        <button class="filter-btn" data-filter="completed">已完成</button>
+      </div>
+
+      <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="搜尋文章...">
+      </div>
+
+      <div id="articleList" class="article-list">
+        <div class="empty-state">
+          <p>📚 閱讀清單是空的</p>
+          <p>點擊「+ 加入」儲存目前頁面</p>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="stats">
+        <span id="unreadCount">0 篇未讀</span>
+        <button id="clearCompletedBtn" class="clear-btn">清除已完成</button>
+      </div>
+    </footer>
+
+    <div id="toast" class="toast hidden"></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
