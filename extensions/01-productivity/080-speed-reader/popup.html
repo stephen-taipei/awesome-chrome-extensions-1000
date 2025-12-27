@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Speed Reader</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📖 Speed Reader</h1>
+    </header>
+
+    <!-- Reader Display -->
+    <div class="reader-section">
+      <div class="word-display">
+        <span id="wordBefore" class="word-part"></span>
+        <span id="wordFocus" class="word-focus"></span>
+        <span id="wordAfter" class="word-part"></span>
+      </div>
+      <div class="progress-container">
+        <div id="progressBar" class="progress-bar"></div>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls-section">
+      <div class="control-row">
+        <button id="prevBtn" class="control-btn">⏮</button>
+        <button id="playPauseBtn" class="control-btn play">▶</button>
+        <button id="nextBtn" class="control-btn">⏭</button>
+      </div>
+    </div>
+
+    <!-- Speed Control -->
+    <div class="speed-section">
+      <div class="speed-header">
+        <span>閱讀速度</span>
+        <span id="wpmDisplay" class="wpm-display">300 WPM</span>
+      </div>
+      <input type="range" id="speedSlider" min="100" max="1000" value="300" step="50">
+      <div class="speed-labels">
+        <span>100</span>
+        <span>1000</span>
+      </div>
+    </div>
+
+    <!-- Text Input -->
+    <div class="input-section">
+      <textarea id="textInput" placeholder="貼上要閱讀的文字..."></textarea>
+      <button id="loadBtn" class="load-btn">載入文字</button>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats-bar">
+      <span id="wordCount">0 字</span>
+      <span id="timeEstimate">約 0 分鐘</span>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
