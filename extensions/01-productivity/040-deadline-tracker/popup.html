@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deadline Tracker</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>⏰ Deadline Tracker</h1>
+      <button id="addBtn" class="icon-btn" title="新增截止日">+</button>
+    </header>
+
+    <main>
+      <!-- Urgent Section -->
+      <div id="urgentSection" class="deadlines-section urgent hidden">
+        <div class="section-header urgent">
+          <span>🔴 緊急</span>
+          <span id="urgentCount" class="count">0</span>
+        </div>
+        <div id="urgentList" class="deadlines-list"></div>
+      </div>
+
+      <!-- Upcoming Section -->
+      <div id="upcomingSection" class="deadlines-section">
+        <div class="section-header">
+          <span>📅 即將到來</span>
+          <span id="upcomingCount" class="count">0</span>
+        </div>
+        <div id="upcomingList" class="deadlines-list"></div>
+      </div>
+
+      <!-- Later Section -->
+      <div id="laterSection" class="deadlines-section later hidden">
+        <div class="section-header later">
+          <span>📋 稍後</span>
+          <span id="laterCount" class="count">0</span>
+        </div>
+        <div id="laterList" class="deadlines-list"></div>
+      </div>
+
+      <!-- Completed Section -->
+      <div id="completedSection" class="deadlines-section completed hidden">
+        <div class="section-header completed">
+          <span>✅ 已完成</span>
+          <button id="clearCompletedBtn" class="clear-btn">清除</button>
+        </div>
+        <div id="completedList" class="deadlines-list"></div>
+      </div>
+    </main>
+
+    <!-- Add Deadline Modal -->
+    <div id="addModal" class="modal hidden">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 id="modalTitle">新增截止日期</h2>
+          <button id="closeModalBtn" class="close-btn">×</button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label>項目名稱</label>
+            <input type="text" id="deadlineTitle" placeholder="輸入項目名稱">
+          </div>
+          <div class="form-group">
+            <label>截止日期</label>
+            <input type="date" id="deadlineDate">
+          </div>
+          <div class="form-group">
+            <label>分類</label>
+            <select id="deadlineCategory">
+              <option value="work">💼 工作</option>
+              <option value="personal">🏠 個人</option>
+              <option value="study">📚 學習</option>
+              <option value="project">📁 專案</option>
+              <option value="other">📌 其他</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>備註 (選填)</label>
+            <textarea id="deadlineNotes" rows="2" placeholder="備註..."></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button id="deleteDeadlineBtn" class="btn btn-danger hidden">刪除</button>
+          <button id="saveDeadlineBtn" class="btn btn-primary">儲存</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
