@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upsell Pitch</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Upsell Pitch</h1>
+      <div class="header-sub">Increase customer value</div>
+    </header>
+
+    <!-- Pitch Form -->
+    <div class="pitch-form">
+      <select id="pitchType">
+        <option value="upgrade">Plan Upgrade</option>
+        <option value="addon">Add-on Feature</option>
+        <option value="premium">Premium Tier</option>
+        <option value="bundle">Bundle Deal</option>
+        <option value="service">Additional Service</option>
+        <option value="annual">Annual Plan</option>
+      </select>
+
+      <input type="text" id="customer" placeholder="Customer name">
+      <input type="text" id="currentPlan" placeholder="Their current plan/product">
+      <input type="text" id="upgrade" placeholder="What you're offering">
+      <textarea id="benefits" placeholder="Key benefits for them..."></textarea>
+      <input type="text" id="pricing" placeholder="Special pricing (if any)">
+    </div>
+
+    <!-- Actions -->
+    <div class="actions">
+      <button id="copyPitch" class="copy-btn">Copy Pitch</button>
+      <button id="savePitch" class="save-btn">Save</button>
+    </div>
+
+    <!-- Saved -->
+    <div class="section">
+      <div class="section-title">Saved Pitches</div>
+      <div id="pitchList" class="pitch-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
