@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Focus Mode</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🎯 Focus Mode</h1>
+    </header>
+
+    <!-- Timer Display -->
+    <div id="timerSection" class="timer-section">
+      <div id="timerDisplay" class="timer-display">25:00</div>
+      <div id="statusText" class="status-text">準備開始專注</div>
+    </div>
+
+    <!-- Duration Selection -->
+    <div id="durationSection" class="section">
+      <div class="section-title">專注時長</div>
+      <div class="duration-grid">
+        <button class="duration-btn" data-minutes="15">15 分鐘</button>
+        <button class="duration-btn selected" data-minutes="25">25 分鐘</button>
+        <button class="duration-btn" data-minutes="45">45 分鐘</button>
+        <button class="duration-btn" data-minutes="60">60 分鐘</button>
+      </div>
+    </div>
+
+    <!-- Control Buttons -->
+    <div class="control-section">
+      <button id="startBtn" class="control-btn start">開始專注</button>
+      <button id="stopBtn" class="control-btn stop hidden">結束專注</button>
+    </div>
+
+    <!-- Blocked Sites -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-title">封鎖網站</span>
+        <button id="addSiteBtn" class="add-btn">+</button>
+      </div>
+      <div id="blockedSites" class="blocked-sites"></div>
+      <div id="addSiteForm" class="add-site-form hidden">
+        <input type="text" id="siteInput" placeholder="例如：facebook.com">
+        <button id="saveSiteBtn" class="save-btn">新增</button>
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="section stats-section">
+      <div class="stat-item">
+        <div class="stat-value" id="todaySessions">0</div>
+        <div class="stat-label">今日專注</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value" id="todayMinutes">0</div>
+        <div class="stat-label">專注分鐘</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value" id="streak">0</div>
+        <div class="stat-label">連續天數</div>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
