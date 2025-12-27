@@ -1,0 +1,220 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  background: linear-gradient(180deg, #e0e7ff 0%, #c7d2fe 100%);
+  color: #3730a3;
+}
+
+.container {
+  width: 340px;
+  min-height: 450px;
+}
+
+header {
+  text-align: center;
+  padding: 16px;
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+  color: white;
+}
+
+header h1 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* Controls */
+.controls {
+  display: flex;
+  padding: 12px;
+  gap: 8px;
+}
+
+.controls input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 2px solid #c7d2fe;
+  border-radius: 8px;
+  font-size: 12px;
+  color: #3730a3;
+}
+
+.controls input:focus {
+  outline: none;
+  border-color: #6366f1;
+}
+
+.add-btn {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Add Form */
+.add-form {
+  padding: 12px;
+  background: #f5f3ff;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.add-form input,
+.add-form select {
+  padding: 10px 12px;
+  border: 2px solid #c7d2fe;
+  border-radius: 8px;
+  font-size: 12px;
+  color: #3730a3;
+}
+
+.add-form input:focus,
+.add-form select:focus {
+  outline: none;
+  border-color: #6366f1;
+}
+
+.form-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.save-btn {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  padding: 10px 16px;
+  border: 2px solid #c7d2fe;
+  border-radius: 8px;
+  background: white;
+  color: #3730a3;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Team List */
+.team-list {
+  padding: 0 12px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 320px;
+  overflow-y: auto;
+}
+
+.member-card {
+  background: white;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.12);
+}
+
+.member-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.member-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.member-info {
+  flex: 1;
+}
+
+.member-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: #3730a3;
+}
+
+.member-role {
+  font-size: 11px;
+  color: #6366f1;
+}
+
+.member-dept {
+  font-size: 9px;
+  padding: 2px 6px;
+  background: #e0e7ff;
+  color: #4f46e5;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.member-contact {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.contact-btn {
+  flex: 1;
+  padding: 6px;
+  border: none;
+  border-radius: 6px;
+  background: #e0e7ff;
+  color: #3730a3;
+  font-size: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+}
+
+.contact-btn:hover {
+  background: #c7d2fe;
+}
+
+.member-actions {
+  text-align: right;
+}
+
+.delete-btn {
+  padding: 4px 10px;
+  border: none;
+  border-radius: 4px;
+  background: #fee2e2;
+  color: #991b1b;
+  font-size: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 40px 20px;
+  color: #9ca3af;
+  font-size: 12px;
+}
