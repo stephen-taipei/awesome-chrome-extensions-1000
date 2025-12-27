@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Follow Up Tracker</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📬 Follow Ups</h1>
+      <div class="header-stats">
+        <span id="pendingCount">0 pending</span>
+      </div>
+    </header>
+
+    <!-- Add New -->
+    <div class="add-section">
+      <div class="form-row">
+        <input type="text" id="contact" placeholder="Contact name or email">
+        <input type="date" id="dueDate">
+      </div>
+      <input type="text" id="subject" placeholder="Subject or reason">
+      <button id="addBtn" class="add-btn">Add Follow Up</button>
+    </div>
+
+    <!-- Filter -->
+    <div class="filter-section">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="pending">Pending</button>
+      <button class="filter-btn" data-filter="done">Done</button>
+    </div>
+
+    <!-- List -->
+    <div class="section">
+      <div id="followUpList" class="follow-up-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
