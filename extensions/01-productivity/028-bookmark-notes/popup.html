@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookmark Notes</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Bookmark Notes</h1>
+    </header>
+
+    <main>
+      <div class="search-section">
+        <input type="text" id="searchInput" placeholder="搜尋書籤或筆記...">
+        <select id="filterSelect">
+          <option value="all">全部</option>
+          <option value="with-notes">有筆記</option>
+          <option value="rated">有評分</option>
+        </select>
+      </div>
+
+      <div id="bookmarkList" class="bookmark-list">
+        <div class="loading">載入中...</div>
+      </div>
+    </main>
+
+    <!-- Edit Modal -->
+    <div id="editModal" class="modal hidden">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>編輯筆記</h2>
+          <button id="closeModalBtn" class="close-btn">×</button>
+        </div>
+        <div class="modal-body">
+          <div class="bookmark-preview" id="bookmarkPreview"></div>
+
+          <div class="form-group">
+            <label>筆記</label>
+            <textarea id="noteInput" placeholder="添加筆記..." rows="3"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label>標籤</label>
+            <input type="text" id="tagsInput" placeholder="用逗號分隔標籤...">
+          </div>
+
+          <div class="form-group">
+            <label>評分</label>
+            <div class="rating" id="ratingPicker">
+              <span class="star" data-rating="1">☆</span>
+              <span class="star" data-rating="2">☆</span>
+              <span class="star" data-rating="3">☆</span>
+              <span class="star" data-rating="4">☆</span>
+              <span class="star" data-rating="5">☆</span>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button id="deleteNoteBtn" class="btn btn-danger">刪除筆記</button>
+          <button id="saveNoteBtn" class="btn btn-primary">儲存</button>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <span id="statsInfo">0 個書籤, 0 個筆記</span>
+    </footer>
+
+    <div id="toast" class="toast hidden"></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
