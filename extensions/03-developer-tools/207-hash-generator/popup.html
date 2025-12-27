@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Hash Generator</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <div class="container">
+    <header><h1>Hash Generator</h1><div class="header-sub">Generate secure hashes</div></header>
+    <div class="hash-form">
+      <div class="section-title">Input Text</div>
+      <textarea id="input" placeholder="Enter text to hash..."></textarea>
+    </div>
+    <div class="actions"><button id="hashBtn" class="action-btn">Generate Hashes</button></div>
+    <div class="results">
+      <div class="hash-row"><label>SHA-256</label><input type="text" id="sha256" readonly><button data-copy="sha256">Copy</button></div>
+      <div class="hash-row"><label>SHA-1</label><input type="text" id="sha1" readonly><button data-copy="sha1">Copy</button></div>
+      <div class="hash-row"><label>SHA-384</label><input type="text" id="sha384" readonly><button data-copy="sha384">Copy</button></div>
+      <div class="hash-row"><label>SHA-512</label><input type="text" id="sha512" readonly><button data-copy="sha512">Copy</button></div>
+    </div>
+    <div id="status" class="status"></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
