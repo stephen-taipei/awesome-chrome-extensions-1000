@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conflict Resolution</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Conflict Resolution</h1>
+      <div class="header-sub">Navigate difficult conversations</div>
+    </header>
+
+    <!-- Resolution Form -->
+    <div class="resolution-form">
+      <select id="conflictType">
+        <option value="workplace">Workplace Dispute</option>
+        <option value="team">Team Disagreement</option>
+        <option value="client">Client Issue</option>
+        <option value="misunderstanding">Misunderstanding</option>
+        <option value="deadline">Deadline Conflict</option>
+        <option value="personal">Personal Conflict</option>
+      </select>
+
+      <input type="text" id="recipient" placeholder="Who are you addressing?">
+      <textarea id="issue" placeholder="Describe the issue briefly..."></textarea>
+      <textarea id="perspective" placeholder="Acknowledge their perspective..."></textarea>
+      <textarea id="solution" placeholder="Proposed resolution..."></textarea>
+    </div>
+
+    <!-- Actions -->
+    <div class="actions">
+      <button id="copyMessage" class="copy-btn">Copy Message</button>
+      <button id="saveMessage" class="save-btn">Save</button>
+    </div>
+
+    <!-- Saved -->
+    <div class="section">
+      <div class="section-title">Saved Messages</div>
+      <div id="messageList" class="message-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
