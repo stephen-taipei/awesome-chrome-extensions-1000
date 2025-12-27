@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  background: linear-gradient(180deg, #fdf4ff 0%, #fae8ff 100%);
+  color: #701a75;
+}
+
+.container {
+  width: 340px;
+  min-height: 450px;
+}
+
+header {
+  text-align: center;
+  padding: 16px;
+  background: linear-gradient(135deg, #e879f9 0%, #d946ef 100%);
+  color: white;
+}
+
+header h1 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* Create Section */
+.create-section {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.create-section input,
+.create-section textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 2px solid #fae8ff;
+  border-radius: 8px;
+  font-size: 12px;
+  font-family: inherit;
+  color: #701a75;
+}
+
+.create-section textarea {
+  height: 50px;
+  resize: none;
+}
+
+.create-section input:focus,
+.create-section textarea:focus {
+  outline: none;
+  border-color: #e879f9;
+}
+
+.row {
+  display: flex;
+  gap: 8px;
+}
+
+.row input {
+  flex: 1;
+}
+
+.create-btn {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #e879f9 0%, #d946ef 100%);
+  color: white;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Section */
+.section {
+  padding: 0 16px 16px;
+}
+
+.section-title {
+  font-size: 11px;
+  font-weight: 600;
+  color: #d946ef;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+/* Invites List */
+.invites-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.invite-item {
+  background: white;
+  border-radius: 10px;
+  padding: 12px;
+  box-shadow: 0 2px 6px rgba(233, 121, 249, 0.1);
+}
+
+.invite-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #701a75;
+  margin-bottom: 6px;
+}
+
+.invite-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.invite-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: #6b7280;
+}
+
+.invite-icon {
+  font-size: 12px;
+}
+
+.invite-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.invite-actions button {
+  flex: 1;
+  padding: 6px;
+  border: none;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.copy-btn {
+  background: #e879f9;
+  color: white;
+}
+
+.delete-btn {
+  background: #fdf4ff;
+  color: #701a75;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 20px;
+  color: #a1a1aa;
+  font-size: 12px;
+}
