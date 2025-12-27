@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>💰 Expense Tracker</h1>
+    </header>
+
+    <!-- Balance Card -->
+    <div class="balance-card">
+      <div class="balance-label">本月餘額</div>
+      <div id="balance" class="balance-amount">$0</div>
+      <div class="balance-row">
+        <div class="income-box">
+          <span class="box-label">收入</span>
+          <span id="totalIncome" class="box-value income">+$0</span>
+        </div>
+        <div class="expense-box">
+          <span class="box-label">支出</span>
+          <span id="totalExpense" class="box-value expense">-$0</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add Transaction -->
+    <div class="add-section">
+      <div class="add-row">
+        <input type="text" id="description" placeholder="項目名稱">
+        <input type="number" id="amount" placeholder="金額">
+      </div>
+      <div class="add-row">
+        <select id="category">
+          <option value="food">🍔 飲食</option>
+          <option value="transport">🚌 交通</option>
+          <option value="shopping">🛒 購物</option>
+          <option value="entertainment">🎮 娛樂</option>
+          <option value="bills">📄 帳單</option>
+          <option value="income">💵 收入</option>
+          <option value="other">📌 其他</option>
+        </select>
+        <button id="addBtn" class="add-btn">添加</button>
+      </div>
+    </div>
+
+    <!-- Transactions List -->
+    <div class="section">
+      <div class="section-title">最近交易</div>
+      <div id="transactionsList" class="transactions-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
