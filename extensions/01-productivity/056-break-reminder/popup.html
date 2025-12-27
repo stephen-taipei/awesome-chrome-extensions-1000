@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Break Reminder</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>☕ Break Reminder</h1>
+      <label class="toggle">
+        <input type="checkbox" id="enableToggle" checked>
+        <span class="slider"></span>
+      </label>
+    </header>
+
+    <!-- Status Display -->
+    <div class="status-section">
+      <div id="statusIcon" class="status-icon">⏰</div>
+      <div id="nextBreak" class="next-break">距離下次休息還有 25 分鐘</div>
+      <div class="progress-bar">
+        <div id="progress" class="progress" style="width: 0%"></div>
+      </div>
+    </div>
+
+    <!-- Quick Actions -->
+    <div class="quick-actions">
+      <button id="takeBreakBtn" class="action-btn primary">
+        <span>🧘</span>
+        立即休息
+      </button>
+      <button id="skipBreakBtn" class="action-btn secondary">
+        <span>⏭️</span>
+        跳過這次
+      </button>
+    </div>
+
+    <!-- Settings -->
+    <section class="section">
+      <div class="section-title">休息間隔</div>
+      <div class="interval-grid">
+        <button class="interval-btn" data-minutes="20">20 分</button>
+        <button class="interval-btn selected" data-minutes="25">25 分</button>
+        <button class="interval-btn" data-minutes="30">30 分</button>
+        <button class="interval-btn" data-minutes="45">45 分</button>
+        <button class="interval-btn" data-minutes="60">60 分</button>
+        <button class="interval-btn" data-minutes="90">90 分</button>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">休息時長</div>
+      <div class="break-duration">
+        <button class="duration-btn" data-duration="3">3 分鐘</button>
+        <button class="duration-btn selected" data-duration="5">5 分鐘</button>
+        <button class="duration-btn" data-duration="10">10 分鐘</button>
+        <button class="duration-btn" data-duration="15">15 分鐘</button>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">休息提示</div>
+      <div class="activities">
+        <label class="activity-item">
+          <input type="checkbox" name="activity" value="stretch" checked>
+          <span class="activity-icon">🤸</span>
+          <span>伸展身體</span>
+        </label>
+        <label class="activity-item">
+          <input type="checkbox" name="activity" value="eyes" checked>
+          <span class="activity-icon">👀</span>
+          <span>眼睛休息</span>
+        </label>
+        <label class="activity-item">
+          <input type="checkbox" name="activity" value="water" checked>
+          <span class="activity-icon">💧</span>
+          <span>喝水</span>
+        </label>
+        <label class="activity-item">
+          <input type="checkbox" name="activity" value="walk">
+          <span class="activity-icon">🚶</span>
+          <span>走動一下</span>
+        </label>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="section stats">
+      <div class="stat-item">
+        <div class="stat-value" id="todayBreaks">0</div>
+        <div class="stat-label">今日休息</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value" id="totalBreaks">0</div>
+        <div class="stat-label">累計休息</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value" id="streak">0</div>
+        <div class="stat-label">連續天數</div>
+      </div>
+    </section>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
