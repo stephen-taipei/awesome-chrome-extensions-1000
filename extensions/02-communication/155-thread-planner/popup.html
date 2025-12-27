@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thread Planner</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🧵 Thread Planner</h1>
+      <div class="header-sub">Craft compelling threads</div>
+    </header>
+
+    <!-- Thread Title -->
+    <div class="thread-header">
+      <input type="text" id="threadTitle" placeholder="Thread topic or title">
+    </div>
+
+    <!-- Tweets -->
+    <div class="tweets-section">
+      <div class="section-header">
+        <span class="section-title">Tweets</span>
+        <button id="addTweet" class="add-tweet-btn">+ Add Tweet</button>
+      </div>
+      <div id="tweetList" class="tweet-list"></div>
+    </div>
+
+    <!-- Actions -->
+    <div class="actions">
+      <button id="copyThread" class="copy-btn">Copy Thread</button>
+      <button id="saveThread" class="save-btn">Save</button>
+      <button id="clearThread" class="clear-btn">Clear</button>
+    </div>
+
+    <!-- Saved Threads -->
+    <div class="section">
+      <div class="section-title">Saved Threads</div>
+      <div id="savedList" class="saved-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
