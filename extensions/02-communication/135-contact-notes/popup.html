@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Notes</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Contact Notes</h1>
+    </header>
+
+    <!-- Search -->
+    <div class="search-section">
+      <input type="text" id="search" placeholder="Search contacts...">
+    </div>
+
+    <!-- Add Contact -->
+    <div class="add-section">
+      <input type="text" id="name" placeholder="Contact name...">
+      <input type="text" id="company" placeholder="Company/Role...">
+      <textarea id="notes" placeholder="Notes about this person..."></textarea>
+      <button id="saveContact" class="save-btn">Save Contact</button>
+    </div>
+
+    <!-- Contacts List -->
+    <div class="section">
+      <div class="section-title">Contacts</div>
+      <div id="contactsList" class="contacts-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
