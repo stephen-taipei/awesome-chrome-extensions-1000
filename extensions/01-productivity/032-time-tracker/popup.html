@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Time Tracker</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>⏱️ Time Tracker</h1>
+      <div class="header-actions">
+        <button id="toggleBtn" class="icon-btn" title="暫停追蹤">⏸</button>
+      </div>
+    </header>
+
+    <main>
+      <!-- Today Summary -->
+      <div class="summary-card">
+        <div class="summary-header">
+          <span>今日總計</span>
+          <span id="todayDate" class="date"></span>
+        </div>
+        <div id="totalTime" class="total-time">0h 0m</div>
+        <div id="siteCount" class="site-count">0 個網站</div>
+      </div>
+
+      <!-- Period Tabs -->
+      <div class="period-tabs">
+        <button class="period-tab active" data-period="today">今日</button>
+        <button class="period-tab" data-period="week">本週</button>
+        <button class="period-tab" data-period="month">本月</button>
+      </div>
+
+      <!-- Top Sites -->
+      <div class="sites-section">
+        <div class="section-header">
+          <span>使用時間排行</span>
+        </div>
+        <div id="sitesList" class="sites-list"></div>
+      </div>
+
+      <!-- Category Chart -->
+      <div class="chart-section">
+        <div class="section-header">
+          <span>分類統計</span>
+        </div>
+        <div id="categoryChart" class="category-chart"></div>
+      </div>
+    </main>
+
+    <footer>
+      <button id="exportBtn" class="footer-btn">📊 匯出報告</button>
+      <button id="clearBtn" class="footer-btn">🗑️ 清除數據</button>
+    </footer>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
