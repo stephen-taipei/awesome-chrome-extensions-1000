@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  background: linear-gradient(180deg, #dcfce7 0%, #bbf7d0 100%);
+  color: #166534;
+}
+
+.container {
+  width: 340px;
+  min-height: 500px;
+}
+
+header {
+  text-align: center;
+  padding: 14px 16px;
+  background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+  color: white;
+}
+
+header h1 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.header-sub {
+  font-size: 11px;
+  opacity: 0.9;
+  margin-top: 4px;
+}
+
+/* Request Form */
+.request-form {
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.request-form select {
+  padding: 10px 12px;
+  border: 2px solid #bbf7d0;
+  border-radius: 8px;
+  font-size: 12px;
+  color: #166534;
+  background: white;
+}
+
+.request-form input {
+  padding: 10px 12px;
+  border: 2px solid #bbf7d0;
+  border-radius: 8px;
+  font-size: 12px;
+  color: #166534;
+}
+
+.request-form textarea {
+  padding: 10px 12px;
+  border: 2px solid #bbf7d0;
+  border-radius: 8px;
+  font-size: 12px;
+  font-family: inherit;
+  color: #166534;
+  height: 60px;
+  resize: none;
+}
+
+.request-form select:focus,
+.request-form input:focus,
+.request-form textarea:focus {
+  outline: none;
+  border-color: #22c55e;
+}
+
+.form-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.copy-btn {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+  color: white;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.save-btn {
+  padding: 10px 16px;
+  border: 2px solid #bbf7d0;
+  border-radius: 8px;
+  background: white;
+  color: #166534;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Section */
+.section {
+  padding: 0 16px 16px;
+}
+
+.section-title {
+  font-size: 11px;
+  font-weight: 600;
+  color: #16a34a;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+/* Template List */
+.template-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-height: 140px;
+  overflow-y: auto;
+}
+
+.template-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  border-radius: 8px;
+  padding: 10px 12px;
+  box-shadow: 0 1px 4px rgba(34, 197, 94, 0.15);
+}
+
+.template-info {
+  flex: 1;
+}
+
+.template-name {
+  font-size: 11px;
+  font-weight: 600;
+  color: #166534;
+}
+
+.template-type {
+  font-size: 9px;
+  color: #a1a1aa;
+  text-transform: uppercase;
+}
+
+.template-actions button {
+  padding: 4px 8px;
+  border: none;
+  border-radius: 4px;
+  font-size: 9px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 4px;
+}
+
+.load-btn {
+  background: #22c55e;
+  color: white;
+}
+
+.delete-btn {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 16px;
+  color: #a1a1aa;
+  font-size: 11px;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback Request</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Feedback Request</h1>
+      <div class="header-sub">Ask for feedback professionally</div>
+    </header>
+
+    <!-- Request Form -->
+    <div class="request-form">
+      <select id="requestType">
+        <option value="project">Project Review</option>
+        <option value="presentation">Presentation</option>
+        <option value="document">Document/Report</option>
+        <option value="design">Design Work</option>
+        <option value="code">Code Review</option>
+        <option value="general">General Feedback</option>
+      </select>
+      <input type="text" id="itemName" placeholder="What needs feedback?">
+      <input type="text" id="recipient" placeholder="Recipient name (optional)">
+      <textarea id="context" placeholder="Any specific areas to focus on?"></textarea>
+      <input type="text" id="deadline" placeholder="When do you need it by? (optional)">
+      <div class="form-actions">
+        <button id="copyRequest" class="copy-btn">Copy Request</button>
+        <button id="saveTemplate" class="save-btn">Save</button>
+      </div>
+    </div>
+
+    <!-- Saved Templates -->
+    <div class="section">
+      <div class="section-title">Saved Requests</div>
+      <div id="templateList" class="template-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

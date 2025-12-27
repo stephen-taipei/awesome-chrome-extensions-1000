@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#22c55e"/>
+      <stop offset="100%" style="stop-color:#16a34a"/>
+    </linearGradient>
+  </defs>
+  <circle cx="64" cy="64" r="60" fill="url(#grad)"/>
+
+  <!-- Message bubble -->
+  <rect x="26" y="30" width="52" height="40" rx="6" fill="white"/>
+  <path d="M36 70 L44 82 L52 70" fill="white"/>
+
+  <!-- Question mark in bubble -->
+  <text x="52" y="58" font-family="Arial" font-size="28" font-weight="bold" fill="#16a34a" text-anchor="middle">?</text>
+
+  <!-- Return arrow -->
+  <path d="M80 50 Q100 50 100 70 Q100 90 80 90 L70 90" stroke="white" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <path d="M75 82 L67 90 L75 98" stroke="white" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Stars -->
+  <circle cx="88" cy="36" r="4" fill="white" opacity="0.8"/>
+  <circle cx="100" cy="44" r="3" fill="white" opacity="0.6"/>
+</svg>
