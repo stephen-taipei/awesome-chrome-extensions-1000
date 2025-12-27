@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  background: linear-gradient(180deg, #fce7f3 0%, #fbcfe8 100%);
+  color: #831843;
+}
+
+.container {
+  width: 340px;
+  min-height: 450px;
+}
+
+header {
+  text-align: center;
+  padding: 16px;
+  background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
+  color: white;
+}
+
+header h1 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* Input Section */
+.input-section {
+  padding: 16px;
+}
+
+.input-section textarea {
+  width: 100%;
+  height: 80px;
+  padding: 12px;
+  border: 2px solid #fbcfe8;
+  border-radius: 12px;
+  font-size: 13px;
+  font-family: inherit;
+  resize: none;
+  color: #831843;
+}
+
+.input-section textarea:focus {
+  outline: none;
+  border-color: #ec4899;
+}
+
+/* Case Buttons */
+.case-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  padding: 0 16px 16px;
+}
+
+.case-btn {
+  padding: 10px 6px;
+  border: none;
+  border-radius: 8px;
+  background: white;
+  color: #831843;
+  font-size: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.case-btn:hover {
+  background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
+  color: white;
+  transform: scale(1.05);
+}
+
+.case-btn.active {
+  background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
+  color: white;
+}
+
+/* Output Section */
+.output-section {
+  padding: 0 16px 16px;
+}
+
+.output-section textarea {
+  width: 100%;
+  height: 80px;
+  padding: 12px;
+  border: 2px solid #fbcfe8;
+  border-radius: 12px;
+  font-size: 13px;
+  font-family: inherit;
+  resize: none;
+  color: #831843;
+  background: #fdf2f8;
+  margin-bottom: 10px;
+}
+
+.copy-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.copy-btn:hover {
+  transform: scale(1.02);
+}
+
+.copy-btn:active {
+  opacity: 0.9;
+}
+
+/* Stats */
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 0 16px 16px;
+}
+
+.stats span {
+  font-size: 11px;
+  color: #9d174d;
+  font-weight: 500;
+}

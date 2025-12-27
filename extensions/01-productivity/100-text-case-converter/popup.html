@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text Case Converter</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Aa Text Case</h1>
+    </header>
+
+    <!-- Input -->
+    <div class="input-section">
+      <textarea id="inputText" placeholder="Enter or paste your text here..."></textarea>
+    </div>
+
+    <!-- Case Buttons -->
+    <div class="case-buttons">
+      <button class="case-btn" data-case="lowercase">lowercase</button>
+      <button class="case-btn" data-case="uppercase">UPPERCASE</button>
+      <button class="case-btn" data-case="title">Title Case</button>
+      <button class="case-btn" data-case="sentence">Sentence case</button>
+      <button class="case-btn" data-case="camel">camelCase</button>
+      <button class="case-btn" data-case="pascal">PascalCase</button>
+      <button class="case-btn" data-case="snake">snake_case</button>
+      <button class="case-btn" data-case="kebab">kebab-case</button>
+    </div>
+
+    <!-- Output -->
+    <div class="output-section">
+      <textarea id="outputText" readonly placeholder="Converted text will appear here..."></textarea>
+      <button id="copyBtn" class="copy-btn">Copy to Clipboard</button>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats">
+      <span id="charCount">0 characters</span>
+      <span id="wordCount">0 words</span>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
