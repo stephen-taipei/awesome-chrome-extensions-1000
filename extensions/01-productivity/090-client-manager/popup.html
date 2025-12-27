@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client Manager</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>👥 Client Manager</h1>
+    </header>
+
+    <!-- Search & Stats -->
+    <div class="search-section">
+      <input type="text" id="searchInput" placeholder="Search clients...">
+      <span id="clientCount" class="client-count">0 clients</span>
+    </div>
+
+    <!-- Quick Add -->
+    <div class="quick-add">
+      <button id="addClientBtn" class="add-btn">+ Add New Client</button>
+    </div>
+
+    <!-- Clients List -->
+    <div class="section">
+      <div class="section-title">Your Clients</div>
+      <div id="clientsList" class="clients-list"></div>
+    </div>
+
+    <!-- Add/Edit Modal -->
+    <div id="modal" class="modal hidden">
+      <div class="modal-content">
+        <h3 id="modalTitle">Add Client</h3>
+        <input type="text" id="clientName" placeholder="Client/Company name">
+        <input type="text" id="contactName" placeholder="Contact person">
+        <input type="email" id="email" placeholder="Email">
+        <input type="tel" id="phone" placeholder="Phone">
+        <select id="status">
+          <option value="active">🟢 Active</option>
+          <option value="prospect">🟡 Prospect</option>
+          <option value="inactive">🔴 Inactive</option>
+        </select>
+        <textarea id="notes" placeholder="Notes..."></textarea>
+        <div class="modal-actions">
+          <button id="cancelBtn" class="modal-btn cancel">Cancel</button>
+          <button id="saveBtn" class="modal-btn save">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
