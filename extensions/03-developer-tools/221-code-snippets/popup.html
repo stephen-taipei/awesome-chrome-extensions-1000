@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Code Snippets</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <div class="container">
+    <header><h1>Code Snippets</h1><div class="header-sub">Save & manage code</div></header>
+    <div class="snippet-form">
+      <input type="text" id="title" placeholder="Snippet title...">
+      <select id="language"><option value="js">JavaScript</option><option value="py">Python</option><option value="html">HTML</option><option value="css">CSS</option><option value="sql">SQL</option><option value="other">Other</option></select>
+      <textarea id="code" placeholder="Paste code here..."></textarea>
+    </div>
+    <div class="actions"><button id="saveBtn" class="action-btn">Save Snippet</button></div>
+    <div class="section"><div class="section-title">Saved Snippets</div><div id="snippetList" class="snippet-list"></div></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
