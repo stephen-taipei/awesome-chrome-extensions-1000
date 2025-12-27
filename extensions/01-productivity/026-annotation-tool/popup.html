@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Annotation Tool</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Annotation Tool</h1>
+    </header>
+
+    <main>
+      <div class="control-section">
+        <button id="toggleBtn" class="toggle-btn">
+          <span class="toggle-icon">✏️</span>
+          <span class="toggle-text">開始標註</span>
+        </button>
+      </div>
+
+      <div class="tools-section">
+        <label>工具</label>
+        <div class="tool-picker">
+          <button class="tool-btn active" data-tool="pen" title="畫筆">✏️</button>
+          <button class="tool-btn" data-tool="highlighter" title="螢光筆">🖍️</button>
+          <button class="tool-btn" data-tool="arrow" title="箭頭">➡️</button>
+          <button class="tool-btn" data-tool="rect" title="矩形">⬜</button>
+          <button class="tool-btn" data-tool="text" title="文字">📝</button>
+          <button class="tool-btn" data-tool="eraser" title="橡皮擦">🧹</button>
+        </div>
+      </div>
+
+      <div class="color-section">
+        <label>顏色</label>
+        <div class="color-picker">
+          <button class="color-btn active" data-color="#FF0000" style="background:#FF0000"></button>
+          <button class="color-btn" data-color="#FF9800" style="background:#FF9800"></button>
+          <button class="color-btn" data-color="#FFEB3B" style="background:#FFEB3B"></button>
+          <button class="color-btn" data-color="#4CAF50" style="background:#4CAF50"></button>
+          <button class="color-btn" data-color="#2196F3" style="background:#2196F3"></button>
+          <button class="color-btn" data-color="#9C27B0" style="background:#9C27B0"></button>
+          <button class="color-btn" data-color="#000000" style="background:#000000"></button>
+        </div>
+      </div>
+
+      <div class="size-section">
+        <label>粗細</label>
+        <input type="range" id="sizeSlider" min="1" max="20" value="3">
+        <span id="sizeValue">3px</span>
+      </div>
+
+      <div class="actions-section">
+        <button id="undoBtn" class="action-btn">↩️ 復原</button>
+        <button id="clearBtn" class="action-btn danger">🗑️ 清除</button>
+        <button id="saveBtn" class="action-btn primary">💾 儲存</button>
+      </div>
+
+      <div class="stats">
+        <span id="annotationCount">本頁 0 個標註</span>
+      </div>
+    </main>
+
+    <div id="toast" class="toast hidden"></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
