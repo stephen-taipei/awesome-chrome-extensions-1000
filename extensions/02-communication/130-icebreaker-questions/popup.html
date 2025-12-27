@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Icebreaker Questions</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Icebreakers</h1>
+    </header>
+
+    <!-- Random Question -->
+    <div class="random-section">
+      <select id="categoryFilter">
+        <option value="all">All Categories</option>
+        <option value="fun">Fun</option>
+        <option value="work">Work</option>
+        <option value="deep">Deep</option>
+        <option value="creative">Creative</option>
+      </select>
+      <button id="randomBtn" class="random-btn">Get Random Question</button>
+      <div id="questionResult" class="question-result hidden"></div>
+    </div>
+
+    <!-- Add Question -->
+    <div class="add-section">
+      <select id="category">
+        <option value="fun">Fun</option>
+        <option value="work">Work</option>
+        <option value="deep">Deep</option>
+        <option value="creative">Creative</option>
+      </select>
+      <input type="text" id="question" placeholder="Add your own question...">
+      <button id="addBtn" class="add-btn">Add</button>
+    </div>
+
+    <!-- Questions List -->
+    <div class="section">
+      <div class="section-title">Custom Questions</div>
+      <div id="questionsList" class="questions-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

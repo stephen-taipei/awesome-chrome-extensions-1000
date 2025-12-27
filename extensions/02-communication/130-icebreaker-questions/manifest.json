@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Icebreaker Questions",
+  "version": "1.0.0",
+  "description": "Get icebreaker questions for meetings and conversations",
+  "permissions": [
+    "storage"
+  ],
+  "action": {
+    "default_title": "Icebreaker Questions",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
