@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mind Map Note</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Mind Map</h1>
+      <div class="header-actions">
+        <button id="newMapBtn" class="icon-btn" title="New map">🗒️</button>
+        <button id="exportBtn" class="icon-btn" title="Export as PNG">📥</button>
+      </div>
+    </header>
+
+    <main>
+      <div class="toolbar">
+        <button id="addNodeBtn" class="tool-btn active" title="Add node">➕</button>
+        <button id="connectBtn" class="tool-btn" title="Connect nodes">🔗</button>
+        <button id="deleteBtn" class="tool-btn" title="Delete">🗑️</button>
+        <div class="color-picker">
+          <button class="color-btn" data-color="#4CAF50" style="background:#4CAF50"></button>
+          <button class="color-btn" data-color="#2196F3" style="background:#2196F3"></button>
+          <button class="color-btn" data-color="#FF9800" style="background:#FF9800"></button>
+          <button class="color-btn" data-color="#E91E63" style="background:#E91E63"></button>
+          <button class="color-btn" data-color="#9C27B0" style="background:#9C27B0"></button>
+        </div>
+        <button id="zoomInBtn" class="tool-btn" title="Zoom in">🔍+</button>
+        <button id="zoomOutBtn" class="tool-btn" title="Zoom out">🔍-</button>
+      </div>
+
+      <div id="canvasContainer" class="canvas-container">
+        <canvas id="mindMapCanvas"></canvas>
+      </div>
+
+      <div id="nodeEditor" class="node-editor hidden">
+        <input type="text" id="nodeText" placeholder="節點內容..." maxlength="50">
+        <button id="saveNodeBtn">確定</button>
+      </div>
+    </main>
+
+    <footer>
+      <span id="mapInfo">節點: 0 | 連線: 0</span>
+    </footer>
+
+    <div id="toast" class="toast hidden"></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
