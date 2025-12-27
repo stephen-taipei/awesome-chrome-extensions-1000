@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  background: #fafafa;
+}
+
+.container {
+  width: 320px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  padding: 12px;
+  background: linear-gradient(135deg, #f472b6 0%, #ec4899 100%);
+}
+
+#searchEmoji {
+  width: 100%;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 20px;
+  font-size: 13px;
+  background: white;
+  color: #333;
+}
+
+#searchEmoji:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(244, 114, 182, 0.4);
+}
+
+#searchEmoji::placeholder {
+  color: #999;
+}
+
+/* Categories */
+.categories {
+  display: flex;
+  padding: 8px;
+  gap: 4px;
+  background: #f5f5f5;
+  border-bottom: 1px solid #eee;
+}
+
+.cat-btn {
+  flex: 1;
+  padding: 8px 0;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.cat-btn:hover {
+  background: #fff;
+  transform: scale(1.1);
+}
+
+.cat-btn.active {
+  background: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Emoji Grid */
+.emoji-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 2px;
+  padding: 8px;
+  overflow-y: auto;
+  align-content: start;
+}
+
+.emoji-btn {
+  width: 100%;
+  aspect-ratio: 1;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  font-size: 22px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s;
+}
+
+.emoji-btn:hover {
+  background: #fce7f3;
+  transform: scale(1.2);
+}
+
+/* Status */
+.status {
+  padding: 10px;
+  text-align: center;
+  font-size: 12px;
+  color: #666;
+  background: #f5f5f5;
+  border-top: 1px solid #eee;
+}
+
+.status.copied {
+  color: #ec4899;
+  font-weight: 600;
+}
+
+.empty-state {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 40px 20px;
+  color: #999;
+  font-size: 13px;
+}

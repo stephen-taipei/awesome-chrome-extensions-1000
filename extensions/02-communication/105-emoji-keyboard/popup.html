@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emoji Keyboard</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <input type="text" id="searchEmoji" placeholder="Search emojis...">
+    </header>
+
+    <!-- Categories -->
+    <div class="categories">
+      <button class="cat-btn active" data-category="recent" title="Recent">🕐</button>
+      <button class="cat-btn" data-category="smileys" title="Smileys">😀</button>
+      <button class="cat-btn" data-category="people" title="People">👋</button>
+      <button class="cat-btn" data-category="nature" title="Nature">🌿</button>
+      <button class="cat-btn" data-category="food" title="Food">🍕</button>
+      <button class="cat-btn" data-category="activities" title="Activities">⚽</button>
+      <button class="cat-btn" data-category="travel" title="Travel">✈️</button>
+      <button class="cat-btn" data-category="objects" title="Objects">💡</button>
+      <button class="cat-btn" data-category="symbols" title="Symbols">❤️</button>
+    </div>
+
+    <!-- Emoji Grid -->
+    <div id="emojiGrid" class="emoji-grid"></div>
+
+    <!-- Status -->
+    <div id="status" class="status">Click an emoji to copy</div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
