@@ -1,0 +1,213 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  background: linear-gradient(180deg, #fef3c7 0%, #fde68a 100%);
+  color: #333;
+}
+
+.container {
+  width: 320px;
+  min-height: 480px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%);
+  color: white;
+}
+
+header h1 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.date {
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+/* Today Section */
+.today-section {
+  padding: 16px;
+  background: white;
+  border-radius: 0 0 16px 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.prompt {
+  font-size: 16px;
+  font-weight: 600;
+  color: #92400e;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.entries-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.entry-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.entry-number {
+  font-size: 16px;
+  font-weight: 600;
+  color: #f59e0b;
+  width: 24px;
+}
+
+.entry-input {
+  flex: 1;
+  padding: 12px;
+  border: 2px solid #fde68a;
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: inherit;
+  transition: all 0.2s;
+}
+
+.entry-input:focus {
+  outline: none;
+  border-color: #f59e0b;
+  background: #fffbeb;
+}
+
+.entry-input::placeholder {
+  color: #d4a373;
+}
+
+.save-btn {
+  width: 100%;
+  padding: 14px;
+  margin-top: 16px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%);
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.save-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+}
+
+.save-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Stats Section */
+.stats-section {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.stat-icon {
+  font-size: 24px;
+}
+
+.stat-value {
+  font-size: 28px;
+  font-weight: 700;
+  color: #92400e;
+}
+
+.stat-label {
+  font-size: 11px;
+  color: #b45309;
+}
+
+/* History Section */
+.history-section {
+  padding: 0 16px 16px;
+}
+
+.section-header {
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: #92400e;
+  text-transform: uppercase;
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.history-list:empty::after {
+  content: '開始記錄你的感恩吧！';
+  display: block;
+  text-align: center;
+  color: #d4a373;
+  padding: 20px;
+  font-size: 13px;
+}
+
+.history-item {
+  background: white;
+  padding: 12px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.history-date {
+  font-size: 11px;
+  color: #f59e0b;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.history-entries {
+  font-size: 12px;
+  color: #78716c;
+  line-height: 1.5;
+}
+
+/* Scrollbar */
+.history-list::-webkit-scrollbar {
+  width: 4px;
+}
+
+.history-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.history-list::-webkit-scrollbar-thumb {
+  background: #fde68a;
+  border-radius: 2px;
+}

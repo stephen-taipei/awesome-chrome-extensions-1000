@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gratitude Journal</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🙏 Gratitude</h1>
+      <span id="currentDate" class="date"></span>
+    </header>
+
+    <!-- Today's Entry -->
+    <div class="today-section">
+      <div class="prompt">今天你感謝什麼？</div>
+      <div id="entriesContainer" class="entries-container">
+        <div class="entry-row">
+          <span class="entry-number">1.</span>
+          <input type="text" class="entry-input" data-index="0" placeholder="我感謝...">
+        </div>
+        <div class="entry-row">
+          <span class="entry-number">2.</span>
+          <input type="text" class="entry-input" data-index="1" placeholder="我感謝...">
+        </div>
+        <div class="entry-row">
+          <span class="entry-number">3.</span>
+          <input type="text" class="entry-input" data-index="2" placeholder="我感謝...">
+        </div>
+      </div>
+      <button id="saveBtn" class="save-btn">儲存今日感恩</button>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats-section">
+      <div class="stat-item">
+        <span class="stat-icon">🔥</span>
+        <span id="streak" class="stat-value">0</span>
+        <span class="stat-label">連續天數</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-icon">📝</span>
+        <span id="totalEntries" class="stat-value">0</span>
+        <span class="stat-label">感恩紀錄</span>
+      </div>
+    </div>
+
+    <!-- Past Entries -->
+    <div class="history-section">
+      <div class="section-header">
+        <span class="section-title">過去的感恩</span>
+      </div>
+      <div id="historyList" class="history-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
