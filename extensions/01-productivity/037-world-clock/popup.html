@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>World Clock</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🌍 World Clock</h1>
+      <button id="addBtn" class="icon-btn" title="新增時區">+</button>
+    </header>
+
+    <main>
+      <!-- Local Time -->
+      <div class="local-time-card">
+        <div class="local-label">本地時間</div>
+        <div id="localTime" class="local-time">00:00:00</div>
+        <div id="localDate" class="local-date"></div>
+      </div>
+
+      <!-- World Clocks -->
+      <div id="clocksList" class="clocks-list"></div>
+
+      <!-- Time Converter -->
+      <div class="converter-section">
+        <div class="section-header">
+          <span>時間換算</span>
+        </div>
+        <div class="converter-input">
+          <input type="time" id="convertTime" value="12:00">
+          <select id="convertFrom"></select>
+        </div>
+        <div id="convertResults" class="convert-results"></div>
+      </div>
+    </main>
+
+    <!-- Add Timezone Modal -->
+    <div id="addModal" class="modal hidden">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>新增時區</h2>
+          <button id="closeModalBtn" class="close-btn">×</button>
+        </div>
+        <div class="modal-body">
+          <input type="text" id="searchInput" placeholder="搜尋城市或時區...">
+          <div id="searchResults" class="search-results"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
