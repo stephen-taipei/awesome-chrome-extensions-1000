@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tab Suspender</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>💤 Tab Suspender</h1>
+      <div class="memory-badge">
+        <span id="savedMemory">0</span> MB 已節省
+      </div>
+    </header>
+
+    <div class="stats-bar">
+      <div class="stat">
+        <span class="stat-value" id="totalTabs">0</span>
+        <span class="stat-label">總分頁數</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value" id="activeTabs">0</span>
+        <span class="stat-label">使用中</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value" id="suspendedTabs">0</span>
+        <span class="stat-label">已暫停</span>
+      </div>
+    </div>
+
+    <div class="quick-actions">
+      <button id="suspendCurrentBtn" class="action-btn">
+        <span>😴</span> 暫停目前分頁
+      </button>
+      <button id="suspendOthersBtn" class="action-btn">
+        <span>🌙</span> 暫停其他分頁
+      </button>
+    </div>
+
+    <main>
+      <div class="section">
+        <div class="section-header">
+          <span>使用中的分頁</span>
+          <button id="suspendAllBtn" class="section-btn">全部暫停</button>
+        </div>
+        <div id="activeTabList" class="tab-list"></div>
+      </div>
+
+      <div class="section">
+        <div class="section-header">
+          <span>已暫停的分頁</span>
+          <button id="restoreAllBtn" class="section-btn">全部恢復</button>
+        </div>
+        <div id="suspendedTabList" class="tab-list"></div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="setting">
+        <label>自動暫停閒置超過</label>
+        <select id="autoSuspendTime">
+          <option value="0">停用</option>
+          <option value="5">5 分鐘</option>
+          <option value="15">15 分鐘</option>
+          <option value="30" selected>30 分鐘</option>
+          <option value="60">1 小時</option>
+        </select>
+      </div>
+    </footer>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

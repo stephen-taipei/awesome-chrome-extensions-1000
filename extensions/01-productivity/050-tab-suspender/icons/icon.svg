@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1"/>
+      <stop offset="100%" style="stop-color:#4f46e5"/>
+    </linearGradient>
+  </defs>
+  <circle cx="64" cy="64" r="60" fill="url(#grad)"/>
+  <!-- Moon (sleep symbol) -->
+  <path d="M74 34 C54 34, 40 50, 40 70 C40 90, 54 106, 74 106 C60 100, 50 86, 50 70 C50 54, 60 40, 74 34" fill="#fef3c7"/>
+  <!-- Z's for sleeping -->
+  <text x="80" y="50" font-size="20" font-weight="bold" fill="white">Z</text>
+  <text x="90" y="40" font-size="14" font-weight="bold" fill="white" opacity="0.8">Z</text>
+  <text x="96" y="32" font-size="10" font-weight="bold" fill="white" opacity="0.6">Z</text>
+  <!-- Stars -->
+  <circle cx="88" cy="58" r="3" fill="white"/>
+  <circle cx="76" cy="76" r="2" fill="white" opacity="0.6"/>
+  <circle cx="98" cy="70" r="2.5" fill="white" opacity="0.8"/>
+</svg>
