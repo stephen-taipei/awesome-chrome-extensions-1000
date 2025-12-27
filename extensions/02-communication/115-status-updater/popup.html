@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Status Updater</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>My Status</h1>
+    </header>
+
+    <!-- Current Status -->
+    <div class="current-status">
+      <div id="statusIcon" class="status-icon">🟢</div>
+      <div id="statusText" class="status-text">Available</div>
+      <div id="statusMessage" class="status-message"></div>
+    </div>
+
+    <!-- Quick Status -->
+    <div class="quick-status">
+      <button class="status-btn" data-status="available" data-icon="🟢">🟢 Available</button>
+      <button class="status-btn" data-status="busy" data-icon="🔴">🔴 Busy</button>
+      <button class="status-btn" data-status="away" data-icon="🟡">🟡 Away</button>
+      <button class="status-btn" data-status="dnd" data-icon="⛔">⛔ Do Not Disturb</button>
+      <button class="status-btn" data-status="meeting" data-icon="📅">📅 In a Meeting</button>
+      <button class="status-btn" data-status="lunch" data-icon="🍽️">🍽️ On Lunch</button>
+      <button class="status-btn" data-status="brb" data-icon="⏰">⏰ Be Right Back</button>
+      <button class="status-btn" data-status="offline" data-icon="⚫">⚫ Offline</button>
+    </div>
+
+    <!-- Custom Message -->
+    <div class="custom-section">
+      <input type="text" id="customMessage" placeholder="Add a custom message...">
+      <button id="setMessage" class="set-btn">Set</button>
+    </div>
+
+    <!-- Copy Status -->
+    <div class="actions">
+      <button id="copyStatus" class="copy-btn">Copy Status to Clipboard</button>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
