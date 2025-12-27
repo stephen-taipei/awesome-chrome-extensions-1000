@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Wrap-up Summary</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <div class="container">
+    <header><h1>Wrap-up Summary</h1><div class="header-sub">Summarize and close projects</div></header>
+    <div class="summary-form">
+      <select id="summaryType"><option value="project">Project Completion</option><option value="meeting">Meeting Recap</option><option value="sprint">Sprint Summary</option><option value="quarter">Quarterly Review</option><option value="year">Annual Review</option></select>
+      <input type="text" id="title" placeholder="Project/Meeting title">
+      <textarea id="achievements" placeholder="Key achievements and outcomes..."></textarea>
+      <textarea id="lessons" placeholder="Lessons learned..."></textarea>
+      <input type="text" id="nextActions" placeholder="Recommended next actions">
+    </div>
+    <div class="actions"><button id="copySummary" class="copy-btn">Copy Summary</button><button id="saveSummary" class="save-btn">Save</button></div>
+    <div class="section"><div class="section-title">Saved Summaries</div><div id="summaryList" class="summary-list"></div></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
