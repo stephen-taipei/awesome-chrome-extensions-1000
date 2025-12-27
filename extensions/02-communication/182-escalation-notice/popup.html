@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escalation Notice</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Escalation Notice</h1>
+      <div class="header-sub">Escalate issues effectively</div>
+    </header>
+
+    <!-- Escalation Form -->
+    <div class="escalation-form">
+      <select id="escalationType">
+        <option value="priority">Priority Escalation</option>
+        <option value="timeline">Timeline Risk</option>
+        <option value="resource">Resource Need</option>
+        <option value="decision">Decision Required</option>
+        <option value="blocker">Critical Blocker</option>
+        <option value="customer">Customer Issue</option>
+      </select>
+
+      <input type="text" id="recipient" placeholder="Escalating to (manager, team lead)">
+      <input type="text" id="subject" placeholder="Issue subject">
+      <textarea id="issue" placeholder="Describe the issue..."></textarea>
+      <textarea id="impact" placeholder="Business impact..."></textarea>
+      <textarea id="request" placeholder="What do you need?"></textarea>
+    </div>
+
+    <!-- Actions -->
+    <div class="actions">
+      <button id="copyNotice" class="copy-btn">Copy Notice</button>
+      <button id="saveNotice" class="save-btn">Save</button>
+    </div>
+
+    <!-- Saved -->
+    <div class="section">
+      <div class="section-title">Saved Notices</div>
+      <div id="noticeList" class="notice-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

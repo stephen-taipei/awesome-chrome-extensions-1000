@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f43f5e"/>
+      <stop offset="100%" style="stop-color:#e11d48"/>
+    </linearGradient>
+  </defs>
+  <circle cx="64" cy="64" r="60" fill="url(#grad)"/>
+
+  <!-- Arrow pointing up (escalation) -->
+  <path d="M64 28 L84 52 L72 52 L72 75 L56 75 L56 52 L44 52 Z" fill="white"/>
+
+  <!-- Three level bars -->
+  <rect x="30" y="82" width="20" height="12" rx="3" fill="white" opacity="0.6"/>
+  <rect x="54" y="82" width="20" height="12" rx="3" fill="white" opacity="0.8"/>
+  <rect x="78" y="82" width="20" height="12" rx="3" fill="white"/>
+
+  <!-- Exclamation mark on arrow -->
+  <rect x="61" y="38" width="6" height="18" rx="2" fill="#e11d48"/>
+  <circle cx="64" cy="62" r="3" fill="#e11d48"/>
+
+  <!-- Pulse rings -->
+  <circle cx="64" cy="50" r="35" fill="none" stroke="white" stroke-width="2" opacity="0.3"/>
+  <circle cx="64" cy="50" r="45" fill="none" stroke="white" stroke-width="1" opacity="0.15"/>
+</svg>
