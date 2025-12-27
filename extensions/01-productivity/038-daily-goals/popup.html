@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Goals</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="header-content">
+        <h1>🎯 今日目標</h1>
+        <div id="dateDisplay" class="date-display"></div>
+      </div>
+      <div id="streakBadge" class="streak-badge">🔥 0</div>
+    </header>
+
+    <main>
+      <!-- Progress Ring -->
+      <div class="progress-section">
+        <div class="progress-ring-container">
+          <svg class="progress-ring" viewBox="0 0 100 100">
+            <circle class="progress-bg" cx="50" cy="50" r="42"/>
+            <circle id="progressCircle" class="progress-fill" cx="50" cy="50" r="42"/>
+          </svg>
+          <div class="progress-text">
+            <div id="progressPercent" class="progress-percent">0%</div>
+            <div class="progress-label">完成率</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Goals List -->
+      <div class="goals-section">
+        <div id="goalsList" class="goals-list"></div>
+
+        <!-- Add Goal -->
+        <div id="addGoalSection" class="add-goal-section">
+          <input type="text" id="goalInput" placeholder="輸入今日目標..." maxlength="100">
+          <button id="addGoalBtn" class="add-btn">+</button>
+        </div>
+        <div id="goalLimit" class="goal-limit"></div>
+      </div>
+
+      <!-- Stats -->
+      <div class="stats-section">
+        <div class="stat-item">
+          <div class="stat-value" id="weekComplete">0</div>
+          <div class="stat-label">本週完成</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value" id="currentStreak">0</div>
+          <div class="stat-label">連續天數</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value" id="bestStreak">0</div>
+          <div class="stat-label">最佳紀錄</div>
+        </div>
+      </div>
+
+      <!-- Weekly Chart -->
+      <div class="chart-section">
+        <div class="section-label">本週進度</div>
+        <div id="weekChart" class="week-chart"></div>
+      </div>
+    </main>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

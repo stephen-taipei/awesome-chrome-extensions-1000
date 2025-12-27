@@ -1,0 +1,328 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  background: linear-gradient(180deg, #fef3c7 0%, #fff 20%);
+  color: #333;
+}
+
+.container {
+  width: 340px;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%);
+  color: white;
+}
+
+.header-content h1 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.date-display {
+  font-size: 12px;
+  opacity: 0.9;
+  margin-top: 2px;
+}
+
+.streak-badge {
+  background: rgba(255,255,255,0.25);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+main {
+  flex: 1;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Progress Ring */
+.progress-section {
+  display: flex;
+  justify-content: center;
+  padding: 8px 0;
+}
+
+.progress-ring-container {
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+
+.progress-ring {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.progress-bg {
+  fill: none;
+  stroke: #e5e7eb;
+  stroke-width: 8;
+}
+
+.progress-fill {
+  fill: none;
+  stroke: #f59e0b;
+  stroke-width: 8;
+  stroke-linecap: round;
+  stroke-dasharray: 264;
+  stroke-dashoffset: 264;
+  transition: stroke-dashoffset 0.5s ease;
+}
+
+.progress-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.progress-percent {
+  font-size: 28px;
+  font-weight: 700;
+  color: #f59e0b;
+}
+
+.progress-label {
+  font-size: 11px;
+  color: #888;
+}
+
+/* Goals List */
+.goals-section {
+  background: white;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.goals-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.goal-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  background: #fef9e7;
+  border-radius: 10px;
+  border-left: 4px solid #f59e0b;
+  transition: all 0.2s;
+}
+
+.goal-item.completed {
+  background: #f0fdf4;
+  border-left-color: #22c55e;
+}
+
+.goal-item.completed .goal-text {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.goal-check {
+  width: 22px;
+  height: 22px;
+  border: 2px solid #f59e0b;
+  border-radius: 50%;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: transparent;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+
+.goal-item.completed .goal-check {
+  background: #22c55e;
+  border-color: #22c55e;
+  color: white;
+}
+
+.goal-text {
+  flex: 1;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.goal-delete {
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: none;
+  color: #ccc;
+  cursor: pointer;
+  font-size: 16px;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.goal-item:hover .goal-delete {
+  opacity: 1;
+}
+
+.goal-delete:hover {
+  color: #ef4444;
+}
+
+/* Add Goal */
+.add-goal-section {
+  display: flex;
+  gap: 8px;
+}
+
+.add-goal-section input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 2px solid #e5e7eb;
+  border-radius: 10px;
+  font-size: 13px;
+}
+
+.add-goal-section input:focus {
+  outline: none;
+  border-color: #f59e0b;
+}
+
+.add-btn {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  background: #f59e0b;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.add-btn:hover {
+  background: #d97706;
+}
+
+.add-btn:disabled {
+  background: #e5e7eb;
+  cursor: not-allowed;
+}
+
+.goal-limit {
+  font-size: 11px;
+  color: #888;
+  text-align: right;
+  margin-top: 6px;
+}
+
+/* Stats */
+.stats-section {
+  display: flex;
+  justify-content: space-around;
+  background: white;
+  border-radius: 12px;
+  padding: 14px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-value {
+  font-size: 22px;
+  font-weight: 700;
+  color: #f59e0b;
+}
+
+.stat-label {
+  font-size: 11px;
+  color: #888;
+  margin-top: 2px;
+}
+
+/* Week Chart */
+.chart-section {
+  background: white;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.section-label {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.week-chart {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 60px;
+}
+
+.day-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  width: 32px;
+}
+
+.day-fill {
+  width: 24px;
+  background: #e5e7eb;
+  border-radius: 4px;
+  transition: all 0.3s;
+  min-height: 4px;
+}
+
+.day-fill.partial {
+  background: linear-gradient(to top, #fbbf24, #e5e7eb);
+}
+
+.day-fill.complete {
+  background: #22c55e;
+}
+
+.day-label {
+  font-size: 10px;
+  color: #888;
+}
+
+.day-bar.today .day-label {
+  color: #f59e0b;
+  font-weight: 600;
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 20px;
+  color: #888;
+}
