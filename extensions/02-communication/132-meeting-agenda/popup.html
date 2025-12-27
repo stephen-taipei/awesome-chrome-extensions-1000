@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meeting Agenda</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Meeting Agenda</h1>
+    </header>
+
+    <!-- Meeting Info -->
+    <div class="info-section">
+      <input type="text" id="meetingTitle" placeholder="Meeting title...">
+      <div class="row">
+        <input type="date" id="meetingDate">
+        <input type="time" id="meetingTime">
+      </div>
+    </div>
+
+    <!-- Add Item -->
+    <div class="add-section">
+      <input type="text" id="agendaItem" placeholder="Add agenda item...">
+      <input type="number" id="duration" placeholder="Min" min="1" max="120">
+      <button id="addItem" class="add-btn">+</button>
+    </div>
+
+    <!-- Agenda Items -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-title">Agenda</span>
+        <span id="totalTime" class="total-time">0 min</span>
+      </div>
+      <div id="agendaList" class="agenda-list"></div>
+    </div>
+
+    <!-- Actions -->
+    <div class="actions">
+      <button id="copyAgenda" class="copy-btn">Copy Agenda</button>
+      <button id="clearAgenda" class="clear-btn">Clear</button>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
