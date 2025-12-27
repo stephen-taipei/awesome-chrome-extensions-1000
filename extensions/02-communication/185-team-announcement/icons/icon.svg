@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f97316"/>
+      <stop offset="100%" style="stop-color:#ea580c"/>
+    </linearGradient>
+  </defs>
+  <circle cx="64" cy="64" r="60" fill="url(#grad)"/>
+
+  <!-- Megaphone -->
+  <g transform="translate(25, 35)">
+    <path d="M20 25 L55 10 L55 50 L20 35 Z" fill="white"/>
+    <rect x="8" y="25" width="14" height="12" rx="3" fill="white"/>
+    <ellipse cx="55" cy="30" rx="8" ry="20" fill="#ffedd5"/>
+    <path d="M8 37 L8 48 Q8 52 12 52 L16 52 Q20 52 20 48 L20 35" fill="white"/>
+  </g>
+
+  <!-- Sound waves -->
+  <path d="M88 50 Q95 60 88 70" stroke="white" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M95 45 Q105 60 95 75" stroke="white" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M102 40 Q115 60 102 80" stroke="white" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+  <!-- People silhouettes -->
+  <circle cx="35" cy="90" r="6" fill="white" opacity="0.8"/>
+  <circle cx="55" cy="88" r="6" fill="white" opacity="0.8"/>
+  <circle cx="75" cy="90" r="6" fill="white" opacity="0.8"/>
+  <circle cx="95" cy="88" r="6" fill="white" opacity="0.8"/>
+</svg>

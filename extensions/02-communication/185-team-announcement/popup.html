@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team Announcement</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Team Announcement</h1>
+      <div class="header-sub">Communicate with your team</div>
+    </header>
+
+    <!-- Announcement Form -->
+    <div class="announcement-form">
+      <select id="announcementType">
+        <option value="update">Team Update</option>
+        <option value="celebration">Celebration</option>
+        <option value="policy">Policy Change</option>
+        <option value="event">Team Event</option>
+        <option value="reminder">Reminder</option>
+        <option value="welcome">New Team Member</option>
+      </select>
+
+      <input type="text" id="subject" placeholder="Announcement subject">
+      <textarea id="message" placeholder="Main message..."></textarea>
+      <textarea id="details" placeholder="Additional details..."></textarea>
+      <input type="text" id="action" placeholder="Required action (if any)">
+    </div>
+
+    <!-- Actions -->
+    <div class="actions">
+      <button id="copyAnnouncement" class="copy-btn">Copy Announcement</button>
+      <button id="saveAnnouncement" class="save-btn">Save</button>
+    </div>
+
+    <!-- Saved -->
+    <div class="section">
+      <div class="section-title">Saved Announcements</div>
+      <div id="announcementList" class="announcement-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
