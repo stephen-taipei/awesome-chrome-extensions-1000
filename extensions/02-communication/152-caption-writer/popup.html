@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caption Writer</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📝 Caption Writer</h1>
+      <div class="header-sub">Perfect captions every time</div>
+    </header>
+
+    <!-- Caption Builder -->
+    <div class="caption-builder">
+      <select id="category">
+        <option value="general">📱 General</option>
+        <option value="travel">✈️ Travel</option>
+        <option value="food">🍕 Food</option>
+        <option value="fitness">💪 Fitness</option>
+        <option value="business">💼 Business</option>
+        <option value="lifestyle">🌟 Lifestyle</option>
+      </select>
+      <textarea id="caption" placeholder="Write your caption here..."></textarea>
+      <input type="text" id="hashtags" placeholder="Add hashtags (optional)">
+    </div>
+
+    <!-- Actions -->
+    <div class="actions">
+      <button id="copyCaption" class="copy-btn">Copy Caption</button>
+      <button id="saveCaption" class="save-btn">Save</button>
+    </div>
+
+    <!-- Saved Captions -->
+    <div class="section">
+      <div class="section-title">Saved Captions</div>
+      <div id="captionList" class="caption-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
