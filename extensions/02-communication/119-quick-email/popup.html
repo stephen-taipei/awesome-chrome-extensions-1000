@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quick Email</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Quick Email</h1>
+    </header>
+
+    <!-- Compose -->
+    <div class="compose-section">
+      <input type="email" id="recipient" placeholder="To: email@example.com">
+      <input type="text" id="subject" placeholder="Subject...">
+      <textarea id="body" placeholder="Email body..."></textarea>
+      <div class="compose-actions">
+        <button id="saveDraft" class="save-btn">Save Draft</button>
+        <button id="openMail" class="open-btn">Open in Mail</button>
+      </div>
+    </div>
+
+    <!-- Drafts -->
+    <div class="section">
+      <div class="section-title">Saved Drafts</div>
+      <div id="draftsList" class="drafts-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
