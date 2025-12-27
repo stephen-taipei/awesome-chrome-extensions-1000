@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendar Widget</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <div class="calendar-header">
+      <button id="prevBtn" class="nav-btn">‹</button>
+      <h2 id="monthYear"></h2>
+      <button id="nextBtn" class="nav-btn">›</button>
+    </div>
+
+    <!-- Weekdays -->
+    <div class="weekdays">
+      <span>Sun</span>
+      <span>Mon</span>
+      <span>Tue</span>
+      <span>Wed</span>
+      <span>Thu</span>
+      <span>Fri</span>
+      <span>Sat</span>
+    </div>
+
+    <!-- Calendar Grid -->
+    <div id="calendarGrid" class="calendar-grid"></div>
+
+    <!-- Selected Date Info -->
+    <div class="date-section">
+      <div class="selected-date">
+        <span id="selectedDateText">Select a date</span>
+        <button id="todayBtn" class="today-btn">Today</button>
+      </div>
+
+      <!-- Events for selected date -->
+      <div class="events-section">
+        <div class="add-event">
+          <input type="text" id="eventInput" placeholder="Add event...">
+          <button id="addEventBtn">+</button>
+        </div>
+        <div id="eventsList" class="events-list"></div>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

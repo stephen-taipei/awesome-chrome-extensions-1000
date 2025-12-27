@@ -1,0 +1,269 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  background: linear-gradient(180deg, #f0f9ff 0%, #e0f2fe 100%);
+  color: #0c4a6e;
+}
+
+.container {
+  width: 320px;
+  padding: 16px;
+}
+
+/* Header */
+.calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.calendar-header h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #0369a1;
+}
+
+.nav-btn {
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 8px;
+  background: white;
+  color: #0369a1;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 2px 4px rgba(3, 105, 161, 0.1);
+}
+
+.nav-btn:hover {
+  background: #0369a1;
+  color: white;
+}
+
+/* Weekdays */
+.weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.weekdays span {
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+}
+
+/* Calendar Grid */
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+  margin-bottom: 16px;
+}
+
+.day-cell {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.day-cell:hover {
+  background: #e0f2fe;
+}
+
+.day-cell.other-month {
+  color: #cbd5e1;
+}
+
+.day-cell.today {
+  background: linear-gradient(135deg, #0ea5e9 0%, #0369a1 100%);
+  color: white;
+  font-weight: 600;
+}
+
+.day-cell.selected {
+  background: #bae6fd;
+  color: #0369a1;
+  font-weight: 600;
+}
+
+.day-cell.today.selected {
+  background: linear-gradient(135deg, #0ea5e9 0%, #0369a1 100%);
+  color: white;
+}
+
+.day-cell.has-events::after {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #0ea5e9;
+}
+
+.day-cell.today.has-events::after {
+  background: white;
+}
+
+/* Date Section */
+.date-section {
+  background: white;
+  border-radius: 12px;
+  padding: 14px;
+  box-shadow: 0 4px 12px rgba(3, 105, 161, 0.1);
+}
+
+.selected-date {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e0f2fe;
+}
+
+#selectedDateText {
+  font-size: 14px;
+  font-weight: 600;
+  color: #0369a1;
+}
+
+.today-btn {
+  padding: 4px 12px;
+  border: none;
+  border-radius: 6px;
+  background: #e0f2fe;
+  color: #0369a1;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.today-btn:hover {
+  background: #bae6fd;
+}
+
+/* Events Section */
+.add-event {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.add-event input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 2px solid #e0f2fe;
+  border-radius: 8px;
+  font-size: 12px;
+  color: #0c4a6e;
+}
+
+.add-event input:focus {
+  outline: none;
+  border-color: #0ea5e9;
+}
+
+.add-event button {
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #0ea5e9 0%, #0369a1 100%);
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.add-event button:hover {
+  transform: scale(1.05);
+}
+
+/* Events List */
+.events-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-height: 100px;
+  overflow-y: auto;
+}
+
+.events-list:empty::after {
+  content: 'No events';
+  color: #94a3b8;
+  font-size: 12px;
+  text-align: center;
+  padding: 8px;
+}
+
+.event-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  background: #f0f9ff;
+  border-radius: 8px;
+  border-left: 3px solid #0ea5e9;
+}
+
+.event-item span {
+  flex: 1;
+  font-size: 12px;
+  color: #0c4a6e;
+}
+
+.event-item button {
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 4px;
+  background: transparent;
+  color: #94a3b8;
+  font-size: 14px;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.2s;
+}
+
+.event-item:hover button {
+  opacity: 1;
+}
+
+.event-item button:hover {
+  background: #fee2e2;
+  color: #ef4444;
+}
+
+/* Scrollbar */
+.events-list::-webkit-scrollbar {
+  width: 4px;
+}
+
+.events-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.events-list::-webkit-scrollbar-thumb {
+  background: rgba(14, 165, 233, 0.2);
+  border-radius: 2px;
+}
