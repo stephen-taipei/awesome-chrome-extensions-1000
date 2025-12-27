@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Announcement Creator</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📢 Announcements</h1>
+      <div class="header-sub">Create & share announcements</div>
+    </header>
+
+    <!-- New Announcement -->
+    <div class="new-announcement">
+      <div class="form-row">
+        <input type="text" id="title" placeholder="Announcement title">
+        <select id="priority">
+          <option value="normal">Normal</option>
+          <option value="important">Important</option>
+          <option value="urgent">Urgent</option>
+        </select>
+      </div>
+      <textarea id="content" placeholder="Announcement content..."></textarea>
+      <div class="actions">
+        <button id="createBtn" class="create-btn">Create & Copy</button>
+        <button id="clearBtn" class="clear-btn">Clear</button>
+      </div>
+    </div>
+
+    <!-- Saved Announcements -->
+    <div class="section">
+      <div class="section-title">Recent Announcements</div>
+      <div id="announcementList" class="announcement-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
