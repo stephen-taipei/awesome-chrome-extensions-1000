@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f97316"/>
+      <stop offset="100%" style="stop-color:#ea580c"/>
+    </linearGradient>
+  </defs>
+  <circle cx="64" cy="64" r="60" fill="url(#grad)"/>
+
+  <!-- Person 1 -->
+  <circle cx="38" cy="50" r="12" fill="white"/>
+  <path d="M24 75 Q24 62 38 62 Q52 62 52 75 L52 82 L24 82 Z" fill="white"/>
+
+  <!-- Person 2 -->
+  <circle cx="90" cy="50" r="12" fill="white"/>
+  <path d="M76 75 Q76 62 90 62 Q104 62 104 75 L104 82 L76 82 Z" fill="white"/>
+
+  <!-- Connection arrow -->
+  <path d="M55 55 L73 55" stroke="#fed7aa" stroke-width="4" stroke-linecap="round"/>
+  <path d="M68 50 L73 55 L68 60" stroke="#fed7aa" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Handshake symbol -->
+  <circle cx="64" cy="95" r="10" fill="white"/>
+  <path d="M58 95 L64 95 L70 95" stroke="#ea580c" stroke-width="3" stroke-linecap="round"/>
+  <path d="M60 92 L64 95 L60 98" stroke="#ea580c" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M68 92 L64 95 L68 98" stroke="#ea580c" stroke-width="2" fill="none" stroke-linecap="round"/>
+</svg>

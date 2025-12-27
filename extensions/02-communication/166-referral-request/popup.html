@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Referral Request</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Referral Request</h1>
+      <div class="header-sub">Get warm introductions</div>
+    </header>
+
+    <!-- Request Form -->
+    <div class="request-form">
+      <select id="referralType">
+        <option value="job">Job Referral</option>
+        <option value="business">Business Introduction</option>
+        <option value="recommendation">LinkedIn Recommendation</option>
+        <option value="customer">Customer Referral</option>
+        <option value="partnership">Partnership Intro</option>
+      </select>
+
+      <input type="text" id="contactName" placeholder="Who to ask">
+      <input type="text" id="targetCompany" placeholder="Target company/person">
+      <input type="text" id="position" placeholder="Role/opportunity">
+      <textarea id="context" placeholder="Why you're a good fit..."></textarea>
+    </div>
+
+    <!-- Actions -->
+    <div class="actions">
+      <button id="copyRequest" class="copy-btn">Copy Request</button>
+      <button id="saveRequest" class="save-btn">Save</button>
+    </div>
+
+    <!-- Saved -->
+    <div class="section">
+      <div class="section-title">Saved Requests</div>
+      <div id="requestList" class="request-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
