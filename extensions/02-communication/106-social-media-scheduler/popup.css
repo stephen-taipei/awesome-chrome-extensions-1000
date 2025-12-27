@@ -1,0 +1,234 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  background: linear-gradient(180deg, #fae8ff 0%, #f5d0fe 100%);
+  color: #701a75;
+}
+
+.container {
+  width: 340px;
+  min-height: 450px;
+}
+
+header {
+  text-align: center;
+  padding: 16px;
+  background: linear-gradient(135deg, #d946ef 0%, #a855f7 100%);
+  color: white;
+}
+
+header h1 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* Form Section */
+.form-section {
+  padding: 16px;
+  background: #fefbff;
+}
+
+.form-section textarea {
+  width: 100%;
+  height: 70px;
+  padding: 12px;
+  border: 2px solid #f5d0fe;
+  border-radius: 10px;
+  font-size: 13px;
+  font-family: inherit;
+  color: #701a75;
+  resize: none;
+  margin-bottom: 10px;
+}
+
+.form-section textarea:focus {
+  outline: none;
+  border-color: #d946ef;
+}
+
+.form-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.form-row input {
+  flex: 1;
+  padding: 10px;
+  border: 2px solid #f5d0fe;
+  border-radius: 8px;
+  font-size: 12px;
+  color: #701a75;
+}
+
+.form-row input:focus {
+  outline: none;
+  border-color: #d946ef;
+}
+
+.platforms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.platform-check {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 10px;
+  background: white;
+  border: 2px solid #f5d0fe;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 500;
+  color: #701a75;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.platform-check:has(input:checked) {
+  background: linear-gradient(135deg, #d946ef 0%, #a855f7 100%);
+  border-color: #d946ef;
+  color: white;
+}
+
+.platform-check input {
+  display: none;
+}
+
+.schedule-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #d946ef 0%, #a855f7 100%);
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.schedule-btn:hover {
+  transform: scale(1.02);
+}
+
+/* Section */
+.section {
+  padding: 0 16px 16px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-size: 11px;
+  font-weight: 600;
+  color: #a855f7;
+  text-transform: uppercase;
+}
+
+.post-count {
+  background: #d946ef;
+  color: white;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+/* Posts List */
+.posts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 220px;
+  overflow-y: auto;
+}
+
+.post-item {
+  background: white;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 2px 8px rgba(217, 70, 239, 0.15);
+}
+
+.post-content {
+  font-size: 12px;
+  color: #701a75;
+  line-height: 1.4;
+  margin-bottom: 8px;
+  max-height: 40px;
+  overflow: hidden;
+}
+
+.post-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.post-datetime {
+  font-size: 10px;
+  color: #a855f7;
+  font-weight: 500;
+}
+
+.post-platforms {
+  display: flex;
+  gap: 4px;
+}
+
+.platform-tag {
+  font-size: 9px;
+  padding: 2px 6px;
+  background: #fae8ff;
+  color: #a855f7;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.post-actions {
+  display: flex;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.post-actions button {
+  flex: 1;
+  padding: 6px;
+  border: none;
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.mark-done-btn {
+  background: #22c55e;
+  color: white;
+}
+
+.delete-btn {
+  background: #fae8ff;
+  color: #701a75;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 30px;
+  color: #a1a1aa;
+  font-size: 12px;
+}
