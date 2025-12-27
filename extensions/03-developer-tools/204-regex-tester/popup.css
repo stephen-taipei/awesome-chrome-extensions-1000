@@ -1,0 +1,28 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Monaco', 'Menlo', monospace; font-size: 13px; background: linear-gradient(180deg, #1e1e1e 0%, #2d2d2d 100%); color: #d4d4d4; }
+.container { width: 380px; min-height: 500px; }
+header { text-align: center; padding: 14px 16px; background: linear-gradient(135deg, #ec4899 0%, #db2777 100%); color: white; }
+header h1 { font-size: 18px; font-weight: 600; }
+.header-sub { font-size: 11px; opacity: 0.9; margin-top: 4px; }
+.regex-form { padding: 14px 16px 8px; }
+.section-title { font-size: 10px; font-weight: 600; color: #ec4899; text-transform: uppercase; margin-bottom: 6px; margin-top: 10px; }
+.section-title:first-child { margin-top: 0; }
+.pattern-row { display: flex; gap: 8px; }
+.pattern-row input:first-child { flex: 1; }
+.pattern-row input:last-child { width: 50px; text-align: center; }
+.regex-form input { padding: 10px; border: 2px solid #3c3c3c; border-radius: 6px; font-family: inherit; font-size: 12px; background: #252526; color: #f9a8d4; }
+.regex-form textarea { width: 100%; height: 80px; padding: 10px; border: 2px solid #3c3c3c; border-radius: 6px; font-family: inherit; font-size: 11px; background: #252526; color: #d4d4d4; resize: none; }
+.regex-form input:focus, .regex-form textarea:focus { outline: none; border-color: #ec4899; }
+.actions { padding: 8px 16px; display: flex; gap: 8px; }
+.action-btn { flex: 1; padding: 10px; border: none; border-radius: 6px; font-size: 11px; font-weight: 600; cursor: pointer; background: linear-gradient(135deg, #ec4899 0%, #db2777 100%); color: white; }
+.action-btn.secondary { background: #3c3c3c; color: #d4d4d4; }
+.status { padding: 0 16px; font-size: 11px; min-height: 20px; }
+.status.success { color: #4ade80; }
+.status.error { color: #f87171; }
+.result-section { padding: 8px 16px 16px; }
+.matches { background: #1e1e1e; border-radius: 6px; padding: 10px; min-height: 100px; max-height: 140px; overflow-y: auto; }
+.match { background: #3c3c3c; padding: 6px 10px; border-radius: 4px; margin-bottom: 6px; font-size: 11px; }
+.match:last-child { margin-bottom: 0; }
+.match-index { color: #ec4899; font-weight: 600; }
+.match-value { color: #4ade80; }
+.no-match { color: #a1a1aa; font-size: 11px; text-align: center; padding: 20px; }

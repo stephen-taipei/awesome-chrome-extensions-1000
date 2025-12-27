@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Regex Tester</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <div class="container">
+    <header><h1>Regex Tester</h1><div class="header-sub">Test regular expressions</div></header>
+    <div class="regex-form">
+      <div class="section-title">Pattern</div>
+      <div class="pattern-row">
+        <input type="text" id="pattern" placeholder="Enter regex pattern...">
+        <input type="text" id="flags" placeholder="gi" value="g" maxlength="6">
+      </div>
+      <div class="section-title">Test String</div>
+      <textarea id="testString" placeholder="Enter test string..."></textarea>
+    </div>
+    <div class="actions"><button id="testBtn" class="action-btn">Test</button><button id="clearBtn" class="action-btn secondary">Clear</button></div>
+    <div id="status" class="status"></div>
+    <div class="result-section"><div class="section-title">Matches</div><div id="matches" class="matches"></div></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
