@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Links</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🔗 Profile Links</h1>
+      <div class="header-sub">Your link in bio manager</div>
+    </header>
+
+    <!-- Add Link -->
+    <div class="add-link">
+      <input type="text" id="linkTitle" placeholder="Link title">
+      <input type="url" id="linkUrl" placeholder="https://...">
+      <select id="linkIcon">
+        <option value="🌐">🌐 Website</option>
+        <option value="📧">📧 Email</option>
+        <option value="📱">📱 Social</option>
+        <option value="🛒">🛒 Shop</option>
+        <option value="📝">📝 Blog</option>
+        <option value="🎵">🎵 Music</option>
+        <option value="📺">📺 Video</option>
+        <option value="💼">💼 Portfolio</option>
+      </select>
+      <button id="addBtn" class="add-btn">Add Link</button>
+    </div>
+
+    <!-- Links -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-title">Your Links</span>
+        <button id="copyAll" class="copy-all-btn">Copy All</button>
+      </div>
+      <div id="linkList" class="link-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
