@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Renewal Notice</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Renewal Notice</h1>
+      <div class="header-sub">Subscription renewal reminders</div>
+    </header>
+
+    <!-- Renewal Form -->
+    <div class="renewal-form">
+      <select id="renewalType">
+        <option value="upcoming">Upcoming Renewal</option>
+        <option value="expired">Expiration Notice</option>
+        <option value="autorenew">Auto-Renewal Reminder</option>
+        <option value="discount">Renewal Discount</option>
+        <option value="contract">Contract Renewal</option>
+        <option value="final">Final Notice</option>
+      </select>
+
+      <input type="text" id="customer" placeholder="Customer name">
+      <input type="text" id="subscription" placeholder="Subscription/Plan name">
+      <input type="text" id="expiryDate" placeholder="Expiry date">
+      <textarea id="benefits" placeholder="Renewal benefits or changes..."></textarea>
+      <input type="text" id="action" placeholder="Action needed">
+    </div>
+
+    <!-- Actions -->
+    <div class="actions">
+      <button id="copyNotice" class="copy-btn">Copy Notice</button>
+      <button id="saveNotice" class="save-btn">Save</button>
+    </div>
+
+    <!-- Saved -->
+    <div class="section">
+      <div class="section-title">Saved Notices</div>
+      <div id="noticeList" class="notice-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

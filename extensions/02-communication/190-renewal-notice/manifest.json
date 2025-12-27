@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Renewal Notice",
+  "version": "1.0.0",
+  "description": "Draft subscription renewal messages",
+  "permissions": [
+    "storage"
+  ],
+  "action": {
+    "default_title": "Renewal Notice",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
