@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apology Message</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Apology Message</h1>
+      <div class="header-sub">Make things right</div>
+    </header>
+
+    <!-- Apology Form -->
+    <div class="apology-form">
+      <select id="context">
+        <option value="professional">Professional/Work</option>
+        <option value="customer">Customer Service</option>
+        <option value="personal">Personal</option>
+        <option value="delay">Delay/Late</option>
+        <option value="mistake">Mistake/Error</option>
+        <option value="miscommunication">Miscommunication</option>
+      </select>
+
+      <input type="text" id="recipient" placeholder="Recipient name">
+      <textarea id="issue" placeholder="What happened? What went wrong?"></textarea>
+      <textarea id="resolution" placeholder="How will you fix it?"></textarea>
+      <input type="text" id="sender" placeholder="Your name">
+    </div>
+
+    <!-- Actions -->
+    <div class="actions">
+      <button id="copyApology" class="copy-btn">Copy Message</button>
+      <button id="saveApology" class="save-btn">Save</button>
+    </div>
+
+    <!-- Saved -->
+    <div class="section">
+      <div class="section-title">Saved Templates</div>
+      <div id="apologyList" class="apology-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
