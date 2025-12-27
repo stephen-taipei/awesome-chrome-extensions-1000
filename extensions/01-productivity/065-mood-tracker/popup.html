@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mood Tracker</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>😊 Mood Tracker</h1>
+      <span id="currentDate" class="date"></span>
+    </header>
+
+    <!-- Mood Selection -->
+    <div class="mood-section">
+      <div class="prompt">今天感覺如何？</div>
+      <div class="mood-grid">
+        <button class="mood-btn" data-mood="great" data-emoji="😄">
+          <span class="mood-emoji">😄</span>
+          <span class="mood-label">很棒</span>
+        </button>
+        <button class="mood-btn" data-mood="good" data-emoji="😊">
+          <span class="mood-emoji">😊</span>
+          <span class="mood-label">不錯</span>
+        </button>
+        <button class="mood-btn" data-mood="okay" data-emoji="😐">
+          <span class="mood-emoji">😐</span>
+          <span class="mood-label">普通</span>
+        </button>
+        <button class="mood-btn" data-mood="bad" data-emoji="😔">
+          <span class="mood-emoji">😔</span>
+          <span class="mood-label">不好</span>
+        </button>
+        <button class="mood-btn" data-mood="terrible" data-emoji="😢">
+          <span class="mood-emoji">😢</span>
+          <span class="mood-label">很差</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Note -->
+    <div class="note-section">
+      <textarea id="noteInput" placeholder="想記錄什麼嗎？（選填）" rows="2"></textarea>
+    </div>
+
+    <!-- Weekly View -->
+    <div class="week-section">
+      <div class="section-title">這週的心情</div>
+      <div id="weekView" class="week-view">
+        <div class="day-item" data-day="0"><span class="day-label">日</span><span class="day-mood">-</span></div>
+        <div class="day-item" data-day="1"><span class="day-label">一</span><span class="day-mood">-</span></div>
+        <div class="day-item" data-day="2"><span class="day-label">二</span><span class="day-mood">-</span></div>
+        <div class="day-item" data-day="3"><span class="day-label">三</span><span class="day-mood">-</span></div>
+        <div class="day-item" data-day="4"><span class="day-label">四</span><span class="day-mood">-</span></div>
+        <div class="day-item" data-day="5"><span class="day-label">五</span><span class="day-mood">-</span></div>
+        <div class="day-item" data-day="6"><span class="day-label">六</span><span class="day-mood">-</span></div>
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats-section">
+      <div class="stat-item">
+        <span class="stat-value" id="avgMood">-</span>
+        <span class="stat-label">平均心情</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-value" id="streak">0</span>
+        <span class="stat-label">連續天數</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-value" id="totalDays">0</span>
+        <span class="stat-label">記錄天數</span>
+      </div>
+    </div>
+
+    <!-- Recent Entries -->
+    <div class="history-section">
+      <div class="section-title">最近紀錄</div>
+      <div id="historyList" class="history-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,239 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  background: #f0fdf4;
+  color: #333;
+}
+
+.container {
+  width: 320px;
+  min-height: 500px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  background: linear-gradient(135deg, #22c55e 0%, #4ade80 100%);
+  color: white;
+}
+
+header h1 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.date {
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+/* Mood Section */
+.mood-section {
+  padding: 16px;
+  background: white;
+}
+
+.prompt {
+  font-size: 15px;
+  font-weight: 600;
+  color: #166534;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.mood-grid {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mood-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 12px 10px;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  background: #f0fdf4;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.mood-btn:hover {
+  background: #dcfce7;
+  transform: translateY(-2px);
+}
+
+.mood-btn.selected {
+  background: #dcfce7;
+  border-color: #22c55e;
+}
+
+.mood-emoji {
+  font-size: 28px;
+}
+
+.mood-label {
+  font-size: 10px;
+  color: #166534;
+}
+
+/* Note Section */
+.note-section {
+  padding: 0 16px 16px;
+  background: white;
+}
+
+.note-section textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #dcfce7;
+  border-radius: 10px;
+  font-size: 13px;
+  font-family: inherit;
+  resize: none;
+  transition: all 0.2s;
+}
+
+.note-section textarea:focus {
+  outline: none;
+  border-color: #22c55e;
+}
+
+/* Week Section */
+.week-section {
+  padding: 16px;
+  background: white;
+  border-top: 1px solid #dcfce7;
+}
+
+.section-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: #166534;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.week-view {
+  display: flex;
+  justify-content: space-between;
+}
+
+.day-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.day-item.today {
+  background: #dcfce7;
+  padding: 4px 6px;
+  border-radius: 8px;
+}
+
+.day-label {
+  font-size: 11px;
+  color: #166534;
+}
+
+.day-mood {
+  font-size: 20px;
+}
+
+/* Stats Section */
+.stats-section {
+  display: flex;
+  justify-content: space-around;
+  padding: 16px;
+  background: #dcfce7;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-value {
+  display: block;
+  font-size: 22px;
+  font-weight: 700;
+  color: #166534;
+}
+
+.stat-label {
+  font-size: 11px;
+  color: #15803d;
+}
+
+/* History Section */
+.history-section {
+  padding: 16px;
+  background: white;
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 100px;
+  overflow-y: auto;
+}
+
+.history-list:empty::after {
+  content: '開始記錄你的心情吧！';
+  color: #86efac;
+  font-size: 12px;
+  text-align: center;
+}
+
+.history-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  background: #f0fdf4;
+  border-radius: 8px;
+}
+
+.history-emoji {
+  font-size: 20px;
+}
+
+.history-info {
+  flex: 1;
+}
+
+.history-date {
+  font-size: 11px;
+  color: #22c55e;
+  font-weight: 500;
+}
+
+.history-note {
+  font-size: 11px;
+  color: #64748b;
+  margin-top: 2px;
+}
+
+/* Scrollbar */
+.history-list::-webkit-scrollbar {
+  width: 4px;
+}
+
+.history-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.history-list::-webkit-scrollbar-thumb {
+  background: #dcfce7;
+  border-radius: 2px;
+}
