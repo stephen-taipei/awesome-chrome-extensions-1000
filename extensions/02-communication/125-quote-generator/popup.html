@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quote Generator</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Quote Generator</h1>
+    </header>
+
+    <!-- Add Quote -->
+    <div class="add-section">
+      <textarea id="quoteText" placeholder="Enter quote text..."></textarea>
+      <input type="text" id="author" placeholder="Author name...">
+      <input type="text" id="source" placeholder="Source (optional)...">
+      <button id="addQuote" class="add-btn">Save Quote</button>
+    </div>
+
+    <!-- Random Quote -->
+    <div class="random-section">
+      <button id="randomQuote" class="random-btn">Get Random Quote</button>
+    </div>
+
+    <!-- Quotes List -->
+    <div class="section">
+      <div class="section-title">Saved Quotes</div>
+      <div id="quotesList" class="quotes-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
