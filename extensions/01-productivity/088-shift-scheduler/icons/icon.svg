@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#eab308"/>
+      <stop offset="100%" style="stop-color:#ca8a04"/>
+    </linearGradient>
+  </defs>
+  <circle cx="64" cy="64" r="60" fill="url(#grad)"/>
+
+  <!-- Calendar -->
+  <rect x="28" y="32" width="72" height="64" rx="8" fill="white"/>
+  <rect x="28" y="32" width="72" height="18" rx="8" fill="#fef08a"/>
+
+  <!-- Calendar hooks -->
+  <rect x="44" y="26" width="6" height="12" rx="2" fill="#ca8a04"/>
+  <rect x="78" y="26" width="6" height="12" rx="2" fill="#ca8a04"/>
+
+  <!-- Grid -->
+  <rect x="36" y="56" width="12" height="10" rx="2" fill="#fef9c3"/>
+  <rect x="52" y="56" width="12" height="10" rx="2" fill="#eab308"/>
+  <rect x="68" y="56" width="12" height="10" rx="2" fill="#eab308"/>
+  <rect x="84" y="56" width="12" height="10" rx="2" fill="#fef9c3"/>
+
+  <rect x="36" y="70" width="12" height="10" rx="2" fill="#eab308"/>
+  <rect x="52" y="70" width="12" height="10" rx="2" fill="#eab308"/>
+  <rect x="68" y="70" width="12" height="10" rx="2" fill="#fef9c3"/>
+  <rect x="84" y="70" width="12" height="10" rx="2" fill="#fef9c3"/>
+
+  <rect x="36" y="84" width="12" height="10" rx="2" fill="#fef9c3"/>
+  <rect x="52" y="84" width="12" height="10" rx="2" fill="#fef9c3"/>
+</svg>

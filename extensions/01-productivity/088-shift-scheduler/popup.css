@@ -1,0 +1,265 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  background: linear-gradient(180deg, #fef9c3 0%, #fef08a 100%);
+  color: #713f12;
+}
+
+.container {
+  width: 360px;
+  min-height: 500px;
+}
+
+header {
+  text-align: center;
+  padding: 16px;
+  background: linear-gradient(135deg, #eab308 0%, #ca8a04 100%);
+  color: white;
+}
+
+header h1 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* Stats Card */
+.stats-card {
+  display: flex;
+  margin: 16px;
+  padding: 16px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(234, 179, 8, 0.15);
+}
+
+.stat {
+  flex: 1;
+  text-align: center;
+}
+
+.stat-value {
+  display: block;
+  font-size: 22px;
+  font-weight: 700;
+  color: #ca8a04;
+}
+
+.stat-label {
+  font-size: 10px;
+  color: #6b7280;
+  text-transform: uppercase;
+}
+
+/* Add Section */
+.add-section {
+  padding: 0 16px 16px;
+}
+
+.section-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: #ca8a04;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.form-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.add-section input,
+.add-section select {
+  flex: 1;
+  padding: 10px;
+  border: 2px solid rgba(234, 179, 8, 0.2);
+  border-radius: 8px;
+  font-size: 12px;
+  background: white;
+  color: #713f12;
+}
+
+.add-section input:focus,
+.add-section select:focus {
+  outline: none;
+  border-color: #eab308;
+}
+
+.add-btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #eab308 0%, #ca8a04 100%);
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.add-btn:hover {
+  transform: translateY(-1px);
+}
+
+/* Section */
+.section {
+  padding: 0 16px 16px;
+}
+
+/* Week View */
+.week-view {
+  display: flex;
+  gap: 4px;
+}
+
+.day-column {
+  flex: 1;
+  text-align: center;
+}
+
+.day-name {
+  font-size: 10px;
+  font-weight: 600;
+  color: #6b7280;
+  margin-bottom: 4px;
+}
+
+.day-date {
+  font-size: 12px;
+  font-weight: 600;
+  color: #713f12;
+  margin-bottom: 6px;
+}
+
+.day-hours {
+  padding: 8px 4px;
+  background: white;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #ca8a04;
+}
+
+.day-hours.has-shift {
+  background: linear-gradient(135deg, #fef08a 0%, #fde047 100%);
+}
+
+.day-column.today .day-date {
+  background: #eab308;
+  color: white;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  margin: 0 auto 6px;
+}
+
+/* Shifts List */
+.shifts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 140px;
+  overflow-y: auto;
+}
+
+.shifts-list:empty::after {
+  content: 'No upcoming shifts';
+  color: #eab308;
+  opacity: 0.5;
+  font-size: 12px;
+  text-align: center;
+  padding: 16px;
+}
+
+.shift-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  background: white;
+  border-radius: 10px;
+  border-left: 4px solid #eab308;
+}
+
+.shift-item.overtime {
+  border-left-color: #f59e0b;
+}
+
+.shift-item.holiday {
+  border-left-color: #22c55e;
+}
+
+.shift-item.sick {
+  border-left-color: #ef4444;
+}
+
+.shift-item.vacation {
+  border-left-color: #3b82f6;
+}
+
+.shift-date {
+  font-size: 12px;
+  font-weight: 600;
+  color: #713f12;
+  min-width: 70px;
+}
+
+.shift-time {
+  flex: 1;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.shift-duration {
+  font-size: 12px;
+  font-weight: 600;
+  color: #ca8a04;
+  background: #fef9c3;
+  padding: 4px 8px;
+  border-radius: 12px;
+}
+
+.shift-delete {
+  width: 24px;
+  height: 24px;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: #9ca3af;
+  font-size: 14px;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.2s;
+}
+
+.shift-item:hover .shift-delete {
+  opacity: 1;
+}
+
+.shift-delete:hover {
+  background: #fee2e2;
+  color: #ef4444;
+}
+
+/* Scrollbar */
+.shifts-list::-webkit-scrollbar {
+  width: 4px;
+}
+
+.shifts-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.shifts-list::-webkit-scrollbar-thumb {
+  background: rgba(234, 179, 8, 0.2);
+  border-radius: 2px;
+}

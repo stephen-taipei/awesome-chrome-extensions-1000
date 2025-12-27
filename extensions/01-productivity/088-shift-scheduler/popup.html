@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shift Scheduler</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📅 Shift Scheduler</h1>
+    </header>
+
+    <!-- Week Stats -->
+    <div class="stats-card">
+      <div class="stat">
+        <span id="weekHours" class="stat-value">0h</span>
+        <span class="stat-label">This Week</span>
+      </div>
+      <div class="stat">
+        <span id="monthHours" class="stat-value">0h</span>
+        <span class="stat-label">This Month</span>
+      </div>
+      <div class="stat">
+        <span id="upcomingCount" class="stat-value">0</span>
+        <span class="stat-label">Upcoming</span>
+      </div>
+    </div>
+
+    <!-- Add Shift -->
+    <div class="add-section">
+      <div class="section-title">Add Shift</div>
+      <div class="form-row">
+        <input type="date" id="shiftDate">
+        <input type="time" id="startTime" placeholder="Start">
+        <input type="time" id="endTime" placeholder="End">
+      </div>
+      <div class="form-row">
+        <select id="shiftType">
+          <option value="regular">Regular</option>
+          <option value="overtime">Overtime</option>
+          <option value="holiday">Holiday</option>
+          <option value="sick">Sick Leave</option>
+          <option value="vacation">Vacation</option>
+        </select>
+        <button id="addBtn" class="add-btn">Add Shift</button>
+      </div>
+    </div>
+
+    <!-- Week View -->
+    <div class="section">
+      <div class="section-title">This Week</div>
+      <div id="weekView" class="week-view"></div>
+    </div>
+
+    <!-- Upcoming Shifts -->
+    <div class="section">
+      <div class="section-title">Upcoming Shifts</div>
+      <div id="shiftsList" class="shifts-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
