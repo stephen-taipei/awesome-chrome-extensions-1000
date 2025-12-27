@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Webinar Notes</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🖥️ Webinar Notes</h1>
+      <div class="header-sub">Plan your online presentations</div>
+    </header>
+
+    <!-- Webinar Info -->
+    <div class="webinar-info">
+      <input type="text" id="webinarTitle" placeholder="Webinar title">
+      <div class="row">
+        <input type="date" id="webinarDate">
+        <input type="time" id="webinarTime">
+      </div>
+    </div>
+
+    <!-- Sections -->
+    <div class="notes-section">
+      <div class="section-label">📋 Agenda / Outline</div>
+      <textarea id="agenda" placeholder="Key points to cover..."></textarea>
+    </div>
+
+    <div class="notes-section">
+      <div class="section-label">🎁 Offer / CTA</div>
+      <textarea id="offer" placeholder="What are you promoting?"></textarea>
+    </div>
+
+    <div class="notes-section">
+      <div class="section-label">❓ Q&A Prep</div>
+      <textarea id="qa" placeholder="Anticipated questions..."></textarea>
+    </div>
+
+    <!-- Actions -->
+    <div class="actions">
+      <button id="copyNotes" class="copy-btn">Copy Notes</button>
+      <button id="saveWebinar" class="save-btn">Save</button>
+    </div>
+
+    <!-- Saved -->
+    <div class="section">
+      <div class="section-title">Saved Webinars</div>
+      <div id="webinarList" class="webinar-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
