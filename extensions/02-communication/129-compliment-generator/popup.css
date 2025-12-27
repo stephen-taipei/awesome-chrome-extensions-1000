@@ -1,0 +1,189 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  background: linear-gradient(180deg, #fce7f3 0%, #fbcfe8 100%);
+  color: #9d174d;
+}
+
+.container {
+  width: 340px;
+  min-height: 450px;
+}
+
+header {
+  text-align: center;
+  padding: 16px;
+  background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
+  color: white;
+}
+
+header h1 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* Random Section */
+.random-section {
+  padding: 16px;
+}
+
+.random-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.random-result {
+  margin-top: 10px;
+  padding: 12px;
+  background: white;
+  border-radius: 10px;
+  font-size: 13px;
+  font-style: italic;
+  color: #9d174d;
+  text-align: center;
+  line-height: 1.5;
+  box-shadow: 0 2px 6px rgba(236, 72, 153, 0.15);
+}
+
+.random-result.hidden {
+  display: none;
+}
+
+/* Add Section */
+.add-section {
+  padding: 0 16px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.add-section select,
+.add-section textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 2px solid #fbcfe8;
+  border-radius: 8px;
+  font-size: 12px;
+  font-family: inherit;
+  color: #9d174d;
+  background: white;
+}
+
+.add-section textarea {
+  height: 60px;
+  resize: none;
+}
+
+.add-section select:focus,
+.add-section textarea:focus {
+  outline: none;
+  border-color: #ec4899;
+}
+
+.save-btn {
+  padding: 10px;
+  border: 2px solid #fbcfe8;
+  border-radius: 8px;
+  background: white;
+  color: #9d174d;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Section */
+.section {
+  padding: 0 16px 16px;
+}
+
+.section-title {
+  font-size: 11px;
+  font-weight: 600;
+  color: #db2777;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+/* Compliments List */
+.compliments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.compliment-item {
+  background: white;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 1px 4px rgba(236, 72, 153, 0.1);
+}
+
+.compliment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.compliment-category {
+  font-size: 9px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: #fce7f3;
+  color: #db2777;
+  font-weight: 600;
+}
+
+.compliment-text {
+  font-size: 11px;
+  color: #374151;
+  line-height: 1.4;
+  margin-bottom: 6px;
+}
+
+.compliment-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.compliment-actions button {
+  flex: 1;
+  padding: 5px;
+  border: none;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.copy-btn {
+  background: #ec4899;
+  color: white;
+}
+
+.delete-btn {
+  background: #fce7f3;
+  color: #9d174d;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 16px;
+  color: #a1a1aa;
+  font-size: 12px;
+}

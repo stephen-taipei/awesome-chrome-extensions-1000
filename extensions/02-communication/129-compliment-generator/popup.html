@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compliment Generator</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Compliments</h1>
+    </header>
+
+    <!-- Random Compliment -->
+    <div class="random-section">
+      <button id="randomBtn" class="random-btn">Get Random Compliment</button>
+      <div id="randomResult" class="random-result hidden"></div>
+    </div>
+
+    <!-- Add Compliment -->
+    <div class="add-section">
+      <select id="category">
+        <option value="personality">Personality</option>
+        <option value="work">Work/Skills</option>
+        <option value="appearance">Appearance</option>
+        <option value="character">Character</option>
+        <option value="general">General</option>
+      </select>
+      <textarea id="compliment" placeholder="Write a compliment..."></textarea>
+      <button id="saveBtn" class="save-btn">Save Compliment</button>
+    </div>
+
+    <!-- Saved Compliments -->
+    <div class="section">
+      <div class="section-title">Saved Compliments</div>
+      <div id="complimentsList" class="compliments-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ec4899"/>
+      <stop offset="100%" style="stop-color:#db2777"/>
+    </linearGradient>
+  </defs>
+  <circle cx="64" cy="64" r="60" fill="url(#grad)"/>
+
+  <!-- Smiley face -->
+  <circle cx="64" cy="68" r="32" fill="white"/>
+
+  <!-- Eyes -->
+  <circle cx="52" cy="62" r="5" fill="#ec4899"/>
+  <circle cx="76" cy="62" r="5" fill="#ec4899"/>
+
+  <!-- Smile -->
+  <path d="M48 76 Q64 90 80 76" stroke="#ec4899" stroke-width="4" fill="none" stroke-linecap="round"/>
+
+  <!-- Sparkles -->
+  <circle cx="36" cy="40" r="4" fill="white" opacity="0.8"/>
+  <circle cx="92" cy="42" r="3" fill="white" opacity="0.8"/>
+  <circle cx="28" cy="58" r="2" fill="white" opacity="0.6"/>
+</svg>
