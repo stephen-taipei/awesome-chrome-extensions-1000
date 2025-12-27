@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6"/>
+      <stop offset="100%" style="stop-color:#1d4ed8"/>
+    </linearGradient>
+  </defs>
+  <circle cx="64" cy="64" r="60" fill="url(#grad)"/>
+
+  <!-- Newsletter document -->
+  <rect x="34" y="24" width="60" height="80" rx="4" fill="white"/>
+
+  <!-- Header area -->
+  <rect x="40" y="30" width="48" height="12" rx="2" fill="#bfdbfe"/>
+
+  <!-- Content lines -->
+  <rect x="40" y="48" width="48" height="4" rx="2" fill="#93c5fd"/>
+  <rect x="40" y="56" width="40" height="4" rx="2" fill="#93c5fd"/>
+  <rect x="40" y="64" width="44" height="4" rx="2" fill="#93c5fd"/>
+
+  <!-- Section divider -->
+  <rect x="40" y="74" width="48" height="2" rx="1" fill="#dbeafe"/>
+
+  <!-- More lines -->
+  <rect x="40" y="82" width="36" height="4" rx="2" fill="#93c5fd"/>
+  <rect x="40" y="90" width="42" height="4" rx="2" fill="#93c5fd"/>
+</svg>

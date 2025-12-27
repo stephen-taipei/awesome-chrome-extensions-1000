@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Newsletter Builder</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Newsletter</h1>
+    </header>
+
+    <!-- Builder -->
+    <div class="builder-section">
+      <input type="text" id="title" placeholder="Newsletter Title...">
+      <input type="text" id="subtitle" placeholder="Subtitle or tagline...">
+
+      <div class="section-group">
+        <input type="text" id="sectionTitle" placeholder="Section heading...">
+        <textarea id="sectionContent" placeholder="Section content..."></textarea>
+        <button id="addSection" class="add-btn">+ Add Section</button>
+      </div>
+    </div>
+
+    <!-- Sections -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-title">Sections</span>
+        <button id="clearAll" class="clear-btn">Clear</button>
+      </div>
+      <div id="sectionsList" class="sections-list"></div>
+    </div>
+
+    <!-- Actions -->
+    <div class="actions">
+      <button id="preview" class="preview-btn">Preview</button>
+      <button id="copy" class="copy-btn">Copy</button>
+    </div>
+
+    <!-- Preview Modal -->
+    <div id="previewModal" class="modal hidden">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span>Preview</span>
+          <button id="closeModal" class="close-btn">&times;</button>
+        </div>
+        <div id="previewContent" class="preview-area"></div>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
