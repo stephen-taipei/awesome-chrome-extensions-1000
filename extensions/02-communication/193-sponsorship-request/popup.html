@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sponsorship Request</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Sponsorship Request</h1>
+      <div class="header-sub">Secure sponsorships</div>
+    </header>
+
+    <!-- Sponsorship Form -->
+    <div class="sponsorship-form">
+      <select id="sponsorshipType">
+        <option value="event">Event Sponsorship</option>
+        <option value="content">Content Sponsorship</option>
+        <option value="team">Team/Athlete</option>
+        <option value="nonprofit">Nonprofit/Charity</option>
+        <option value="podcast">Podcast/Media</option>
+        <option value="community">Community Project</option>
+      </select>
+
+      <input type="text" id="sponsor" placeholder="Potential sponsor name">
+      <input type="text" id="project" placeholder="Your project/event name">
+      <textarea id="opportunity" placeholder="Sponsorship opportunity..."></textarea>
+      <textarea id="benefits" placeholder="Benefits for sponsor..."></textarea>
+      <input type="text" id="amount" placeholder="Sponsorship tiers/amount">
+    </div>
+
+    <!-- Actions -->
+    <div class="actions">
+      <button id="copyRequest" class="copy-btn">Copy Request</button>
+      <button id="saveRequest" class="save-btn">Save</button>
+    </div>
+
+    <!-- Saved -->
+    <div class="section">
+      <div class="section-title">Saved Requests</div>
+      <div id="requestList" class="request-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
