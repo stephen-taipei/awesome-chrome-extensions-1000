@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meditation Timer</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🧘 Meditation</h1>
+    </header>
+
+    <!-- Timer Display -->
+    <div class="timer-section">
+      <div id="breathCircle" class="breath-circle">
+        <div class="inner-circle">
+          <div id="timerDisplay" class="timer-display">5:00</div>
+          <div id="breathText" class="breath-text">準備開始</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Duration Selection -->
+    <div id="durationSection" class="duration-section">
+      <div class="duration-title">選擇時長</div>
+      <div class="duration-grid">
+        <button class="duration-btn" data-minutes="3">3 分鐘</button>
+        <button class="duration-btn selected" data-minutes="5">5 分鐘</button>
+        <button class="duration-btn" data-minutes="10">10 分鐘</button>
+        <button class="duration-btn" data-minutes="15">15 分鐘</button>
+        <button class="duration-btn" data-minutes="20">20 分鐘</button>
+        <button class="duration-btn" data-minutes="30">30 分鐘</button>
+      </div>
+    </div>
+
+    <!-- Breathing Pattern -->
+    <div id="breathingSection" class="section">
+      <div class="section-title">呼吸模式</div>
+      <div class="breathing-options">
+        <button class="breathing-btn selected" data-pattern="4-7-8">
+          <span class="pattern-name">4-7-8</span>
+          <span class="pattern-desc">放鬆睡眠</span>
+        </button>
+        <button class="breathing-btn" data-pattern="4-4-4">
+          <span class="pattern-name">4-4-4</span>
+          <span class="pattern-desc">平靜專注</span>
+        </button>
+        <button class="breathing-btn" data-pattern="5-5-5">
+          <span class="pattern-name">5-5-5</span>
+          <span class="pattern-desc">深度放鬆</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls">
+      <button id="startBtn" class="control-btn start">開始冥想</button>
+      <button id="stopBtn" class="control-btn stop hidden">結束</button>
+    </div>
+
+    <!-- Stats -->
+    <section class="section stats">
+      <div class="stat-item">
+        <div class="stat-value" id="todaySessions">0</div>
+        <div class="stat-label">今日次數</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value" id="totalMinutes">0</div>
+        <div class="stat-label">累計分鐘</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value" id="streak">0</div>
+        <div class="stat-label">連續天數</div>
+      </div>
+    </section>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
