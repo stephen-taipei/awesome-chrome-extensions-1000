@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quick Reply Templates</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Quick Replies</h1>
+    </header>
+
+    <!-- Add New -->
+    <div class="add-section">
+      <input type="text" id="templateName" placeholder="Template name...">
+      <textarea id="templateContent" placeholder="Template content..."></textarea>
+      <button id="addTemplate" class="add-btn">+ Add Template</button>
+    </div>
+
+    <!-- Templates List -->
+    <div class="section">
+      <div class="section-title">Your Templates</div>
+      <div id="templatesList" class="templates-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
