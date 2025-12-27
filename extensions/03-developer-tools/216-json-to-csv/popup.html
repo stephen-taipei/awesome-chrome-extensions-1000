@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>JSON to CSV</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <div class="container">
+    <header><h1>JSON to CSV</h1><div class="header-sub">Convert JSON array to CSV</div></header>
+    <div class="json-form">
+      <div class="section-title">JSON Input</div>
+      <textarea id="jsonInput" placeholder='[{"name":"John","age":30}]'></textarea>
+      <div class="options"><label><input type="checkbox" id="includeHeader" checked> Include header row</label></div>
+    </div>
+    <div class="actions"><button id="convertBtn" class="action-btn">Convert to CSV</button><button id="copyBtn" class="action-btn secondary">Copy</button></div>
+    <div id="status" class="status"></div>
+    <div class="output-section"><div class="section-title">CSV Output</div><textarea id="csvOutput" readonly placeholder="CSV result..."></textarea></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
