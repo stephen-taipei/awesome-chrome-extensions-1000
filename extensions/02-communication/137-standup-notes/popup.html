@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Standup Notes</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Standup Notes</h1>
+      <div id="todayDate" class="header-date"></div>
+    </header>
+
+    <!-- Sections -->
+    <div class="standup-section">
+      <div class="section-label">Yesterday</div>
+      <textarea id="yesterday" placeholder="What did you work on yesterday?"></textarea>
+    </div>
+
+    <div class="standup-section">
+      <div class="section-label">Today</div>
+      <textarea id="today" placeholder="What will you work on today?"></textarea>
+    </div>
+
+    <div class="standup-section">
+      <div class="section-label">Blockers</div>
+      <textarea id="blockers" placeholder="Any blockers or issues?"></textarea>
+    </div>
+
+    <!-- Actions -->
+    <div class="actions">
+      <button id="copyNotes" class="copy-btn">Copy Notes</button>
+      <button id="clearNotes" class="clear-btn">Clear</button>
+    </div>
+
+    <!-- History -->
+    <div class="section">
+      <div class="section-title">Recent Standups</div>
+      <div id="historyList" class="history-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
