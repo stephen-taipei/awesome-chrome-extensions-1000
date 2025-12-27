@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Picker</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Color Picker</h1>
+    </header>
+
+    <!-- Color Picker -->
+    <div class="picker-card">
+      <input type="color" id="colorPicker" value="#6366f1">
+      <div class="color-preview" id="colorPreview"></div>
+    </div>
+
+    <!-- Color Formats -->
+    <div class="formats-card">
+      <div class="format-row">
+        <span class="format-label">HEX</span>
+        <input type="text" id="hexValue" readonly>
+        <button class="copy-btn" data-format="hex">Copy</button>
+      </div>
+      <div class="format-row">
+        <span class="format-label">RGB</span>
+        <input type="text" id="rgbValue" readonly>
+        <button class="copy-btn" data-format="rgb">Copy</button>
+      </div>
+      <div class="format-row">
+        <span class="format-label">HSL</span>
+        <input type="text" id="hslValue" readonly>
+        <button class="copy-btn" data-format="hsl">Copy</button>
+      </div>
+    </div>
+
+    <!-- Saved Colors -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-title">Saved Colors</span>
+        <button id="saveColor" class="save-btn">+ Save</button>
+      </div>
+      <div id="savedColors" class="saved-colors"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

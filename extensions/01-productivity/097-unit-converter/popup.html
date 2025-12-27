@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unit Converter</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📐 Unit Converter</h1>
+    </header>
+
+    <!-- Category Tabs -->
+    <div class="category-tabs">
+      <button class="tab active" data-category="length">📏 Length</button>
+      <button class="tab" data-category="weight">⚖️ Weight</button>
+      <button class="tab" data-category="temp">🌡️ Temp</button>
+      <button class="tab" data-category="volume">🥛 Volume</button>
+    </div>
+
+    <!-- Converter -->
+    <div class="converter-card">
+      <div class="input-group">
+        <input type="number" id="fromValue" placeholder="Enter value">
+        <select id="fromUnit"></select>
+      </div>
+
+      <div class="equals">=</div>
+
+      <div class="input-group">
+        <input type="number" id="toValue" readonly>
+        <select id="toUnit"></select>
+      </div>
+    </div>
+
+    <!-- Common Conversions -->
+    <div class="section">
+      <div class="section-title">Quick Reference</div>
+      <div id="referenceList" class="reference-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
