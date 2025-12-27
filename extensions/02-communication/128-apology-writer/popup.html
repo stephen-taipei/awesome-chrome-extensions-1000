@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apology Writer</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Apology Writer</h1>
+    </header>
+
+    <!-- Write Apology -->
+    <div class="write-section">
+      <select id="context">
+        <option value="personal">Personal</option>
+        <option value="professional">Professional</option>
+        <option value="customer">Customer Service</option>
+        <option value="delay">Delay/Late</option>
+        <option value="mistake">Mistake/Error</option>
+      </select>
+      <input type="text" id="recipient" placeholder="To (name or role)...">
+      <input type="text" id="situation" placeholder="Brief situation...">
+      <textarea id="message" placeholder="Your apology message..."></textarea>
+      <button id="saveApology" class="save-btn">Save Apology</button>
+    </div>
+
+    <!-- Saved Apologies -->
+    <div class="section">
+      <div class="section-title">Saved Templates</div>
+      <div id="apologyList" class="apology-list"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
