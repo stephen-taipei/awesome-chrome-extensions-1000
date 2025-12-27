@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quick Memo</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>⚡ Quick Memo</h1>
+      <div class="header-actions">
+        <span id="memoCount" class="count">0</span>
+        <button id="clearAllBtn" class="icon-btn" title="清除全部">🗑️</button>
+      </div>
+    </header>
+
+    <main>
+      <!-- Quick Input -->
+      <div class="input-area">
+        <textarea id="memoInput" placeholder="輸入備忘錄... (Enter 儲存, Shift+Enter 換行)" rows="2"></textarea>
+        <button id="addBtn" class="add-btn">+</button>
+      </div>
+
+      <!-- Memo List -->
+      <div id="memoList" class="memo-list"></div>
+
+      <!-- Empty State -->
+      <div id="emptyState" class="empty-state">
+        <p>📝 尚無備忘錄</p>
+        <p class="hint">按 Alt+M 快速開啟</p>
+      </div>
+    </main>
+
+    <footer>
+      <span class="shortcut">Alt+M 開啟</span>
+    </footer>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
