@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Event Follow-up</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <div class="container">
+    <header><h1>Event Follow-up</h1><div class="header-sub">Stay connected after events</div></header>
+    <div class="followup-form">
+      <select id="eventType"><option value="conference">Conference</option><option value="meeting">Meeting</option><option value="webinar">Webinar</option><option value="networking">Networking</option><option value="workshop">Workshop</option></select>
+      <input type="text" id="contact" placeholder="Contact name">
+      <input type="text" id="event" placeholder="Event name">
+      <textarea id="highlights" placeholder="Key takeaways or discussion points..."></textarea>
+      <input type="text" id="nextSteps" placeholder="Proposed next steps">
+    </div>
+    <div class="actions"><button id="copyFollowup" class="copy-btn">Copy Follow-up</button><button id="saveFollowup" class="save-btn">Save</button></div>
+    <div class="section"><div class="section-title">Saved Follow-ups</div><div id="followupList" class="followup-list"></div></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
