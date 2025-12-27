@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Link Organizer</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🔗 Link Organizer</h1>
+      <div class="header-actions">
+        <button id="addFolderBtn" class="icon-btn" title="新增資料夾">📁</button>
+        <button id="addLinkBtn" class="icon-btn" title="新增連結">+</button>
+      </div>
+    </header>
+
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="搜尋連結...">
+    </div>
+
+    <main>
+      <div id="folderList" class="folder-list"></div>
+      <div id="emptyState" class="empty-state hidden">
+        <div class="empty-icon">📂</div>
+        <div>沒有資料夾</div>
+        <div class="empty-hint">點擊 📁 建立第一個資料夾</div>
+      </div>
+    </main>
+
+    <!-- Add Folder Modal -->
+    <div id="folderModal" class="modal hidden">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 id="folderModalTitle">新增資料夾</h2>
+          <button class="close-btn" data-close="folderModal">×</button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label>資料夾名稱</label>
+            <input type="text" id="folderName" placeholder="輸入名稱...">
+          </div>
+          <div class="form-group">
+            <label>圖示</label>
+            <div class="emoji-picker" id="folderEmojiPicker">
+              <button class="emoji-btn selected" data-emoji="📁">📁</button>
+              <button class="emoji-btn" data-emoji="💼">💼</button>
+              <button class="emoji-btn" data-emoji="🎮">🎮</button>
+              <button class="emoji-btn" data-emoji="📚">📚</button>
+              <button class="emoji-btn" data-emoji="🛒">🛒</button>
+              <button class="emoji-btn" data-emoji="💡">💡</button>
+              <button class="emoji-btn" data-emoji="🔧">🔧</button>
+              <button class="emoji-btn" data-emoji="⭐">⭐</button>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button id="deleteFolderBtn" class="btn btn-danger hidden">刪除</button>
+          <button id="saveFolderBtn" class="btn btn-primary">儲存</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add Link Modal -->
+    <div id="linkModal" class="modal hidden">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 id="linkModalTitle">新增連結</h2>
+          <button class="close-btn" data-close="linkModal">×</button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label>連結名稱</label>
+            <input type="text" id="linkName" placeholder="輸入名稱...">
+          </div>
+          <div class="form-group">
+            <label>網址</label>
+            <input type="url" id="linkUrl" placeholder="https://...">
+          </div>
+          <div class="form-group">
+            <label>資料夾</label>
+            <select id="linkFolder"></select>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button id="deleteLinkBtn" class="btn btn-danger hidden">刪除</button>
+          <button id="saveLinkBtn" class="btn btn-primary">儲存</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
