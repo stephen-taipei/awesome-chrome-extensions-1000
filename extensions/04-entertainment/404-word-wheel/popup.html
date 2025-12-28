@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Word Wheel</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <div class="container">
+    <header><h1>Word Wheel</h1><div class="header-sub">Use center letter in every word</div></header>
+    <div class="content">
+      <div class="stats">Score: <span id="score">0</span> | Words: <span id="wordCount">0</span></div>
+      <div id="wheel" class="wheel"></div>
+      <input type="text" id="input" placeholder="Type a word..." autocomplete="off">
+      <div id="message" class="message"></div>
+      <div id="words" class="words"></div>
+      <button id="newBtn">NEW WHEEL</button>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 14px; background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%); color: #e0e0e0; }
+.container { width: 280px; }
+header { text-align: center; padding: 12px; background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%); color: white; }
+header h1 { font-size: 18px; font-weight: 600; }
+.header-sub { font-size: 11px; opacity: 0.9; margin-top: 2px; }
+.content { padding: 12px; text-align: center; }
+.coins { font-size: 16px; font-weight: 600; color: #fbbf24; margin-bottom: 12px; }
+.slots { display: flex; justify-content: center; gap: 8px; margin-bottom: 12px; }
+.reel { width: 60px; height: 70px; background: linear-gradient(180deg, #2d2d44 0%, #1e1e2e 100%); border: 3px solid #fbbf24; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 36px; }
+.reel.spinning { animation: spin 0.1s linear infinite; }
+@keyframes spin { 0%, 100% { transform: translateY(-2px); } 50% { transform: translateY(2px); } }
+.result { min-height: 30px; font-size: 18px; font-weight: 600; margin-bottom: 12px; }
+.result.win { color: #22c55e; }
+.result.lose { color: #ef4444; }
+#spinBtn { width: 100%; background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%); color: white; border: none; padding: 12px; border-radius: 8px; font-size: 16px; font-weight: bold; cursor: pointer; }
+#spinBtn:disabled { opacity: 0.6; cursor: not-allowed; }
