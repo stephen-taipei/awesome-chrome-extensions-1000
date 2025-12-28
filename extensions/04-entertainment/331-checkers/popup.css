@@ -1,0 +1,18 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 14px; background: linear-gradient(180deg, #4a3728 0%, #2d1f14 100%); color: #e0e0e0; }
+.container { width: 320px; }
+header { text-align: center; padding: 10px; background: linear-gradient(135deg, #8b4513 0%, #654321 100%); color: white; }
+header h1 { font-size: 18px; font-weight: 600; }
+.content { padding: 10px; text-align: center; }
+.status { font-size: 14px; margin-bottom: 8px; padding: 8px; background: rgba(0,0,0,0.3); border-radius: 6px; }
+.board { display: grid; grid-template-columns: repeat(8, 1fr); gap: 0; margin: 0 auto 10px; width: 288px; border: 4px solid #2d1f14; }
+.cell { width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; }
+.cell.light { background: #f4d9b0; }
+.cell.dark { background: #8b4513; cursor: pointer; }
+.cell.selected { background: #22c55e; }
+.cell.highlight { background: #fbbf24; }
+.piece { width: 28px; height: 28px; border-radius: 50%; cursor: pointer; border: 2px solid #000; }
+.piece.red { background: radial-gradient(circle at 30% 30%, #ef6b6b, #dc2626); }
+.piece.black { background: radial-gradient(circle at 30% 30%, #555, #111); }
+.piece.king::after { content: '♔'; font-size: 14px; color: gold; }
+#newGame { background: linear-gradient(135deg, #8b4513 0%, #654321 100%); color: white; border: none; padding: 10px 24px; border-radius: 6px; font-size: 13px; cursor: pointer; }
