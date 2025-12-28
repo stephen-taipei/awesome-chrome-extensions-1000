@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Epoch Converter</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <div class="container">
+    <header><h1>Epoch Converter</h1><div class="header-sub">Unix timestamp converter</div></header>
+    <div class="current-time"><span class="label">Current Epoch:</span><span id="currentEpoch" class="value">---</span></div>
+    <div class="section"><div class="section-title">Epoch to Date</div><div class="input-row"><input type="text" id="epochInput" placeholder="Enter Unix timestamp"><button id="toDateBtn" class="action-btn">Convert</button></div><div class="result" id="dateResult">---</div></div>
+    <div class="section"><div class="section-title">Date to Epoch</div><div class="input-row"><input type="datetime-local" id="dateInput"><button id="toEpochBtn" class="action-btn">Convert</button></div><div class="result" id="epochResult">---</div></div>
+    <div class="formats" id="formats"></div>
+    <div class="actions"><button id="copyBtn" class="action-btn secondary">Copy Current Epoch</button></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
