@@ -1,0 +1,17 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Monaco', 'Menlo', monospace; font-size: 13px; background: linear-gradient(180deg, #1e1e1e 0%, #2d2d2d 100%); color: #d4d4d4; }
+.container { width: 400px; min-height: 500px; }
+header { text-align: center; padding: 12px 16px; background: linear-gradient(135deg, #0891b2 0%, #0e7490 100%); color: white; }
+header h1 { font-size: 18px; font-weight: 600; }
+.header-sub { font-size: 11px; opacity: 0.9; margin-top: 4px; }
+.search-box { padding: 10px 16px; }
+.search-box input { width: 100%; padding: 8px 12px; border: 2px solid #3c3c3c; border-radius: 6px; font-family: inherit; font-size: 11px; background: #252526; color: #67e8f9; }
+.search-box input:focus { outline: none; border-color: #0891b2; }
+.tabs { display: flex; padding: 0 16px; gap: 8px; }
+.tab { flex: 1; padding: 8px; border: none; border-radius: 6px 6px 0 0; font-size: 11px; font-weight: 600; cursor: pointer; background: #3c3c3c; color: #9ca3af; }
+.tab.active { background: #252526; color: #22d3ee; }
+.header-list { padding: 0 16px 16px; max-height: 340px; overflow-y: auto; }
+.header-item { background: #252526; border: 1px solid #3c3c3c; border-radius: 6px; padding: 10px; margin-top: 8px; }
+.header-name { font-size: 12px; font-weight: 600; color: #22d3ee; margin-bottom: 4px; }
+.header-desc { font-size: 10px; color: #9ca3af; line-height: 1.4; }
+.header-example { font-size: 9px; color: #67e8f9; margin-top: 4px; background: #1e1e1e; padding: 4px 6px; border-radius: 3px; }
