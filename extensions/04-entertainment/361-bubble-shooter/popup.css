@@ -1,0 +1,21 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 14px; background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%); color: #e0e0e0; }
+.container { width: 280px; }
+header { text-align: center; padding: 12px; background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%); color: white; }
+header h1 { font-size: 18px; font-weight: 600; }
+.header-sub { font-size: 11px; opacity: 0.9; margin-top: 2px; }
+.content { padding: 12px; text-align: center; }
+.stats { display: flex; justify-content: space-around; font-size: 14px; color: #67e8f9; margin-bottom: 12px; }
+.game { display: grid; grid-template-columns: repeat(8, 1fr); gap: 2px; margin-bottom: 12px; padding: 8px; background: #0f172a; border-radius: 8px; min-height: 180px; }
+.bubble { width: 28px; height: 28px; border-radius: 50%; cursor: pointer; transition: transform 0.1s; }
+.bubble:hover { transform: scale(1.1); }
+.bubble.c0 { background: radial-gradient(circle at 30% 30%, #fca5a5, #ef4444); }
+.bubble.c1 { background: radial-gradient(circle at 30% 30%, #86efac, #22c55e); }
+.bubble.c2 { background: radial-gradient(circle at 30% 30%, #93c5fd, #3b82f6); }
+.bubble.c3 { background: radial-gradient(circle at 30% 30%, #fde047, #eab308); }
+.bubble.c4 { background: radial-gradient(circle at 30% 30%, #d8b4fe, #a855f7); }
+.bubble.empty { background: transparent; }
+.shooter { display: flex; justify-content: center; align-items: center; gap: 16px; margin-bottom: 12px; }
+.current, .next { width: 36px; height: 36px; border-radius: 50%; }
+.next { width: 24px; height: 24px; opacity: 0.6; }
+#newBtn { width: 100%; background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%); color: white; border: none; padding: 10px; border-radius: 8px; font-size: 14px; cursor: pointer; }

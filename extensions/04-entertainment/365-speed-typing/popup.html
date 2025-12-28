@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Speed Typing</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <div class="container">
+    <header><h1>Speed Typing</h1><div class="header-sub">Type fast!</div></header>
+    <div class="content">
+      <div class="stats"><span>WPM: <b id="wpm">0</b></span><span>Best: <b id="best">0</b></span></div>
+      <div class="timer">Time: <b id="timer">30</b>s</div>
+      <div class="word-display" id="display"></div>
+      <input type="text" id="input" placeholder="Type here..." autocomplete="off">
+      <div class="progress"><span>Words: <b id="words">0</b></span></div>
+      <button id="startBtn">Start Game</button>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
