@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>CSS Grid Generator</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <div class="container">
+    <header><h1>CSS Grid</h1><div class="header-sub">Generate grid layouts</div></header>
+    <div class="controls">
+      <div class="control-row"><label>Columns:</label><input type="number" id="cols" value="3" min="1" max="12"></div>
+      <div class="control-row"><label>Rows:</label><input type="number" id="rows" value="2" min="1" max="12"></div>
+      <div class="control-row"><label>Gap:</label><input type="number" id="gap" value="10" min="0" max="50"><span>px</span></div>
+    </div>
+    <div id="preview" class="preview"></div>
+    <div class="output"><textarea id="cssOutput" readonly></textarea></div>
+    <div class="actions"><button id="copyBtn" class="action-btn">Copy CSS</button></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
