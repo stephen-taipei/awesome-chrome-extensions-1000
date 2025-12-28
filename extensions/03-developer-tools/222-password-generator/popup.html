@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Password Generator</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <div class="container">
+    <header><h1>Password Generator</h1><div class="header-sub">Create secure passwords</div></header>
+    <div class="password-display"><input type="text" id="password" readonly><button id="copyBtn">Copy</button></div>
+    <div class="options">
+      <div class="option-row"><label>Length: <span id="lengthVal">16</span></label><input type="range" id="length" min="8" max="64" value="16"></div>
+      <div class="checkboxes">
+        <label><input type="checkbox" id="upper" checked> Uppercase (A-Z)</label>
+        <label><input type="checkbox" id="lower" checked> Lowercase (a-z)</label>
+        <label><input type="checkbox" id="numbers" checked> Numbers (0-9)</label>
+        <label><input type="checkbox" id="symbols" checked> Symbols (!@#$)</label>
+      </div>
+    </div>
+    <div class="actions"><button id="generateBtn" class="action-btn">Generate Password</button></div>
+    <div class="strength"><span>Strength:</span><div id="strengthBar" class="strength-bar"></div><span id="strengthText"></span></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
