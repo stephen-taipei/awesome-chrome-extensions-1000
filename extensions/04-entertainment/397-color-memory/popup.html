@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Color Memory</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <div class="container">
+    <header><h1>Color Memory</h1><div class="header-sub">Remember the colors!</div></header>
+    <div class="content">
+      <div class="stats"><span>Level: <span id="level">1</span></span><span>Best: <span id="best">0</span></span></div>
+      <div class="grid" id="grid">
+        <button class="color-btn red" data-color="red"></button>
+        <button class="color-btn blue" data-color="blue"></button>
+        <button class="color-btn green" data-color="green"></button>
+        <button class="color-btn yellow" data-color="yellow"></button>
+      </div>
+      <div id="message" class="message">Press Start</div>
+      <button id="startBtn">Start</button>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

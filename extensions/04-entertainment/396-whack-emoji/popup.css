@@ -1,0 +1,17 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 14px; background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%); color: #e0e0e0; }
+.container { width: 280px; }
+header { text-align: center; padding: 12px; background: linear-gradient(135deg, #84cc16 0%, #65a30d 100%); color: white; }
+header h1 { font-size: 18px; font-weight: 600; }
+.header-sub { font-size: 11px; opacity: 0.9; margin-top: 2px; }
+.content { padding: 12px; text-align: center; }
+.stats { display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 14px; font-weight: 600; }
+.timer { font-size: 16px; font-weight: 600; color: #bef264; margin-bottom: 12px; }
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 12px; }
+.hole { width: 76px; height: 70px; background: #1e293b; border-radius: 12px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background 0.1s; }
+.hole:hover { background: #334155; }
+.hole .emoji { font-size: 36px; opacity: 0; transition: opacity 0.1s, transform 0.1s; }
+.hole .emoji.visible { opacity: 1; transform: scale(1.1); }
+.hole .emoji.whacked { animation: whack 0.2s ease-out; }
+@keyframes whack { 50% { transform: scale(0.5) rotate(20deg); } 100% { opacity: 0; } }
+#startBtn { width: 100%; background: linear-gradient(135deg, #84cc16 0%, #65a30d 100%); color: white; border: none; padding: 10px; border-radius: 8px; font-size: 14px; cursor: pointer; }
