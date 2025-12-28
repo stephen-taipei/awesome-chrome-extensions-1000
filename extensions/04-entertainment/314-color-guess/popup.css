@@ -1,0 +1,18 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 14px; background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%); color: #e0e0e0; }
+.container { width: 320px; }
+header { text-align: center; padding: 14px; background: linear-gradient(135deg, #ec4899 0%, #be185d 100%); color: white; }
+header h1 { font-size: 18px; font-weight: 600; }
+.header-sub { font-size: 11px; opacity: 0.9; margin-top: 2px; }
+.content { padding: 16px; text-align: center; }
+.score { font-size: 13px; color: #f472b6; margin-bottom: 16px; }
+.hex-code { font-family: 'Monaco', monospace; font-size: 28px; font-weight: bold; color: white; margin-bottom: 20px; letter-spacing: 2px; }
+.options { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 16px; }
+.option { height: 80px; border: 3px solid transparent; border-radius: 12px; cursor: pointer; transition: all 0.2s; }
+.option:hover { transform: scale(1.05); }
+.option.correct { border-color: #4ade80; box-shadow: 0 0 20px rgba(74, 222, 128, 0.5); }
+.option.wrong { border-color: #f87171; opacity: 0.5; }
+.option:disabled { cursor: default; transform: none; }
+.message { font-size: 16px; font-weight: 600; min-height: 28px; }
+.message.correct { color: #4ade80; }
+.message.wrong { color: #f87171; }

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Typing Test</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <div class="container">
+    <header><h1>Typing Test</h1></header>
+    <div class="content">
+      <div id="text" class="text"></div>
+      <input type="text" id="input" placeholder="Start typing..." autocomplete="off">
+      <div class="stats">
+        <div class="stat"><span class="label">WPM</span><span id="wpm">0</span></div>
+        <div class="stat"><span class="label">Accuracy</span><span id="accuracy">100%</span></div>
+        <div class="stat"><span class="label">Time</span><span id="time">30s</span></div>
+      </div>
+      <button id="restartBtn">Restart</button>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Number Guess</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <div class="container">
+    <header><h1>Number Guess</h1><div class="header-sub">Guess 1-100</div></header>
+    <div class="content">
+      <div class="stats">
+        <span>Attempts: <b id="attempts">0</b></span>
+        <span>Best: <b id="best">-</b></span>
+      </div>
+      <div id="hint" class="hint">I'm thinking of a number between 1 and 100</div>
+      <div class="input-row">
+        <input type="number" id="guess" min="1" max="100" placeholder="Your guess">
+        <button id="guessBtn">Guess</button>
+      </div>
+      <div id="history" class="history"></div>
+      <button id="newGame" class="new-game">New Game</button>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
