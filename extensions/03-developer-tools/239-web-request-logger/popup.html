@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Request Logger</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <div class="container">
+    <header><h1>Request Logger</h1><div class="header-sub">Network activity monitor</div></header>
+    <div class="toolbar">
+      <span id="count">0 requests</span>
+      <div class="toolbar-actions">
+        <button id="refreshBtn" class="small-btn">Refresh</button>
+        <button id="clearBtn" class="small-btn danger">Clear</button>
+      </div>
+    </div>
+    <div class="filter"><input type="text" id="filter" placeholder="Filter by URL..."></div>
+    <div id="requestList" class="request-list"></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
