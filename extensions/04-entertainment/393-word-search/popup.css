@@ -1,0 +1,17 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 14px; background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%); color: #e0e0e0; }
+.container { width: 280px; }
+header { text-align: center; padding: 12px; background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%); color: white; }
+header h1 { font-size: 18px; font-weight: 600; }
+.header-sub { font-size: 11px; opacity: 0.9; margin-top: 2px; }
+.content { padding: 12px; text-align: center; }
+.words { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; margin-bottom: 12px; }
+.word { padding: 4px 8px; background: #334155; border-radius: 4px; font-size: 12px; font-weight: 600; }
+.word.found { background: #22c55e; text-decoration: line-through; }
+.grid { display: grid; grid-template-columns: repeat(8, 1fr); gap: 2px; margin-bottom: 12px; user-select: none; }
+.cell { width: 28px; height: 28px; background: #1e293b; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 600; cursor: pointer; transition: background 0.1s; }
+.cell:hover { background: #334155; }
+.cell.selected { background: #3b82f6; }
+.cell.found { background: #22c55e; }
+.message { min-height: 24px; font-weight: 600; margin-bottom: 12px; color: #22c55e; }
+#newBtn { width: 100%; background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%); color: white; border: none; padding: 10px; border-radius: 8px; font-size: 14px; cursor: pointer; }
