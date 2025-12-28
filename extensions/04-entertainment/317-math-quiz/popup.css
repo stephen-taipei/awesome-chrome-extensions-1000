@@ -1,0 +1,16 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 14px; background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%); color: #e0e0e0; }
+.container { width: 280px; }
+header { text-align: center; padding: 14px; background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%); color: white; }
+header h1 { font-size: 18px; font-weight: 600; }
+.content { padding: 16px; text-align: center; }
+.stats { display: flex; justify-content: space-around; font-size: 14px; color: #4ade80; margin-bottom: 16px; }
+.problem { font-size: 36px; font-weight: bold; color: white; margin-bottom: 16px; min-height: 50px; }
+#answer { width: 120px; background: #0f172a; border: 2px solid #334155; color: white; padding: 14px; border-radius: 8px; font-size: 24px; text-align: center; margin-bottom: 12px; }
+#answer:focus { border-color: #22c55e; outline: none; }
+#answer:disabled { opacity: 0.5; }
+.message { min-height: 24px; font-size: 14px; font-weight: 600; margin-bottom: 12px; }
+.message.correct { color: #4ade80; }
+.message.wrong { color: #f87171; }
+#startBtn { width: 100%; background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%); color: white; border: none; padding: 12px; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer; }
+.final { color: #4ade80; font-size: 18px; margin-bottom: 16px; }
