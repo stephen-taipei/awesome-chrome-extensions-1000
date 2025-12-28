@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>IP Lookup</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <div class="container">
+    <header><h1>IP Lookup</h1><div class="header-sub">IP address tools</div></header>
+    <div class="lookup-form">
+      <input type="text" id="ipInput" placeholder="Enter IP address (e.g., 192.168.1.1)">
+      <button id="analyzeBtn" class="action-btn">Analyze</button>
+    </div>
+    <div id="results" class="results"></div>
+    <div class="section"><div class="section-title">IP Utilities</div>
+      <div class="utility-row"><label>IPv4 to Decimal</label><input type="text" id="ipv4" placeholder="192.168.1.1"><span id="decimal"></span></div>
+      <div class="utility-row"><label>Subnet Calculator</label><input type="text" id="cidr" placeholder="192.168.1.0/24"><span id="subnet"></span></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

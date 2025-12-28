@@ -1,0 +1,13 @@
+// IP Lookup - Popup Script
+class IpLookup {
+  constructor() { this.initElements(); this.bindEvents(); }
+  initElements() { this.ipInputEl = document.getElementById('ipInput'); this.analyzeBtn = document.getElementById('analyzeBtn'); this.resultsEl = document.getElementById('results'); this.ipv4El = document.getElementById('ipv4'); this.decimalEl = document.getElementById('decimal'); this.cidrEl = document.getElementById('cidr'); this.subnetEl = document.getElementById('subnet'); }
+  bindEvents() { this.analyzeBtn.addEventListener('click', () => this.analyze()); this.ipv4El.addEventListener('input', () => this.toDecimal()); this.cidrEl.addEventListener('input', () => this.calcSubnet()); }
+  isValidIp(ip) { const parts = ip.split('.'); if (parts.length !== 4) return false; return parts.every(p => { const n = parseInt(p); return !isNaN(n) && n >= 0 && n <= 255; }); }
+  getIpClass(ip) { const first = parseInt(ip.split('.')[0]); if (first < 128) return 'A'; if (first < 192) return 'B'; if (first < 224) return 'C'; if (first < 240) return 'D (Multicast)'; return 'E (Reserved)'; }
+  isPrivate(ip) { const parts = ip.split('.').map(Number); if (parts[0] === 10) return true; if (parts[0] === 172 && parts[1] >= 16 && parts[1] <= 31) return true; if (parts[0] === 192 && parts[1] === 168) return true; if (parts[0] === 127) return true; return false; }
+  analyze() { const ip = this.ipInputEl.value.trim(); if (!this.isValidIp(ip)) { this.resultsEl.innerHTML = '<div class="result-item"><span class="result-value" style="color:#f87171">Invalid IP address</span></div>'; return; } const results = [ { label: 'IP Address', value: ip }, { label: 'Class', value: this.getIpClass(ip) }, { label: 'Type', value: this.isPrivate(ip) ? 'Private' : 'Public' }, { label: 'Binary', value: ip.split('.').map(o => parseInt(o).toString(2).padStart(8, '0')).join('.') } ]; this.resultsEl.innerHTML = results.map(r => `<div class="result-item"><span class="result-label">${r.label}</span><span class="result-value">${r.value}</span></div>`).join(''); }
+  toDecimal() { const ip = this.ipv4El.value.trim(); if (!this.isValidIp(ip)) { this.decimalEl.textContent = ''; return; } const dec = ip.split('.').reduce((acc, octet) => (acc << 8) + parseInt(octet), 0) >>> 0; this.decimalEl.textContent = dec; }
+  calcSubnet() { const cidr = this.cidrEl.value.trim(); const match = cidr.match(/^(\d+\.\d+\.\d+\.\d+)\/(\d+)$/); if (!match) { this.subnetEl.textContent = ''; return; } const bits = parseInt(match[2]); const hosts = Math.pow(2, 32 - bits) - 2; this.subnetEl.textContent = `${hosts > 0 ? hosts : 0} hosts`; }
+}
+document.addEventListener('DOMContentLoaded', () => new IpLookup());

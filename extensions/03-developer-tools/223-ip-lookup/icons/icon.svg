@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs><linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#f59e0b"/><stop offset="100%" style="stop-color:#d97706"/></linearGradient></defs>
+  <circle cx="64" cy="64" r="60" fill="url(#grad)"/>
+  <circle cx="64" cy="64" r="35" fill="none" stroke="white" stroke-width="3"/>
+  <ellipse cx="64" cy="64" rx="15" ry="35" fill="none" stroke="white" stroke-width="3"/>
+  <path d="M29 64 L99 64" stroke="white" stroke-width="3"/>
+  <path d="M64 29 L64 99" stroke="white" stroke-width="3"/>
+</svg>
