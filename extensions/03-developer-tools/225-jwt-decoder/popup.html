@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>JWT Decoder</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <div class="container">
+    <header><h1>JWT Decoder</h1><div class="header-sub">Decode JSON Web Tokens</div></header>
+    <div class="jwt-form"><textarea id="jwtInput" placeholder="Paste JWT token here..."></textarea></div>
+    <div class="actions"><button id="decodeBtn" class="action-btn">Decode</button></div>
+    <div id="status" class="status"></div>
+    <div class="decoded">
+      <div class="section"><div class="section-title">Header</div><pre id="header"></pre></div>
+      <div class="section"><div class="section-title">Payload</div><pre id="payload"></pre></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

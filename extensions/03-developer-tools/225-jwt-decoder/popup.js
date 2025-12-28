@@ -1,0 +1,10 @@
+// JWT Decoder - Popup Script
+class JwtDecoder {
+  constructor() { this.initElements(); this.bindEvents(); }
+  initElements() { this.jwtEl = document.getElementById('jwtInput'); this.decodeBtn = document.getElementById('decodeBtn'); this.statusEl = document.getElementById('status'); this.headerEl = document.getElementById('header'); this.payloadEl = document.getElementById('payload'); }
+  bindEvents() { this.decodeBtn.addEventListener('click', () => this.decode()); this.jwtEl.addEventListener('input', () => this.decode()); }
+  setStatus(msg, type) { this.statusEl.textContent = msg; this.statusEl.className = 'status ' + type; }
+  base64UrlDecode(str) { str = str.replace(/-/g, '+').replace(/_/g, '/'); const pad = str.length % 4; if (pad) str += '='.repeat(4 - pad); return decodeURIComponent(atob(str).split('').map(c => '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2)).join('')); }
+  decode() { const jwt = this.jwtEl.value.trim(); if (!jwt) { this.headerEl.textContent = ''; this.payloadEl.textContent = ''; this.statusEl.textContent = ''; return; } const parts = jwt.split('.'); if (parts.length !== 3) { this.setStatus('Invalid JWT format (should have 3 parts)', 'error'); this.headerEl.textContent = ''; this.payloadEl.textContent = ''; return; } try { const header = JSON.parse(this.base64UrlDecode(parts[0])); const payload = JSON.parse(this.base64UrlDecode(parts[1])); this.headerEl.textContent = JSON.stringify(header, null, 2); this.payloadEl.textContent = JSON.stringify(payload, null, 2); if (payload.exp) { const exp = new Date(payload.exp * 1000); const expired = exp < new Date(); this.setStatus(expired ? `Expired: ${exp.toLocaleString()}` : `Expires: ${exp.toLocaleString()}`, expired ? 'error' : 'success'); } else { this.setStatus('Decoded successfully', 'success'); } } catch (e) { this.setStatus('Error decoding: ' + e.message, 'error'); this.headerEl.textContent = ''; this.payloadEl.textContent = ''; } }
+}
+document.addEventListener('DOMContentLoaded', () => new JwtDecoder());
