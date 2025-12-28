@@ -1,0 +1,16 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Monaco', 'Menlo', monospace; font-size: 13px; background: linear-gradient(180deg, #1e1e1e 0%, #2d2d2d 100%); color: #d4d4d4; }
+.container { width: 360px; min-height: 450px; }
+header { text-align: center; padding: 12px 16px; background: linear-gradient(135deg, #facc15 0%, #eab308 100%); color: #1e1e1e; }
+header h1 { font-size: 18px; font-weight: 600; }
+.header-sub { font-size: 11px; opacity: 0.7; margin-top: 4px; }
+.search-box { padding: 10px 16px; }
+.search-box input { width: 100%; padding: 8px 10px; border: 2px solid #3c3c3c; border-radius: 6px; font-family: inherit; font-size: 11px; background: #252526; color: #fef08a; }
+.search-box input:focus { outline: none; border-color: #facc15; }
+.tabs { display: flex; padding: 0 16px 8px; gap: 4px; overflow-x: auto; }
+.tab { padding: 6px 10px; border: none; border-radius: 4px; font-size: 14px; cursor: pointer; background: #3c3c3c; }
+.tab.active { background: #facc15; }
+.emoji-grid { padding: 0 16px 16px; display: grid; grid-template-columns: repeat(8, 1fr); gap: 4px; max-height: 280px; overflow-y: auto; }
+.emoji { font-size: 22px; text-align: center; padding: 6px; cursor: pointer; border-radius: 4px; transition: background 0.2s; }
+.emoji:hover { background: #3c3c3c; }
+.copied { padding: 4px 16px; font-size: 10px; color: #22c55e; text-align: center; min-height: 20px; }
