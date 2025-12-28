@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Border Radius Generator</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <div class="container">
+    <header><h1>Border Radius</h1><div class="header-sub">CSS radius generator</div></header>
+    <div class="preview-area"><div id="preview" class="preview-box"></div></div>
+    <div class="controls">
+      <div class="control-row"><label>Top Left:</label><input type="range" id="tl" min="0" max="100" value="20"><span id="tlLabel">20px</span></div>
+      <div class="control-row"><label>Top Right:</label><input type="range" id="tr" min="0" max="100" value="20"><span id="trLabel">20px</span></div>
+      <div class="control-row"><label>Bottom Right:</label><input type="range" id="br" min="0" max="100" value="20"><span id="brLabel">20px</span></div>
+      <div class="control-row"><label>Bottom Left:</label><input type="range" id="bl" min="0" max="100" value="20"><span id="blLabel">20px</span></div>
+      <div class="control-row"><label>Link All:</label><input type="checkbox" id="linkAll" checked></div>
+    </div>
+    <div class="output"><textarea id="cssOutput" readonly></textarea></div>
+    <div class="actions"><button id="copyBtn" class="action-btn">Copy CSS</button></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
