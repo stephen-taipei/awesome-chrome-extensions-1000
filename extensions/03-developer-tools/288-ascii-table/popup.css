@@ -1,0 +1,15 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Monaco', 'Menlo', monospace; font-size: 13px; background: linear-gradient(180deg, #1e1e1e 0%, #2d2d2d 100%); color: #d4d4d4; }
+.container { width: 420px; min-height: 500px; }
+header { text-align: center; padding: 12px 16px; background: linear-gradient(135deg, #84cc16 0%, #65a30d 100%); color: white; }
+header h1 { font-size: 18px; font-weight: 600; }
+.header-sub { font-size: 11px; opacity: 0.9; margin-top: 4px; }
+.search-box { padding: 12px 16px; }
+.search-box input { width: 100%; padding: 8px 10px; border: 2px solid #3c3c3c; border-radius: 6px; font-family: inherit; font-size: 11px; background: #252526; color: #bef264; }
+.search-box input:focus { outline: none; border-color: #84cc16; }
+.ascii-table { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; padding: 0 16px 16px; max-height: 380px; overflow-y: auto; }
+.ascii-item { background: #252526; border-radius: 4px; padding: 6px; text-align: center; cursor: pointer; }
+.ascii-item:hover { background: #333; }
+.ascii-char { font-size: 16px; color: #a3e635; }
+.ascii-dec { font-size: 9px; color: #9ca3af; }
+.ascii-hex { font-size: 9px; color: #84cc16; }
