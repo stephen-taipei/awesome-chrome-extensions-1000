@@ -1,0 +1,15 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 14px; background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%); color: #e0e0e0; }
+.container { width: 320px; }
+header { text-align: center; padding: 12px; background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: white; }
+header h1 { font-size: 18px; font-weight: 600; }
+.content { padding: 12px; text-align: center; }
+.stats { display: flex; justify-content: space-around; margin-bottom: 12px; font-size: 13px; color: #9ca3af; }
+.stats b { color: #fbbf24; }
+.board { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin-bottom: 12px; }
+.card { width: 65px; height: 65px; background: #1e293b; border: none; border-radius: 8px; font-size: 24px; cursor: pointer; transition: all 0.3s; }
+.card:hover { background: #334155; }
+.card.flipped, .card.matched { background: #374151; }
+.card.matched { background: #166534; cursor: default; }
+#newGame { background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: white; border: none; padding: 10px 24px; border-radius: 6px; font-size: 13px; cursor: pointer; }
+.win-message { font-size: 16px; font-weight: bold; color: #4ade80; margin-bottom: 12px; }
