@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Escape/Unescape</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <div class="container">
+    <header><h1>Escape/Unescape</h1><div class="header-sub">String encoding tools</div></header>
+    <div class="section"><textarea id="input" placeholder="Enter text..."></textarea></div>
+    <div class="type-select"><select id="escapeType"><option value="html">HTML Entities</option><option value="url">URL Encode</option><option value="json">JSON String</option><option value="unicode">Unicode</option><option value="backslash">Backslash</option></select></div>
+    <div class="actions">
+      <button id="escapeBtn" class="action-btn">Escape ↓</button>
+      <button id="unescapeBtn" class="action-btn">Unescape ↑</button>
+    </div>
+    <div class="section"><textarea id="output" readonly placeholder="Result..."></textarea></div>
+    <div class="actions"><button id="copyBtn" class="action-btn secondary">Copy Result</button></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
