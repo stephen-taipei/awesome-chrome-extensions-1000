@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Mock Data Generator</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <div class="container">
+    <header><h1>Mock Data</h1><div class="header-sub">Generate fake data</div></header>
+    <div class="controls">
+      <div class="control-row"><label>Type:</label><select id="dataType"><option value="user">User</option><option value="address">Address</option><option value="product">Product</option><option value="email">Email</option><option value="phone">Phone</option><option value="uuid">UUID</option></select></div>
+      <div class="control-row"><label>Count:</label><input type="number" id="count" value="5" min="1" max="50"></div>
+      <button id="generateBtn" class="action-btn">Generate</button>
+    </div>
+    <div class="output-section"><div class="section-title">Generated Data</div><textarea id="output" readonly></textarea></div>
+    <div class="actions"><button id="copyBtn" class="action-btn secondary">Copy JSON</button></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
