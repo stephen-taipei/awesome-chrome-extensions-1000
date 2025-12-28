@@ -1,0 +1,13 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 14px; background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%); color: #e0e0e0; }
+.container { width: 280px; }
+header { text-align: center; padding: 12px; background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%); color: white; }
+header h1 { font-size: 18px; font-weight: 600; }
+.header-sub { font-size: 11px; opacity: 0.9; margin-top: 2px; }
+.content { padding: 12px; text-align: center; }
+.stats { display: flex; justify-content: space-between; margin-bottom: 12px; font-size: 14px; font-weight: 600; }
+.arena { position: relative; width: 256px; height: 220px; background: #1e293b; border-radius: 12px; overflow: hidden; }
+.player { position: absolute; font-size: 28px; transition: all 0.1s; }
+.arrow { position: absolute; font-size: 24px; }
+.start-msg { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 14px; font-weight: 600; color: #94a3b8; text-align: center; }
+.start-msg.hidden { display: none; }
