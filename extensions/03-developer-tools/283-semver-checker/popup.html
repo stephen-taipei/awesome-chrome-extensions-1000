@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>SemVer Checker</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <div class="container">
+    <header><h1>SemVer Checker</h1><div class="header-sub">Version comparison</div></header>
+    <div class="content">
+      <div class="inputs">
+        <input type="text" id="v1" placeholder="1.0.0">
+        <select id="op"><option>></option><option>>=</option><option><</option><option><=</option><option>=</option></select>
+        <input type="text" id="v2" placeholder="2.0.0">
+      </div>
+      <button id="compare">Compare</button>
+      <div id="result" class="result"></div>
+      <div class="bump-section">
+        <h3>Version Bump</h3>
+        <input type="text" id="version" placeholder="1.0.0">
+        <div class="bump-btns">
+          <button class="bump" data-type="major">Major</button>
+          <button class="bump" data-type="minor">Minor</button>
+          <button class="bump" data-type="patch">Patch</button>
+        </div>
+        <div id="bumped" class="bumped"></div>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
