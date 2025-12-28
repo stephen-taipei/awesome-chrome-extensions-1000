@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Gradient Generator</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <div class="container">
+    <header><h1>Gradient Generator</h1><div class="header-sub">Create CSS gradients</div></header>
+    <div id="preview" class="preview"></div>
+    <div class="controls">
+      <div class="control-row"><label>Type:</label><select id="gradientType"><option value="linear">Linear</option><option value="radial">Radial</option></select></div>
+      <div class="control-row"><label>Angle:</label><input type="range" id="angle" min="0" max="360" value="90"><span id="angleLabel">90°</span></div>
+      <div class="control-row"><label>Color 1:</label><input type="color" id="color1" value="#667eea"></div>
+      <div class="control-row"><label>Color 2:</label><input type="color" id="color2" value="#764ba2"></div>
+    </div>
+    <div class="output"><div class="section-title">CSS Code</div><textarea id="cssOutput" readonly></textarea></div>
+    <div class="actions"><button id="copyBtn" class="action-btn">Copy CSS</button></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

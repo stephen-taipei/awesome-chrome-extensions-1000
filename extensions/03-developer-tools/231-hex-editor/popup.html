@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Hex Editor</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <div class="container">
+    <header><h1>Hex Editor</h1><div class="header-sub">Text ↔ Hex converter</div></header>
+    <div class="section"><div class="section-title">Text</div><textarea id="textInput" placeholder="Enter text..."></textarea></div>
+    <div class="actions">
+      <button id="toHexBtn" class="action-btn">Text → Hex</button>
+      <button id="toTextBtn" class="action-btn">Hex → Text</button>
+    </div>
+    <div class="section"><div class="section-title">Hex</div><textarea id="hexInput" placeholder="Enter hex values (e.g., 48 65 6C 6C 6F)..."></textarea></div>
+    <div class="actions"><button id="copyBtn" class="action-btn secondary">Copy Hex</button></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

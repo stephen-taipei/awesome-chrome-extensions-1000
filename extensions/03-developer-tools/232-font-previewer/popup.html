@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Font Previewer</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <div class="container">
+    <header><h1>Font Previewer</h1><div class="header-sub">Preview system fonts</div></header>
+    <div class="controls">
+      <input type="text" id="previewText" placeholder="Enter preview text..." value="The quick brown fox jumps">
+      <input type="range" id="fontSize" min="12" max="48" value="18"><span id="sizeLabel">18px</span>
+    </div>
+    <div id="fontList" class="font-list"></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+{
+  "manifest_version": 3, "name": "Hex Editor", "version": "1.0.0", "description": "View and edit hex values",
+  "permissions": ["storage"],
+  "action": { "default_title": "Hex Editor", "default_popup": "popup.html", "default_icon": { "16": "icons/icon16.png", "48": "icons/icon48.png", "128": "icons/icon128.png" } },
+  "icons": { "16": "icons/icon16.png", "48": "icons/icon48.png", "128": "icons/icon128.png" }
+}
