@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Query String Parser</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <div class="container">
+    <header><h1>Query String Parser</h1><div class="header-sub">Parse & build query strings</div></header>
+    <div class="input-section"><textarea id="urlInput" placeholder="Paste URL or query string here..."></textarea></div>
+    <div class="actions">
+      <button id="parseBtn" class="action-btn">Parse</button>
+      <button id="buildBtn" class="action-btn">Build</button>
+      <button id="copyBtn" class="action-btn secondary">Copy</button>
+    </div>
+    <div class="output-section"><div class="section-title">Parameters</div><div id="paramsContainer" class="params-container"></div></div>
+    <div class="output-section"><div class="section-title">Result</div><textarea id="resultOutput" readonly placeholder="Result..."></textarea></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
