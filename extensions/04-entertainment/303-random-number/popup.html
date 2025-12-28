@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Random Number</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <div class="container">
+    <header><h1>Random Number</h1><div class="header-sub">Generate random numbers</div></header>
+    <div class="content">
+      <div class="range-config">
+        <div class="input-row"><label>Min:</label><input type="number" id="minVal" value="1"></div>
+        <div class="input-row"><label>Max:</label><input type="number" id="maxVal" value="100"></div>
+        <div class="input-row"><label>Count:</label><input type="number" id="count" value="1" min="1" max="20"></div>
+      </div>
+      <button id="generateBtn">Generate</button>
+      <div id="result" class="result"></div>
+      <div id="history" class="history"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
