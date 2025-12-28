@@ -1,0 +1,25 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 14px; background: linear-gradient(180deg, #faf8ef 0%, #eee4da 100%); color: #776e65; }
+.container { width: 300px; }
+header { text-align: center; padding: 10px; background: linear-gradient(135deg, #edc22e 0%, #e5b821 100%); color: white; }
+header h1 { font-size: 24px; font-weight: 700; }
+.content { padding: 10px; text-align: center; }
+.stats { display: flex; justify-content: space-around; font-size: 13px; margin-bottom: 8px; }
+.stats b { color: #8f7a66; }
+.grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; background: #bbada0; padding: 6px; border-radius: 6px; margin-bottom: 10px; }
+.tile { width: 60px; height: 60px; background: #cdc1b4; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 22px; font-weight: bold; color: #776e65; }
+.tile[data-val="2"] { background: #eee4da; }
+.tile[data-val="4"] { background: #ede0c8; }
+.tile[data-val="8"] { background: #f2b179; color: white; }
+.tile[data-val="16"] { background: #f59563; color: white; }
+.tile[data-val="32"] { background: #f67c5f; color: white; }
+.tile[data-val="64"] { background: #f65e3b; color: white; }
+.tile[data-val="128"] { background: #edcf72; color: white; font-size: 18px; }
+.tile[data-val="256"] { background: #edcc61; color: white; font-size: 18px; }
+.tile[data-val="512"] { background: #edc850; color: white; font-size: 18px; }
+.tile[data-val="1024"] { background: #edc53f; color: white; font-size: 14px; }
+.tile[data-val="2048"] { background: #edc22e; color: white; font-size: 14px; }
+.controls { margin-bottom: 10px; }
+.ctrl { width: 40px; height: 40px; background: #8f7a66; border: none; color: white; border-radius: 6px; font-size: 18px; cursor: pointer; margin: 2px; }
+.ctrl-row { display: flex; justify-content: center; }
+#newGame { background: #8f7a66; color: white; border: none; padding: 10px 24px; border-radius: 6px; font-size: 13px; cursor: pointer; }
