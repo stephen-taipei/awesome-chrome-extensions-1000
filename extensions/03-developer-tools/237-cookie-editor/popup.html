@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Cookie Editor</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <div class="container">
+    <header><h1>Cookie Editor</h1><div class="header-sub">View & manage cookies</div></header>
+    <div class="domain-info"><span id="domain">Loading...</span><button id="refreshBtn" class="small-btn">Refresh</button></div>
+    <div id="cookieList" class="cookie-list"></div>
+    <div class="add-section">
+      <div class="section-title">Add Cookie</div>
+      <div class="add-form">
+        <input type="text" id="newName" placeholder="Name">
+        <input type="text" id="newValue" placeholder="Value">
+        <button id="addBtn" class="action-btn">Add</button>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
