@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>JSON Schema Validator</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <div class="container">
+    <header><h1>Schema Validator</h1><div class="header-sub">Validate JSON structure</div></header>
+    <div class="section"><div class="section-title">JSON Data</div><textarea id="jsonInput" placeholder='{"name": "John", "age": 30}'></textarea></div>
+    <div class="section"><div class="section-title">JSON Schema</div><textarea id="schemaInput" placeholder='{"type": "object", "properties": {...}}'></textarea></div>
+    <div class="actions"><button id="validateBtn" class="action-btn">Validate</button></div>
+    <div class="result" id="result"></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
