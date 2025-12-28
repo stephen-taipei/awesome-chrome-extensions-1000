@@ -1,0 +1,15 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 14px; background: linear-gradient(180deg, #8b4513 0%, #654321 100%); color: #e0e0e0; }
+.container { width: 300px; }
+header { text-align: center; padding: 10px; background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%); color: white; }
+header h1 { font-size: 18px; font-weight: 600; }
+.content { padding: 12px; text-align: center; }
+.stats { display: flex; justify-content: space-around; font-size: 14px; color: #fbbf24; margin-bottom: 12px; background: rgba(0,0,0,0.3); padding: 8px; border-radius: 8px; }
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 12px; }
+.hole { width: 80px; height: 70px; background: linear-gradient(180deg, #2d1f14 0%, #1a120a 100%); border-radius: 50%; display: flex; align-items: flex-end; justify-content: center; overflow: hidden; cursor: pointer; border: 3px solid #4a3728; }
+.hole .mole { width: 50px; height: 50px; background: #8b5a2b; border-radius: 50% 50% 0 0; transform: translateY(50px); transition: transform 0.1s; position: relative; }
+.hole .mole::before { content: ''; position: absolute; top: 12px; left: 10px; width: 8px; height: 8px; background: #000; border-radius: 50%; box-shadow: 22px 0 0 #000; }
+.hole .mole::after { content: ''; position: absolute; top: 25px; left: 20px; width: 10px; height: 8px; background: #654321; border-radius: 50%; }
+.hole.active .mole { transform: translateY(0); }
+.hole.whacked .mole { background: #f87171; }
+#startBtn { background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%); color: white; border: none; padding: 12px 28px; border-radius: 8px; font-size: 14px; cursor: pointer; }
