@@ -1,0 +1,11 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Monaco', 'Menlo', monospace; font-size: 13px; background: linear-gradient(180deg, #1e1e1e 0%, #2d2d2d 100%); color: #d4d4d4; }
+.container { width: 400px; min-height: 480px; }
+header { text-align: center; padding: 12px 16px; background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%); color: white; }
+header h1 { font-size: 18px; font-weight: 600; }
+.header-sub { font-size: 11px; opacity: 0.9; margin-top: 4px; }
+.content { padding: 16px; }
+.flow-item { background: #252526; border-radius: 6px; padding: 12px; margin-bottom: 10px; }
+.flow-name { color: #818cf8; font-weight: 700; font-size: 12px; margin-bottom: 4px; }
+.flow-desc { color: #9ca3af; font-size: 10px; line-height: 1.5; }
+.flow-use { color: #a5b4fc; font-size: 10px; margin-top: 6px; font-style: italic; }
