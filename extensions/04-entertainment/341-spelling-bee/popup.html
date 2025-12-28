@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Spelling Bee</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <div class="container">
+    <header><h1>Spelling Bee</h1><div class="header-sub">Spell it right!</div></header>
+    <div class="content">
+      <div class="stats"><span>Score: <b id="score">0</b></span><span>Best: <b id="best">0</b></span></div>
+      <div id="prompt" class="prompt"></div>
+      <input type="text" id="input" placeholder="Type the word..." autocomplete="off">
+      <div id="feedback" class="feedback"></div>
+      <button id="speakBtn">🔊 Hear Again</button>
+      <button id="skipBtn">Skip Word</button>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

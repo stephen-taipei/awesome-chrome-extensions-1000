@@ -1,0 +1,18 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 14px; background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%); color: #e0e0e0; }
+.container { width: 280px; }
+header { text-align: center; padding: 12px; background: linear-gradient(135deg, #1a1a2e 0%, #334155 100%); color: white; }
+header h1 { font-size: 18px; font-weight: 600; }
+.header-sub { font-size: 11px; opacity: 0.9; margin-top: 2px; }
+.content { padding: 12px; text-align: center; }
+.stats { display: flex; justify-content: space-around; font-size: 14px; color: #94a3b8; margin-bottom: 12px; }
+.game { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; height: 280px; background: #1e293b; border-radius: 8px; overflow: hidden; }
+.row { display: contents; }
+.tile { background: #f1f5f9; cursor: pointer; transition: background 0.1s; }
+.tile.black { background: #1e293b; }
+.tile.black:hover { background: #334155; }
+.tile.hit { background: #22c55e !important; }
+.tile.miss { background: #ef4444 !important; }
+.game-over { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0,0,0,0.9); padding: 20px; border-radius: 12px; text-align: center; }
+.game-over div { font-size: 18px; margin-bottom: 12px; color: #ef4444; }
+#startBtn, #restartBtn { width: 100%; background: linear-gradient(135deg, #1a1a2e 0%, #334155 100%); color: white; border: none; padding: 10px; border-radius: 8px; font-size: 14px; cursor: pointer; margin-top: 12px; }
