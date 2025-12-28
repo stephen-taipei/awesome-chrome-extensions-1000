@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Local Storage Viewer</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <div class="container">
+    <header><h1>Local Storage</h1><div class="header-sub">View page storage data</div></header>
+    <div class="tabs"><button class="tab active" data-tab="local">localStorage</button><button class="tab" data-tab="session">sessionStorage</button></div>
+    <div class="toolbar"><span id="count">0 items</span><button id="refreshBtn" class="small-btn">Refresh</button></div>
+    <div id="storageList" class="storage-list"></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
