@@ -1,0 +1,10 @@
+// Box Shadow Generator - Popup Script
+class BoxShadowGenerator {
+  constructor() { this.initElements(); this.bindEvents(); this.update(); }
+  initElements() { this.preview = document.getElementById('preview'); this.offsetX = document.getElementById('offsetX'); this.offsetY = document.getElementById('offsetY'); this.blur = document.getElementById('blur'); this.spread = document.getElementById('spread'); this.shadowColor = document.getElementById('shadowColor'); this.inset = document.getElementById('inset'); this.cssOutput = document.getElementById('cssOutput'); this.copyBtn = document.getElementById('copyBtn'); this.labels = { offsetX: document.getElementById('offsetXLabel'), offsetY: document.getElementById('offsetYLabel'), blur: document.getElementById('blurLabel'), spread: document.getElementById('spreadLabel') }; }
+  bindEvents() { [this.offsetX, this.offsetY, this.blur, this.spread, this.shadowColor, this.inset].forEach(el => el.addEventListener('input', () => this.update())); this.copyBtn.addEventListener('click', () => this.copy()); }
+  hexToRgba(hex, alpha = 0.3) { const r = parseInt(hex.slice(1, 3), 16); const g = parseInt(hex.slice(3, 5), 16); const b = parseInt(hex.slice(5, 7), 16); return `rgba(${r}, ${g}, ${b}, ${alpha})`; }
+  update() { const x = this.offsetX.value; const y = this.offsetY.value; const b = this.blur.value; const s = this.spread.value; const c = this.hexToRgba(this.shadowColor.value, 0.4); const i = this.inset.checked ? 'inset ' : ''; this.labels.offsetX.textContent = x + 'px'; this.labels.offsetY.textContent = y + 'px'; this.labels.blur.textContent = b + 'px'; this.labels.spread.textContent = s + 'px'; const shadow = `${i}${x}px ${y}px ${b}px ${s}px ${c}`; this.preview.style.boxShadow = shadow; this.cssOutput.value = `box-shadow: ${shadow};`; }
+  async copy() { await navigator.clipboard.writeText(this.cssOutput.value); this.copyBtn.textContent = 'Copied!'; setTimeout(() => { this.copyBtn.textContent = 'Copy CSS'; }, 1500); }
+}
+document.addEventListener('DOMContentLoaded', () => new BoxShadowGenerator());

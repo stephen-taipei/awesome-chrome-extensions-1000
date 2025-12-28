@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Box Shadow Generator</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <div class="container">
+    <header><h1>Box Shadow</h1><div class="header-sub">CSS shadow generator</div></header>
+    <div class="preview-area"><div id="preview" class="preview-box"></div></div>
+    <div class="controls">
+      <div class="control-row"><label>X Offset:</label><input type="range" id="offsetX" min="-50" max="50" value="5"><span id="offsetXLabel">5px</span></div>
+      <div class="control-row"><label>Y Offset:</label><input type="range" id="offsetY" min="-50" max="50" value="5"><span id="offsetYLabel">5px</span></div>
+      <div class="control-row"><label>Blur:</label><input type="range" id="blur" min="0" max="100" value="15"><span id="blurLabel">15px</span></div>
+      <div class="control-row"><label>Spread:</label><input type="range" id="spread" min="-50" max="50" value="0"><span id="spreadLabel">0px</span></div>
+      <div class="control-row"><label>Color:</label><input type="color" id="shadowColor" value="#000000"><label>Inset:</label><input type="checkbox" id="inset"></div>
+    </div>
+    <div class="output"><textarea id="cssOutput" readonly></textarea></div>
+    <div class="actions"><button id="copyBtn" class="action-btn">Copy CSS</button></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
