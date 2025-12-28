@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs><linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#06b6d4"/><stop offset="100%" style="stop-color:#0891b2"/></linearGradient></defs>
+  <rect x="4" y="4" width="120" height="120" rx="16" fill="url(#grad)"/>
+  <text x="20" y="40" font-family="Arial" font-size="16" font-weight="bold" fill="white">W O R</text>
+  <text x="20" y="60" font-family="Arial" font-size="16" font-weight="bold" fill="white">A B D</text>
+  <text x="20" y="80" font-family="Arial" font-size="16" font-weight="bold" fill="#22c55e">C A T</text>
+  <text x="20" y="100" font-family="Arial" font-size="16" font-weight="bold" fill="white">X Y Z</text>
+</svg>

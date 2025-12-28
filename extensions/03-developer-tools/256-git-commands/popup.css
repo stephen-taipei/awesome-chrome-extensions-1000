@@ -1,0 +1,14 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Monaco', 'Menlo', monospace; font-size: 13px; background: linear-gradient(180deg, #1e1e1e 0%, #2d2d2d 100%); color: #d4d4d4; }
+.container { width: 420px; min-height: 500px; }
+header { text-align: center; padding: 12px 16px; background: linear-gradient(135deg, #f97316 0%, #ea580c 100%); color: white; }
+header h1 { font-size: 18px; font-weight: 600; }
+.header-sub { font-size: 11px; opacity: 0.9; margin-top: 4px; }
+.search-box { padding: 12px 16px; }
+.search-box input { width: 100%; padding: 8px 10px; border: 2px solid #3c3c3c; border-radius: 6px; font-family: inherit; font-size: 11px; background: #252526; color: #fdba74; }
+.search-box input:focus { outline: none; border-color: #f97316; }
+.cmd-list { padding: 0 16px 16px; max-height: 400px; overflow-y: auto; }
+.cmd-item { background: #252526; border: 1px solid #3c3c3c; border-radius: 6px; padding: 10px; margin-bottom: 8px; cursor: pointer; }
+.cmd-item:hover { border-color: #f97316; }
+.cmd-name { font-size: 11px; font-weight: 600; color: #fb923c; margin-bottom: 4px; }
+.cmd-desc { font-size: 10px; color: #9ca3af; }

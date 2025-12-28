@@ -1,0 +1,15 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 14px; background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%); color: #e0e0e0; }
+.container { width: 320px; }
+header { text-align: center; padding: 12px; background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%); color: white; }
+header h1 { font-size: 18px; font-weight: 600; }
+.header-sub { font-size: 11px; opacity: 0.9; margin-top: 2px; }
+.content { padding: 12px; }
+.words { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; justify-content: center; }
+.words span { background: #334155; padding: 4px 8px; border-radius: 4px; font-size: 11px; }
+.words span.found { background: #22c55e; text-decoration: line-through; }
+.grid { display: grid; grid-template-columns: repeat(8, 1fr); gap: 2px; margin-bottom: 12px; }
+.cell { width: 32px; height: 32px; background: #334155; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 14px; cursor: pointer; border-radius: 4px; user-select: none; }
+.cell.selected { background: #06b6d4; color: white; }
+.cell.found { background: #22c55e; color: white; }
+#newBtn { width: 100%; background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%); color: white; border: none; padding: 10px; border-radius: 8px; font-size: 14px; cursor: pointer; }
