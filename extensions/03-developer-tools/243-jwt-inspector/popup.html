@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>JWT Inspector</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <div class="container">
+    <header><h1>JWT Inspector</h1><div class="header-sub">Decode & analyze tokens</div></header>
+    <div class="section"><textarea id="tokenInput" placeholder="Paste JWT token here..."></textarea></div>
+    <div class="actions"><button id="decodeBtn" class="action-btn">Decode</button></div>
+    <div class="parts">
+      <div class="part"><div class="part-title header-color">Header</div><pre id="headerOutput">---</pre></div>
+      <div class="part"><div class="part-title payload-color">Payload</div><pre id="payloadOutput">---</pre></div>
+      <div class="part"><div class="part-title signature-color">Signature</div><pre id="signatureOutput">---</pre></div>
+    </div>
+    <div class="status" id="status"></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
