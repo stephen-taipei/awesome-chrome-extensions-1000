@@ -1,0 +1,9 @@
+// Text Case Converter - Popup Script
+class TextCaseConverter {
+  constructor() { this.cases = [{name:'UPPER',fn:s=>s.toUpperCase()},{name:'lower',fn:s=>s.toLowerCase()},{name:'Title',fn:s=>s.replace(/\w\S*/g,t=>t.charAt(0).toUpperCase()+t.substr(1).toLowerCase())},{name:'Sentence',fn:s=>s.charAt(0).toUpperCase()+s.slice(1).toLowerCase()},{name:'camelCase',fn:s=>s.replace(/(?:^\w|[A-Z]|\b\w)/g,(c,i)=>i===0?c.toLowerCase():c.toUpperCase()).replace(/\s+/g,'')},{name:'PascalCase',fn:s=>s.replace(/(?:^\w|[A-Z]|\b\w)/g,c=>c.toUpperCase()).replace(/\s+/g,'')},{name:'snake_case',fn:s=>s.toLowerCase().replace(/\s+/g,'_')},{name:'kebab-case',fn:s=>s.toLowerCase().replace(/\s+/g,'-')},{name:'CONSTANT',fn:s=>s.toUpperCase().replace(/\s+/g,'_')}]; this.initElements(); this.renderButtons(); this.bindEvents(); }
+  initElements() { this.input = document.getElementById('input'); this.output = document.getElementById('output'); this.buttons = document.getElementById('buttons'); this.copyBtn = document.getElementById('copyBtn'); }
+  renderButtons() { this.buttons.innerHTML = this.cases.map(c => `<button class="case-btn" data-case="${c.name}">${c.name}</button>`).join(''); }
+  bindEvents() { this.buttons.addEventListener('click', (e) => { if (e.target.classList.contains('case-btn')) { const caseName = e.target.dataset.case; const caseObj = this.cases.find(c => c.name === caseName); if (caseObj) this.output.value = caseObj.fn(this.input.value); } }); this.copyBtn.addEventListener('click', () => this.copy()); }
+  async copy() { if (!this.output.value) return; await navigator.clipboard.writeText(this.output.value); this.copyBtn.textContent = 'Copied!'; setTimeout(() => { this.copyBtn.textContent = 'Copy Result'; }, 1500); }
+}
+document.addEventListener('DOMContentLoaded', () => new TextCaseConverter());
