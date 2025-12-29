@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Letter Scramble</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <div class="container">
+    <header><h1>Letter Scramble</h1><div class="header-sub">Unscramble the word!</div></header>
+    <div class="content">
+      <div class="stats"><span>Score: <span id="score">0</span></span><span>Best: <span id="best">0</span></span></div>
+      <div class="scrambled" id="scrambled">READY?</div>
+      <input type="text" id="input" placeholder="Type the word..." autocomplete="off">
+      <div id="message" class="message"></div>
+      <div class="buttons">
+        <button id="skipBtn" class="skip-btn">Skip</button>
+        <button id="startBtn">Start Game</button>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

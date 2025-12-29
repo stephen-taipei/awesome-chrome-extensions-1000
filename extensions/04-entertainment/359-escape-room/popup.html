@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Escape Room</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <div class="container">
+    <header><h1>Escape Room</h1><div class="header-sub">Solve puzzles to escape!</div></header>
+    <div class="content">
+      <div class="stats"><span>Room: <b id="room">1</b>/5</span><span>Escapes: <b id="escapes">0</b></span></div>
+      <div class="room" id="room-display"></div>
+      <div class="puzzle" id="puzzle"></div>
+      <input type="text" id="input" placeholder="Enter code..." autocomplete="off">
+      <div id="message" class="message"></div>
+      <button id="submitBtn">Try Code</button>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

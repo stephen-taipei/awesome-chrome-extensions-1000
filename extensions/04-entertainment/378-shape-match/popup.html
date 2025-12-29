@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Shape Match</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <div class="container">
+    <header><h1>Shape Match</h1><div class="header-sub">Does it match?</div></header>
+    <div class="content">
+      <div class="stats"><span>Score: <span id="score">0</span></span><span>Best: <span id="best">0</span></span></div>
+      <div class="timer-bar"><div class="timer-fill" id="timerFill"></div></div>
+      <div class="shapes">
+        <div class="shape" id="shape1"></div>
+        <div class="shape" id="shape2"></div>
+      </div>
+      <div class="buttons">
+        <button class="match-btn no" id="noBtn">✗ Different</button>
+        <button class="match-btn yes" id="yesBtn">✓ Same</button>
+      </div>
+      <div id="message" class="message"></div>
+      <button id="startBtn">Start Game</button>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

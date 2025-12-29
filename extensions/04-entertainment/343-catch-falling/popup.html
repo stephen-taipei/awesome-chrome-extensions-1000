@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Catch Falling</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <div class="container">
+    <header><h1>Catch Falling</h1><div class="header-sub">Move basket with arrows!</div></header>
+    <div class="content">
+      <div class="stats"><span>Score: <b id="score">0</b></span><span>Lives: <b id="lives">3</b></span></div>
+      <div class="game" id="game">
+        <div id="basket" class="basket"></div>
+      </div>
+      <div id="gameOver" class="game-over" style="display:none;">
+        <div>Game Over!</div>
+        <div>Score: <b id="finalScore">0</b></div>
+        <button id="restartBtn">Play Again</button>
+      </div>
+      <button id="startBtn">Start Game</button>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

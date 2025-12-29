@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Card War</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <div class="container">
+    <header><h1>Card War</h1><div class="header-sub">Higher card wins!</div></header>
+    <div class="content">
+      <div class="stats"><span>You: <b id="playerCount">26</b></span><span>CPU: <b id="cpuCount">26</b></span></div>
+      <div class="battlefield">
+        <div class="side">
+          <div class="label">You</div>
+          <div class="card" id="playerCard">?</div>
+        </div>
+        <div class="vs">VS</div>
+        <div class="side">
+          <div class="label">CPU</div>
+          <div class="card" id="cpuCard">?</div>
+        </div>
+      </div>
+      <div id="message" class="message"></div>
+      <button id="playBtn">Draw Card</button>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

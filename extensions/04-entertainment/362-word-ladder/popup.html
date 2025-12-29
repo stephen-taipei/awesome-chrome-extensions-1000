@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Word Ladder</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <div class="container">
+    <header><h1>Word Ladder</h1><div class="header-sub">Change one letter at a time!</div></header>
+    <div class="content">
+      <div class="stats"><span>Steps: <b id="steps">0</b></span><span>Wins: <b id="wins">0</b></span></div>
+      <div class="words">
+        <div class="word start" id="start">????</div>
+        <div class="arrow">↓</div>
+        <div class="ladder" id="ladder"></div>
+        <div class="arrow">↓</div>
+        <div class="word target" id="target">????</div>
+      </div>
+      <input type="text" id="input" maxlength="4" placeholder="Enter word..." autocomplete="off">
+      <div id="message" class="message"></div>
+      <button id="newBtn">New Puzzle</button>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Reflex Game</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <div class="container">
+    <header><h1>Reflex Game</h1><div class="header-sub">Press the right key!</div></header>
+    <div class="content">
+      <div class="stats"><span>Score: <span id="score">0</span></span><span>Best: <span id="best">0</span></span></div>
+      <div class="timer-bar"><div class="timer-fill" id="timerFill"></div></div>
+      <div class="prompt" id="prompt">Press Start</div>
+      <div class="keys">
+        <div class="key" data-key="ArrowLeft">←</div>
+        <div class="key" data-key="ArrowUp">↑</div>
+        <div class="key" data-key="ArrowDown">↓</div>
+        <div class="key" data-key="ArrowRight">→</div>
+      </div>
+      <div id="message" class="message"></div>
+      <button id="startBtn">Start Game</button>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

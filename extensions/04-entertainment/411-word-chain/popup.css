@@ -1,0 +1,17 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 14px; background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%); color: #e0e0e0; }
+.container { width: 280px; }
+header { text-align: center; padding: 12px; background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%); color: white; }
+header h1 { font-size: 18px; font-weight: 600; }
+.header-sub { font-size: 11px; opacity: 0.9; margin-top: 2px; }
+.content { padding: 12px; text-align: center; }
+.stats { font-size: 12px; color: #94a3b8; margin-bottom: 10px; }
+.last-word { font-size: 24px; font-weight: bold; color: #6366f1; min-height: 36px; margin-bottom: 8px; }
+.hint { font-size: 12px; color: #94a3b8; margin-bottom: 10px; }
+.letter { font-size: 18px; font-weight: bold; color: #fbbf24; text-transform: uppercase; }
+#input { width: 100%; padding: 12px; border: 2px solid #2d3748; border-radius: 8px; font-size: 16px; text-align: center; background: #1e293b; color: white; margin-bottom: 10px; }
+#input:focus { outline: none; border-color: #6366f1; }
+.message { min-height: 24px; font-size: 14px; margin-bottom: 12px; }
+.message.success { color: #22c55e; }
+.message.error { color: #ef4444; }
+#newBtn { width: 100%; background: #2d3748; color: white; border: none; padding: 10px; border-radius: 8px; font-size: 14px; cursor: pointer; }

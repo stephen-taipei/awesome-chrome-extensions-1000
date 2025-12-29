@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Word Anagram</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <div class="container">
+    <header><h1>Word Anagram</h1><div class="header-sub">Unscramble the word!</div></header>
+    <div class="content">
+      <div class="stats">Score: <span id="score">0</span> | Streak: <span id="streak">0</span></div>
+      <div id="scrambled" class="scrambled"></div>
+      <input type="text" id="input" placeholder="Type your answer..." autocomplete="off">
+      <div id="message" class="message"></div>
+      <button id="skipBtn">SKIP</button>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

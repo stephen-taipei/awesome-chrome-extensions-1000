@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Tower Stack</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <div class="container">
+    <header><h1>Tower Stack</h1><div class="header-sub">Stack blocks perfectly!</div></header>
+    <div class="content">
+      <div class="stats"><span>Height: <b id="height">0</b></span><span>Best: <b id="best">0</b></span></div>
+      <div class="game" id="game">
+        <div id="moving" class="block moving"></div>
+      </div>
+      <div id="gameOver" class="game-over" style="display:none;">
+        <div>Game Over!</div>
+        <button id="restartBtn">Play Again</button>
+      </div>
+      <button id="dropBtn">Drop Block</button>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

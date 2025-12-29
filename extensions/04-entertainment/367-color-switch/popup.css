@@ -1,0 +1,21 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 14px; background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%); color: #e0e0e0; }
+.container { width: 280px; }
+header { text-align: center; padding: 12px; background: linear-gradient(135deg, #f472b6 0%, #ec4899 100%); color: white; }
+header h1 { font-size: 18px; font-weight: 600; }
+.header-sub { font-size: 11px; opacity: 0.9; margin-top: 2px; }
+.content { padding: 12px; text-align: center; }
+.stats { display: flex; justify-content: space-around; font-size: 14px; color: #f9a8d4; margin-bottom: 12px; }
+.game { position: relative; width: 256px; height: 200px; background: #0f172a; border-radius: 8px; overflow: hidden; margin: 0 auto 12px; }
+.ball { position: absolute; width: 30px; height: 30px; border-radius: 50%; left: 113px; top: 160px; transition: background 0.2s; }
+.gate { position: absolute; width: 100%; height: 20px; top: 40px; display: flex; }
+.gate-part { flex: 1; }
+.colors { display: flex; justify-content: center; gap: 12px; margin-bottom: 12px; }
+.color-btn { width: 44px; height: 44px; border-radius: 50%; border: 3px solid transparent; cursor: pointer; transition: transform 0.1s; }
+.color-btn:hover { transform: scale(1.1); }
+.color-btn.active { border-color: white; }
+.c0 { background: #ef4444; }
+.c1 { background: #22c55e; }
+.c2 { background: #3b82f6; }
+.c3 { background: #eab308; }
+#startBtn { width: 100%; background: linear-gradient(135deg, #f472b6 0%, #ec4899 100%); color: white; border: none; padding: 10px; border-radius: 8px; font-size: 14px; cursor: pointer; }

@@ -1,0 +1,20 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 14px; background: #0d5016; color: #e0e0e0; }
+.container { width: 320px; }
+header { text-align: center; padding: 8px; background: linear-gradient(135deg, #166534 0%, #14532d 100%); color: white; }
+header h1 { font-size: 16px; font-weight: 600; }
+.header-sub { font-size: 10px; opacity: 0.9; }
+.content { padding: 8px; }
+.stats { display: flex; justify-content: space-around; font-size: 12px; color: #86efac; margin-bottom: 8px; }
+.top-row { display: flex; gap: 4px; margin-bottom: 8px; }
+.spacer { width: 20px; }
+.pile { width: 36px; height: 50px; border: 1px dashed rgba(255,255,255,0.3); border-radius: 4px; position: relative; cursor: pointer; }
+.card { width: 36px; height: 50px; background: white; border-radius: 4px; position: absolute; font-size: 11px; font-weight: bold; display: flex; align-items: flex-start; justify-content: flex-start; padding: 2px 4px; box-shadow: 0 1px 2px rgba(0,0,0,0.3); cursor: pointer; }
+.card.red { color: #dc2626; }
+.card.black { color: #1a1a2e; }
+.card.facedown { background: linear-gradient(135deg, #1e40af, #1d4ed8); color: transparent; }
+.tableau { display: flex; gap: 4px; margin-bottom: 8px; }
+.column { width: 36px; min-height: 50px; position: relative; }
+.column .card { position: absolute; }
+.selected { box-shadow: 0 0 0 2px #fbbf24 !important; }
+#newBtn { width: 100%; background: linear-gradient(135deg, #166534 0%, #14532d 100%); color: white; border: none; padding: 8px; border-radius: 6px; font-size: 12px; cursor: pointer; }

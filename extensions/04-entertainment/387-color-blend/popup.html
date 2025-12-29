@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Color Blend</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <div class="container">
+    <header><h1>Color Blend</h1><div class="header-sub">Mix to match!</div></header>
+    <div class="content">
+      <div class="stats"><span>Score: <span id="score">0</span></span><span>Best: <span id="best">0</span></span></div>
+      <div class="colors">
+        <div class="color-box"><div class="label">Target</div><div class="swatch" id="target"></div></div>
+        <div class="color-box"><div class="label">Your Mix</div><div class="swatch" id="mix"></div></div>
+      </div>
+      <div class="sliders">
+        <div class="slider-row"><span class="lbl">R</span><input type="range" id="rSlider" min="0" max="255" value="128"><span class="val" id="rVal">128</span></div>
+        <div class="slider-row"><span class="lbl">G</span><input type="range" id="gSlider" min="0" max="255" value="128"><span class="val" id="gVal">128</span></div>
+        <div class="slider-row"><span class="lbl">B</span><input type="range" id="bSlider" min="0" max="255" value="128"><span class="val" id="bVal">128</span></div>
+      </div>
+      <div id="message" class="message"></div>
+      <button id="checkBtn">Check Match</button>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

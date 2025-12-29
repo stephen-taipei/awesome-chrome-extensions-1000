@@ -1,0 +1,23 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 14px; background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%); color: #e0e0e0; }
+.container { width: 280px; }
+header { text-align: center; padding: 12px; background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%); color: white; }
+header h1 { font-size: 18px; font-weight: 600; }
+.header-sub { font-size: 11px; opacity: 0.9; margin-top: 2px; }
+.content { padding: 12px; text-align: center; }
+.stats { display: flex; justify-content: space-between; margin-bottom: 12px; font-size: 14px; font-weight: 600; }
+.colors { display: flex; gap: 16px; justify-content: center; margin-bottom: 12px; }
+.color-box { text-align: center; }
+.label { font-size: 12px; color: #94a3b8; margin-bottom: 4px; }
+.swatch { width: 100px; height: 60px; border-radius: 8px; border: 2px solid #334155; }
+.sliders { margin-bottom: 12px; }
+.slider-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+.lbl { width: 20px; font-weight: 600; font-size: 13px; }
+.slider-row input { flex: 1; height: 8px; -webkit-appearance: none; background: #334155; border-radius: 4px; }
+.slider-row input::-webkit-slider-thumb { -webkit-appearance: none; width: 16px; height: 16px; background: #8b5cf6; border-radius: 50%; cursor: pointer; }
+.val { width: 32px; font-size: 12px; text-align: right; }
+.message { min-height: 24px; font-weight: 600; margin-bottom: 12px; }
+.message.good { color: #22c55e; }
+.message.close { color: #f59e0b; }
+.message.far { color: #ef4444; }
+#checkBtn { width: 100%; background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%); color: white; border: none; padding: 10px; border-radius: 8px; font-size: 14px; cursor: pointer; }

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Target Shooter</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <div class="container">
+    <header><h1>Target Shooter</h1><div class="header-sub">Hit 20 targets fast!</div></header>
+    <div class="content">
+      <div class="stats">
+        <span>Hits: <span id="hits">0</span>/20</span>
+        <span>Time: <span id="time">0.00</span>s</span>
+      </div>
+      <div class="best">Best: <span id="best">--</span></div>
+      <div class="arena" id="arena">
+        <div class="target" id="target">🎯</div>
+        <div class="start-overlay" id="overlay">Click to Start</div>
+      </div>
+      <div id="message" class="message"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

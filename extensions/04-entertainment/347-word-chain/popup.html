@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Word Chain</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <div class="container">
+    <header><h1>Word Chain</h1><div class="header-sub">Connect words by last letter!</div></header>
+    <div class="content">
+      <div class="stats"><span>Chain: <b id="chain">0</b></span><span>Best: <b id="best">0</b></span></div>
+      <div class="current">Start with: <b id="startLetter">?</b></div>
+      <div class="chain-display" id="chainDisplay"></div>
+      <input type="text" id="input" placeholder="Enter a word..." autocomplete="off">
+      <div id="feedback" class="feedback"></div>
+      <button id="newBtn">New Game</button>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

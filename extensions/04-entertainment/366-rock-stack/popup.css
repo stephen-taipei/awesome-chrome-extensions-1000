@@ -1,0 +1,15 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 14px; background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%); color: #e0e0e0; }
+.container { width: 280px; }
+header { text-align: center; padding: 12px; background: linear-gradient(135deg, #78716c 0%, #57534e 100%); color: white; }
+header h1 { font-size: 18px; font-weight: 600; }
+.header-sub { font-size: 11px; opacity: 0.9; margin-top: 2px; }
+.content { padding: 12px; text-align: center; }
+.stats { display: flex; justify-content: space-around; font-size: 14px; color: #a8a29e; margin-bottom: 12px; }
+.game { position: relative; width: 256px; height: 240px; background: linear-gradient(180deg, #7dd3fc 0%, #bae6fd 60%, #a16207 60%, #92400e 100%); border-radius: 8px; overflow: hidden; margin: 0 auto 12px; }
+.moving-rock { position: absolute; top: 10px; font-size: 32px; animation: slide 1.5s ease-in-out infinite alternate; }
+@keyframes slide { 0% { left: 20px; } 100% { left: 200px; } }
+.rock { position: absolute; font-size: 28px; transition: all 0.3s; }
+.rock.falling { animation: fall 0.5s ease-in; }
+@keyframes fall { 0% { transform: translateY(-50px); } 100% { transform: translateY(0); } }
+#dropBtn { width: 100%; background: linear-gradient(135deg, #78716c 0%, #57534e 100%); color: white; border: none; padding: 12px; border-radius: 8px; font-size: 16px; font-weight: 600; cursor: pointer; }

@@ -1,0 +1,18 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 14px; background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%); color: #e0e0e0; }
+.container { width: 280px; }
+header { text-align: center; padding: 12px; background: linear-gradient(135deg, #a855f7 0%, #9333ea 100%); color: white; }
+header h1 { font-size: 18px; font-weight: 600; }
+.header-sub { font-size: 11px; opacity: 0.9; margin-top: 2px; }
+.content { padding: 12px; text-align: center; }
+.stats { display: flex; justify-content: space-around; font-size: 14px; color: #c084fc; margin-bottom: 12px; }
+.display { font-size: 32px; min-height: 50px; margin-bottom: 12px; background: #1e293b; border-radius: 12px; padding: 10px; display: flex; justify-content: center; align-items: center; gap: 4px; }
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 12px; }
+.emoji-btn { width: 72px; height: 72px; font-size: 36px; background: #334155; border: none; border-radius: 12px; cursor: pointer; transition: transform 0.1s, background 0.2s; }
+.emoji-btn:hover { background: #475569; }
+.emoji-btn:active { transform: scale(0.95); }
+.emoji-btn.flash { background: #a855f7; }
+.feedback { min-height: 20px; margin-bottom: 12px; font-weight: 600; }
+.feedback.success { color: #22c55e; }
+.feedback.error { color: #ef4444; }
+#startBtn { width: 100%; background: linear-gradient(135deg, #a855f7 0%, #9333ea 100%); color: white; border: none; padding: 10px; border-radius: 8px; font-size: 14px; cursor: pointer; }
