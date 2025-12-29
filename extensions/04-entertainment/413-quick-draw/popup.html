@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Quick Draw</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <div class="container">
+    <header><h1>Quick Draw</h1><div class="header-sub">Draw the shape!</div></header>
+    <div class="content">
+      <div class="stats">Score: <span id="score">0</span> | Best: <span id="best">0</span></div>
+      <div class="prompt">Draw: <span id="shape" class="shape"></span></div>
+      <canvas id="canvas" width="240" height="160"></canvas>
+      <div class="buttons">
+        <button id="clearBtn">CLEAR</button>
+        <button id="doneBtn">DONE</button>
+      </div>
+      <div id="message" class="message"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
