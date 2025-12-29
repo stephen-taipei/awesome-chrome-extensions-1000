@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Color Sequence</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <div class="container">
+    <header><h1>Color Sequence</h1><div class="header-sub">Remember the pattern!</div></header>
+    <div class="content">
+      <div class="stats">Best: <span id="best">0</span> | Round: <span id="round">0</span></div>
+      <div id="status" class="status">Press Start to play</div>
+      <div id="board" class="board">
+        <button class="color-btn" data-color="0"></button>
+        <button class="color-btn" data-color="1"></button>
+        <button class="color-btn" data-color="2"></button>
+        <button class="color-btn" data-color="3"></button>
+      </div>
+      <button id="startBtn">START GAME</button>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
