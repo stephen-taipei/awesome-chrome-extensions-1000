@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Number Bonds</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <div class="container">
+    <header><h1>Number Bonds</h1><div class="header-sub">Find the missing number!</div></header>
+    <div class="content">
+      <div class="stats">Score: <span id="score">0</span> | Streak: <span id="streak">0</span></div>
+      <div class="mode-toggle">
+        <button id="mode10" class="mode active">To 10</button>
+        <button id="mode20" class="mode">To 20</button>
+      </div>
+      <div class="bond">
+        <div class="num" id="num1">?</div>
+        <div class="plus">+</div>
+        <div class="num" id="num2">?</div>
+        <div class="equals">=</div>
+        <div class="num target" id="target">10</div>
+      </div>
+      <div id="options" class="options"></div>
+      <div id="message" class="message"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
