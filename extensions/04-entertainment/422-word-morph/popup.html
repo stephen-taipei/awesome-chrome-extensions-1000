@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Word Morph</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <div class="container">
+    <header><h1>Word Morph</h1><div class="header-sub">Change one letter at a time!</div></header>
+    <div class="content">
+      <div class="stats">Score: <span id="score">0</span> | Moves: <span id="moves">0</span></div>
+      <div class="target">
+        <span id="start" class="word"></span>
+        <span class="arrow">→</span>
+        <span id="end" class="word target-word"></span>
+      </div>
+      <div id="chain" class="chain"></div>
+      <input type="text" id="input" placeholder="Enter next word..." maxlength="4" autocomplete="off">
+      <div id="message" class="message"></div>
+      <button id="newBtn">NEW PUZZLE</button>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
