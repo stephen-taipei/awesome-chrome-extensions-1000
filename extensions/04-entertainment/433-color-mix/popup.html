@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Color Mix</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <div class="container">
+    <header><h1>Color Mix</h1><div class="header-sub">Match the target color!</div></header>
+    <div class="content">
+      <div class="stats">Score: <span id="score">0</span> | Level: <span id="level">1</span></div>
+      <div class="colors">
+        <div class="color-box"><div class="label">Target</div><div id="target" class="swatch"></div></div>
+        <div class="color-box"><div class="label">Your Mix</div><div id="mix" class="swatch"></div></div>
+      </div>
+      <div class="sliders">
+        <div class="slider-row"><span>R</span><input type="range" id="red" min="0" max="255" value="128"><span id="redVal">128</span></div>
+        <div class="slider-row"><span>G</span><input type="range" id="green" min="0" max="255" value="128"><span id="greenVal">128</span></div>
+        <div class="slider-row"><span>B</span><input type="range" id="blue" min="0" max="255" value="128"><span id="blueVal">128</span></div>
+      </div>
+      <button id="checkBtn">CHECK MATCH</button>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

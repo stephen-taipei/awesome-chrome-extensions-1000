@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Number Memory</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <div class="container">
+    <header><h1>Number Memory</h1><div class="header-sub">Remember the number!</div></header>
+    <div class="content">
+      <div class="stats">Best: <span id="best">0</span> digits | Level: <span id="level">1</span></div>
+      <div id="display" class="display">Press Start</div>
+      <input type="text" id="answer" class="answer" placeholder="Enter the number..." autocomplete="off" style="display:none">
+      <div id="feedback" class="feedback"></div>
+      <button id="startBtn">START</button>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

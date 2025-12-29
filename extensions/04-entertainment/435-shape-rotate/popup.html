@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Shape Rotate</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <div class="container">
+    <header><h1>Shape Rotate</h1><div class="header-sub">Match the target!</div></header>
+    <div class="content">
+      <div class="stats">Score: <span id="score">0</span> | Level: <span id="level">1</span></div>
+      <div class="shapes">
+        <div class="shape-box"><div class="label">Target</div><div id="target" class="shape"></div></div>
+        <div class="shape-box"><div class="label">Rotate Me</div><div id="player" class="shape clickable"></div></div>
+      </div>
+      <div id="feedback" class="feedback"></div>
+      <button id="checkBtn">CHECK</button>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
