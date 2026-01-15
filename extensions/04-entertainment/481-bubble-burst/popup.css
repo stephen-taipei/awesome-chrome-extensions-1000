@@ -1,0 +1,12 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { width: 350px; min-height: 450px; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); color: #fff; font-family: 'Segoe UI', sans-serif; }
+.container { padding: 15px; display: flex; flex-direction: column; align-items: center; }
+h1 { font-size: 24px; margin-bottom: 10px; background: linear-gradient(90deg, #00d4ff, #00ff88); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.stats { display: flex; justify-content: space-between; width: 100%; margin-bottom: 10px; font-size: 14px; color: #aaa; }
+#game-area { width: 320px; height: 320px; background: rgba(255,255,255,0.05); border-radius: 10px; position: relative; overflow: hidden; border: 2px solid rgba(255,255,255,0.1); }
+.bubble { position: absolute; border-radius: 50%; cursor: pointer; transition: transform 0.1s; background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.8), transparent); }
+.bubble:hover { transform: scale(1.1); }
+.bubble.pop { animation: pop 0.3s forwards; }
+@keyframes pop { to { transform: scale(0); opacity: 0; } }
+button { margin-top: 10px; padding: 10px 30px; font-size: 14px; background: linear-gradient(135deg, #667eea, #764ba2); color: #fff; border: none; border-radius: 20px; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; }
+button:hover { transform: translateY(-2px); box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4); }

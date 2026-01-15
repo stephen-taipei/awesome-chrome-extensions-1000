@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Bubble Burst",
+  "version": "1.0",
+  "description": "Pop bubbles to clear the screen and score points",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Bubble Burst"
+  },
+  "permissions": ["storage"]
+}

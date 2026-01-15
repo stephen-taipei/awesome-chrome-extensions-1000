@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coin Toss</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Coin Toss</h1>
+    <div class="stats">
+      <span>Streak: <span id="streak">0</span></span>
+      <span>Best: <span id="best">0</span></span>
+    </div>
+    <div class="coin-container">
+      <div id="coin" class="coin">🪙</div>
+    </div>
+    <div id="result" class="result">Make your guess!</div>
+    <div class="history">
+      <span>History:</span>
+      <span id="history"></span>
+    </div>
+    <div class="buttons">
+      <button id="headsBtn" class="guess-btn heads">HEADS</button>
+      <button id="tailsBtn" class="guess-btn tails">TAILS</button>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

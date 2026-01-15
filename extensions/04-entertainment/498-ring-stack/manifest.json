@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Ring Stack",
+  "version": "1.0",
+  "description": "Stack colored rings in the correct order",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Ring Stack"
+  },
+  "permissions": ["storage"]
+}

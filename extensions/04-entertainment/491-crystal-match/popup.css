@@ -1,0 +1,13 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { width: 320px; min-height: 400px; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); color: #fff; font-family: 'Segoe UI', sans-serif; }
+.container { padding: 15px; display: flex; flex-direction: column; align-items: center; }
+h1 { font-size: 20px; margin-bottom: 10px; background: linear-gradient(90deg, #ff6b9d, #c44dff, #6e9dff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.stats { display: flex; justify-content: space-between; width: 100%; margin-bottom: 10px; font-size: 14px; color: #aaa; }
+.grid { display: grid; grid-template-columns: repeat(6, 40px); gap: 4px; background: rgba(255,255,255,0.05); padding: 8px; border-radius: 10px; }
+.cell { width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; font-size: 24px; border-radius: 8px; cursor: pointer; transition: all 0.2s; background: rgba(255,255,255,0.1); }
+.cell:hover { transform: scale(1.1); }
+.cell.selected { box-shadow: 0 0 10px #fff, 0 0 20px #c44dff; transform: scale(1.15); }
+.cell.matched { animation: pop 0.3s ease-out; }
+@keyframes pop { 0% { transform: scale(1); } 50% { transform: scale(1.3); } 100% { transform: scale(0); opacity: 0; } }
+button { margin-top: 15px; padding: 10px 25px; background: linear-gradient(135deg, #c44dff, #6e9dff); border: none; border-radius: 20px; color: #fff; font-size: 14px; cursor: pointer; transition: transform 0.2s; }
+button:hover { transform: scale(1.05); }

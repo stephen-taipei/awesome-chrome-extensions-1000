@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Shape Fit",
+  "version": "1.0",
+  "description": "Fit shapes into their correct holes to score points",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Shape Fit"
+  },
+  "permissions": ["storage"]
+}

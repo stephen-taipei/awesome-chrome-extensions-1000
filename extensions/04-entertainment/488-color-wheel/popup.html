@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Wheel</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Color Wheel</h1>
+    <div class="stats">
+      <span>Score: <span id="score">0</span></span>
+      <span>Streak: <span id="streak">0</span></span>
+      <span>Best: <span id="best">0</span></span>
+    </div>
+    <div id="target-color"></div>
+    <div id="wheel-container">
+      <canvas id="wheel" width="250" height="250"></canvas>
+      <div id="pointer"></div>
+    </div>
+    <button id="spin-btn">SPIN</button>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Rope Cut",
+  "version": "1.0",
+  "description": "Cut ropes to drop items into targets",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Rope Cut"
+  },
+  "permissions": ["storage"]
+}

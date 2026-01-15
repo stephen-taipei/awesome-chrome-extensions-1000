@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Crystal Match",
+  "version": "1.0",
+  "description": "Match 3 crystals to clear them and score points",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Crystal Match"
+  },
+  "permissions": ["storage"]
+}

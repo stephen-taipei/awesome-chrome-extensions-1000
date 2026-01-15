@@ -1,0 +1,12 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { width: 350px; min-height: 450px; background: linear-gradient(135deg, #2c3e50 0%, #000000 100%); color: #fff; font-family: 'Segoe UI', sans-serif; }
+.container { padding: 15px; display: flex; flex-direction: column; align-items: center; }
+h1 { font-size: 24px; margin-bottom: 10px; background: linear-gradient(90deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.stats { display: flex; justify-content: space-between; width: 100%; margin-bottom: 15px; font-size: 14px; color: #aaa; }
+#target-color { width: 80px; height: 80px; border-radius: 50%; margin-bottom: 15px; border: 4px solid #fff; box-shadow: 0 0 20px rgba(255,255,255,0.3); }
+#wheel-container { position: relative; margin-bottom: 15px; }
+#wheel { border-radius: 50%; box-shadow: 0 0 30px rgba(0,0,0,0.5); }
+#pointer { position: absolute; top: -15px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 15px solid transparent; border-right: 15px solid transparent; border-top: 25px solid #fff; filter: drop-shadow(0 2px 5px rgba(0,0,0,0.5)); }
+button { padding: 15px 50px; font-size: 18px; background: linear-gradient(135deg, #667eea, #764ba2); color: #fff; border: none; border-radius: 30px; cursor: pointer; font-weight: bold; transition: transform 0.2s, box-shadow 0.2s; }
+button:hover { transform: translateY(-2px); box-shadow: 0 5px 25px rgba(102, 126, 234, 0.5); }
+button:disabled { opacity: 0.5; cursor: not-allowed; }

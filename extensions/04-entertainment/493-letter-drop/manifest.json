@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Letter Drop",
+  "version": "1.0",
+  "description": "Catch falling letters to spell words and score points",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Letter Drop"
+  },
+  "permissions": ["storage"]
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maze Gen</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Maze Gen</h1>
+    <div class="stats">
+      <span>Level: <span id="level">1</span></span>
+      <span>Moves: <span id="moves">0</span></span>
+    </div>
+    <div id="maze" class="maze"></div>
+    <div class="controls">
+      <button class="dir-btn" data-dir="up">W</button>
+      <div class="row">
+        <button class="dir-btn" data-dir="left">A</button>
+        <button class="dir-btn" data-dir="down">S</button>
+        <button class="dir-btn" data-dir="right">D</button>
+      </div>
+    </div>
+    <button id="newMaze">New Maze</button>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

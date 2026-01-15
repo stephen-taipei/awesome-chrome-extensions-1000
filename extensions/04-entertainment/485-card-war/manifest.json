@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Card War",
+  "version": "1.0",
+  "description": "Simple card game where higher card wins",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Card War"
+  },
+  "permissions": ["storage"]
+}

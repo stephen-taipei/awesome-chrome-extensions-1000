@@ -1,0 +1,23 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { width: 320px; min-height: 420px; background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: #fff; font-family: 'Segoe UI', sans-serif; }
+.container { padding: 12px; display: flex; flex-direction: column; align-items: center; }
+h1 { font-size: 22px; margin-bottom: 8px; background: linear-gradient(90deg, #ffecd2, #fcb69f); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.stats { display: flex; justify-content: space-between; width: 100%; margin-bottom: 10px; font-size: 13px; color: #bbb; }
+.target { display: flex; align-items: center; gap: 10px; margin-bottom: 15px; font-size: 12px; color: #aaa; }
+.target-stack { display: flex; gap: 3px; }
+.target-stack .ring { width: 20px; height: 20px; border-radius: 50%; }
+.pegs { display: flex; gap: 15px; justify-content: center; }
+.peg { width: 80px; display: flex; flex-direction: column; align-items: center; }
+.peg-rod { width: 8px; height: 140px; background: linear-gradient(180deg, #8b7355, #5d4e37); border-radius: 4px 4px 0 0; position: relative; cursor: pointer; transition: all 0.2s; }
+.peg-rod:hover { box-shadow: 0 0 15px rgba(255,236,210,0.4); }
+.peg-rod.selected { box-shadow: 0 0 20px #fcb69f; }
+.peg-base { width: 60px; height: 8px; background: #5d4e37; border-radius: 2px; }
+.ring-container { position: absolute; bottom: 8px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column-reverse; gap: 2px; }
+.ring { height: 18px; border-radius: 10px; transition: all 0.2s; }
+.ring.r1 { width: 25px; background: linear-gradient(135deg, #ff6b6b, #ee5a24); }
+.ring.r2 { width: 35px; background: linear-gradient(135deg, #feca57, #f9ca24); }
+.ring.r3 { width: 45px; background: linear-gradient(135deg, #1dd1a1, #10ac84); }
+.ring.r4 { width: 55px; background: linear-gradient(135deg, #54a0ff, #2e86de); }
+.ring.r5 { width: 65px; background: linear-gradient(135deg, #5f27cd, #341f97); }
+button { margin-top: 15px; padding: 10px 25px; background: linear-gradient(135deg, #ffecd2, #fcb69f); border: none; border-radius: 20px; color: #1e3c72; font-size: 14px; font-weight: bold; cursor: pointer; transition: all 0.2s; }
+button:hover { transform: scale(1.05); }

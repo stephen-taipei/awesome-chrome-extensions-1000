@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Connect Pipe",
+  "version": "1.0",
+  "description": "Connect pipes to create a flow path",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Connect Pipe"
+  },
+  "permissions": ["storage"]
+}

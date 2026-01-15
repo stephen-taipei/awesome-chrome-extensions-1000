@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Photo Puzzle",
+  "version": "1.0",
+  "description": "Solve jigsaw puzzles with emoji patterns",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Photo Puzzle"
+  },
+  "permissions": ["storage"]
+}

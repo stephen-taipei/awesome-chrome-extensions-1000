@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Final Challenge</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Final Challenge</h1>
+    <div class="stats">
+      <span>Total: <span id="totalScore">0</span></span>
+      <span>Best: <span id="bestScore">0</span></span>
+    </div>
+    <div id="menu" class="menu">
+      <div class="game-btn" data-game="reaction">Reaction Test</div>
+      <div class="game-btn" data-game="memory">Memory Match</div>
+      <div class="game-btn" data-game="math">Quick Math</div>
+      <div class="game-btn" data-game="sequence">Sequence</div>
+    </div>
+    <div id="gameArea" class="game-area hidden"></div>
+    <div id="result" class="result hidden"></div>
+    <button id="backBtn" class="hidden">Back to Menu</button>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
