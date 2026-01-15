@@ -1,0 +1,21 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 14px; background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%); color: #e0e0e0; }
+.container { width: 280px; }
+header { text-align: center; padding: 12px; background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; }
+header h1 { font-size: 18px; font-weight: 600; }
+.header-sub { font-size: 11px; opacity: 0.9; margin-top: 2px; }
+.content { padding: 12px; text-align: center; }
+.stats { font-size: 12px; color: #94a3b8; margin-bottom: 10px; }
+.words { margin-bottom: 12px; }
+.word { padding: 8px 16px; border-radius: 8px; font-size: 20px; font-weight: bold; letter-spacing: 4px; text-transform: uppercase; margin: 4px 0; display: inline-block; }
+.word.start { background: #374151; color: #9ca3af; }
+.word.current { background: #10b981; color: white; }
+.word.target { background: #f59e0b; color: white; }
+.arrow { color: #4a5568; font-size: 16px; }
+#input { width: 100%; padding: 10px; border: 2px solid #4a5568; border-radius: 8px; background: #2d3748; color: white; font-size: 18px; text-align: center; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 8px; }
+#input:focus { outline: none; border-color: #10b981; }
+#submitBtn { width: 100%; background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; border: none; padding: 10px; border-radius: 8px; font-size: 14px; font-weight: bold; cursor: pointer; margin-bottom: 8px; }
+.feedback { min-height: 20px; font-size: 13px; font-weight: bold; margin-bottom: 8px; }
+.feedback.correct { color: #22c55e; }
+.feedback.wrong { color: #ef4444; }
+.history { font-size: 12px; color: #64748b; max-height: 60px; overflow-y: auto; }

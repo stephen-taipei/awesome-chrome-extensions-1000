@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Count Shapes</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <div class="container">
+    <header><h1>🔢 Count Shapes</h1><div class="header-sub">How many can you find?</div></header>
+    <div class="content">
+      <div class="stats">Score: <span id="score">0</span> | Streak: <span id="streak">0</span></div>
+      <div class="target">Count: <span id="targetShape"></span></div>
+      <div id="display" class="display"></div>
+      <div class="answer-row">
+        <button class="ans-btn" data-delta="-1">−</button>
+        <span id="answer" class="answer">0</span>
+        <button class="ans-btn" data-delta="1">+</button>
+      </div>
+      <button id="submitBtn">SUBMIT</button>
+      <div id="feedback" class="feedback"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
