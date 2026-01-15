@@ -1,0 +1,11 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { width: 320px; min-height: 400px; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); font-family: 'Segoe UI', sans-serif; color: #fff; }
+.game-container { padding: 20px; text-align: center; }
+h1 { font-size: 24px; margin-bottom: 15px; background: linear-gradient(90deg, #f9ca24, #f0932b); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.stats { display: flex; justify-content: space-around; margin-bottom: 20px; font-size: 14px; }
+.reels { display: flex; justify-content: center; gap: 10px; margin-bottom: 20px; }
+.reel { width: 70px; height: 80px; background: linear-gradient(180deg, #2d2d4a 0%, #1a1a3e 100%); border: 3px solid #f9ca24; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 40px; }
+.message { min-height: 30px; font-size: 16px; margin-bottom: 15px; color: #f9ca24; }
+button { padding: 12px 40px; background: linear-gradient(135deg, #f9ca24, #f0932b); border: none; border-radius: 8px; color: #1a1a2e; cursor: pointer; font-size: 18px; font-weight: bold; transition: transform 0.1s; }
+button:hover { transform: scale(1.05); }
+button:disabled { opacity: 0.6; cursor: not-allowed; }

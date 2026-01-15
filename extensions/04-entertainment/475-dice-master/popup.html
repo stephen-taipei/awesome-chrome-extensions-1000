@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dice Master</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Dice Master</h1>
+    <div class="stats">
+      <span>Score: <span id="score">0</span></span>
+      <span>Streak: <span id="streak">0</span></span>
+    </div>
+    <div class="target">Target: <span id="target">7</span></div>
+    <div id="dice" class="dice">
+      <div class="die" id="die1">1</div>
+      <div class="die" id="die2">1</div>
+    </div>
+    <div class="result" id="result"></div>
+    <div class="controls">
+      <button id="roll">Roll Dice</button>
+      <button id="newTarget">New Target</button>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { width: 320px; min-height: 480px; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); font-family: 'Segoe UI', sans-serif; color: #fff; }
+.game-container { padding: 15px; text-align: center; }
+h1 { font-size: 22px; margin-bottom: 10px; background: linear-gradient(90deg, #e056fd, #686de0); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.stats { display: flex; justify-content: space-around; margin-bottom: 10px; font-size: 14px; }
+.target { font-size: 16px; margin-bottom: 10px; color: #e056fd; }
+.timer-bar { width: 100%; height: 6px; background: rgba(255,255,255,0.1); border-radius: 3px; margin-bottom: 10px; }
+.timer { height: 100%; background: linear-gradient(90deg, #e056fd, #686de0); border-radius: 3px; width: 100%; transition: width 0.1s linear; }
+#drawCanvas { background: #0f0f23; border-radius: 8px; cursor: crosshair; border: 2px solid #333; }
+.message { min-height: 24px; font-size: 14px; margin-top: 10px; color: #e056fd; }

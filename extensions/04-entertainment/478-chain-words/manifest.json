@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Chain Words",
+  "version": "1.0",
+  "description": "Connect letters to form word chains",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "48": "icon.png"
+    }
+  },
+  "permissions": ["storage"]
+}

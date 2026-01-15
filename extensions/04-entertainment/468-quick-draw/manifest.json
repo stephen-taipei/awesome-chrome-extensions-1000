@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Quick Draw",
+  "version": "1.0",
+  "description": "Draw shapes quickly and accurately",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Quick Draw"
+  },
+  "permissions": ["storage"]
+}

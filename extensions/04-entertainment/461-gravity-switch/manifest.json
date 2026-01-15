@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Gravity Switch",
+  "version": "1.0",
+  "description": "Tap to flip gravity and avoid obstacles",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Gravity Switch"
+  },
+  "permissions": ["storage"]
+}

@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Orbit Tap",
+  "version": "1.0",
+  "description": "Tap when orbiting dot reaches target",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "48": "icon.png"
+    }
+  },
+  "permissions": ["storage"]
+}

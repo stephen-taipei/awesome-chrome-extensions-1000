@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Word Stack",
+  "version": "1.0",
+  "description": "Stack letter blocks to form words",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Word Stack"
+  },
+  "permissions": ["storage"]
+}

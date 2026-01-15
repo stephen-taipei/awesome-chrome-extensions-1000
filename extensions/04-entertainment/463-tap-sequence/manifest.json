@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Tap Sequence",
+  "version": "1.0",
+  "description": "Tap numbers and letters in sequence order",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Tap Sequence"
+  },
+  "permissions": ["storage"]
+}

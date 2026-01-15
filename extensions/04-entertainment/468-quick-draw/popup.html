@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quick Draw</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="game-container">
+    <h1>Quick Draw</h1>
+    <div class="stats"><span>Score: <span id="score">0</span></span><span>Best: <span id="best">0</span></span></div>
+    <div id="target" class="target">Draw: <span id="shape">Circle</span></div>
+    <div class="timer-bar"><div id="timer" class="timer"></div></div>
+    <canvas id="drawCanvas" width="280" height="280"></canvas>
+    <div id="message" class="message"></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
