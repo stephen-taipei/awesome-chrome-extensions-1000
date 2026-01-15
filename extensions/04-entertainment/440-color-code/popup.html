@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Color Code</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <div class="container">
+    <header><h1>🎨 Color Code</h1><div class="header-sub">Crack the code!</div></header>
+    <div class="content">
+      <div class="stats">Wins: <span id="wins">0</span> | Attempts: <span id="attempts">0</span>/8</div>
+      <div id="history" class="history"></div>
+      <div class="current">
+        <div id="guess" class="guess"></div>
+        <div class="hints" id="currentHints"></div>
+      </div>
+      <div class="palette" id="palette"></div>
+      <button id="submitBtn">SUBMIT</button>
+      <div id="feedback" class="feedback"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
