@@ -1,0 +1,69 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  width: 320px;
+  min-height: 400px;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+}
+.container { padding: 15px; text-align: center; }
+h1 {
+  font-size: 24px;
+  background: linear-gradient(90deg, #00d4ff, #7b2cbf);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+}
+.stats {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 15px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 8px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+#gameArea {
+  width: 100%;
+  height: 250px;
+  background: rgba(0,0,0,0.3);
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.digit {
+  position: absolute;
+  font-size: 28px;
+  font-weight: bold;
+  color: #00d4ff;
+  text-shadow: 0 0 10px #00d4ff;
+  transition: color 0.2s;
+}
+.digit.warning { color: #ff6b6b; text-shadow: 0 0 10px #ff6b6b; }
+#input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  outline: none;
+  margin-bottom: 10px;
+}
+#input:focus { background: rgba(255,255,255,0.15); }
+#startBtn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #00d4ff, #7b2cbf);
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, opacity 0.2s;
+}
+#startBtn:hover { transform: scale(1.02); opacity: 0.9; }

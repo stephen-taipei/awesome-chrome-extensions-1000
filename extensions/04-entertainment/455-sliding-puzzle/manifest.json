@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Sliding Puzzle",
+  "version": "1.0",
+  "description": "Classic 15-puzzle sliding tile game!",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "48": "icon.png"
+    }
+  },
+  "permissions": ["storage"]
+}

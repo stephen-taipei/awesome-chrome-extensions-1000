@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Number Path",
+  "version": "1.0",
+  "description": "Draw a path connecting numbers in order",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "48": "icon.png"
+    }
+  },
+  "permissions": ["storage"]
+}

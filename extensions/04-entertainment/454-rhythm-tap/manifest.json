@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Rhythm Tap",
+  "version": "1.0",
+  "description": "Tap circles in rhythm to the beat!",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "48": "icon.png"
+    }
+  },
+  "permissions": ["storage"]
+}
