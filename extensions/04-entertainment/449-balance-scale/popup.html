@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Balance Scale</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <div class="container">
+    <header><h1>⚖️ Balance Scale</h1><div class="header-sub">Make it balance!</div></header>
+    <div class="content">
+      <div class="stats">Score: <span id="score">0</span> | Level: <span id="level">1</span></div>
+      <div class="scale">
+        <div class="beam" id="beam">
+          <div class="side left"><div class="pan"><span id="leftWeight">?</span></div></div>
+          <div class="fulcrum">▲</div>
+          <div class="side right"><div class="pan"><span id="rightWeight">0</span></div></div>
+        </div>
+      </div>
+      <div class="weights" id="weights"></div>
+      <button id="checkBtn">CHECK BALANCE</button>
+      <div id="feedback" class="feedback"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

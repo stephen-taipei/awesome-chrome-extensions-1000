@@ -1,0 +1,16 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 14px; background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%); color: #e0e0e0; }
+.container { width: 300px; }
+header { text-align: center; padding: 12px; background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%); color: white; }
+header h1 { font-size: 18px; font-weight: 600; }
+.header-sub { font-size: 11px; opacity: 0.9; margin-top: 2px; }
+.content { padding: 12px; text-align: center; }
+.stats { font-size: 12px; color: #94a3b8; margin-bottom: 8px; }
+.arena { width: 100%; height: 220px; background: #2d3748; border-radius: 10px; margin-bottom: 8px; position: relative; overflow: hidden; cursor: crosshair; }
+.bubble { position: absolute; border-radius: 50%; transform: translate(-50%, -50%); transition: all 0.3s; cursor: pointer; }
+.bubble.exploding { animation: explode 0.4s ease-out forwards; }
+@keyframes explode { 0% { transform: translate(-50%, -50%) scale(1); opacity: 1; } 100% { transform: translate(-50%, -50%) scale(3); opacity: 0; } }
+.feedback { min-height: 24px; font-size: 14px; font-weight: bold; margin-bottom: 8px; }
+.feedback.win { color: #22c55e; }
+.feedback.lose { color: #ef4444; }
+#nextBtn { width: 100%; background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%); color: white; border: none; padding: 10px; border-radius: 8px; font-size: 14px; font-weight: bold; cursor: pointer; }
