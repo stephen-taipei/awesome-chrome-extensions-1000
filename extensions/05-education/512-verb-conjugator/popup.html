@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verb Conjugator</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Verb Conjugator</h1>
+      <p class="subtitle">Master Verb Forms</p>
+    </header>
+
+    <div class="selectors">
+      <select id="languageSelect">
+        <option value="spanish">Spanish</option>
+        <option value="french">French</option>
+        <option value="italian">Italian</option>
+      </select>
+      <select id="tenseSelect">
+        <option value="present">Present</option>
+        <option value="past">Past</option>
+        <option value="future">Future</option>
+      </select>
+    </div>
+
+    <div class="verb-search">
+      <input type="text" id="verbInput" placeholder="Enter infinitive verb...">
+      <button class="btn btn-primary btn-sm" id="conjugateBtn">Conjugate</button>
+    </div>
+
+    <div class="conjugation-card" id="conjugationCard">
+      <div class="verb-header">
+        <span class="verb-infinitive" id="verbInfinitive">hablar</span>
+        <span class="verb-meaning" id="verbMeaning">to speak</span>
+      </div>
+      <div class="tense-label" id="tenseLabel">Present Tense</div>
+      <div class="conjugation-table">
+        <div class="conjugation-row">
+          <span class="pronoun">I</span>
+          <span class="conjugated" id="conj1">hablo</span>
+        </div>
+        <div class="conjugation-row">
+          <span class="pronoun">You (informal)</span>
+          <span class="conjugated" id="conj2">hablas</span>
+        </div>
+        <div class="conjugation-row">
+          <span class="pronoun">He/She/It</span>
+          <span class="conjugated" id="conj3">habla</span>
+        </div>
+        <div class="conjugation-row">
+          <span class="pronoun">We</span>
+          <span class="conjugated" id="conj4">hablamos</span>
+        </div>
+        <div class="conjugation-row">
+          <span class="pronoun">You (formal)</span>
+          <span class="conjugated" id="conj5">habláis</span>
+        </div>
+        <div class="conjugation-row">
+          <span class="pronoun">They</span>
+          <span class="conjugated" id="conj6">hablan</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="practice-section">
+      <h3>Practice Mode</h3>
+      <button class="btn btn-secondary" id="startPracticeBtn">Start Practice</button>
+    </div>
+
+    <div id="practiceView" style="display: none;">
+      <div class="practice-card">
+        <div class="practice-prompt">
+          <span class="practice-verb" id="practiceVerb">hablar</span>
+          <span class="practice-form" id="practiceForm">(yo - present)</span>
+        </div>
+        <div class="practice-input">
+          <input type="text" id="practiceAnswer" placeholder="Type conjugation...">
+          <button class="btn btn-primary btn-sm" id="checkAnswerBtn">Check</button>
+        </div>
+        <div class="practice-feedback" id="practiceFeedback"></div>
+      </div>
+      <div class="practice-stats">
+        <span>Correct: <strong id="correctCount">0</strong></span>
+        <span>Total: <strong id="totalCount">0</strong></span>
+      </div>
+      <button class="btn btn-secondary" id="exitPracticeBtn">Exit Practice</button>
+    </div>
+
+    <div class="verb-list">
+      <h3>Common Verbs</h3>
+      <div class="verb-chips" id="verbChips"></div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

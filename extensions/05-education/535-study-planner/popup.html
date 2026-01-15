@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Planner</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Study Planner</h1>
+
+    <div class="date-nav">
+      <button id="prevDayBtn" class="nav-btn">&lt;</button>
+      <span id="currentDate" class="current-date">Today</span>
+      <button id="nextDayBtn" class="nav-btn">&gt;</button>
+    </div>
+
+    <div class="section">
+      <h2>Add Study Session</h2>
+      <input type="text" id="subjectInput" placeholder="Subject">
+      <div class="time-row">
+        <input type="time" id="startTime" value="09:00">
+        <span>to</span>
+        <input type="time" id="endTime" value="10:00">
+      </div>
+      <input type="text" id="topicInput" placeholder="Topic / Focus area">
+      <select id="prioritySelect">
+        <option value="normal">Normal Priority</option>
+        <option value="high">High Priority</option>
+        <option value="low">Low Priority</option>
+      </select>
+      <button id="addSessionBtn" class="btn primary">Add Session</button>
+    </div>
+
+    <div class="section">
+      <h2>Today's Schedule</h2>
+      <div id="scheduleList" class="schedule-list">
+        <p class="empty-message">No sessions planned</p>
+      </div>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat">
+        <span class="stat-value" id="totalHours">0h</span>
+        <span class="stat-label">Planned</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value" id="completedSessions">0</span>
+        <span class="stat-label">Completed</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value" id="pendingSessions">0</span>
+        <span class="stat-label">Pending</span>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

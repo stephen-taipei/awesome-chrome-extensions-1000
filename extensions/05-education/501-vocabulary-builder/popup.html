@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vocabulary Builder</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Vocabulary Builder</h1>
+      <p class="subtitle">Learn with Flash Cards</p>
+    </header>
+
+    <div class="stats-bar">
+      <div class="stat">
+        <span class="stat-value" id="totalCards">0</span>
+        <span class="stat-label">Total</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value" id="masteredCards">0</span>
+        <span class="stat-label">Mastered</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value" id="dueCards">0</span>
+        <span class="stat-label">Due</span>
+      </div>
+    </div>
+
+    <div id="mainView">
+      <div class="card-display" id="cardDisplay">
+        <div class="flashcard" id="flashcard">
+          <div class="card-front" id="cardFront">
+            <span class="card-text">Click Study to begin</span>
+          </div>
+          <div class="card-back" id="cardBack">
+            <span class="card-text"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-actions" id="cardActions" style="display: none;">
+        <button class="btn btn-danger" id="wrongBtn">Again</button>
+        <button class="btn btn-warning" id="hardBtn">Hard</button>
+        <button class="btn btn-success" id="correctBtn">Good</button>
+        <button class="btn btn-primary" id="easyBtn">Easy</button>
+      </div>
+
+      <div class="main-actions">
+        <button class="btn btn-primary" id="studyBtn">Study Now</button>
+        <button class="btn btn-secondary" id="addBtn">Add Card</button>
+      </div>
+    </div>
+
+    <div id="addView" style="display: none;">
+      <div class="form-group">
+        <label for="wordInput">Word / Term</label>
+        <input type="text" id="wordInput" placeholder="Enter word or term">
+      </div>
+      <div class="form-group">
+        <label for="definitionInput">Definition</label>
+        <textarea id="definitionInput" placeholder="Enter definition or meaning"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="exampleInput">Example (optional)</label>
+        <input type="text" id="exampleInput" placeholder="Use in a sentence">
+      </div>
+      <div class="form-actions">
+        <button class="btn btn-secondary" id="cancelAddBtn">Cancel</button>
+        <button class="btn btn-primary" id="saveCardBtn">Save Card</button>
+      </div>
+    </div>
+
+    <div id="listView" style="display: none;">
+      <div class="list-header">
+        <button class="btn btn-secondary btn-sm" id="backToMain">Back</button>
+        <span class="list-title">All Cards</span>
+      </div>
+      <div class="cards-list" id="cardsList"></div>
+    </div>
+
+    <footer>
+      <button class="btn-link" id="viewAllBtn">View All Cards</button>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

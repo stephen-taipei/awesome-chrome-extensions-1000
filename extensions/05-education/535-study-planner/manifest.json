@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Study Planner",
+  "version": "1.0.0",
+  "description": "Plan and organize your study sessions",
+  "permissions": ["storage"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Study Planner"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

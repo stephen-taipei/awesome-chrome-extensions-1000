@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Highlight Export</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Highlight Export</h1>
+
+    <div class="section">
+      <button id="captureBtn" class="btn primary">Capture Selection</button>
+    </div>
+
+    <div class="section">
+      <h2>Saved Highlights</h2>
+      <div id="highlightsList" class="highlights-list">
+        <p class="empty-message">No highlights saved</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Export Options</h2>
+      <div class="export-format">
+        <label class="radio-label">
+          <input type="radio" name="format" value="text" checked>
+          Plain Text
+        </label>
+        <label class="radio-label">
+          <input type="radio" name="format" value="markdown">
+          Markdown
+        </label>
+        <label class="radio-label">
+          <input type="radio" name="format" value="html">
+          HTML
+        </label>
+      </div>
+
+      <div class="export-options">
+        <label class="checkbox-label">
+          <input type="checkbox" id="includeSource" checked>
+          Include source URL
+        </label>
+        <label class="checkbox-label">
+          <input type="checkbox" id="includeDate" checked>
+          Include date
+        </label>
+        <label class="checkbox-label">
+          <input type="checkbox" id="groupBySource">
+          Group by source
+        </label>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Preview</h2>
+      <div id="exportPreview" class="export-preview">
+        <p class="empty-message">Export preview will appear here</p>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button id="copyBtn" class="btn secondary" disabled>Copy to Clipboard</button>
+      <button id="downloadBtn" class="btn primary" disabled>Download</button>
+    </div>
+
+    <div class="section">
+      <button id="clearAllBtn" class="btn danger">Clear All Highlights</button>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

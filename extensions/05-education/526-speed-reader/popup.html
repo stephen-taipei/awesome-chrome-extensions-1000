@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Speed Reader</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Speed Reader</h1>
+
+    <div class="reader-display">
+      <div id="wordDisplay" class="word-display">Select text to start</div>
+      <div class="progress-bar">
+        <div id="progressFill" class="progress-fill"></div>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button id="loadTextBtn" class="btn secondary">Load Selection</button>
+      <div class="playback-controls">
+        <button id="prevBtn" class="btn icon">⏮</button>
+        <button id="playPauseBtn" class="btn primary">▶</button>
+        <button id="nextBtn" class="btn icon">⏭</button>
+      </div>
+    </div>
+
+    <div class="settings">
+      <div class="setting-group">
+        <label>Speed: <span id="wpmValue">300</span> WPM</label>
+        <input type="range" id="wpmSlider" min="100" max="1000" value="300" step="50">
+      </div>
+      <div class="setting-group">
+        <label>Chunk Size</label>
+        <select id="chunkSize">
+          <option value="1">1 word</option>
+          <option value="2">2 words</option>
+          <option value="3">3 words</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat-item">
+        <span class="stat-label">Words</span>
+        <span id="wordCount" class="stat-value">0</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-label">Est. Time</span>
+        <span id="estTime" class="stat-value">0:00</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-label">Progress</span>
+        <span id="progressPct" class="stat-value">0%</span>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

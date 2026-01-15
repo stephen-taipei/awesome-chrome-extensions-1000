@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Antonym Quiz</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Antonym Quiz</h1>
+      <p class="subtitle">Find the Opposite</p>
+    </header>
+
+    <div class="score-bar">
+      <div class="score-item">
+        <span class="score-value" id="score">0</span>
+        <span class="score-label">Score</span>
+      </div>
+      <div class="score-item">
+        <span class="score-value" id="timer">30</span>
+        <span class="score-label">Seconds</span>
+      </div>
+      <div class="score-item">
+        <span class="score-value" id="highScore">0</span>
+        <span class="score-label">Best</span>
+      </div>
+    </div>
+
+    <div id="menuView">
+      <div class="mode-select">
+        <h3>Select Game Mode</h3>
+        <div class="mode-buttons">
+          <button class="mode-btn" data-mode="match">
+            <span class="mode-icon">🎯</span>
+            <span class="mode-name">Match Game</span>
+            <span class="mode-desc">Match words with antonyms</span>
+          </button>
+          <button class="mode-btn" data-mode="quiz">
+            <span class="mode-icon">❓</span>
+            <span class="mode-name">Quiz Mode</span>
+            <span class="mode-desc">Multiple choice questions</span>
+          </button>
+          <button class="mode-btn" data-mode="timed">
+            <span class="mode-icon">⏱️</span>
+            <span class="mode-name">Speed Round</span>
+            <span class="mode-desc">Answer quickly!</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="matchView" style="display: none;">
+      <div class="match-instruction">Connect words with their antonyms</div>
+      <div class="match-container">
+        <div class="match-column" id="wordsColumn"></div>
+        <div class="match-lines" id="matchLines"></div>
+        <div class="match-column" id="antonymsColumn"></div>
+      </div>
+      <div class="match-progress">
+        <span id="matchProgress">0</span> / <span id="matchTotal">5</span> matched
+      </div>
+      <button class="btn btn-secondary" id="matchBackBtn">Back to Menu</button>
+    </div>
+
+    <div id="quizView" style="display: none;">
+      <div class="quiz-question">
+        <span class="question-label">What is the antonym of:</span>
+        <span class="question-word" id="quizWord"></span>
+      </div>
+      <div class="quiz-options" id="quizOptions"></div>
+      <div class="quiz-feedback" id="quizFeedback" style="display: none;"></div>
+      <div class="quiz-progress">
+        Question <span id="quizNum">1</span> / <span id="quizTotal">10</span>
+      </div>
+      <button class="btn btn-secondary" id="quizBackBtn">Back to Menu</button>
+    </div>
+
+    <div id="timedView" style="display: none;">
+      <div class="timed-word" id="timedWord"></div>
+      <div class="timed-options" id="timedOptions"></div>
+      <button class="btn btn-secondary" id="timedBackBtn">Back to Menu</button>
+    </div>
+
+    <div id="resultView" style="display: none;">
+      <div class="result-card">
+        <div class="result-icon" id="resultIcon">🏆</div>
+        <div class="result-title" id="resultTitle">Great Job!</div>
+        <div class="result-score">Score: <span id="finalScore">0</span></div>
+      </div>
+      <div class="result-actions">
+        <button class="btn btn-primary" id="playAgainBtn">Play Again</button>
+        <button class="btn btn-secondary" id="menuBtn">Main Menu</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

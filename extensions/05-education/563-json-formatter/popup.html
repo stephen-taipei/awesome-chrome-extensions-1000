@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSON Formatter</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>JSON Formatter</h1>
+    </header>
+
+    <div class="input-section">
+      <label>Input JSON</label>
+      <textarea id="jsonInput" placeholder="Paste your JSON here..."></textarea>
+    </div>
+
+    <div class="actions">
+      <button id="formatBtn" class="primary">Format</button>
+      <button id="minifyBtn">Minify</button>
+      <button id="validateBtn">Validate</button>
+      <button id="copyBtn">Copy</button>
+      <button id="clearBtn">Clear</button>
+    </div>
+
+    <div class="options">
+      <label>
+        Indent:
+        <select id="indentSize">
+          <option value="2">2 spaces</option>
+          <option value="4">4 spaces</option>
+          <option value="tab">Tab</option>
+        </select>
+      </label>
+      <label>
+        <input type="checkbox" id="sortKeys"> Sort keys
+      </label>
+    </div>
+
+    <div id="statusMessage" class="status-message"></div>
+
+    <div class="output-section">
+      <label>Output</label>
+      <div id="jsonOutput" class="json-output"></div>
+    </div>
+
+    <div class="stats">
+      <span id="sizeInfo">Size: 0 bytes</span>
+      <span id="keyCount">Keys: 0</span>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

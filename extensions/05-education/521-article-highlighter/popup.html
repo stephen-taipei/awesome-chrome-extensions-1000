@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Article Highlighter</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Article Highlighter</h1>
+
+    <div class="section">
+      <h2>Highlight Colors</h2>
+      <div class="color-picker">
+        <button class="color-btn active" data-color="#ffeb3b" style="background: #ffeb3b;"></button>
+        <button class="color-btn" data-color="#4caf50" style="background: #4caf50;"></button>
+        <button class="color-btn" data-color="#2196f3" style="background: #2196f3;"></button>
+        <button class="color-btn" data-color="#e91e63" style="background: #e91e63;"></button>
+        <button class="color-btn" data-color="#ff9800" style="background: #ff9800;"></button>
+      </div>
+    </div>
+
+    <div class="section">
+      <button id="highlightBtn" class="btn primary">Highlight Selection</button>
+      <button id="clearAllBtn" class="btn secondary">Clear All Highlights</button>
+    </div>
+
+    <div class="section">
+      <h2>Saved Highlights</h2>
+      <div id="highlightsList" class="highlights-list">
+        <p class="empty-message">No highlights saved yet</p>
+      </div>
+    </div>
+
+    <div class="section stats">
+      <span id="highlightCount">0</span> highlights saved
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

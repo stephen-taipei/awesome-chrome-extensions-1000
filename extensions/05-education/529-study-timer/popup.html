@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Timer</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Study Timer</h1>
+
+    <div class="timer-display">
+      <div class="timer-mode" id="timerMode">Focus Time</div>
+      <div class="timer-time" id="timerTime">25:00</div>
+      <div class="timer-ring">
+        <svg viewBox="0 0 100 100">
+          <circle class="ring-bg" cx="50" cy="50" r="45"/>
+          <circle class="ring-progress" id="ringProgress" cx="50" cy="50" r="45"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="mode-buttons">
+      <button class="mode-btn active" data-mode="focus">Focus</button>
+      <button class="mode-btn" data-mode="short">Short Break</button>
+      <button class="mode-btn" data-mode="long">Long Break</button>
+    </div>
+
+    <div class="controls">
+      <button id="startBtn" class="btn primary">Start</button>
+      <button id="resetBtn" class="btn secondary">Reset</button>
+    </div>
+
+    <div class="settings-section">
+      <h2>Settings</h2>
+      <div class="setting-row">
+        <label>Focus: <span id="focusValue">25</span> min</label>
+        <input type="range" id="focusDuration" min="5" max="60" value="25" step="5">
+      </div>
+      <div class="setting-row">
+        <label>Short Break: <span id="shortValue">5</span> min</label>
+        <input type="range" id="shortDuration" min="1" max="15" value="5" step="1">
+      </div>
+      <div class="setting-row">
+        <label>Long Break: <span id="longValue">15</span> min</label>
+        <input type="range" id="longDuration" min="10" max="30" value="15" step="5">
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat">
+        <span class="stat-value" id="sessionsToday">0</span>
+        <span class="stat-label">Sessions Today</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value" id="totalFocus">0h</span>
+        <span class="stat-label">Total Focus</span>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

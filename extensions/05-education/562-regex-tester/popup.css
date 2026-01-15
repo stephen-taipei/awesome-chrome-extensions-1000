@@ -1,0 +1,251 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 420px;
+  min-height: 500px;
+  background: #1a1a2e;
+  color: #e0e0e0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  padding: 16px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #3a3a5a;
+}
+
+header h1 {
+  font-size: 20px;
+  color: #ff6b9d;
+}
+
+label {
+  display: block;
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 6px;
+}
+
+.regex-section {
+  margin-bottom: 16px;
+}
+
+.regex-input {
+  display: flex;
+  align-items: center;
+  background: #252542;
+  border-radius: 6px;
+  padding: 4px;
+}
+
+.regex-input .delimiter {
+  color: #ff6b9d;
+  font-size: 18px;
+  padding: 0 8px;
+  font-family: 'Monaco', 'Consolas', monospace;
+}
+
+.regex-input input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  background: transparent;
+  color: #e0e0e0;
+  font-family: 'Monaco', 'Consolas', monospace;
+  font-size: 14px;
+}
+
+.regex-input input:focus {
+  outline: none;
+}
+
+.flags-input {
+  width: 50px !important;
+  flex: none !important;
+  text-align: center;
+}
+
+.error-message {
+  color: #ff6b6b;
+  font-size: 12px;
+  margin-top: 6px;
+  min-height: 18px;
+}
+
+.test-section {
+  margin-bottom: 16px;
+}
+
+.test-section textarea {
+  width: 100%;
+  height: 100px;
+  padding: 12px;
+  border: 1px solid #3a3a5a;
+  border-radius: 6px;
+  background: #252542;
+  color: #e0e0e0;
+  font-family: 'Monaco', 'Consolas', monospace;
+  font-size: 13px;
+  resize: vertical;
+}
+
+.test-section textarea:focus {
+  outline: none;
+  border-color: #ff6b9d;
+}
+
+.results-section {
+  background: #252542;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 16px;
+}
+
+.results-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.results-header h2 {
+  font-size: 14px;
+  color: #ff6b9d;
+}
+
+#matchCount {
+  font-size: 12px;
+  color: #64ffda;
+}
+
+.highlighted-result {
+  background: #1a1a2e;
+  padding: 12px;
+  border-radius: 4px;
+  font-family: 'Monaco', 'Consolas', monospace;
+  font-size: 13px;
+  white-space: pre-wrap;
+  word-break: break-all;
+  max-height: 120px;
+  overflow-y: auto;
+  margin-bottom: 12px;
+}
+
+.highlighted-result .match {
+  background: #ff6b9d44;
+  color: #ff6b9d;
+  border-radius: 2px;
+}
+
+.matches-list {
+  max-height: 100px;
+  overflow-y: auto;
+}
+
+.match-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 8px;
+  background: #1a1a2e;
+  border-radius: 4px;
+  margin-bottom: 4px;
+  font-size: 12px;
+}
+
+.match-value {
+  font-family: 'Monaco', 'Consolas', monospace;
+  color: #64ffda;
+}
+
+.match-index {
+  color: #888;
+}
+
+.quick-patterns {
+  margin-bottom: 16px;
+}
+
+.quick-patterns h3 {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 8px;
+}
+
+.patterns-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+}
+
+.patterns-grid button {
+  padding: 8px;
+  background: #252542;
+  color: #e0e0e0;
+  border: 1px solid #3a3a5a;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 11px;
+  transition: all 0.2s;
+}
+
+.patterns-grid button:hover {
+  background: #3a3a5a;
+  border-color: #ff6b9d;
+}
+
+.history-section h3 {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 8px;
+}
+
+#historyList {
+  max-height: 80px;
+  overflow-y: auto;
+}
+
+.history-item {
+  display: flex;
+  align-items: center;
+  padding: 6px 8px;
+  background: #252542;
+  border-radius: 4px;
+  margin-bottom: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  font-family: 'Monaco', 'Consolas', monospace;
+  transition: background 0.2s;
+}
+
+.history-item:hover {
+  background: #3a3a5a;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+  font-size: 12px;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a2e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3a3a5a;
+  border-radius: 3px;
+}

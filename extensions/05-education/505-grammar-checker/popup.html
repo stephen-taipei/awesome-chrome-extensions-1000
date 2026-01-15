@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grammar Checker</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Grammar Checker</h1>
+      <p class="subtitle">Improve Your Writing</p>
+    </header>
+
+    <div class="input-section">
+      <textarea id="textInput" placeholder="Enter or paste your text here to check for grammar issues..."></textarea>
+      <div class="char-count">
+        <span id="charCount">0</span> characters
+      </div>
+      <button class="btn btn-primary" id="checkBtn">Check Grammar</button>
+    </div>
+
+    <div class="results-section" id="resultsSection" style="display: none;">
+      <div class="results-header">
+        <h3>Issues Found: <span id="issueCount">0</span></h3>
+        <button class="btn btn-secondary btn-sm" id="clearBtn">Clear</button>
+      </div>
+
+      <div class="issues-list" id="issuesList"></div>
+
+      <div class="no-issues" id="noIssues" style="display: none;">
+        <span class="check-icon">✓</span>
+        <p>No grammar issues found!</p>
+      </div>
+    </div>
+
+    <div class="tips-section">
+      <h3>Grammar Tips</h3>
+      <div class="tips-tabs">
+        <button class="tip-tab active" data-tab="common">Common Errors</button>
+        <button class="tip-tab" data-tab="punctuation">Punctuation</button>
+        <button class="tip-tab" data-tab="style">Style</button>
+      </div>
+
+      <div class="tip-content active" id="commonTab">
+        <div class="tip-item">
+          <strong>Their/There/They're</strong>
+          <p>Their = possessive, There = location, They're = they are</p>
+        </div>
+        <div class="tip-item">
+          <strong>Your/You're</strong>
+          <p>Your = possessive, You're = you are</p>
+        </div>
+        <div class="tip-item">
+          <strong>Its/It's</strong>
+          <p>Its = possessive, It's = it is or it has</p>
+        </div>
+        <div class="tip-item">
+          <strong>Effect/Affect</strong>
+          <p>Effect = noun (result), Affect = verb (influence)</p>
+        </div>
+      </div>
+
+      <div class="tip-content" id="punctuationTab" style="display: none;">
+        <div class="tip-item">
+          <strong>Oxford Comma</strong>
+          <p>Use before "and" in lists: "red, white, and blue"</p>
+        </div>
+        <div class="tip-item">
+          <strong>Semicolons</strong>
+          <p>Connect related independent clauses without a conjunction</p>
+        </div>
+        <div class="tip-item">
+          <strong>Apostrophes</strong>
+          <p>For possession (John's) and contractions (don't), not plurals</p>
+        </div>
+      </div>
+
+      <div class="tip-content" id="styleTab" style="display: none;">
+        <div class="tip-item">
+          <strong>Active Voice</strong>
+          <p>"The cat chased the mouse" beats "The mouse was chased"</p>
+        </div>
+        <div class="tip-item">
+          <strong>Avoid Redundancy</strong>
+          <p>Skip "very unique" or "past history"</p>
+        </div>
+        <div class="tip-item">
+          <strong>Concise Writing</strong>
+          <p>"Now" instead of "at this point in time"</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Synonym Finder</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Synonym Finder</h1>
+      <p class="subtitle">Expand Your Vocabulary</p>
+    </header>
+
+    <div class="search-section">
+      <div class="search-box">
+        <input type="text" id="wordInput" placeholder="Enter a word...">
+        <button class="btn btn-primary" id="searchBtn">Find</button>
+      </div>
+    </div>
+
+    <div class="results-section" id="resultsSection" style="display: none;">
+      <div class="word-card">
+        <div class="word-header">
+          <h2 id="mainWord"></h2>
+          <span class="word-type" id="wordType"></span>
+        </div>
+        <p class="word-definition" id="wordDefinition"></p>
+      </div>
+
+      <div class="synonyms-section">
+        <h3>Synonyms</h3>
+        <div class="synonym-list" id="synonymList"></div>
+      </div>
+
+      <div class="related-section">
+        <h3>Related Words</h3>
+        <div class="related-list" id="relatedList"></div>
+      </div>
+
+      <div class="example-section">
+        <h3>Example Usage</h3>
+        <div class="example-text" id="exampleText"></div>
+      </div>
+    </div>
+
+    <div class="no-results" id="noResults" style="display: none;">
+      <span class="no-results-icon">🔍</span>
+      <p>No synonyms found for this word.</p>
+      <p class="suggestion">Try a different word or check the spelling.</p>
+    </div>
+
+    <div class="saved-section">
+      <h3>Saved Words</h3>
+      <div class="saved-list" id="savedList">
+        <p class="empty-message">No saved words yet</p>
+      </div>
+    </div>
+
+    <div class="history-section">
+      <h3>Recent Searches</h3>
+      <div class="history-list" id="historyList"></div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

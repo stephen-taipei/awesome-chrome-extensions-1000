@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reading Progress</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Reading Progress</h1>
+
+    <div class="stats-overview">
+      <div class="stat-card">
+        <span class="stat-value" id="totalArticles">0</span>
+        <span class="stat-label">Articles</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-value" id="completedArticles">0</span>
+        <span class="stat-label">Completed</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-value" id="totalPages">0</span>
+        <span class="stat-label">Pages Read</span>
+      </div>
+    </div>
+
+    <div class="section">
+      <button id="addCurrentBtn" class="btn primary">Track Current Page</button>
+    </div>
+
+    <div class="section">
+      <h2>Add Book/Series</h2>
+      <input type="text" id="bookTitle" placeholder="Book or series title">
+      <div class="page-row">
+        <input type="number" id="currentPage" placeholder="Current page" min="0">
+        <span>of</span>
+        <input type="number" id="totalPageCount" placeholder="Total pages" min="1">
+      </div>
+      <button id="addBookBtn" class="btn secondary">Add Book</button>
+    </div>
+
+    <div class="section">
+      <h2>In Progress</h2>
+      <div id="progressList" class="progress-list">
+        <p class="empty-message">No items being tracked</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Recently Completed</h2>
+      <div id="completedList" class="completed-list">
+        <p class="empty-message">No completed items</p>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

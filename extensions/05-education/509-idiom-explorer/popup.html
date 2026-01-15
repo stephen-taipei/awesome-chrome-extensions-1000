@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Idiom Explorer</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Idiom Explorer</h1>
+      <p class="subtitle">Master Common Expressions</p>
+    </header>
+
+    <div class="search-section">
+      <input type="text" id="searchInput" placeholder="Search idioms...">
+    </div>
+
+    <div class="category-tabs">
+      <button class="cat-tab active" data-category="all">All</button>
+      <button class="cat-tab" data-category="time">Time</button>
+      <button class="cat-tab" data-category="money">Money</button>
+      <button class="cat-tab" data-category="animals">Animals</button>
+      <button class="cat-tab" data-category="body">Body</button>
+    </div>
+
+    <div class="idiom-card" id="featuredIdiom">
+      <div class="idiom-badge">Featured Idiom</div>
+      <h2 class="idiom-text" id="featuredText"></h2>
+      <p class="idiom-meaning" id="featuredMeaning"></p>
+      <div class="idiom-example" id="featuredExample"></div>
+      <div class="idiom-origin" id="featuredOrigin"></div>
+      <div class="idiom-actions">
+        <button class="btn-icon" id="speakBtn" title="Listen">🔊</button>
+        <button class="btn-icon" id="favoriteBtn" title="Favorite">☆</button>
+        <button class="btn-icon" id="shareBtn" title="Copy">📋</button>
+      </div>
+    </div>
+
+    <button class="btn btn-primary" id="randomBtn">Random Idiom</button>
+
+    <div class="idiom-list" id="idiomList"></div>
+
+    <div class="favorites-section" id="favoritesSection">
+      <h3>Favorites</h3>
+      <div class="favorites-list" id="favoritesList"></div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

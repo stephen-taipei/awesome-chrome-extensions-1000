@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reading Speed Trainer</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Reading Speed Trainer</h1>
+      <p class="subtitle">Improve Your Reading Speed</p>
+    </header>
+
+    <div class="stats-bar">
+      <div class="stat">
+        <span class="stat-value" id="avgWPM">0</span>
+        <span class="stat-label">Avg WPM</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value" id="bestWPM">0</span>
+        <span class="stat-label">Best WPM</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value" id="testsCompleted">0</span>
+        <span class="stat-label">Tests</span>
+      </div>
+    </div>
+
+    <div id="menuView">
+      <div class="difficulty-select">
+        <h3>Select Difficulty</h3>
+        <div class="difficulty-options">
+          <button class="diff-btn active" data-level="easy">
+            <span class="diff-name">Easy</span>
+            <span class="diff-desc">Simple vocabulary</span>
+          </button>
+          <button class="diff-btn" data-level="medium">
+            <span class="diff-name">Medium</span>
+            <span class="diff-desc">Mixed content</span>
+          </button>
+          <button class="diff-btn" data-level="hard">
+            <span class="diff-name">Hard</span>
+            <span class="diff-desc">Complex text</span>
+          </button>
+        </div>
+      </div>
+      <button class="btn btn-primary" id="startTestBtn">Start Reading Test</button>
+    </div>
+
+    <div id="testView" style="display: none;">
+      <div class="timer-bar">
+        <span id="timerDisplay">0:00</span>
+        <span class="word-count"><span id="wordCount">0</span> words</span>
+      </div>
+
+      <div class="reading-area" id="readingArea">
+        <p id="readingText"></p>
+      </div>
+
+      <div class="test-status" id="testStatus">
+        Click "Start" when ready, then "Done" when finished reading
+      </div>
+
+      <div class="test-actions">
+        <button class="btn btn-primary" id="startReadingBtn">Start</button>
+        <button class="btn btn-success" id="doneReadingBtn" style="display: none;">Done</button>
+      </div>
+    </div>
+
+    <div id="questionView" style="display: none;">
+      <h3>Comprehension Check</h3>
+      <div class="question-card">
+        <p class="question-text" id="questionText"></p>
+        <div class="question-options" id="questionOptions"></div>
+      </div>
+      <div class="question-progress">
+        Question <span id="questionNum">1</span> / <span id="totalQuestions">3</span>
+      </div>
+    </div>
+
+    <div id="resultView" style="display: none;">
+      <div class="result-card">
+        <div class="result-wpm">
+          <span class="wpm-value" id="resultWPM">0</span>
+          <span class="wpm-label">Words Per Minute</span>
+        </div>
+        <div class="result-details">
+          <div class="result-detail">
+            <span class="detail-value" id="resultTime">0:00</span>
+            <span class="detail-label">Time</span>
+          </div>
+          <div class="result-detail">
+            <span class="detail-value" id="resultComprehension">0%</span>
+            <span class="detail-label">Comprehension</span>
+          </div>
+        </div>
+        <div class="result-message" id="resultMessage"></div>
+      </div>
+      <div class="result-actions">
+        <button class="btn btn-primary" id="tryAgainBtn">Try Again</button>
+        <button class="btn btn-secondary" id="backMenuBtn">Main Menu</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pronunciation Guide</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Pronunciation Guide</h1>
+      <p class="subtitle">Learn to Pronounce Correctly</p>
+    </header>
+
+    <div class="search-section">
+      <div class="search-box">
+        <input type="text" id="wordInput" placeholder="Enter a word...">
+        <button class="btn btn-primary" id="searchBtn">Look Up</button>
+      </div>
+    </div>
+
+    <div class="result-section" id="resultSection" style="display: none;">
+      <div class="word-card">
+        <div class="word-header">
+          <h2 class="word-title" id="wordTitle"></h2>
+          <button class="btn-speak" id="speakBtn" title="Listen">🔊</button>
+        </div>
+
+        <div class="pronunciation">
+          <span class="ipa-label">IPA:</span>
+          <span class="ipa-text" id="ipaText"></span>
+        </div>
+
+        <div class="syllables">
+          <span class="syllable-label">Syllables:</span>
+          <span class="syllable-text" id="syllableText"></span>
+        </div>
+
+        <div class="phonetic-breakdown" id="phoneticBreakdown">
+          <h3>Phonetic Breakdown</h3>
+          <div class="phonemes" id="phonemes"></div>
+        </div>
+      </div>
+
+      <div class="tips-section">
+        <h3>Pronunciation Tips</h3>
+        <div class="tip" id="tipContent"></div>
+      </div>
+
+      <div class="speed-control">
+        <label>Speech Speed</label>
+        <input type="range" id="speedRange" min="0.5" max="1.5" step="0.1" value="1">
+        <span id="speedValue">1.0x</span>
+      </div>
+    </div>
+
+    <div class="ipa-chart-section">
+      <h3>IPA Symbol Reference</h3>
+      <div class="ipa-tabs">
+        <button class="ipa-tab active" data-tab="vowels">Vowels</button>
+        <button class="ipa-tab" data-tab="consonants">Consonants</button>
+      </div>
+
+      <div class="ipa-content" id="vowelsTab">
+        <div class="ipa-grid">
+          <div class="ipa-item" data-sound="iː">iː <span>see</span></div>
+          <div class="ipa-item" data-sound="ɪ">ɪ <span>sit</span></div>
+          <div class="ipa-item" data-sound="e">e <span>bed</span></div>
+          <div class="ipa-item" data-sound="æ">æ <span>cat</span></div>
+          <div class="ipa-item" data-sound="ɑː">ɑː <span>car</span></div>
+          <div class="ipa-item" data-sound="ɒ">ɒ <span>hot</span></div>
+          <div class="ipa-item" data-sound="ɔː">ɔː <span>saw</span></div>
+          <div class="ipa-item" data-sound="ʊ">ʊ <span>put</span></div>
+          <div class="ipa-item" data-sound="uː">uː <span>too</span></div>
+          <div class="ipa-item" data-sound="ʌ">ʌ <span>cup</span></div>
+          <div class="ipa-item" data-sound="ɜː">ɜː <span>bird</span></div>
+          <div class="ipa-item" data-sound="ə">ə <span>about</span></div>
+        </div>
+      </div>
+
+      <div class="ipa-content" id="consonantsTab" style="display: none;">
+        <div class="ipa-grid">
+          <div class="ipa-item" data-sound="p">p <span>pen</span></div>
+          <div class="ipa-item" data-sound="b">b <span>bad</span></div>
+          <div class="ipa-item" data-sound="t">t <span>tea</span></div>
+          <div class="ipa-item" data-sound="d">d <span>did</span></div>
+          <div class="ipa-item" data-sound="k">k <span>cat</span></div>
+          <div class="ipa-item" data-sound="g">g <span>get</span></div>
+          <div class="ipa-item" data-sound="f">f <span>fall</span></div>
+          <div class="ipa-item" data-sound="v">v <span>van</span></div>
+          <div class="ipa-item" data-sound="θ">θ <span>thin</span></div>
+          <div class="ipa-item" data-sound="ð">ð <span>this</span></div>
+          <div class="ipa-item" data-sound="s">s <span>see</span></div>
+          <div class="ipa-item" data-sound="z">z <span>zoo</span></div>
+          <div class="ipa-item" data-sound="ʃ">ʃ <span>she</span></div>
+          <div class="ipa-item" data-sound="ʒ">ʒ <span>vision</span></div>
+          <div class="ipa-item" data-sound="tʃ">tʃ <span>chin</span></div>
+          <div class="ipa-item" data-sound="dʒ">dʒ <span>job</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="history-section">
+      <h3>Recent Words</h3>
+      <div class="history-list" id="historyList"></div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

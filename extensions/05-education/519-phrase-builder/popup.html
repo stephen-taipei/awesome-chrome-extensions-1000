@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phrase Builder</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Phrase Builder</h1>
+      <p class="subtitle">Master Common Expressions</p>
+    </header>
+
+    <div class="category-selector">
+      <button class="cat-btn active" data-cat="everyday">Everyday</button>
+      <button class="cat-btn" data-cat="business">Business</button>
+      <button class="cat-btn" data-cat="academic">Academic</button>
+      <button class="cat-btn" data-cat="social">Social</button>
+    </div>
+
+    <div class="phrase-card" id="phraseCard">
+      <div class="phrase-main">
+        <span class="phrase-text" id="phraseText"></span>
+        <button class="btn-speak" id="speakBtn">🔊</button>
+      </div>
+      <div class="phrase-meaning" id="phraseMeaning"></div>
+      <div class="phrase-example">
+        <span class="example-label">Example:</span>
+        <span class="example-text" id="phraseExample"></span>
+      </div>
+      <div class="phrase-usage">
+        <span class="usage-label">Usage:</span>
+        <span class="usage-text" id="phraseUsage"></span>
+      </div>
+    </div>
+
+    <div class="nav-buttons">
+      <button class="btn btn-secondary" id="prevBtn">← Previous</button>
+      <button class="btn btn-primary" id="randomBtn">Random</button>
+      <button class="btn btn-secondary" id="nextBtn">Next →</button>
+    </div>
+
+    <div class="practice-section">
+      <h3>Fill in the Blank</h3>
+      <div class="practice-card" id="practiceCard">
+        <p class="practice-prompt" id="practicePrompt"></p>
+        <div class="practice-options" id="practiceOptions"></div>
+        <div class="practice-feedback" id="practiceFeedback"></div>
+      </div>
+      <button class="btn btn-secondary" id="newPracticeBtn">New Practice</button>
+    </div>
+
+    <div class="saved-section">
+      <div class="saved-header">
+        <h3>Saved Phrases</h3>
+        <span class="saved-count" id="savedCount">0</span>
+      </div>
+      <div class="saved-list" id="savedList"></div>
+    </div>
+
+    <div class="phrase-actions">
+      <button class="btn-action" id="saveBtn">
+        <span id="saveIcon">☆</span> Save
+      </button>
+      <button class="btn-action" id="copyBtn">
+        <span>📋</span> Copy
+      </button>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Summary Maker</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Summary Maker</h1>
+
+    <div class="section">
+      <label for="summaryLength">Summary Length</label>
+      <select id="summaryLength">
+        <option value="short">Short (1-2 sentences)</option>
+        <option value="medium" selected>Medium (3-4 sentences)</option>
+        <option value="long">Long (5+ sentences)</option>
+      </select>
+    </div>
+
+    <div class="section">
+      <button id="summarizeBtn" class="btn primary">Summarize Selection</button>
+    </div>
+
+    <div class="section">
+      <h2>Summary</h2>
+      <div id="summaryResult" class="summary-result">
+        <p class="placeholder">Select text and click summarize</p>
+      </div>
+      <button id="copyBtn" class="btn secondary" disabled>Copy Summary</button>
+      <button id="saveBtn" class="btn secondary" disabled>Save Summary</button>
+    </div>
+
+    <div class="section">
+      <h2>Saved Summaries</h2>
+      <div id="savedList" class="saved-list">
+        <p class="empty-message">No summaries saved</p>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

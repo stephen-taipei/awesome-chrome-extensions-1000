@@ -1,0 +1,270 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 370px;
+  min-height: 500px;
+  background: #1a1a2e;
+  color: #eee;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  padding: 20px;
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #69f0ae;
+  text-align: center;
+}
+
+h2 {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  color: #aaa;
+}
+
+.section {
+  margin-bottom: 18px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  background: #16213e;
+  border: 1px solid #333;
+  border-radius: 8px;
+  color: #eee;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+
+textarea {
+  min-height: 80px;
+  resize: vertical;
+  font-family: inherit;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #69f0ae;
+}
+
+.add-row {
+  display: flex;
+  gap: 8px;
+}
+
+.add-row input {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.btn {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn.primary {
+  width: 100%;
+  background: #69f0ae;
+  color: #1a1a2e;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.btn.primary:hover {
+  background: #00e676;
+}
+
+.btn.icon {
+  background: #69f0ae;
+  color: #1a1a2e;
+  font-size: 1.2rem;
+  font-weight: bold;
+  width: 45px;
+}
+
+.folders-list {
+  max-height: 180px;
+  overflow-y: auto;
+}
+
+.folder-item {
+  background: #16213e;
+  border-radius: 8px;
+  padding: 12px 15px;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.folder-item:hover {
+  background: #1f2b4a;
+}
+
+.folder-item .folder-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.folder-item .folder-icon {
+  font-size: 1.2rem;
+}
+
+.folder-item .folder-name {
+  font-weight: bold;
+  color: #69f0ae;
+}
+
+.folder-item .note-count {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.folder-item .delete-btn {
+  background: none;
+  border: none;
+  color: #e91e63;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 5px;
+}
+
+.folder-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.back-btn {
+  background: #16213e;
+  border: none;
+  color: #69f0ae;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.back-btn:hover {
+  background: #1f2b4a;
+}
+
+#currentFolderName {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #69f0ae;
+}
+
+.add-note-form {
+  margin-bottom: 15px;
+}
+
+.notes-list {
+  max-height: 180px;
+  overflow-y: auto;
+}
+
+.note-item {
+  background: #16213e;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.note-item .title {
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 5px;
+  padding-right: 25px;
+}
+
+.note-item .content {
+  font-size: 0.85rem;
+  color: #aaa;
+  line-height: 1.4;
+}
+
+.note-item .delete-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: none;
+  border: none;
+  color: #e91e63;
+  cursor: pointer;
+}
+
+.search-section {
+  margin-bottom: 15px;
+}
+
+.search-results {
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.search-item {
+  background: #16213e;
+  border-radius: 6px;
+  padding: 10px;
+  margin-top: 8px;
+  font-size: 0.85rem;
+}
+
+.search-item .folder {
+  color: #69f0ae;
+  font-size: 0.75rem;
+  margin-bottom: 3px;
+}
+
+.search-item .title {
+  font-weight: bold;
+  color: #fff;
+}
+
+.empty-message {
+  color: #666;
+  text-align: center;
+  font-style: italic;
+  padding: 20px;
+}
+
+.stats {
+  text-align: center;
+  color: #888;
+  font-size: 0.85rem;
+}
+
+.stats span {
+  color: #69f0ae;
+  font-weight: bold;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a2e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 3px;
+}
