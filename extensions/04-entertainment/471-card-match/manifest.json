@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Card Match",
+  "version": "1.0",
+  "description": "Classic card memory matching game",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "48": "icon.png"
+    }
+  },
+  "permissions": ["storage"]
+}

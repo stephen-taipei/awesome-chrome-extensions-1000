@@ -1,0 +1,13 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { width: 320px; min-height: 450px; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); font-family: 'Segoe UI', sans-serif; color: #fff; }
+.game-container { padding: 15px; text-align: center; }
+h1 { font-size: 22px; margin-bottom: 10px; background: linear-gradient(90deg, #a8edea, #fed6e3); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.stats { display: flex; justify-content: space-around; margin-bottom: 15px; font-size: 14px; }
+.grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 5px; margin-bottom: 15px; }
+.cell { height: 50px; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.1); border-radius: 6px; font-size: 18px; font-weight: bold; }
+.cell.sum { background: linear-gradient(135deg, #a8edea, #fed6e3); color: #1a1a2e; }
+.cell input { width: 100%; height: 100%; background: transparent; border: 2px solid #667eea; border-radius: 6px; color: #fff; text-align: center; font-size: 18px; font-weight: bold; }
+.cell input:focus { outline: none; border-color: #a8edea; }
+.message { min-height: 24px; font-size: 14px; margin-bottom: 10px; color: #a8edea; }
+button { padding: 10px 25px; background: linear-gradient(135deg, #667eea, #764ba2); border: none; border-radius: 5px; color: #fff; cursor: pointer; font-size: 14px; }
+button:hover { opacity: 0.9; }

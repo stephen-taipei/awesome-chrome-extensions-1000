@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Coin Toss",
+  "version": "1.0",
+  "description": "Guess heads or tails and build winning streaks",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Coin Toss"
+  },
+  "permissions": ["storage"]
+}

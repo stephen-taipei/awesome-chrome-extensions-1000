@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Card War</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Card War</h1>
+    <div class="stats">
+      <span>You: <span id="player-score">0</span></span>
+      <span>Wins: <span id="wins">0</span></span>
+      <span>CPU: <span id="cpu-score">0</span></span>
+    </div>
+    <div id="game-area">
+      <div class="card-slot">
+        <div id="player-card" class="card"></div>
+        <span>You</span>
+      </div>
+      <div id="result">VS</div>
+      <div class="card-slot">
+        <div id="cpu-card" class="card"></div>
+        <span>CPU</span>
+      </div>
+    </div>
+    <div id="message">Click Draw to play!</div>
+    <button id="draw-btn">Draw Card</button>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

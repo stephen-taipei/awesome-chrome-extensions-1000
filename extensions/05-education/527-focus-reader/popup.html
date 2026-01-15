@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Focus Reader</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Focus Reader</h1>
+
+    <div class="section">
+      <button id="enableFocusBtn" class="btn primary">Enable Focus Mode</button>
+    </div>
+
+    <div class="section">
+      <h2>Reading Settings</h2>
+
+      <div class="setting-group">
+        <label>Text Width</label>
+        <input type="range" id="textWidth" min="400" max="900" value="650" step="50">
+        <span class="range-value"><span id="textWidthValue">650</span>px</span>
+      </div>
+
+      <div class="setting-group">
+        <label>Font Size</label>
+        <input type="range" id="fontSize" min="14" max="28" value="18" step="1">
+        <span class="range-value"><span id="fontSizeValue">18</span>px</span>
+      </div>
+
+      <div class="setting-group">
+        <label>Line Height</label>
+        <input type="range" id="lineHeight" min="1.2" max="2.2" value="1.6" step="0.1">
+        <span class="range-value"><span id="lineHeightValue">1.6</span></span>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Theme</h2>
+      <div class="theme-options">
+        <button class="theme-btn active" data-theme="dark">
+          <span class="theme-preview dark-preview"></span>
+          Dark
+        </button>
+        <button class="theme-btn" data-theme="light">
+          <span class="theme-preview light-preview"></span>
+          Light
+        </button>
+        <button class="theme-btn" data-theme="sepia">
+          <span class="theme-preview sepia-preview"></span>
+          Sepia
+        </button>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Hide Elements</h2>
+      <div class="toggle-group">
+        <label class="toggle">
+          <input type="checkbox" id="hideImages" checked>
+          <span class="toggle-slider"></span>
+          Images
+        </label>
+        <label class="toggle">
+          <input type="checkbox" id="hideSidebars" checked>
+          <span class="toggle-slider"></span>
+          Sidebars
+        </label>
+        <label class="toggle">
+          <input type="checkbox" id="hideAds" checked>
+          <span class="toggle-slider"></span>
+          Ads
+        </label>
+        <label class="toggle">
+          <input type="checkbox" id="hideComments" checked>
+          <span class="toggle-slider"></span>
+          Comments
+        </label>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

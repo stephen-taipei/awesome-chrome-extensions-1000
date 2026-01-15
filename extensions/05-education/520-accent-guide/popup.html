@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accent Guide</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Accent Guide</h1>
+      <p class="subtitle">Master Pronunciation Accents</p>
+    </header>
+
+    <div class="language-selector">
+      <button class="lang-btn active" data-lang="english">English</button>
+      <button class="lang-btn" data-lang="spanish">Spanish</button>
+      <button class="lang-btn" data-lang="french">French</button>
+    </div>
+
+    <div class="accent-tabs">
+      <button class="accent-tab active" data-accent="0">Accent 1</button>
+      <button class="accent-tab" data-accent="1">Accent 2</button>
+      <button class="accent-tab" data-accent="2">Accent 3</button>
+    </div>
+
+    <div class="accent-card" id="accentCard">
+      <div class="accent-header">
+        <h2 class="accent-name" id="accentName"></h2>
+        <span class="accent-region" id="accentRegion"></span>
+      </div>
+      <p class="accent-description" id="accentDescription"></p>
+
+      <div class="features-section">
+        <h3>Key Features</h3>
+        <ul class="features-list" id="featuresList"></ul>
+      </div>
+
+      <div class="examples-section">
+        <h3>Example Words</h3>
+        <div class="examples-list" id="examplesList"></div>
+      </div>
+
+      <div class="tips-section">
+        <h3>Pronunciation Tips</h3>
+        <div class="tips-list" id="tipsList"></div>
+      </div>
+    </div>
+
+    <div class="practice-section">
+      <h3>Practice Listening</h3>
+      <div class="practice-card">
+        <p class="practice-word" id="practiceWord"></p>
+        <div class="practice-buttons">
+          <button class="btn btn-primary" id="listenBtn">Listen</button>
+          <button class="btn btn-secondary" id="nextWordBtn">Next Word</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="saved-section">
+      <div class="saved-header">
+        <h3>Saved Accents</h3>
+        <span class="saved-count" id="savedCount">0</span>
+      </div>
+      <div class="saved-list" id="savedList"></div>
+    </div>
+
+    <div class="accent-actions">
+      <button class="btn-action" id="saveBtn">
+        <span id="saveIcon">☆</span> Save Accent
+      </button>
+      <button class="btn-action" id="compareBtn">
+        <span>⇄</span> Compare
+      </button>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

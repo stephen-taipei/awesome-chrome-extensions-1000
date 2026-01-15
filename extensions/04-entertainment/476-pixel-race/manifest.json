@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Pixel Race",
+  "version": "1.0",
+  "description": "Racing game with pixel graphics",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "48": "icon.png"
+    }
+  },
+  "permissions": ["storage"]
+}

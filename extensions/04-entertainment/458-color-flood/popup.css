@@ -1,0 +1,14 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { width: 320px; min-height: 420px; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); font-family: 'Segoe UI', sans-serif; }
+.container { padding: 15px; text-align: center; }
+h1 { color: #4ecdc4; font-size: 22px; margin-bottom: 10px; text-shadow: 0 0 10px rgba(78,205,196,0.5); }
+.stats { display: flex; justify-content: space-around; margin-bottom: 10px; color: #a0a0a0; font-size: 14px; }
+.stats span span { color: #4ecdc4; font-weight: bold; }
+#grid { display: grid; gap: 2px; margin: 0 auto; width: fit-content; }
+.cell { width: 28px; height: 28px; border-radius: 4px; transition: background 0.3s; }
+#colors { display: flex; justify-content: center; gap: 8px; margin: 12px 0; }
+.color-btn { width: 35px; height: 35px; border: 3px solid transparent; border-radius: 8px; cursor: pointer; transition: transform 0.2s, border-color 0.2s; }
+.color-btn:hover { transform: scale(1.1); border-color: #fff; }
+#message { color: #fff; margin: 8px 0; font-size: 13px; min-height: 20px; }
+button { background: linear-gradient(135deg, #4ecdc4, #2a9d8f); border: none; color: #fff; padding: 10px 25px; border-radius: 20px; cursor: pointer; font-size: 14px; transition: transform 0.2s; }
+button:hover { transform: scale(1.05); }

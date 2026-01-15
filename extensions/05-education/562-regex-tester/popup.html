@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Regex Tester</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Regex Tester</h1>
+    </header>
+
+    <div class="regex-section">
+      <label>Regular Expression</label>
+      <div class="regex-input">
+        <span class="delimiter">/</span>
+        <input type="text" id="regexPattern" placeholder="Enter regex pattern...">
+        <span class="delimiter">/</span>
+        <input type="text" id="regexFlags" placeholder="gi" maxlength="6" class="flags-input">
+      </div>
+      <div id="regexError" class="error-message"></div>
+    </div>
+
+    <div class="test-section">
+      <label>Test String</label>
+      <textarea id="testString" placeholder="Enter text to test against..."></textarea>
+    </div>
+
+    <div class="results-section">
+      <div class="results-header">
+        <h2>Results</h2>
+        <span id="matchCount">0 matches</span>
+      </div>
+      <div id="highlightedResult" class="highlighted-result"></div>
+      <div id="matchesList" class="matches-list"></div>
+    </div>
+
+    <div class="quick-patterns">
+      <h3>Quick Patterns</h3>
+      <div class="patterns-grid">
+        <button data-pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" data-flags="g">Email</button>
+        <button data-pattern="https?://[^\s]+" data-flags="g">URL</button>
+        <button data-pattern="\d{3}-\d{3}-\d{4}" data-flags="g">Phone</button>
+        <button data-pattern="\b\d{5}(-\d{4})?\b" data-flags="g">ZIP Code</button>
+        <button data-pattern="#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})" data-flags="g">Hex Color</button>
+        <button data-pattern="\d{4}-\d{2}-\d{2}" data-flags="g">Date</button>
+      </div>
+    </div>
+
+    <div class="history-section">
+      <h3>Recent Patterns</h3>
+      <div id="historyList"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

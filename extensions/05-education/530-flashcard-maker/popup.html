@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flashcard Maker</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Flashcard Maker</h1>
+
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="create">Create</button>
+      <button class="tab-btn" data-tab="study">Study</button>
+      <button class="tab-btn" data-tab="manage">Manage</button>
+    </div>
+
+    <div id="createTab" class="tab-content active">
+      <div class="section">
+        <input type="text" id="deckSelect" list="deckList" placeholder="Select or create deck">
+        <datalist id="deckList"></datalist>
+      </div>
+      <div class="section">
+        <textarea id="frontText" placeholder="Front (Question)"></textarea>
+        <textarea id="backText" placeholder="Back (Answer)"></textarea>
+        <button id="useSelectionBtn" class="btn secondary">Use Selection as Answer</button>
+        <button id="createCardBtn" class="btn primary">Create Flashcard</button>
+      </div>
+    </div>
+
+    <div id="studyTab" class="tab-content">
+      <div class="section">
+        <select id="studyDeck">
+          <option value="">Select a deck to study</option>
+        </select>
+      </div>
+      <div class="flashcard" id="flashcard">
+        <div class="card-inner" id="cardInner">
+          <div class="card-front">
+            <p id="cardFront">Select a deck to start</p>
+          </div>
+          <div class="card-back">
+            <p id="cardBack"></p>
+          </div>
+        </div>
+      </div>
+      <div class="study-controls">
+        <button id="flipBtn" class="btn secondary">Flip Card</button>
+        <div class="nav-buttons">
+          <button id="prevCardBtn" class="btn icon">&#8592;</button>
+          <span id="cardProgress">0/0</span>
+          <button id="nextCardBtn" class="btn icon">&#8594;</button>
+        </div>
+        <button id="shuffleBtn" class="btn secondary">Shuffle</button>
+      </div>
+    </div>
+
+    <div id="manageTab" class="tab-content">
+      <div class="section">
+        <select id="manageDeck">
+          <option value="">Select a deck</option>
+        </select>
+      </div>
+      <div id="cardsList" class="cards-list">
+        <p class="empty-message">Select a deck to view cards</p>
+      </div>
+      <button id="deleteDeckBtn" class="btn danger">Delete Deck</button>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

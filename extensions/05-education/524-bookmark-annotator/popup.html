@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookmark Annotator</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Bookmark Annotator</h1>
+
+    <div class="current-page">
+      <h2>Current Page</h2>
+      <div id="pageInfo" class="page-info">
+        <div class="page-title">Loading...</div>
+        <div class="page-url"></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <textarea id="annotationText" placeholder="Add your annotation here..."></textarea>
+      <select id="categorySelect">
+        <option value="">Select category</option>
+        <option value="important">Important</option>
+        <option value="reference">Reference</option>
+        <option value="research">Research</option>
+        <option value="reading">To Read</option>
+        <option value="other">Other</option>
+      </select>
+      <button id="saveBtn" class="btn primary">Save Annotation</button>
+    </div>
+
+    <div class="section">
+      <h2>Annotated Bookmarks</h2>
+      <div class="filter-row">
+        <select id="filterCategory">
+          <option value="">All Categories</option>
+          <option value="important">Important</option>
+          <option value="reference">Reference</option>
+          <option value="research">Research</option>
+          <option value="reading">To Read</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div id="bookmarksList" class="bookmarks-list">
+        <p class="empty-message">No annotated bookmarks</p>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sentence Builder</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Sentence Builder</h1>
+      <p class="subtitle">Construct Correct Sentences</p>
+    </header>
+
+    <div class="score-bar">
+      <div class="score-item">
+        <span class="score-value" id="currentScore">0</span>
+        <span class="score-label">Score</span>
+      </div>
+      <div class="score-item">
+        <span class="score-value" id="level">1</span>
+        <span class="score-label">Level</span>
+      </div>
+      <div class="score-item">
+        <span class="score-value" id="streak">0</span>
+        <span class="score-label">Streak</span>
+      </div>
+    </div>
+
+    <div class="game-area">
+      <div class="instruction">
+        Arrange the words to form a correct sentence:
+      </div>
+
+      <div class="sentence-zone" id="sentenceZone">
+        <span class="placeholder">Click words below to build your sentence</span>
+      </div>
+
+      <div class="word-bank" id="wordBank"></div>
+
+      <div class="feedback" id="feedback" style="display: none;"></div>
+
+      <div class="action-buttons">
+        <button class="btn btn-secondary" id="clearBtn">Clear</button>
+        <button class="btn btn-primary" id="checkBtn">Check</button>
+      </div>
+
+      <div class="hint-section">
+        <button class="btn btn-link" id="hintBtn">Need a hint?</button>
+        <div class="hint-text" id="hintText" style="display: none;"></div>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button class="btn btn-secondary" id="newSentenceBtn">New Sentence</button>
+    </div>
+
+    <div class="difficulty-selector">
+      <span>Difficulty:</span>
+      <div class="difficulty-btns">
+        <button class="diff-btn active" data-level="easy">Easy</button>
+        <button class="diff-btn" data-level="medium">Medium</button>
+        <button class="diff-btn" data-level="hard">Hard</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

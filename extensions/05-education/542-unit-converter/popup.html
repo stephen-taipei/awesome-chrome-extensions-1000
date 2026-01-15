@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unit Converter</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Unit Converter</h1>
+
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="length">Length</button>
+      <button class="tab-btn" data-tab="weight">Weight</button>
+      <button class="tab-btn" data-tab="temp">Temp</button>
+    </div>
+
+    <div id="length" class="tab-content active">
+      <div class="converter">
+        <input type="number" id="length-value" placeholder="Enter value" step="any">
+        <div class="unit-row">
+          <select id="length-from">
+            <option value="m">Meters (m)</option>
+            <option value="km">Kilometers (km)</option>
+            <option value="cm">Centimeters (cm)</option>
+            <option value="mm">Millimeters (mm)</option>
+            <option value="mi">Miles (mi)</option>
+            <option value="yd">Yards (yd)</option>
+            <option value="ft">Feet (ft)</option>
+            <option value="in">Inches (in)</option>
+          </select>
+          <span class="arrow">→</span>
+          <select id="length-to">
+            <option value="ft">Feet (ft)</option>
+            <option value="m">Meters (m)</option>
+            <option value="km">Kilometers (km)</option>
+            <option value="cm">Centimeters (cm)</option>
+            <option value="mm">Millimeters (mm)</option>
+            <option value="mi">Miles (mi)</option>
+            <option value="yd">Yards (yd)</option>
+            <option value="in">Inches (in)</option>
+          </select>
+        </div>
+        <button class="convert-btn" data-type="length">Convert</button>
+      </div>
+    </div>
+
+    <div id="weight" class="tab-content">
+      <div class="converter">
+        <input type="number" id="weight-value" placeholder="Enter value" step="any">
+        <div class="unit-row">
+          <select id="weight-from">
+            <option value="kg">Kilograms (kg)</option>
+            <option value="g">Grams (g)</option>
+            <option value="mg">Milligrams (mg)</option>
+            <option value="lb">Pounds (lb)</option>
+            <option value="oz">Ounces (oz)</option>
+            <option value="ton">Metric Tons</option>
+          </select>
+          <span class="arrow">→</span>
+          <select id="weight-to">
+            <option value="lb">Pounds (lb)</option>
+            <option value="kg">Kilograms (kg)</option>
+            <option value="g">Grams (g)</option>
+            <option value="mg">Milligrams (mg)</option>
+            <option value="oz">Ounces (oz)</option>
+            <option value="ton">Metric Tons</option>
+          </select>
+        </div>
+        <button class="convert-btn" data-type="weight">Convert</button>
+      </div>
+    </div>
+
+    <div id="temp" class="tab-content">
+      <div class="converter">
+        <input type="number" id="temp-value" placeholder="Enter value" step="any">
+        <div class="unit-row">
+          <select id="temp-from">
+            <option value="c">Celsius (°C)</option>
+            <option value="f">Fahrenheit (°F)</option>
+            <option value="k">Kelvin (K)</option>
+          </select>
+          <span class="arrow">→</span>
+          <select id="temp-to">
+            <option value="f">Fahrenheit (°F)</option>
+            <option value="c">Celsius (°C)</option>
+            <option value="k">Kelvin (K)</option>
+          </select>
+        </div>
+        <button class="convert-btn" data-type="temp">Convert</button>
+      </div>
+    </div>
+
+    <div id="result" class="result"></div>
+
+    <div class="history">
+      <h3>Recent Conversions</h3>
+      <ul id="history-list"></ul>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

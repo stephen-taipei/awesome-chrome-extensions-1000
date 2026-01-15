@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Drop Merge",
+  "version": "1.0",
+  "description": "Drop and merge same-colored items to score",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Drop Merge"
+  },
+  "permissions": ["storage"]
+}

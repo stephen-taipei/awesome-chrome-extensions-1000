@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Concept Mapper",
+  "version": "1.0.0",
+  "description": "Simple concept mapping tool for visual learning",
+  "permissions": ["storage"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Concept Mapper"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

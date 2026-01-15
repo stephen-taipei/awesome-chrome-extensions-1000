@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Translation Helper</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Translation Helper</h1>
+      <p class="subtitle">Quick Phrase Translations</p>
+    </header>
+
+    <div class="language-selectors">
+      <div class="lang-select">
+        <label>From</label>
+        <select id="fromLang">
+          <option value="en">English</option>
+          <option value="es">Spanish</option>
+          <option value="fr">French</option>
+          <option value="de">German</option>
+        </select>
+      </div>
+      <button class="swap-btn" id="swapBtn">⇄</button>
+      <div class="lang-select">
+        <label>To</label>
+        <select id="toLang">
+          <option value="es">Spanish</option>
+          <option value="en">English</option>
+          <option value="fr">French</option>
+          <option value="de">German</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="input-section">
+      <textarea id="inputText" placeholder="Enter text to translate..."></textarea>
+      <button class="btn btn-primary" id="translateBtn">Translate</button>
+    </div>
+
+    <div class="output-section" id="outputSection" style="display: none;">
+      <div class="output-header">
+        <span>Translation</span>
+        <div class="output-actions">
+          <button class="btn-icon" id="speakBtn" title="Listen">🔊</button>
+          <button class="btn-icon" id="copyBtn" title="Copy">📋</button>
+        </div>
+      </div>
+      <div class="output-text" id="outputText"></div>
+    </div>
+
+    <div class="phrase-section">
+      <h3>Common Phrases</h3>
+      <div class="phrase-categories">
+        <button class="cat-btn active" data-cat="greetings">Greetings</button>
+        <button class="cat-btn" data-cat="travel">Travel</button>
+        <button class="cat-btn" data-cat="dining">Dining</button>
+        <button class="cat-btn" data-cat="emergency">Emergency</button>
+      </div>
+      <div class="phrase-list" id="phraseList"></div>
+    </div>
+
+    <div class="history-section">
+      <h3>Recent Translations</h3>
+      <div class="history-list" id="historyList"></div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

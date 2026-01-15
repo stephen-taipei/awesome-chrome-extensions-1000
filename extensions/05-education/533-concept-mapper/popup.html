@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Concept Mapper</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Concept Mapper</h1>
+
+    <div class="section">
+      <input type="text" id="mapTitle" placeholder="Map title">
+    </div>
+
+    <div class="section">
+      <h2>Add Concept</h2>
+      <div class="concept-form">
+        <input type="text" id="conceptText" placeholder="Concept name">
+        <select id="parentConcept">
+          <option value="">No parent (root)</option>
+        </select>
+        <input type="text" id="relationLabel" placeholder="Relation label (optional)">
+        <button id="addConceptBtn" class="btn primary">Add Concept</button>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Concept Map</h2>
+      <div id="mapContainer" class="map-container">
+        <p class="empty-message">Add concepts to build your map</p>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button id="saveMapBtn" class="btn primary" disabled>Save Map</button>
+      <button id="clearMapBtn" class="btn secondary">Clear</button>
+    </div>
+
+    <div class="section">
+      <h2>Saved Maps</h2>
+      <div id="savedMaps" class="saved-list">
+        <p class="empty-message">No saved maps</p>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,352 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 400px;
+  min-height: 550px;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  color: #e0e0e0;
+}
+
+.container {
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-size: 22px;
+  background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  font-size: 12px;
+  color: #888;
+  margin-top: 4px;
+}
+
+h3 {
+  font-size: 13px;
+  color: #84fab0;
+  margin-bottom: 10px;
+}
+
+.category-selector {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.cat-btn {
+  flex: 1;
+  min-width: 70px;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #888;
+  cursor: pointer;
+  font-size: 11px;
+  transition: all 0.3s ease;
+}
+
+.cat-btn:hover {
+  background: rgba(132, 250, 176, 0.1);
+}
+
+.cat-btn.active {
+  background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
+  color: #1a1a2e;
+  border-color: transparent;
+  font-weight: 600;
+}
+
+.phrase-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 15px;
+  border: 1px solid rgba(132, 250, 176, 0.3);
+}
+
+.phrase-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.phrase-text {
+  font-size: 20px;
+  font-weight: bold;
+  background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  flex: 1;
+}
+
+.btn-speak {
+  background: rgba(132, 250, 176, 0.2);
+  border: 1px solid rgba(132, 250, 176, 0.4);
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.btn-speak:hover {
+  background: rgba(132, 250, 176, 0.4);
+  transform: scale(1.1);
+}
+
+.phrase-meaning {
+  font-size: 14px;
+  color: #e0e0e0;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.phrase-example, .phrase-usage {
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.example-label, .usage-label {
+  color: #84fab0;
+  font-weight: 600;
+}
+
+.example-text {
+  color: #aaa;
+  font-style: italic;
+}
+
+.usage-text {
+  color: #888;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
+  color: #1a1a2e;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(132, 250, 176, 0.4);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: #e0e0e0;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.practice-section {
+  margin-bottom: 20px;
+}
+
+.practice-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+
+.practice-prompt {
+  font-size: 14px;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.practice-prompt .blank {
+  display: inline-block;
+  min-width: 80px;
+  border-bottom: 2px solid #84fab0;
+  margin: 0 5px;
+}
+
+.practice-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.practice-option {
+  padding: 8px 14px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.2s ease;
+}
+
+.practice-option:hover:not(.disabled) {
+  background: rgba(132, 250, 176, 0.2);
+  border-color: rgba(132, 250, 176, 0.4);
+}
+
+.practice-option.correct {
+  background: rgba(56, 239, 125, 0.3);
+  border-color: #38ef7d;
+  color: #38ef7d;
+}
+
+.practice-option.wrong {
+  background: rgba(255, 107, 107, 0.3);
+  border-color: #ff6b6b;
+  color: #ff6b6b;
+}
+
+.practice-feedback {
+  font-size: 13px;
+  padding: 8px;
+  border-radius: 6px;
+  text-align: center;
+  min-height: 30px;
+}
+
+.practice-feedback.correct {
+  background: rgba(56, 239, 125, 0.2);
+  color: #38ef7d;
+}
+
+.practice-feedback.wrong {
+  background: rgba(255, 107, 107, 0.2);
+  color: #ff6b6b;
+}
+
+.saved-section {
+  padding: 15px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 15px;
+}
+
+.saved-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.saved-header h3 {
+  margin-bottom: 0;
+}
+
+.saved-count {
+  background: rgba(132, 250, 176, 0.2);
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  color: #84fab0;
+}
+
+.saved-list {
+  max-height: 80px;
+  overflow-y: auto;
+}
+
+.saved-item {
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 6px;
+  margin-bottom: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.saved-item:hover {
+  background: rgba(132, 250, 176, 0.1);
+}
+
+.saved-phrase {
+  font-size: 13px;
+  color: #84fab0;
+}
+
+.saved-remove {
+  background: none;
+  border: none;
+  color: #ff6b6b;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.phrase-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-action {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #e0e0e0;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.3s ease;
+}
+
+.btn-action:hover {
+  background: rgba(132, 250, 176, 0.1);
+  border-color: rgba(132, 250, 176, 0.3);
+}
+
+.btn-action.saved {
+  background: rgba(132, 250, 176, 0.2);
+  color: #84fab0;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(132, 250, 176, 0.5);
+  border-radius: 3px;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Citation Helper</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Citation Helper</h1>
+
+    <div class="section">
+      <h2>Source Type</h2>
+      <select id="sourceType">
+        <option value="webpage">Web Page</option>
+        <option value="book">Book</option>
+        <option value="journal">Journal Article</option>
+        <option value="video">Video</option>
+      </select>
+    </div>
+
+    <div class="section">
+      <h2>Citation Details</h2>
+      <input type="text" id="title" placeholder="Title">
+      <input type="text" id="author" placeholder="Author(s)">
+      <input type="text" id="date" placeholder="Date (YYYY-MM-DD)">
+      <input type="text" id="url" placeholder="URL">
+      <input type="text" id="publisher" placeholder="Publisher / Site Name">
+      <button id="autoFillBtn" class="btn secondary">Auto-fill from Page</button>
+    </div>
+
+    <div class="section">
+      <h2>Format Style</h2>
+      <div class="style-buttons">
+        <button class="style-btn active" data-style="apa">APA</button>
+        <button class="style-btn" data-style="mla">MLA</button>
+        <button class="style-btn" data-style="chicago">Chicago</button>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Generated Citation</h2>
+      <div id="citationOutput" class="citation-output">
+        <p class="placeholder">Fill in details to generate citation</p>
+      </div>
+      <button id="copyBtn" class="btn primary" disabled>Copy Citation</button>
+    </div>
+
+    <div class="section">
+      <h2>Saved Citations</h2>
+      <div id="savedCitations" class="saved-list">
+        <p class="empty-message">No saved citations</p>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

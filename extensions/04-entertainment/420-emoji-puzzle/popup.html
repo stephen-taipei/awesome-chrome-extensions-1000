@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Emoji Puzzle</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <div class="container">
+    <header><h1>Emoji Puzzle</h1><div class="header-sub">Guess what it represents!</div></header>
+    <div class="content">
+      <div class="stats">Score: <span id="score">0</span> | Streak: <span id="streak">0</span></div>
+      <div id="emojis" class="emojis"></div>
+      <div class="hint">Hint: <span id="hint"></span></div>
+      <input type="text" id="input" placeholder="Type your answer..." autocomplete="off">
+      <div id="message" class="message"></div>
+      <button id="skipBtn">SKIP</button>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

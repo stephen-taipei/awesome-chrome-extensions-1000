@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Grid Lock",
+  "version": "1.0",
+  "description": "Unlock the grid by sliding blocks to free the key block",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Grid Lock"
+  },
+  "permissions": ["storage"]
+}

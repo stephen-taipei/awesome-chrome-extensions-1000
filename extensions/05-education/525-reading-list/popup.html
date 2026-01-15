@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reading List</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Reading List</h1>
+
+    <div class="section">
+      <button id="addCurrentBtn" class="btn primary">Add Current Page</button>
+    </div>
+
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="unread">Unread (<span id="unreadCount">0</span>)</button>
+      <button class="tab-btn" data-tab="read">Read (<span id="readCount">0</span>)</button>
+    </div>
+
+    <div class="section">
+      <div class="filter-sort">
+        <select id="sortBy">
+          <option value="newest">Newest First</option>
+          <option value="oldest">Oldest First</option>
+          <option value="title">By Title</option>
+        </select>
+      </div>
+    </div>
+
+    <div id="readingList" class="reading-list">
+      <p class="empty-message">No items in reading list</p>
+    </div>
+
+    <div class="footer-stats">
+      <span id="totalCount">0</span> total items
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

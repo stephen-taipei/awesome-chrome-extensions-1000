@@ -1,0 +1,10 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { width: 320px; min-height: 400px; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); font-family: 'Segoe UI', sans-serif; }
+.container { padding: 15px; text-align: center; }
+h1 { color: #00d9ff; font-size: 22px; margin-bottom: 10px; text-shadow: 0 0 10px rgba(0,217,255,0.5); }
+.stats { display: flex; justify-content: space-around; margin-bottom: 10px; color: #a0a0a0; font-size: 14px; }
+.stats span span { color: #00d9ff; font-weight: bold; }
+#canvas { background: #0f0f1a; border-radius: 10px; cursor: pointer; display: block; margin: 0 auto; }
+#message { color: #fff; margin: 10px 0; font-size: 13px; min-height: 20px; }
+button { background: linear-gradient(135deg, #00d9ff, #0099cc); border: none; color: #fff; padding: 10px 25px; border-radius: 20px; cursor: pointer; font-size: 14px; transition: transform 0.2s; }
+button:hover { transform: scale(1.05); }

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spelling Practice</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Spelling Practice</h1>
+      <p class="subtitle">Master Your Spelling</p>
+    </header>
+
+    <div class="stats-bar">
+      <div class="stat">
+        <span class="stat-value" id="correctCount">0</span>
+        <span class="stat-label">Correct</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value" id="totalAttempts">0</span>
+        <span class="stat-label">Attempts</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value" id="accuracy">0%</span>
+        <span class="stat-label">Accuracy</span>
+      </div>
+    </div>
+
+    <div id="practiceView">
+      <div class="word-display">
+        <div class="word-hint" id="wordHint">Click "New Word" to start</div>
+        <button class="btn-speak" id="speakBtn" title="Listen to pronunciation">
+          <span class="speak-icon">🔊</span>
+        </button>
+      </div>
+
+      <div class="definition-hint" id="definitionHint"></div>
+
+      <div class="input-area">
+        <input type="text" id="spellingInput" placeholder="Type the word here..." autocomplete="off">
+        <button class="btn btn-primary" id="checkBtn">Check</button>
+      </div>
+
+      <div class="feedback-area" id="feedbackArea"></div>
+
+      <div class="hint-buttons">
+        <button class="btn btn-secondary btn-sm" id="showFirstLetter">First Letter</button>
+        <button class="btn btn-secondary btn-sm" id="showLength">Word Length</button>
+        <button class="btn btn-secondary btn-sm" id="showVowels">Show Vowels</button>
+      </div>
+
+      <div class="action-buttons">
+        <button class="btn btn-primary" id="newWordBtn">New Word</button>
+        <button class="btn btn-secondary" id="skipBtn">Skip</button>
+      </div>
+    </div>
+
+    <div id="wordListView" style="display: none;">
+      <div class="view-header">
+        <button class="btn btn-secondary btn-sm" id="backBtn">Back</button>
+        <span class="view-title">Word List</span>
+        <button class="btn btn-secondary btn-sm" id="addWordBtn">+ Add</button>
+      </div>
+      <div class="word-list" id="wordList"></div>
+    </div>
+
+    <div id="addWordView" style="display: none;">
+      <div class="view-header">
+        <button class="btn btn-secondary btn-sm" id="cancelAddBtn">Cancel</button>
+        <span class="view-title">Add Word</span>
+      </div>
+      <div class="form-group">
+        <label for="newWord">Word</label>
+        <input type="text" id="newWord" placeholder="Enter word">
+      </div>
+      <div class="form-group">
+        <label for="newDefinition">Definition</label>
+        <input type="text" id="newDefinition" placeholder="Enter definition">
+      </div>
+      <button class="btn btn-primary" id="saveWordBtn">Save Word</button>
+    </div>
+
+    <footer>
+      <button class="btn-link" id="manageWordsBtn">Manage Word List</button>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tower Defense</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="game-container">
+    <h1>Tower Defense</h1>
+    <div class="stats">
+      <span>Wave: <span id="wave">1</span></span>
+      <span>Gold: <span id="gold">100</span></span>
+      <span>Lives: <span id="lives">10</span></span>
+    </div>
+    <canvas id="gameCanvas" width="300" height="350"></canvas>
+    <div class="controls">
+      <button id="towerBtn">Place Tower (50g)</button>
+      <button id="startBtn">Start Wave</button>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

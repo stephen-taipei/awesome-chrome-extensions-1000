@@ -1,0 +1,371 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 420px;
+  min-height: 580px;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  color: #e0e0e0;
+}
+
+.container {
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-size: 24px;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  font-size: 12px;
+  color: #888;
+  margin-top: 4px;
+}
+
+h3 {
+  font-size: 13px;
+  color: #f093fb;
+  margin-bottom: 10px;
+}
+
+.language-selector {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.lang-btn {
+  flex: 1;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #888;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.3s ease;
+}
+
+.lang-btn:hover {
+  background: rgba(240, 147, 251, 0.1);
+}
+
+.lang-btn.active {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: #fff;
+  border-color: transparent;
+  font-weight: 600;
+}
+
+.accent-tabs {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 15px;
+}
+
+.accent-tab {
+  flex: 1;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  color: #666;
+  cursor: pointer;
+  font-size: 11px;
+  transition: all 0.3s ease;
+}
+
+.accent-tab:hover {
+  background: rgba(240, 147, 251, 0.1);
+}
+
+.accent-tab.active {
+  background: rgba(240, 147, 251, 0.2);
+  color: #f093fb;
+  border-color: rgba(240, 147, 251, 0.4);
+}
+
+.accent-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 18px;
+  margin-bottom: 15px;
+  border: 1px solid rgba(240, 147, 251, 0.3);
+}
+
+.accent-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.accent-name {
+  font-size: 18px;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.accent-region {
+  font-size: 11px;
+  background: rgba(240, 147, 251, 0.2);
+  padding: 4px 10px;
+  border-radius: 12px;
+  color: #f093fb;
+}
+
+.accent-description {
+  font-size: 13px;
+  color: #aaa;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.features-section, .examples-section, .tips-section {
+  margin-bottom: 12px;
+}
+
+.features-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.features-list li {
+  font-size: 12px;
+  color: #ccc;
+  padding: 6px 0;
+  padding-left: 20px;
+  position: relative;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.features-list li::before {
+  content: '•';
+  position: absolute;
+  left: 5px;
+  color: #f093fb;
+}
+
+.examples-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.example-item {
+  background: rgba(240, 147, 251, 0.1);
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.example-item:hover {
+  background: rgba(240, 147, 251, 0.2);
+  transform: scale(1.05);
+}
+
+.example-word {
+  color: #f093fb;
+  font-weight: 600;
+}
+
+.example-pron {
+  color: #888;
+  font-size: 11px;
+  margin-left: 5px;
+}
+
+.tips-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tip-item {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  color: #bbb;
+  border-left: 3px solid #f093fb;
+}
+
+.practice-section {
+  margin-bottom: 15px;
+}
+
+.practice-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+}
+
+.practice-word {
+  font-size: 20px;
+  font-weight: bold;
+  color: #f093fb;
+  margin-bottom: 12px;
+}
+
+.practice-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(240, 147, 251, 0.4);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: #e0e0e0;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.saved-section {
+  padding: 15px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 15px;
+}
+
+.saved-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.saved-header h3 {
+  margin-bottom: 0;
+}
+
+.saved-count {
+  background: rgba(240, 147, 251, 0.2);
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  color: #f093fb;
+}
+
+.saved-list {
+  max-height: 80px;
+  overflow-y: auto;
+}
+
+.saved-item {
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 6px;
+  margin-bottom: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.saved-item:hover {
+  background: rgba(240, 147, 251, 0.1);
+}
+
+.saved-accent {
+  font-size: 13px;
+  color: #f093fb;
+}
+
+.saved-lang {
+  font-size: 11px;
+  color: #666;
+  margin-left: 8px;
+}
+
+.saved-remove {
+  background: none;
+  border: none;
+  color: #ff6b6b;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.accent-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-action {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #e0e0e0;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.3s ease;
+}
+
+.btn-action:hover {
+  background: rgba(240, 147, 251, 0.1);
+  border-color: rgba(240, 147, 251, 0.3);
+}
+
+.btn-action.saved {
+  background: rgba(240, 147, 251, 0.2);
+  color: #f093fb;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(240, 147, 251, 0.5);
+  border-radius: 3px;
+}

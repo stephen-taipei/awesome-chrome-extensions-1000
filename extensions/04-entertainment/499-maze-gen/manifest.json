@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Maze Gen",
+  "version": "1.0",
+  "description": "Navigate procedurally generated mazes",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Maze Gen"
+  },
+  "permissions": ["storage"]
+}

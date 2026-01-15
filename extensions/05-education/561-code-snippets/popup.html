@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code Snippets</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Code Snippets</h1>
+    </header>
+
+    <div class="add-section">
+      <input type="text" id="snippetTitle" placeholder="Snippet title...">
+      <select id="snippetLanguage">
+        <option value="javascript">JavaScript</option>
+        <option value="python">Python</option>
+        <option value="html">HTML</option>
+        <option value="css">CSS</option>
+        <option value="java">Java</option>
+        <option value="cpp">C++</option>
+        <option value="sql">SQL</option>
+        <option value="bash">Bash</option>
+        <option value="other">Other</option>
+      </select>
+      <textarea id="snippetCode" placeholder="Enter your code here..."></textarea>
+      <input type="text" id="snippetTags" placeholder="Tags (comma separated)">
+      <button id="saveSnippet">Save Snippet</button>
+    </div>
+
+    <div class="search-section">
+      <input type="text" id="searchInput" placeholder="Search snippets...">
+      <select id="filterLanguage">
+        <option value="all">All Languages</option>
+        <option value="javascript">JavaScript</option>
+        <option value="python">Python</option>
+        <option value="html">HTML</option>
+        <option value="css">CSS</option>
+        <option value="java">Java</option>
+        <option value="cpp">C++</option>
+        <option value="sql">SQL</option>
+        <option value="bash">Bash</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+
+    <div id="snippetsList" class="snippets-list"></div>
+
+    <div class="stats">
+      <span id="snippetCount">0 snippets</span>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

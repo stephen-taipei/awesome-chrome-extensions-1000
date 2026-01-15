@@ -1,0 +1,19 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { width: 320px; min-height: 450px; background: linear-gradient(135deg, #0a0a0a 0%, #1a1a3e 100%); color: #fff; font-family: 'Segoe UI', sans-serif; }
+.container { padding: 12px; display: flex; flex-direction: column; align-items: center; }
+h1 { font-size: 20px; margin-bottom: 8px; background: linear-gradient(90deg, #00ff88, #00ccff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.stats { display: flex; justify-content: space-between; width: 100%; margin-bottom: 10px; font-size: 13px; color: #aaa; }
+.maze { display: grid; gap: 0; background: #0a0a0a; padding: 2px; border-radius: 8px; border: 2px solid #00ff88; }
+.cell { width: 18px; height: 18px; transition: background 0.1s; }
+.cell.wall { background: #1a1a3e; }
+.cell.path { background: #0a0a0a; }
+.cell.player { background: #00ff88; border-radius: 50%; box-shadow: 0 0 10px #00ff88; }
+.cell.exit { background: #ff6b6b; border-radius: 3px; box-shadow: 0 0 8px #ff6b6b; }
+.cell.visited { background: rgba(0,255,136,0.1); }
+.controls { margin-top: 10px; display: flex; flex-direction: column; align-items: center; gap: 3px; }
+.row { display: flex; gap: 3px; }
+.dir-btn { width: 40px; height: 35px; background: linear-gradient(135deg, #00ff88, #00ccff); border: none; border-radius: 8px; color: #0a0a0a; font-size: 14px; font-weight: bold; cursor: pointer; transition: all 0.1s; }
+.dir-btn:hover { transform: scale(1.1); }
+.dir-btn:active { transform: scale(0.95); }
+button#newMaze { margin-top: 10px; padding: 8px 20px; background: linear-gradient(135deg, #ff6b6b, #ee5a24); border: none; border-radius: 15px; color: #fff; font-size: 12px; cursor: pointer; transition: all 0.2s; }
+button#newMaze:hover { transform: scale(1.05); }

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo Puzzle</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Photo Puzzle</h1>
+    <div class="stats">
+      <span>Moves: <span id="moves">0</span></span>
+      <span>Best: <span id="best">-</span></span>
+    </div>
+    <div class="preview">
+      <span>Pattern:</span>
+      <div id="preview" class="preview-grid"></div>
+    </div>
+    <div id="puzzle" class="puzzle"></div>
+    <button id="newGame">New Puzzle</button>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

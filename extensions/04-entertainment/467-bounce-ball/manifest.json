@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Bounce Ball",
+  "version": "1.0",
+  "description": "Keep the ball bouncing by moving the paddle",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Bounce Ball"
+  },
+  "permissions": ["storage"]
+}

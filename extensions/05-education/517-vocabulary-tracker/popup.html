@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vocabulary Tracker</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Vocabulary Tracker</h1>
+      <p class="subtitle">Monitor Your Word Growth</p>
+    </header>
+
+    <div class="stats-overview">
+      <div class="stat-card main-stat">
+        <span class="stat-number" id="totalWords">0</span>
+        <span class="stat-desc">Total Words</span>
+      </div>
+      <div class="stat-row">
+        <div class="stat-card">
+          <span class="stat-number" id="thisWeek">0</span>
+          <span class="stat-desc">This Week</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number" id="thisMonth">0</span>
+          <span class="stat-desc">This Month</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number" id="streak">0</span>
+          <span class="stat-desc">Day Streak</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="add-word-section">
+      <h3>Add New Word</h3>
+      <div class="add-form">
+        <input type="text" id="wordInput" placeholder="Word">
+        <input type="text" id="meaningInput" placeholder="Meaning">
+        <select id="categorySelect">
+          <option value="general">General</option>
+          <option value="academic">Academic</option>
+          <option value="business">Business</option>
+          <option value="technical">Technical</option>
+        </select>
+        <button class="btn btn-primary" id="addBtn">Add</button>
+      </div>
+    </div>
+
+    <div class="goal-section">
+      <div class="goal-header">
+        <h3>Daily Goal</h3>
+        <span class="goal-text"><span id="todayCount">0</span>/<span id="goalCount">5</span> words</span>
+      </div>
+      <div class="goal-progress">
+        <div class="goal-bar" id="goalBar"></div>
+      </div>
+      <div class="goal-settings">
+        <button class="btn-small" id="decreaseGoal">-</button>
+        <span id="goalDisplay">5</span>
+        <button class="btn-small" id="increaseGoal">+</button>
+      </div>
+    </div>
+
+    <div class="words-section">
+      <div class="words-header">
+        <h3>Recent Words</h3>
+        <select id="filterCategory">
+          <option value="all">All Categories</option>
+          <option value="general">General</option>
+          <option value="academic">Academic</option>
+          <option value="business">Business</option>
+          <option value="technical">Technical</option>
+        </select>
+      </div>
+      <div class="words-list" id="wordsList"></div>
+    </div>
+
+    <div class="chart-section">
+      <h3>Weekly Progress</h3>
+      <div class="chart" id="weeklyChart">
+        <div class="chart-bar" data-day="Mon"><span class="bar-fill"></span><span class="bar-label">M</span></div>
+        <div class="chart-bar" data-day="Tue"><span class="bar-fill"></span><span class="bar-label">T</span></div>
+        <div class="chart-bar" data-day="Wed"><span class="bar-fill"></span><span class="bar-label">W</span></div>
+        <div class="chart-bar" data-day="Thu"><span class="bar-fill"></span><span class="bar-label">T</span></div>
+        <div class="chart-bar" data-day="Fri"><span class="bar-fill"></span><span class="bar-label">F</span></div>
+        <div class="chart-bar" data-day="Sat"><span class="bar-fill"></span><span class="bar-label">S</span></div>
+        <div class="chart-bar" data-day="Sun"><span class="bar-fill"></span><span class="bar-label">S</span></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

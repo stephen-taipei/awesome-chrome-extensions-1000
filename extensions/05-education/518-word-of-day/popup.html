@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Word of the Day</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Word of the Day</h1>
+      <p class="date" id="currentDate"></p>
+    </header>
+
+    <div class="word-card">
+      <div class="word-badge">Today's Word</div>
+      <h2 class="word-title" id="wordTitle"></h2>
+      <div class="word-phonetic" id="wordPhonetic"></div>
+      <div class="word-type" id="wordType"></div>
+
+      <div class="word-definition">
+        <h4>Definition</h4>
+        <p id="wordDefinition"></p>
+      </div>
+
+      <div class="word-example">
+        <h4>Example</h4>
+        <p id="wordExample"></p>
+      </div>
+
+      <div class="word-origin">
+        <h4>Origin</h4>
+        <p id="wordOrigin"></p>
+      </div>
+
+      <div class="word-actions">
+        <button class="btn-action" id="speakBtn">
+          <span>🔊</span> Listen
+        </button>
+        <button class="btn-action" id="saveBtn">
+          <span id="saveIcon">☆</span> Save
+        </button>
+        <button class="btn-action" id="shareBtn">
+          <span>📋</span> Copy
+        </button>
+      </div>
+    </div>
+
+    <div class="streak-section">
+      <div class="streak-card">
+        <span class="streak-icon">🔥</span>
+        <span class="streak-count" id="streakCount">0</span>
+        <span class="streak-label">Day Streak</span>
+      </div>
+      <div class="streak-card">
+        <span class="streak-icon">📚</span>
+        <span class="streak-count" id="wordsLearned">0</span>
+        <span class="streak-label">Words Learned</span>
+      </div>
+    </div>
+
+    <div class="archive-section">
+      <div class="archive-header">
+        <h3>Previous Words</h3>
+        <button class="btn-link" id="viewAllBtn">View All</button>
+      </div>
+      <div class="archive-list" id="archiveList"></div>
+    </div>
+
+    <div id="archiveView" style="display: none;">
+      <div class="archive-full-header">
+        <button class="btn-back" id="backBtn">← Back</button>
+        <h3>All Saved Words</h3>
+      </div>
+      <div class="archive-full-list" id="fullArchiveList"></div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

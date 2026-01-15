@@ -1,0 +1,14 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { width: 320px; min-height: 400px; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); font-family: 'Segoe UI', sans-serif; }
+.container { padding: 15px; text-align: center; }
+h1 { color: #ff6b9d; font-size: 22px; margin-bottom: 10px; text-shadow: 0 0 10px rgba(255,107,157,0.5); }
+.stats { display: flex; justify-content: space-around; margin-bottom: 10px; color: #a0a0a0; font-size: 14px; }
+.stats span span { color: #ff6b9d; font-weight: bold; }
+#grid { display: grid; gap: 3px; margin: 0 auto; width: fit-content; user-select: none; }
+.cell { width: 45px; height: 45px; background: #2a2a4a; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: bold; color: #fff; cursor: pointer; transition: background 0.2s; }
+.cell.number { background: #3a3a5a; color: #ff6b9d; }
+.cell.path { background: linear-gradient(135deg, #ff6b9d, #c44569); }
+.cell.current { box-shadow: 0 0 10px #ff6b9d; }
+#message { color: #fff; margin: 10px 0; font-size: 13px; min-height: 20px; }
+button { background: linear-gradient(135deg, #ff6b9d, #c44569); border: none; color: #fff; padding: 10px 25px; border-radius: 20px; cursor: pointer; font-size: 14px; transition: transform 0.2s; }
+button:hover { transform: scale(1.05); }

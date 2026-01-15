@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Math Grid",
+  "version": "1.0",
+  "description": "Fill grid so rows and columns sum correctly",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Math Grid"
+  },
+  "permissions": ["storage"]
+}

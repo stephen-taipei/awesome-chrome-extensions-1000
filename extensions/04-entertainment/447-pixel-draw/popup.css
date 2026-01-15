@@ -1,0 +1,16 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 14px; background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%); color: #e0e0e0; }
+.container { width: 320px; }
+header { text-align: center; padding: 12px; background: linear-gradient(135deg, #ec4899 0%, #db2777 100%); color: white; }
+header h1 { font-size: 18px; font-weight: 600; }
+.header-sub { font-size: 11px; opacity: 0.9; margin-top: 2px; }
+.content { padding: 12px; text-align: center; }
+.canvas { display: grid; grid-template-columns: repeat(16, 1fr); gap: 1px; background: #1a1a2e; padding: 2px; border-radius: 8px; margin-bottom: 10px; }
+.pixel { width: 16px; height: 16px; background: #374151; cursor: crosshair; transition: background 0.1s; }
+.pixel:hover { opacity: 0.8; }
+.palette { display: flex; gap: 4px; justify-content: center; flex-wrap: wrap; margin-bottom: 10px; }
+.color { width: 24px; height: 24px; border-radius: 4px; cursor: pointer; border: 2px solid transparent; }
+.color.selected { border-color: white; transform: scale(1.1); }
+.tools { display: flex; gap: 8px; justify-content: center; }
+.tools button { padding: 8px 12px; background: #374151; border: none; border-radius: 6px; color: white; cursor: pointer; font-size: 12px; }
+.tools button:hover { background: #4b5563; }

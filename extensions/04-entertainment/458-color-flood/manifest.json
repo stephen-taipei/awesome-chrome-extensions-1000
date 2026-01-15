@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Color Flood",
+  "version": "1.0",
+  "description": "Flood fill to make all cells the same color",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "48": "icon.png"
+    }
+  },
+  "permissions": ["storage"]
+}

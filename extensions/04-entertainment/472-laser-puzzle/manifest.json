@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Laser Puzzle",
+  "version": "1.0",
+  "description": "Redirect lasers to targets with mirrors",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "48": "icon.png"
+    }
+  },
+  "permissions": ["storage"]
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Language Flashcards</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Language Flashcards</h1>
+      <p class="subtitle">Learn Multiple Languages</p>
+    </header>
+
+    <div class="language-selector">
+      <select id="languageSelect">
+        <option value="spanish">Spanish</option>
+        <option value="french">French</option>
+        <option value="german">German</option>
+        <option value="italian">Italian</option>
+        <option value="japanese">Japanese</option>
+      </select>
+    </div>
+
+    <div class="stats-bar">
+      <div class="stat">
+        <span class="stat-value" id="learned">0</span>
+        <span class="stat-label">Learned</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value" id="studying">0</span>
+        <span class="stat-label">Studying</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value" id="mastered">0</span>
+        <span class="stat-label">Mastered</span>
+      </div>
+    </div>
+
+    <div id="cardView">
+      <div class="category-tabs">
+        <button class="cat-btn active" data-category="greetings">Greetings</button>
+        <button class="cat-btn" data-category="numbers">Numbers</button>
+        <button class="cat-btn" data-category="colors">Colors</button>
+        <button class="cat-btn" data-category="food">Food</button>
+      </div>
+
+      <div class="flashcard-container">
+        <div class="flashcard" id="flashcard">
+          <div class="card-inner">
+            <div class="card-front">
+              <span class="card-word" id="cardFront">Hello</span>
+              <span class="card-hint" id="cardHint"></span>
+            </div>
+            <div class="card-back">
+              <span class="card-word" id="cardBack">Hola</span>
+              <button class="btn-speak-small" id="speakBack">🔊</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-progress">
+        <span id="currentIndex">1</span> / <span id="totalCards">10</span>
+      </div>
+
+      <div class="rating-buttons" id="ratingButtons" style="display: none;">
+        <button class="rate-btn rate-hard" data-rating="1">Hard</button>
+        <button class="rate-btn rate-good" data-rating="2">Good</button>
+        <button class="rate-btn rate-easy" data-rating="3">Easy</button>
+      </div>
+
+      <div class="nav-buttons">
+        <button class="btn btn-secondary" id="prevBtn">← Prev</button>
+        <button class="btn btn-primary" id="flipBtn">Flip</button>
+        <button class="btn btn-secondary" id="nextBtn">Next →</button>
+      </div>
+
+      <div class="action-buttons">
+        <button class="btn btn-secondary" id="shuffleBtn">🔀 Shuffle</button>
+        <button class="btn btn-secondary" id="resetBtn">↻ Reset</button>
+      </div>
+    </div>
+
+    <div class="progress-section">
+      <h3>Progress</h3>
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+      <span class="progress-text" id="progressText">0% Complete</span>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

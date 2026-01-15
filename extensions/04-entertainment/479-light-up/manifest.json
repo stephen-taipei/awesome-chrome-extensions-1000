@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Light Up",
+  "version": "1.0",
+  "description": "Light up all cells in grid puzzle",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "48": "icon.png"
+    }
+  },
+  "permissions": ["storage"]
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Math Solver</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Math Solver</h1>
+
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="linear">Linear</button>
+      <button class="tab-btn" data-tab="quadratic">Quadratic</button>
+    </div>
+
+    <div id="linear" class="tab-content active">
+      <h3>Linear Equation: ax + b = c</h3>
+      <div class="input-group">
+        <input type="number" id="linear-a" placeholder="a" step="any">
+        <span>x +</span>
+        <input type="number" id="linear-b" placeholder="b" step="any">
+        <span>=</span>
+        <input type="number" id="linear-c" placeholder="c" step="any">
+      </div>
+      <button id="solve-linear" class="solve-btn">Solve</button>
+    </div>
+
+    <div id="quadratic" class="tab-content">
+      <h3>Quadratic: ax² + bx + c = 0</h3>
+      <div class="input-group">
+        <input type="number" id="quad-a" placeholder="a" step="any">
+        <span>x² +</span>
+        <input type="number" id="quad-b" placeholder="b" step="any">
+        <span>x +</span>
+        <input type="number" id="quad-c" placeholder="c" step="any">
+        <span>= 0</span>
+      </div>
+      <button id="solve-quadratic" class="solve-btn">Solve</button>
+    </div>
+
+    <div id="result" class="result"></div>
+
+    <div class="history">
+      <h3>History</h3>
+      <ul id="history-list"></ul>
+      <button id="clear-history" class="clear-btn">Clear History</button>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

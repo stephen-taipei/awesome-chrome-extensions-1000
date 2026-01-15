@@ -1,0 +1,297 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 400px;
+  min-height: 500px;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  color: #e0e0e0;
+}
+
+.container {
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-size: 22px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  font-size: 12px;
+  color: #888;
+  margin-top: 4px;
+}
+
+h3 {
+  font-size: 13px;
+  color: #667eea;
+  margin-bottom: 10px;
+}
+
+.selectors {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.selectors select {
+  flex: 1;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(102, 126, 234, 0.3);
+  border-radius: 8px;
+  color: #e0e0e0;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.selectors select:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.selectors select option {
+  background: #1a1a2e;
+}
+
+.verb-search {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.verb-search input {
+  flex: 1;
+  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #e0e0e0;
+  font-size: 14px;
+}
+
+.verb-search input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.btn {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-sm {
+  padding: 10px 15px;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: #e0e0e0;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 100%;
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.conjugation-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 15px;
+  border: 1px solid rgba(102, 126, 234, 0.3);
+}
+
+.verb-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.verb-infinitive {
+  font-size: 24px;
+  font-weight: bold;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.verb-meaning {
+  font-size: 13px;
+  color: #888;
+  font-style: italic;
+}
+
+.tense-label {
+  font-size: 12px;
+  color: #667eea;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.conjugation-table {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.conjugation-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 8px;
+}
+
+.pronoun {
+  font-size: 13px;
+  color: #888;
+}
+
+.conjugated {
+  font-size: 14px;
+  font-weight: 600;
+  color: #e0e0e0;
+}
+
+.practice-section {
+  margin-bottom: 15px;
+}
+
+.practice-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.practice-prompt {
+  margin-bottom: 15px;
+}
+
+.practice-verb {
+  display: block;
+  font-size: 28px;
+  font-weight: bold;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 8px;
+}
+
+.practice-form {
+  font-size: 14px;
+  color: #888;
+}
+
+.practice-input {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.practice-input input {
+  flex: 1;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #e0e0e0;
+  font-size: 16px;
+  text-align: center;
+}
+
+.practice-input input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.practice-feedback {
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  min-height: 40px;
+}
+
+.practice-feedback.correct {
+  background: rgba(56, 239, 125, 0.2);
+  color: #38ef7d;
+}
+
+.practice-feedback.incorrect {
+  background: rgba(255, 107, 107, 0.2);
+  color: #ff6b6b;
+}
+
+.practice-stats {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 15px;
+  font-size: 13px;
+  color: #888;
+}
+
+.practice-stats strong {
+  color: #667eea;
+}
+
+.verb-list {
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.verb-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.verb-chip {
+  padding: 6px 14px;
+  background: rgba(102, 126, 234, 0.15);
+  border: 1px solid rgba(102, 126, 234, 0.3);
+  border-radius: 20px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.verb-chip:hover {
+  background: rgba(102, 126, 234, 0.3);
+  transform: translateY(-2px);
+}

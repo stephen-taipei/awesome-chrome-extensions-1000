@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Study Timer",
+  "version": "1.0.0",
+  "description": "Pomodoro study timer with customizable intervals",
+  "permissions": ["storage", "alarms", "notifications"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Study Timer"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

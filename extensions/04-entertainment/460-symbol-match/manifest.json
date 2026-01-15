@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Symbol Match",
+  "version": "1.0",
+  "description": "Match pairs of symbols",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "48": "icon.png"
+    }
+  },
+  "permissions": ["storage"]
+}

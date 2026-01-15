@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Brick Stack",
+  "version": "1.0",
+  "description": "Stack bricks to build the tallest tower",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Brick Stack"
+  },
+  "permissions": ["storage"]
+}

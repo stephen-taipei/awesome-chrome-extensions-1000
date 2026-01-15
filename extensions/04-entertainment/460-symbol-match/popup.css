@@ -1,0 +1,16 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { width: 320px; min-height: 400px; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); font-family: 'Segoe UI', sans-serif; }
+.container { padding: 15px; text-align: center; }
+h1 { color: #a855f7; font-size: 22px; margin-bottom: 10px; text-shadow: 0 0 10px rgba(168,85,247,0.5); }
+.stats { display: flex; justify-content: space-around; margin-bottom: 10px; color: #a0a0a0; font-size: 14px; }
+.stats span span { color: #a855f7; font-weight: bold; }
+#grid { display: grid; grid-template-columns: repeat(4, 60px); gap: 6px; margin: 0 auto; width: fit-content; }
+.card { width: 60px; height: 60px; background: #2a2a4a; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 28px; cursor: pointer; transition: all 0.3s; transform-style: preserve-3d; }
+.card:hover { background: #3a3a5a; }
+.card.flipped { background: linear-gradient(135deg, #a855f7, #7c3aed); transform: rotateY(180deg); }
+.card.matched { background: linear-gradient(135deg, #22c55e, #16a34a); pointer-events: none; }
+.card .symbol { opacity: 0; transform: rotateY(180deg); }
+.card.flipped .symbol, .card.matched .symbol { opacity: 1; }
+#message { color: #fff; margin: 10px 0; font-size: 13px; min-height: 20px; }
+button { background: linear-gradient(135deg, #a855f7, #7c3aed); border: none; color: #fff; padding: 10px 25px; border-radius: 20px; cursor: pointer; font-size: 14px; transition: transform 0.2s; }
+button:hover { transform: scale(1.05); }

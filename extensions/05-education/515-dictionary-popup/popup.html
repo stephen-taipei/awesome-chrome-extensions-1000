@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dictionary Popup</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Dictionary</h1>
+      <p class="subtitle">Quick Word Lookup</p>
+    </header>
+
+    <div class="search-section">
+      <div class="search-box">
+        <input type="text" id="wordInput" placeholder="Enter a word..." autofocus>
+        <button class="btn btn-primary" id="searchBtn">Look Up</button>
+      </div>
+    </div>
+
+    <div id="resultSection" style="display: none;">
+      <div class="word-card">
+        <div class="word-header">
+          <h2 class="word-title" id="wordTitle"></h2>
+          <button class="btn-speak" id="speakBtn">🔊</button>
+        </div>
+        <div class="word-phonetic" id="wordPhonetic"></div>
+      </div>
+
+      <div class="definitions-section">
+        <div id="definitionsList"></div>
+      </div>
+
+      <div class="word-actions">
+        <button class="btn-action" id="saveWordBtn">
+          <span class="action-icon">☆</span>
+          <span>Save</span>
+        </button>
+        <button class="btn-action" id="copyBtn">
+          <span class="action-icon">📋</span>
+          <span>Copy</span>
+        </button>
+      </div>
+    </div>
+
+    <div id="noResult" style="display: none;">
+      <div class="no-result-card">
+        <span class="no-result-icon">🔍</span>
+        <p>Word not found</p>
+        <p class="no-result-hint">Check spelling and try again</p>
+      </div>
+    </div>
+
+    <div class="saved-section" id="savedSection">
+      <div class="saved-header">
+        <h3>Saved Words</h3>
+        <button class="btn-clear" id="clearAllBtn">Clear All</button>
+      </div>
+      <div class="saved-words" id="savedWords">
+        <p class="empty-msg">No saved words yet</p>
+      </div>
+    </div>
+
+    <div class="history-section">
+      <h3>Recent Searches</h3>
+      <div class="history-words" id="historyWords"></div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

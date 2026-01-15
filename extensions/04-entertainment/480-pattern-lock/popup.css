@@ -1,0 +1,16 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { width: 320px; min-height: 420px; background: linear-gradient(135deg, #141e30 0%, #243b55 100%); font-family: 'Segoe UI', sans-serif; color: #fff; }
+.container { padding: 15px; text-align: center; }
+h1 { font-size: 22px; background: linear-gradient(90deg, #00c9ff, #92fe9d); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 10px; }
+.stats { display: flex; justify-content: space-around; margin-bottom: 10px; font-size: 14px; color: #aaa; }
+.status { font-size: 16px; margin: 15px 0; padding: 10px; background: rgba(0,0,0,0.2); border-radius: 10px; min-height: 40px; }
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; max-width: 240px; margin: 0 auto 20px; }
+.node { width: 60px; height: 60px; background: linear-gradient(145deg, #1a2a3a, #243b55); border: 3px solid #3d5a6f; border-radius: 50%; cursor: pointer; transition: all 0.3s; display: flex; align-items: center; justify-content: center; }
+.node:hover { border-color: #00c9ff; }
+.node.active { background: linear-gradient(145deg, #00c9ff, #92fe9d); border-color: #fff; box-shadow: 0 0 25px rgba(0, 201, 255, 0.6); }
+.node.correct { background: linear-gradient(145deg, #2ecc71, #27ae60); border-color: #2ecc71; }
+.node.wrong { background: linear-gradient(145deg, #e74c3c, #c0392b); border-color: #e74c3c; }
+.node .dot { width: 12px; height: 12px; background: #5a7a8f; border-radius: 50%; }
+.node.active .dot { background: #1a2a3a; }
+button { background: linear-gradient(145deg, #00c9ff, #92fe9d); border: none; color: #1a2a3a; padding: 12px 30px; border-radius: 25px; cursor: pointer; font-size: 14px; font-weight: bold; transition: transform 0.2s; }
+button:hover { transform: scale(1.05); }

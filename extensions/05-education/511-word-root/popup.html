@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Word Root Explorer</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Word Root Explorer</h1>
+      <p class="subtitle">Understand Word Origins</p>
+    </header>
+
+    <div class="search-section">
+      <input type="text" id="searchInput" placeholder="Search roots, prefixes, or suffixes...">
+    </div>
+
+    <div class="type-tabs">
+      <button class="type-tab active" data-type="roots">Roots</button>
+      <button class="type-tab" data-type="prefixes">Prefixes</button>
+      <button class="type-tab" data-type="suffixes">Suffixes</button>
+    </div>
+
+    <div class="root-card" id="rootCard">
+      <div class="root-header">
+        <span class="root-text" id="rootText">bio</span>
+        <span class="root-origin" id="rootOrigin">Greek</span>
+      </div>
+      <div class="root-meaning" id="rootMeaning">life, living</div>
+      <div class="root-examples">
+        <h4>Related Words</h4>
+        <div class="example-words" id="exampleWords"></div>
+      </div>
+    </div>
+
+    <div class="nav-buttons">
+      <button class="btn btn-secondary" id="prevBtn">← Previous</button>
+      <button class="btn btn-primary" id="randomBtn">Random</button>
+      <button class="btn btn-secondary" id="nextBtn">Next →</button>
+    </div>
+
+    <div class="root-list" id="rootList"></div>
+
+    <div class="study-section">
+      <h3>Study Progress</h3>
+      <div class="progress-stats">
+        <div class="progress-item">
+          <span class="progress-value" id="rootsLearned">0</span>
+          <span class="progress-label">Roots</span>
+        </div>
+        <div class="progress-item">
+          <span class="progress-value" id="prefixesLearned">0</span>
+          <span class="progress-label">Prefixes</span>
+        </div>
+        <div class="progress-item">
+          <span class="progress-value" id="suffixesLearned">0</span>
+          <span class="progress-label">Suffixes</span>
+        </div>
+      </div>
+      <button class="btn btn-secondary" id="markLearnedBtn">Mark as Learned</button>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

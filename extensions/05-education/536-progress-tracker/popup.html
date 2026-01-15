@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Progress Tracker</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Progress Tracker</h1>
+
+    <div class="overall-progress">
+      <div class="progress-circle">
+        <svg viewBox="0 0 100 100">
+          <circle class="bg" cx="50" cy="50" r="40"/>
+          <circle class="progress" id="overallCircle" cx="50" cy="50" r="40"/>
+        </svg>
+        <span id="overallPercent" class="percent">0%</span>
+      </div>
+      <div class="progress-label">Overall Progress</div>
+    </div>
+
+    <div class="section">
+      <h2>Add Subject</h2>
+      <div class="add-subject-row">
+        <input type="text" id="subjectName" placeholder="Subject name">
+        <input type="number" id="totalTopics" placeholder="Total topics" min="1" max="100">
+        <button id="addSubjectBtn" class="btn icon">+</button>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Subjects</h2>
+      <div id="subjectsList" class="subjects-list">
+        <p class="empty-message">No subjects added</p>
+      </div>
+    </div>
+
+    <div class="streak-display">
+      <div class="streak-item">
+        <span class="streak-value" id="currentStreak">0</span>
+        <span class="streak-label">Day Streak</span>
+      </div>
+      <div class="streak-item">
+        <span class="streak-value" id="totalDays">0</span>
+        <span class="streak-label">Total Days</span>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,279 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 380px;
+  min-height: 520px;
+  background: #1a1a2e;
+  color: #eee;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  padding: 20px;
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #81d4fa;
+  text-align: center;
+}
+
+h2 {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  color: #aaa;
+}
+
+.section {
+  margin-bottom: 18px;
+}
+
+.stats-overview {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.stat-card {
+  flex: 1;
+  background: #16213e;
+  border-radius: 10px;
+  padding: 15px 10px;
+  text-align: center;
+}
+
+.stat-card .stat-value {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #81d4fa;
+}
+
+.stat-card .stat-label {
+  font-size: 0.75rem;
+  color: #888;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  background: #16213e;
+  border: 1px solid #333;
+  border-radius: 8px;
+  color: #eee;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+
+input:focus {
+  outline: none;
+  border-color: #81d4fa;
+}
+
+.page-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.page-row input {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.page-row span {
+  color: #888;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn.primary {
+  background: #81d4fa;
+  color: #1a1a2e;
+  font-weight: bold;
+}
+
+.btn.primary:hover {
+  background: #4fc3f7;
+}
+
+.btn.secondary {
+  background: #333;
+  color: #eee;
+}
+
+.btn.secondary:hover {
+  background: #444;
+}
+
+.progress-list, .completed-list {
+  max-height: 160px;
+  overflow-y: auto;
+}
+
+.progress-item {
+  background: #16213e;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.progress-item .title {
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 5px;
+  padding-right: 25px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.progress-item .progress-bar {
+  height: 8px;
+  background: #333;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.progress-item .progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #81d4fa, #4fc3f7);
+  transition: width 0.3s ease;
+}
+
+.progress-item .meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.progress-item .percent {
+  color: #81d4fa;
+  font-weight: bold;
+}
+
+.progress-item .actions {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 5px;
+}
+
+.progress-item .action-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.85rem;
+  padding: 3px 6px;
+  border-radius: 4px;
+}
+
+.progress-item .update-btn {
+  background: #81d4fa33;
+  color: #81d4fa;
+}
+
+.progress-item .delete-btn {
+  color: #e91e63;
+}
+
+.completed-item {
+  background: #16213e;
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-left: 4px solid #4caf50;
+}
+
+.completed-item .title {
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+.completed-item .date {
+  font-size: 0.75rem;
+  color: #888;
+}
+
+.empty-message {
+  color: #666;
+  text-align: center;
+  font-style: italic;
+  padding: 15px;
+}
+
+.update-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.update-modal.active {
+  display: flex;
+}
+
+.modal-content {
+  background: #1a1a2e;
+  padding: 20px;
+  border-radius: 12px;
+  width: 280px;
+}
+
+.modal-content h3 {
+  color: #81d4fa;
+  margin-bottom: 15px;
+}
+
+.modal-content input {
+  margin-bottom: 15px;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.modal-actions .btn {
+  flex: 1;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a2e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 3px;
+}

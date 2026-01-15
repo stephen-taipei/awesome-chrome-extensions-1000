@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Digit Drop",
+  "version": "1.0",
+  "description": "Type falling numbers before they reach the bottom!",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "48": "icon.png"
+    }
+  },
+  "permissions": ["storage"]
+}

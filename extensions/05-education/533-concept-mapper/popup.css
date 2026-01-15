@@ -1,0 +1,218 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 400px;
+  min-height: 520px;
+  background: #1a1a2e;
+  color: #eee;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  padding: 20px;
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #e040fb;
+  text-align: center;
+}
+
+h2 {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  color: #aaa;
+}
+
+.section {
+  margin-bottom: 18px;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  background: #16213e;
+  border: 1px solid #333;
+  border-radius: 8px;
+  color: #eee;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #e040fb;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn.primary {
+  background: #e040fb;
+  color: white;
+  font-weight: bold;
+}
+
+.btn.primary:hover:not(:disabled) {
+  background: #d500f9;
+}
+
+.btn.secondary {
+  background: #333;
+  color: #eee;
+}
+
+.btn.secondary:hover {
+  background: #444;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.map-container {
+  background: #16213e;
+  border-radius: 8px;
+  padding: 15px;
+  min-height: 180px;
+  max-height: 220px;
+  overflow-y: auto;
+}
+
+.concept-node {
+  margin-bottom: 10px;
+}
+
+.concept-node .node-content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.concept-node .connector {
+  width: 20px;
+  text-align: center;
+  color: #666;
+  font-size: 0.8rem;
+}
+
+.concept-node .node-box {
+  background: linear-gradient(135deg, #e040fb33, #7c4dff33);
+  border: 2px solid #e040fb;
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.concept-node .node-box.root {
+  background: linear-gradient(135deg, #e040fb55, #7c4dff55);
+  font-weight: bold;
+}
+
+.concept-node .delete-btn {
+  background: none;
+  border: none;
+  color: #e91e63;
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 0;
+}
+
+.concept-node .relation {
+  font-size: 0.75rem;
+  color: #888;
+  margin-left: 28px;
+  font-style: italic;
+}
+
+.children {
+  margin-left: 30px;
+  border-left: 2px dashed #333;
+  padding-left: 15px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.actions .btn {
+  flex: 1;
+}
+
+.saved-list {
+  max-height: 100px;
+  overflow-y: auto;
+}
+
+.saved-item {
+  background: #16213e;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 8px;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.saved-item:hover {
+  background: #1f2b4a;
+}
+
+.saved-item .title {
+  font-weight: bold;
+  color: #e040fb;
+  margin-bottom: 3px;
+}
+
+.saved-item .meta {
+  font-size: 0.75rem;
+  color: #888;
+}
+
+.saved-item .delete-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: none;
+  border: none;
+  color: #e91e63;
+  cursor: pointer;
+}
+
+.empty-message {
+  color: #666;
+  text-align: center;
+  font-style: italic;
+  padding: 30px 20px;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a2e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 3px;
+}

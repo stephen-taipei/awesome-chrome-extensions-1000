@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Word Finder",
+  "version": "1.0",
+  "description": "Find hidden words in the grid",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Word Finder"
+  },
+  "permissions": ["storage"]
+}

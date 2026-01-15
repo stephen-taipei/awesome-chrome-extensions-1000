@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Word Bomb",
+  "version": "1.0",
+  "description": "Type words before the bomb explodes",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "48": "icon.png"
+    }
+  },
+  "permissions": ["storage"]
+}

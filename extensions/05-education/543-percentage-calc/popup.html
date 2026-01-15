@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Percentage Calculator</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>% Calculator</h1>
+
+    <div class="calc-section">
+      <h3>What is X% of Y?</h3>
+      <div class="input-row">
+        <input type="number" id="percent1" placeholder="X" step="any">
+        <span>% of</span>
+        <input type="number" id="value1" placeholder="Y" step="any">
+        <button class="calc-btn" data-calc="1">=</button>
+      </div>
+      <div class="result" id="result1"></div>
+    </div>
+
+    <div class="calc-section">
+      <h3>X is what % of Y?</h3>
+      <div class="input-row">
+        <input type="number" id="part2" placeholder="X" step="any">
+        <span>is</span>
+        <span>?% of</span>
+        <input type="number" id="whole2" placeholder="Y" step="any">
+        <button class="calc-btn" data-calc="2">=</button>
+      </div>
+      <div class="result" id="result2"></div>
+    </div>
+
+    <div class="calc-section">
+      <h3>Percentage Change</h3>
+      <div class="input-row">
+        <input type="number" id="from3" placeholder="From" step="any">
+        <span>→</span>
+        <input type="number" id="to3" placeholder="To" step="any">
+        <button class="calc-btn" data-calc="3">=</button>
+      </div>
+      <div class="result" id="result3"></div>
+    </div>
+
+    <div class="calc-section">
+      <h3>Increase/Decrease by %</h3>
+      <div class="input-row">
+        <input type="number" id="value4" placeholder="Value" step="any">
+        <select id="operation4">
+          <option value="increase">+ %</option>
+          <option value="decrease">- %</option>
+        </select>
+        <input type="number" id="percent4" placeholder="%" step="any">
+        <button class="calc-btn" data-calc="4">=</button>
+      </div>
+      <div class="result" id="result4"></div>
+    </div>
+
+    <div class="history">
+      <h3>History</h3>
+      <ul id="history-list"></ul>
+      <button id="clear-history" class="clear-btn">Clear</button>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
