@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Startup Toolkit",
+  "version": "1.0.0",
+  "description": "A educational tool that helps you with startup toolkit.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Startup Toolkit"
+  },
+  "permissions": ["storage"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "minimum_chrome_version": "116"
+}
