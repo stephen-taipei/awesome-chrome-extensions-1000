@@ -13,12 +13,13 @@ jobs:
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
+          ref: e301c36e3ad5c146c3bb59ecde02482571c36566
           persist-credentials: false
       - name: Capture source and verify upstream release bytes
         shell: bash
         run: |
           mkdir -p /tmp/followup-source
-          git archive --format=tar e301c36e3ad5c146c3bb59ecde02482571c36566 -o /tmp/followup-source/baseline.tar
+          git archive --format=tar HEAD -o /tmp/followup-source/baseline.tar
           curl --fail --location --proto '=https' --tlsv1.2 --output /tmp/followup-source/dompurify-3.4.16.tar.gz https://github.com/cure53/DOMPurify/releases/download/3.4.16/3.4.16.tar.gz
           echo '80b3d37a15495f484614d060ed41124878d38ff63567c41a8e8efa159507c56a  /tmp/followup-source/dompurify-3.4.16.tar.gz' | sha256sum --check
           sha256sum /tmp/followup-source/* > /tmp/followup-source/checksums.txt
