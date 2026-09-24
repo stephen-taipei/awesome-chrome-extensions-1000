@@ -1,0 +1,32 @@
+name: Codebase Audit
+
+on:
+  push:
+    branches: [audit/chrome-extensions-20260924]
+    paths: [.github/workflows/codebase-audit.yml]
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Inventory tracked source (no repository code execution)
+        run: |
+          git rev-parse HEAD
+          git ls-files > /tmp/audit-files.txt
+          find extensions -name manifest.json | wc -l
+          git archive --format=tar HEAD -o /tmp/audit-source.tar
+      - uses: actions/upload-artifact@v4
+        with:
+          name: audit-source
+          path: |
+            /tmp/audit-source.tar
+            /tmp/audit-files.txt
+          retention-days: 1
+          if-no-files-found: error
