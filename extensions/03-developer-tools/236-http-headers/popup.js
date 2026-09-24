@@ -4,6 +4,8 @@ class HttpHeadersRef {
   initElements() { this.searchInput = document.getElementById('search'); this.headerList = document.getElementById('headerList'); this.tabs = document.querySelectorAll('.tab'); }
   bindEvents() { this.searchInput.addEventListener('input', () => this.render()); this.tabs.forEach(tab => tab.addEventListener('click', () => { this.tabs.forEach(t => t.classList.remove('active')); tab.classList.add('active'); this.currentTab = tab.dataset.tab; this.render(); })); }
   render() { const query = this.searchInput.value.toLowerCase(); const filtered = this.headers[this.currentTab].filter(h => h.name.toLowerCase().includes(query) || h.desc.toLowerCase().includes(query)); this.headerList.innerHTML = filtered.map(h => `<div class="header-item"><div class="header-name">${h.name}</div><div class="header-desc">${h.desc}</div><div class="header-example">${this.escapeHtml(h.example)}</div></div>`).join(''); }
-  escapeHtml(str) { const div = document.createElement('div'); div.textContent = str; return div.innerHTML; }
+  escapeHtml(str) {
+    return String(str ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+  }
 }
 document.addEventListener('DOMContentLoaded', () => new HttpHeadersRef());

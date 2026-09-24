@@ -288,7 +288,7 @@ class LinkOrganizer {
           ${links.length > 0 ? links.map(link => `
             <div class="link-item" data-url="${this.escapeHtml(link.url)}">
               <div class="link-favicon">
-                ${link.favicon ? `<img src="${link.favicon}" onerror="this.parentElement.textContent='🔗'">` : '🔗'}
+                ${link.favicon ? `<img src="${link.favicon}" data-fallback-icon>` : '🔗'}
               </div>
               <span class="link-name">${this.escapeHtml(link.name)}</span>
               <button class="link-edit" data-folder="${folder.id}" data-id="${link.id}">✎</button>
@@ -341,9 +341,7 @@ class LinkOrganizer {
   }
 
   escapeHtml(text) {
-    const div = document.createElement('div');
-    div.textContent = text;
-    return div.innerHTML;
+    return String(text ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
   }
 }
 
@@ -351,3 +349,11 @@ class LinkOrganizer {
 document.addEventListener('DOMContentLoaded', () => {
   new LinkOrganizer();
 });
+
+// Capture resource errors outside inline handlers (which MV3 blocks).
+document.addEventListener('error', event => {
+  const image = event.target;
+  if (image instanceof HTMLImageElement && image.hasAttribute('data-fallback-icon')) {
+    image.style.visibility = 'hidden';
+  }
+}, true);

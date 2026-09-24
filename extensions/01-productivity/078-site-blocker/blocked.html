@@ -92,14 +92,8 @@
     <div class="quote">
       "專注是成功的關鍵。每一次的自律都讓你更接近目標。"
     </div>
-    <button class="back-btn" onclick="history.back()">返回上一頁</button>
+    <button class="back-btn" id="backButton">返回上一頁</button>
   </div>
-  <script>
-    const params = new URLSearchParams(window.location.search);
-    const site = params.get('site');
-    if (site) {
-      document.getElementById('siteName').textContent = site;
-    }
-  </script>
+  <script src="blocked.js"></script>
 </body>
 </html>

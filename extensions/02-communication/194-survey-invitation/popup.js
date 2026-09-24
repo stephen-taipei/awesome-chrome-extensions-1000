@@ -32,7 +32,9 @@ class SurveyInvitation {
   }
   loadInvitation(id) { const inv = this.invitations.find(i => i.id === id); if (inv) { this.typeEl.value = inv.type || 'customer'; this.recipientEl.value = inv.recipient || ''; this.surveyNameEl.value = inv.surveyName || ''; this.purposeEl.value = inv.purpose || ''; this.durationEl.value = inv.duration || ''; this.incentiveEl.value = inv.incentive || ''; } }
   deleteInvitation(id) { this.invitations = this.invitations.filter(i => i.id !== id); this.saveData(); this.render(); }
-  escapeHtml(text) { const div = document.createElement('div'); div.textContent = text; return div.innerHTML; }
+  escapeHtml(text) {
+    return String(text ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+  }
   truncate(text, len = 25) { return (!text || text.length <= len) ? (text || '') : text.substring(0, len) + '...'; }
   render() {
     if (this.invitations.length === 0) { this.listEl.innerHTML = '<div class="empty-state">No saved invitations</div>'; return; }

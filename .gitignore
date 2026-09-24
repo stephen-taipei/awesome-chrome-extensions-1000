@@ -64,3 +64,8 @@ proxy.conf.json
 AGENTS.md
 MIGRATION.md
 ARCHITECTURE.md
+
+# Audit/test caches
+__pycache__/
+*.py[cod]
+.audit-results/

@@ -124,7 +124,7 @@ class BookmarkNotes {
       return `
         <div class="bookmark-item ${hasNote ? 'has-note' : ''}" data-id="${bookmark.id}">
           <div class="bookmark-favicon">
-            <img src="https://www.google.com/s2/favicons?domain=${domain}&sz=32" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22><text y=%2218%22 font-size=%2218%22>🔖</text></svg>'">
+            <img src="https://www.google.com/s2/favicons?domain=${domain}&sz=32" data-fallback-icon>
           </div>
           <div class="bookmark-info">
             <div class="bookmark-title">${this.escapeHtml(bookmark.title || 'Untitled')}</div>
@@ -154,9 +154,7 @@ class BookmarkNotes {
   }
 
   escapeHtml(text) {
-    const div = document.createElement('div');
-    div.textContent = text;
-    return div.innerHTML;
+    return String(text ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
   }
 
   openEditModal(bookmarkId) {
@@ -278,3 +276,11 @@ class BookmarkNotes {
 document.addEventListener('DOMContentLoaded', () => {
   new BookmarkNotes();
 });
+
+// Capture resource errors outside inline handlers (which MV3 blocks).
+document.addEventListener('error', event => {
+  const image = event.target;
+  if (image instanceof HTMLImageElement && image.hasAttribute('data-fallback-icon')) {
+    image.style.visibility = 'hidden';
+  }
+}, true);

@@ -7,6 +7,24 @@
 [![Manifest V3](https://img.shields.io/badge/Manifest-V3-blue.svg)](https://developer.chrome.com/docs/extensions/mv3/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 
+
+## 實作狀態與品質檢查（2026-09-24）
+
+**「1000」是開發目標，不代表已有 1000 個可正式使用的擴充功能。** 目前實際有 965 個 Manifest V3 套件，其中 386 個仍是未實作原型，已於子項目介面明確標示並停用誤導性的操作按鈕；其餘套件也不等同全部通過功能驗收。
+
+完整缺失、已修復內容、驗證範圍與待辦請見 [Codebase Audit](docs/AUDIT-2026-09-24.md)。每個套件的機器可讀狀態請見 [實作狀態清單](docs/extension-status.json)。類別主頁維持原有設計。
+
+實際目錄分類為 `01-productivity`、`02-communication`、`03-developer-tools`、`04-entertainment`、`05-education`、`06-accessibility`、`07-news`、`08-shopping`、`10-experimental`。**下方原始分類、編號配置與技術架構是歷史規劃，不是已完成清單**；載入擴充功能應選擇實際包含 `manifest.json` 的個別子目錄，而非整個 repository。
+
+```sh
+python scripts/audit.py
+node --experimental-vm-modules scripts/check-syntax.mjs
+python -m unittest discover -s tests -p 'test_*.py'
+node --test tests/*.test.mjs
+```
+
+套件執行仍不需要 npm 依賴。檢查工具使用 Python 3.11+、Node.js 22+；瀏覽器整合測試的獨立開發依賴與執行方式見稽核文件。
+
 ---
 
 ## 專案介紹

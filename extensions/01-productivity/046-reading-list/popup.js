@@ -186,7 +186,7 @@ class ReadingList {
     item.innerHTML = `
       <div class="article-favicon">
         ${article.favicon ?
-          `<img src="${article.favicon}" onerror="this.parentElement.textContent='📄'">` :
+          `<img src="${article.favicon}" data-fallback-icon>` :
           '📄'}
       </div>
       <div class="article-info">
@@ -232,9 +232,7 @@ class ReadingList {
   }
 
   escapeHtml(text) {
-    const div = document.createElement('div');
-    div.textContent = text;
-    return div.innerHTML;
+    return String(text ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
   }
 
   showToast(message) {
@@ -251,3 +249,11 @@ class ReadingList {
 document.addEventListener('DOMContentLoaded', () => {
   new ReadingList();
 });
+
+// Capture resource errors outside inline handlers (which MV3 blocks).
+document.addEventListener('error', event => {
+  const image = event.target;
+  if (image instanceof HTMLImageElement && image.hasAttribute('data-fallback-icon')) {
+    image.style.visibility = 'hidden';
+  }
+}, true);

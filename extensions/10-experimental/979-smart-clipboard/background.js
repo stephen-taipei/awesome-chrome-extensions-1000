@@ -1,13 +1,16 @@
 // Background service worker for Smart Clipboard
-chrome.runtime.onInstalled.addListener(() => {
+chrome.runtime.onInstalled.addListener((details) => {
   console.log('Smart Clipboard installed.');
 
-  chrome.storage.local.set({
-    clipboardHistory: [],
-    snippets: [],
-    maxHistorySize: 100,
-    autoFormat: true
-  });
+  // Updates must preserve user data; setup below still runs.
+  if (details.reason === 'install') {
+    chrome.storage.local.set({
+      clipboardHistory: [],
+      snippets: [],
+      maxHistorySize: 100,
+      autoFormat: true
+    });
+  }
 });
 
 // Listen for clipboard changes

@@ -1,15 +1,18 @@
 // Background service worker for Reading Mode
-chrome.runtime.onInstalled.addListener(() => {
+chrome.runtime.onInstalled.addListener((details) => {
   console.log('Reading Mode installed.');
 
-  chrome.storage.local.set({
-    theme: 'light',
-    fontSize: 18,
-    fontFamily: 'Georgia',
-    lineHeight: 1.8,
-    maxWidth: 700,
-    savedArticles: []
-  });
+  // Updates must preserve user data; setup below still runs.
+  if (details.reason === 'install') {
+    chrome.storage.local.set({
+      theme: 'light',
+      fontSize: 18,
+      fontFamily: 'Georgia',
+      lineHeight: 1.8,
+      maxWidth: 700,
+      savedArticles: []
+    });
+  }
 });
 
 // Handle reading mode requests

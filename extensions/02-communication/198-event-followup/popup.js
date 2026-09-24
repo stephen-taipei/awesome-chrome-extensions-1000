@@ -11,7 +11,9 @@ class EventFollowup {
   saveFollowup() { const c = this.contactEl.value.trim(); if (!c) return; this.followups.unshift({ id: Date.now(), type: this.typeEl.value, contact: c, event: this.eventEl.value.trim(), highlights: this.highlightsEl.value.trim(), nextSteps: this.nextStepsEl.value.trim(), created: Date.now() }); if (this.followups.length > 15) this.followups.pop(); this.saveData(); this.render(); const o = this.saveBtn.textContent; this.saveBtn.textContent = 'Saved!'; setTimeout(() => { this.saveBtn.textContent = o; }, 1500); }
   loadFollowup(id) { const f = this.followups.find(f => f.id === id); if (f) { this.typeEl.value = f.type || 'conference'; this.contactEl.value = f.contact || ''; this.eventEl.value = f.event || ''; this.highlightsEl.value = f.highlights || ''; this.nextStepsEl.value = f.nextSteps || ''; } }
   deleteFollowup(id) { this.followups = this.followups.filter(f => f.id !== id); this.saveData(); this.render(); }
-  escapeHtml(t) { const d = document.createElement('div'); d.textContent = t; return d.innerHTML; }
+  escapeHtml(t) {
+    return String(t ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+  }
   truncate(t, l = 25) { return (!t || t.length <= l) ? (t || '') : t.substring(0, l) + '...'; }
   render() { if (this.followups.length === 0) { this.listEl.innerHTML = '<div class="empty-state">No saved follow-ups</div>'; return; } this.listEl.innerHTML = this.followups.map(f => `<div class="followup-item"><div class="followup-info"><div class="followup-contact">${this.escapeHtml(this.truncate(f.contact))}</div><div class="followup-type">${this.getTypeLabel(f.type)}</div></div><div class="followup-actions"><button class="load-btn" data-load="${f.id}">Load</button><button class="delete-btn" data-delete="${f.id}">Del</button></div></div>`).join(''); this.listEl.querySelectorAll('[data-load]').forEach(b => b.addEventListener('click', () => this.loadFollowup(parseInt(b.dataset.load)))); this.listEl.querySelectorAll('[data-delete]').forEach(b => b.addEventListener('click', () => this.deleteFollowup(parseInt(b.dataset.delete)))); }
 }

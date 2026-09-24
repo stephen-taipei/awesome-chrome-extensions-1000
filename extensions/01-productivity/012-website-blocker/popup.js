@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="blocked-item" data-site="${site}">
         <div class="site-info">
           <img class="favicon" src="https://www.google.com/s2/favicons?domain=${site}&sz=32"
-               onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>'">
+               data-fallback-icon>
           <span class="site-name">${site}</span>
         </div>
         <button class="remove-btn">Remove</button>
@@ -104,3 +104,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+// Capture resource errors outside inline handlers (which MV3 blocks).
+document.addEventListener('error', event => {
+  const image = event.target;
+  if (image instanceof HTMLImageElement && image.hasAttribute('data-fallback-icon')) {
+    image.style.visibility = 'hidden';
+  }
+}, true);

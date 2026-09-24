@@ -14,8 +14,44 @@ class GraphQLRef {
     this.render();
   }
   render() {
-    document.getElementById('snippets').innerHTML = this.snippets.map(s => `<div class="snippet-item" onclick="navigator.clipboard.writeText(\`${s.code.replace(/`/g,'\\`')}\`)"><div class="snippet-name">${s.name}</div><div class="snippet-code">${this.escapeHtml(s.code)}</div></div>`).join('');
+    document.getElementById('snippets').innerHTML = this.snippets.map(s => `<div class="snippet-item" data-copy="${auditCopyAttribute(s.code)}" role="button" tabindex="0"><div class="snippet-name">${s.name}</div><div class="snippet-code">${this.escapeHtml(s.code)}</div></div>`).join('');
   }
-  escapeHtml(s) { return s.replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+  escapeHtml(s) {
+    return String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+  }
 }
 document.addEventListener('DOMContentLoaded', () => new GraphQLRef());
+
+// MV3-safe copy controls: data is never interpolated into executable handlers.
+function auditCopyAttribute(value) {
+  return String(value ?? '').replace(/[&<>"'\r\n]/g, char => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;',
+    '\r': '&#13;', '\n': '&#10;'
+  })[char]);
+}
+async function auditCopyControl(target) {
+  const control = target instanceof Element ? target.closest('[data-copy]') : null;
+  if (!control) return;
+  let status = document.getElementById('audit-copy-status');
+  if (!status) {
+    status = document.createElement('p');
+    status.id = 'audit-copy-status';
+    status.setAttribute('role', 'status');
+    status.setAttribute('aria-live', 'polite');
+    document.body.appendChild(status);
+  }
+  try {
+    await navigator.clipboard.writeText(control.dataset.copy);
+    status.textContent = 'Copied to clipboard.';
+  } catch {
+    status.textContent = 'Clipboard access was denied. Select and copy the text manually.';
+  }
+}
+document.addEventListener('click', event => { void auditCopyControl(event.target); });
+document.addEventListener('keydown', event => {
+  const control = event.target instanceof Element ? event.target.closest('[data-copy]') : null;
+  if (control && control.tagName !== 'BUTTON' && (event.key === 'Enter' || event.key === ' ')) {
+    event.preventDefault();
+    void auditCopyControl(control);
+  }
+});

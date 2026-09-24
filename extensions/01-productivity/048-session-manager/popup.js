@@ -91,7 +91,7 @@ class SessionManager {
     // Generate preview list
     this.tabPreviewList.innerHTML = savableTabs.map(tab => `
       <div class="preview-item">
-        <img src="${this.getFaviconUrl(tab.url)}" onerror="this.style.display='none'">
+        <img src="${this.getFaviconUrl(tab.url)}" data-fallback-icon>
         <span>${this.escapeHtml(tab.title.substring(0, 40))}${tab.title.length > 40 ? '...' : ''}</span>
       </div>
     `).join('');
@@ -230,7 +230,7 @@ class SessionManager {
           ${session.tabs.slice(0, 5).map(tab => `
             <div class="tab-item" data-url="${this.escapeHtml(tab.url)}">
               <div class="tab-favicon">
-                <img src="${this.getFaviconUrl(tab.url)}" onerror="this.parentElement.textContent='🔗'">
+                <img src="${this.getFaviconUrl(tab.url)}" data-fallback-icon>
               </div>
               <span class="tab-title">${this.escapeHtml(tab.title)}</span>
             </div>
@@ -273,9 +273,7 @@ class SessionManager {
   }
 
   escapeHtml(text) {
-    const div = document.createElement('div');
-    div.textContent = text;
-    return div.innerHTML;
+    return String(text ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
   }
 }
 
@@ -283,3 +281,11 @@ class SessionManager {
 document.addEventListener('DOMContentLoaded', () => {
   new SessionManager();
 });
+
+// Capture resource errors outside inline handlers (which MV3 blocks).
+document.addEventListener('error', event => {
+  const image = event.target;
+  if (image instanceof HTMLImageElement && image.hasAttribute('data-fallback-icon')) {
+    image.style.visibility = 'hidden';
+  }
+}, true);

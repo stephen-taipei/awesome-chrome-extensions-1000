@@ -154,7 +154,7 @@ class TimeTracker {
       const maxTime = entries[0]?.[1] || 1;
       this.sitesList.innerHTML = entries.slice(0, 10).map(([domain, seconds]) => `
         <div class="site-item">
-          <img class="site-icon" src="${this.getFavicon(domain)}" alt="" onerror="this.textContent='🌐'">
+          <img class="site-icon" src="${this.getFavicon(domain)}" alt="" data-fallback-icon>
           <div class="site-info">
             <div class="site-name">${domain}</div>
             <div class="site-bar">
@@ -272,3 +272,11 @@ class TimeTracker {
 document.addEventListener('DOMContentLoaded', () => {
   new TimeTracker();
 });
+
+// Capture resource errors outside inline handlers (which MV3 blocks).
+document.addEventListener('error', event => {
+  const image = event.target;
+  if (image instanceof HTMLImageElement && image.hasAttribute('data-fallback-icon')) {
+    image.style.visibility = 'hidden';
+  }
+}, true);

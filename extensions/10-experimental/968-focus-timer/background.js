@@ -1,18 +1,21 @@
 // Background service worker for Focus Timer
-chrome.runtime.onInstalled.addListener(() => {
+chrome.runtime.onInstalled.addListener((details) => {
   console.log('Focus Timer installed.');
 
-  chrome.storage.local.set({
-    workDuration: 25,
-    breakDuration: 5,
-    longBreakDuration: 15,
-    sessionsBeforeLongBreak: 4,
-    blockedSites: ['facebook.com', 'twitter.com', 'youtube.com', 'reddit.com'],
-    isRunning: false,
-    currentSession: 0,
-    totalPomodoros: 0,
-    dailyStats: {}
-  });
+  // Updates must preserve user data; setup below still runs.
+  if (details.reason === 'install') {
+    chrome.storage.local.set({
+      workDuration: 25,
+      breakDuration: 5,
+      longBreakDuration: 15,
+      sessionsBeforeLongBreak: 4,
+      blockedSites: ['facebook.com', 'twitter.com', 'youtube.com', 'reddit.com'],
+      isRunning: false,
+      currentSession: 0,
+      totalPomodoros: 0,
+      dailyStats: {}
+    });
+  }
 });
 
 let timerInterval = null;

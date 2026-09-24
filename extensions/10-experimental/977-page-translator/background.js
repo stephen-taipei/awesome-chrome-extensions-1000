@@ -1,14 +1,17 @@
 // Background service worker for Page Translator
-chrome.runtime.onInstalled.addListener(() => {
+chrome.runtime.onInstalled.addListener((details) => {
   console.log('Page Translator installed.');
 
-  chrome.storage.local.set({
-    targetLanguage: 'en',
-    sourceLanguage: 'auto',
-    translationEngine: 'google',
-    learningMode: false,
-    translationHistory: []
-  });
+  // Updates must preserve user data; setup below still runs.
+  if (details.reason === 'install') {
+    chrome.storage.local.set({
+      targetLanguage: 'en',
+      sourceLanguage: 'auto',
+      translationEngine: 'google',
+      learningMode: false,
+      translationHistory: []
+    });
+  }
 
   // Create context menu
   chrome.contextMenus.create({

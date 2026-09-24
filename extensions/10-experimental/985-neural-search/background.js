@@ -1,14 +1,17 @@
 // Background service worker for Neural Search
-chrome.runtime.onInstalled.addListener(() => {
+chrome.runtime.onInstalled.addListener((details) => {
   console.log('Neural Search installed.');
 
   // Initialize default settings
-  chrome.storage.local.set({
-    enableMultiEngine: true,
-    enableSemanticMatch: true,
-    enableLearning: true,
-    searchEngines: ['google', 'bing', 'duckduckgo']
-  });
+  // Updates must preserve user data; setup below still runs.
+  if (details.reason === 'install') {
+    chrome.storage.local.set({
+      enableMultiEngine: true,
+      enableSemanticMatch: true,
+      enableLearning: true,
+      searchEngines: ['google', 'bing', 'duckduckgo']
+    });
+  }
 });
 
 // Listen for search queries

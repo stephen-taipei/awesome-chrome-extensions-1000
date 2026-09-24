@@ -1,12 +1,15 @@
 // Background service worker for Note Anywhere
-chrome.runtime.onInstalled.addListener(() => {
+chrome.runtime.onInstalled.addListener((details) => {
   console.log('Note Anywhere installed.');
 
-  chrome.storage.local.set({
-    notes: {},
-    noteColors: ['#ffeb3b', '#ff9800', '#f44336', '#4caf50', '#2196f3', '#9c27b0'],
-    defaultColor: '#ffeb3b'
-  });
+  // Updates must preserve user data; setup below still runs.
+  if (details.reason === 'install') {
+    chrome.storage.local.set({
+      notes: {},
+      noteColors: ['#ffeb3b', '#ff9800', '#f44336', '#4caf50', '#2196f3', '#9c27b0'],
+      defaultColor: '#ffeb3b'
+    });
+  }
 });
 
 // Handle note operations

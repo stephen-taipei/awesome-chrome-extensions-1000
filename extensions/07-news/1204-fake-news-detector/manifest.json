@@ -12,9 +12,6 @@
     "default_popup": "popup.html",
     "default_title": "Fake News Detector"
   },
-  "permissions": ["storage"],
-  "background": {
-    "service_worker": "background.js"
-  },
+  "permissions": [],
   "minimum_chrome_version": "116"
 }

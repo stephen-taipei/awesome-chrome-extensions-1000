@@ -32,7 +32,9 @@ class BugReport {
   }
   loadReport(id) { const r = this.reports.find(r => r.id === id); if (r) { this.severityEl.value = r.severity || 'medium'; this.titleEl.value = r.title || ''; this.descriptionEl.value = r.description || ''; this.stepsEl.value = r.steps || ''; this.expectedEl.value = r.expected || ''; this.environmentEl.value = r.environment || ''; } }
   deleteReport(id) { this.reports = this.reports.filter(r => r.id !== id); this.saveData(); this.render(); }
-  escapeHtml(text) { const div = document.createElement('div'); div.textContent = text; return div.innerHTML; }
+  escapeHtml(text) {
+    return String(text ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+  }
   truncate(text, len = 25) { return (!text || text.length <= len) ? (text || '') : text.substring(0, len) + '...'; }
   render() {
     if (this.reports.length === 0) { this.listEl.innerHTML = '<div class="empty-state">No saved reports</div>'; return; }

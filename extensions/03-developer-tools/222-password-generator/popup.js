@@ -1,10 +1,48 @@
-// Password Generator - Popup Script
+// Password Generator — all randomness comes from Web Crypto, never Math.random.
 class PasswordGenerator {
-  constructor() { this.initElements(); this.bindEvents(); this.generate(); }
-  initElements() { this.passwordEl = document.getElementById('password'); this.lengthEl = document.getElementById('length'); this.lengthValEl = document.getElementById('lengthVal'); this.upperEl = document.getElementById('upper'); this.lowerEl = document.getElementById('lower'); this.numbersEl = document.getElementById('numbers'); this.symbolsEl = document.getElementById('symbols'); this.generateBtn = document.getElementById('generateBtn'); this.copyBtn = document.getElementById('copyBtn'); this.strengthBar = document.getElementById('strengthBar'); this.strengthText = document.getElementById('strengthText'); }
-  bindEvents() { this.generateBtn.addEventListener('click', () => this.generate()); this.copyBtn.addEventListener('click', () => this.copy()); this.lengthEl.addEventListener('input', () => { this.lengthValEl.textContent = this.lengthEl.value; this.generate(); }); [this.upperEl, this.lowerEl, this.numbersEl, this.symbolsEl].forEach(el => el.addEventListener('change', () => this.generate())); }
-  generate() { const len = parseInt(this.lengthEl.value); let chars = ''; if (this.upperEl.checked) chars += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'; if (this.lowerEl.checked) chars += 'abcdefghijklmnopqrstuvwxyz'; if (this.numbersEl.checked) chars += '0123456789'; if (this.symbolsEl.checked) chars += '!@#$%^&*()_+-=[]{}|;:,.<>?'; if (!chars) chars = 'abcdefghijklmnopqrstuvwxyz'; let pw = ''; for (let i = 0; i < len; i++) pw += chars[Math.floor(Math.random() * chars.length)]; this.passwordEl.value = pw; this.updateStrength(pw); }
-  updateStrength(pw) { let score = 0; if (pw.length >= 12) score++; if (pw.length >= 16) score++; if (/[A-Z]/.test(pw) && /[a-z]/.test(pw)) score++; if (/[0-9]/.test(pw)) score++; if (/[^A-Za-z0-9]/.test(pw)) score++; const levels = ['weak', 'weak', 'fair', 'good', 'strong', 'strong']; const texts = ['Weak', 'Weak', 'Fair', 'Good', 'Strong', 'Strong']; this.strengthBar.className = 'strength-bar ' + levels[score]; this.strengthText.textContent = texts[score]; }
-  async copy() { await navigator.clipboard.writeText(this.passwordEl.value); this.copyBtn.textContent = 'Copied!'; setTimeout(() => { this.copyBtn.textContent = 'Copy'; }, 1500); }
+  constructor() {
+    for (const id of ['password', 'length', 'lengthVal', 'upper', 'lower', 'numbers', 'symbols', 'generateBtn', 'copyBtn', 'strengthBar', 'strengthText']) {
+      this[id] = document.getElementById(id);
+    }
+    this.generateBtn.addEventListener('click', () => this.generate());
+    this.copyBtn.addEventListener('click', () => this.copy());
+    this.length.addEventListener('input', () => {
+      this.lengthVal.textContent = this.length.value;
+      this.generate();
+    });
+    for (const control of [this.upper, this.lower, this.numbers, this.symbols]) {
+      control.addEventListener('change', () => this.generate());
+    }
+    this.strengthText.setAttribute('role', 'status');
+    this.generate();
+  }
+  generate() {
+    const groups = [];
+    if (this.upper.checked) groups.push('ABCDEFGHIJKLMNOPQRSTUVWXYZ');
+    if (this.lower.checked) groups.push('abcdefghijklmnopqrstuvwxyz');
+    if (this.numbers.checked) groups.push('0123456789');
+    if (this.symbols.checked) groups.push('!@#$%^&*()_+-=[]{}|;:,.<>?');
+    try {
+      this.password.value = SecureRandom.password(Number(this.length.value), groups);
+      this.copyBtn.disabled = false;
+      const bits = this.password.value.length * Math.log2(groups.join('').length);
+      this.strengthBar.className = 'strength-bar ' + (bits >= 80 ? 'strong' : bits >= 60 ? 'good' : 'fair');
+      this.strengthText.textContent = 'Randomly generated; use a unique password per account.';
+    } catch (error) {
+      this.password.value = '';
+      this.copyBtn.disabled = true;
+      this.strengthBar.className = 'strength-bar weak';
+      this.strengthText.textContent = error.message;
+    }
+  }
+  async copy() {
+    if (!this.password.value) return;
+    try {
+      await navigator.clipboard.writeText(this.password.value);
+      this.strengthText.textContent = 'Copied. Your clipboard may be readable by other applications.';
+    } catch {
+      this.strengthText.textContent = 'Clipboard access denied. Select and copy the password manually.';
+    }
+  }
 }
 document.addEventListener('DOMContentLoaded', () => new PasswordGenerator());

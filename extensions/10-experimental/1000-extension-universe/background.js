@@ -1,12 +1,15 @@
 // Background service worker for Extension Universe
-chrome.runtime.onInstalled.addListener(() => {
+chrome.runtime.onInstalled.addListener((details) => {
   console.log('Extension Universe installed.');
-  chrome.storage.local.set({ 
-    settings: {
-      autoScan: true,
-      notifications: true
-    }
-  });
+  // Updates must preserve user data; setup below still runs.
+  if (details.reason === 'install') {
+    chrome.storage.local.set({ 
+      settings: {
+        autoScan: true,
+        notifications: true
+      }
+    });
+  }
 });
 
 // Listen for new extensions being installed or uninstalled

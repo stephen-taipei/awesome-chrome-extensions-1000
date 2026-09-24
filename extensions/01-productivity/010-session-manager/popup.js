@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function renderCurrentTabs() {
     currentTabsEl.innerHTML = currentTabs.slice(0, 8).map(tab => `
       <div class="tab-chip">
-        <img src="${tab.favIconUrl || ''}" onerror="this.style.display='none'">
+        <img src="${tab.favIconUrl || ''}" data-fallback-icon>
         <span>${truncate(tab.title, 15)}</span>
       </div>
     `).join('') + (currentTabs.length > 8 ? `<div class="tab-chip">+${currentTabs.length - 8} more</div>` : '');
@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="session-tabs">
           ${session.tabs.slice(0, 6).map(tab => `
             <div class="tab-chip">
-              <img src="${tab.favIconUrl || ''}" onerror="this.style.display='none'">
+              <img src="${tab.favIconUrl || ''}" data-fallback-icon>
               <span>${truncate(tab.title, 12)}</span>
             </div>
           `).join('')}
@@ -146,9 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function escapeHtml(text) {
-    const div = document.createElement('div');
-    div.textContent = text;
-    return div.innerHTML;
+    return String(text ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
   }
 
   // Event listeners
@@ -165,3 +163,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.target === saveModal) hideSaveModal();
   });
 });
+
+// Capture resource errors outside inline handlers (which MV3 blocks).
+document.addEventListener('error', event => {
+  const image = event.target;
+  if (image instanceof HTMLImageElement && image.hasAttribute('data-fallback-icon')) {
+    image.style.visibility = 'hidden';
+  }
+}, true);

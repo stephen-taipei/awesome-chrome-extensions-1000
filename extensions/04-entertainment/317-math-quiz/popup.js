@@ -1,21 +1,23 @@
-// Math Quiz - Popup Script
+// Math Quiz — arithmetic, not eval; one score update per question.
 class MathQuiz {
   constructor() {
     this.score = 0;
-    this.timeLeft = 30;
-    this.timer = null;
-    this.currentAnswer = 0;
     this.playing = false;
-    this.init();
-  }
-  init() {
+    this.pending = false;
+    this.timer = null;
+    this.nextQuestion = null;
+    this.currentAnswer = 0;
     document.getElementById('startBtn').addEventListener('click', () => this.start());
-    document.getElementById('answer').addEventListener('input', (e) => this.checkAnswer(e));
+    document.getElementById('answer').addEventListener('input', event => this.checkAnswer(event));
+    document.getElementById('answer').disabled = true;
   }
   start() {
+    clearInterval(this.timer);
+    clearTimeout(this.nextQuestion);
     this.score = 0;
-    this.timeLeft = 30;
     this.playing = true;
+    this.pending = false;
+    this.deadline = Date.now() + 30000;
     document.getElementById('score').textContent = '0';
     document.getElementById('timer').textContent = '30';
     document.getElementById('message').textContent = '';
@@ -23,47 +25,49 @@ class MathQuiz {
     document.getElementById('startBtn').style.display = 'none';
     this.newProblem();
     this.timer = setInterval(() => {
-      this.timeLeft--;
-      document.getElementById('timer').textContent = this.timeLeft;
-      if (this.timeLeft <= 0) this.end();
-    }, 1000);
+      const remaining = Math.max(0, Math.ceil((this.deadline - Date.now()) / 1000));
+      document.getElementById('timer').textContent = String(remaining);
+      if (remaining === 0) this.end();
+    }, 200);
   }
   newProblem() {
-    const ops = ['+', '-', '*'];
-    const op = ops[Math.floor(Math.random() * ops.length)];
-    let a, b;
-    if (op === '*') {
-      a = Math.floor(Math.random() * 12) + 1;
-      b = Math.floor(Math.random() * 12) + 1;
-    } else {
-      a = Math.floor(Math.random() * 50) + 1;
-      b = Math.floor(Math.random() * 50) + 1;
-    }
-    if (op === '-' && b > a) [a, b] = [b, a];
-    this.currentAnswer = eval(`${a}${op}${b}`);
-    document.getElementById('problem').textContent = `${a} ${op} ${b} = ?`;
+    if (!this.playing) return;
+    this.pending = false;
+    const operation = ['+', '-', '*'][Math.floor(Math.random() * 3)];
+    const maximum = operation === '*' ? 12 : 50;
+    let a = Math.floor(Math.random() * maximum) + 1;
+    let b = Math.floor(Math.random() * maximum) + 1;
+    if (operation === '-' && b > a) [a, b] = [b, a];
+    this.currentAnswer = operation === '+' ? a + b : operation === '-' ? a - b : a * b;
+    document.getElementById('problem').textContent = `${a} ${operation} ${b} = ?`;
     document.getElementById('answer').value = '';
     document.getElementById('answer').focus();
   }
-  checkAnswer(e) {
-    if (!this.playing) return;
-    const val = parseInt(e.target.value);
-    if (val === this.currentAnswer) {
-      this.score++;
-      document.getElementById('score').textContent = this.score;
-      document.getElementById('message').textContent = 'Correct!';
-      document.getElementById('message').className = 'message correct';
-      setTimeout(() => {
-        document.getElementById('message').textContent = '';
-        this.newProblem();
-      }, 300);
-    }
+  checkAnswer(event) {
+    if (!this.playing || this.pending) return;
+    if (Date.now() >= this.deadline) { this.end(); return; }
+    const value = event.target.value.trim();
+    if (!/^\d+$/.test(value) || Number(value) !== this.currentAnswer) return;
+    this.pending = true;
+    this.score++;
+    document.getElementById('score').textContent = String(this.score);
+    document.getElementById('message').textContent = 'Correct!';
+    document.getElementById('message').className = 'message correct';
+    this.nextQuestion = setTimeout(() => {
+      if (!this.playing) return;
+      if (Date.now() >= this.deadline) { this.end(); return; }
+      document.getElementById('message').textContent = '';
+      this.newProblem();
+    }, 300);
   }
   end() {
     clearInterval(this.timer);
+    clearTimeout(this.nextQuestion);
     this.playing = false;
+    this.pending = false;
     document.getElementById('answer').disabled = true;
-    document.getElementById('problem').innerHTML = `<div class="final">Time's up!<br>Score: ${this.score}</div>`;
+    document.getElementById('timer').textContent = '0';
+    document.getElementById('problem').textContent = `Time's up! Score: ${this.score}`;
     document.getElementById('startBtn').style.display = 'block';
     document.getElementById('startBtn').textContent = 'Play Again';
   }

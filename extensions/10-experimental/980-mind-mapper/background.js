@@ -1,13 +1,16 @@
 // Background service worker for Mind Mapper
-chrome.runtime.onInstalled.addListener(() => {
+chrome.runtime.onInstalled.addListener((details) => {
   console.log('Mind Mapper installed.');
 
-  chrome.storage.local.set({
-    autoMapping: true,
-    sessionNodes: [],
-    connections: [],
-    snapshots: []
-  });
+  // Updates must preserve user data; setup below still runs.
+  if (details.reason === 'install') {
+    chrome.storage.local.set({
+      autoMapping: true,
+      sessionNodes: [],
+      connections: [],
+      snapshots: []
+    });
+  }
 });
 
 // Track page visits for mind mapping

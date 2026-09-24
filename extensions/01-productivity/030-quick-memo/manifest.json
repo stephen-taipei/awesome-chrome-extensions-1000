@@ -3,7 +3,9 @@
   "name": "Quick Memo",
   "version": "1.0.0",
   "description": "Minimalist quick memo tool. Instantly capture thoughts with keyboard shortcut support.",
-  "permissions": ["storage", "commands"],
+  "permissions": [
+    "storage"
+  ],
   "action": {
     "default_popup": "popup.html",
     "default_icon": {

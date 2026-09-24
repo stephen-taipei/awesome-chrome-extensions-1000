@@ -1,26 +1,29 @@
 // Background service worker for Tab Grouper
-chrome.runtime.onInstalled.addListener(() => {
+chrome.runtime.onInstalled.addListener((details) => {
   console.log('Tab Grouper installed.');
 
-  chrome.storage.local.set({
-    autoGroup: true,
-    groupByDomain: true,
-    customRules: [],
-    groupColors: {
-      'social': 'blue',
-      'work': 'green',
-      'shopping': 'yellow',
-      'entertainment': 'red',
-      'news': 'purple'
-    },
-    categoryKeywords: {
-      'social': ['facebook', 'twitter', 'instagram', 'linkedin', 'reddit'],
-      'work': ['github', 'gitlab', 'jira', 'slack', 'notion', 'docs.google'],
-      'shopping': ['amazon', 'ebay', 'shopify', 'etsy'],
-      'entertainment': ['youtube', 'netflix', 'spotify', 'twitch'],
-      'news': ['cnn', 'bbc', 'nytimes', 'reuters']
-    }
-  });
+  // Updates must preserve user data; setup below still runs.
+  if (details.reason === 'install') {
+    chrome.storage.local.set({
+      autoGroup: true,
+      groupByDomain: true,
+      customRules: [],
+      groupColors: {
+        'social': 'blue',
+        'work': 'green',
+        'shopping': 'yellow',
+        'entertainment': 'red',
+        'news': 'purple'
+      },
+      categoryKeywords: {
+        'social': ['facebook', 'twitter', 'instagram', 'linkedin', 'reddit'],
+        'work': ['github', 'gitlab', 'jira', 'slack', 'notion', 'docs.google'],
+        'shopping': ['amazon', 'ebay', 'shopify', 'etsy'],
+        'entertainment': ['youtube', 'netflix', 'spotify', 'twitch'],
+        'news': ['cnn', 'bbc', 'nytimes', 'reuters']
+      }
+    });
+  }
 });
 
 // Auto-group new tabs

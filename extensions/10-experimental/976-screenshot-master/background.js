@@ -1,13 +1,16 @@
 // Background service worker for Screenshot Master
-chrome.runtime.onInstalled.addListener(() => {
+chrome.runtime.onInstalled.addListener((details) => {
   console.log('Screenshot Master installed.');
 
-  chrome.storage.local.set({
-    format: 'png',
-    quality: 90,
-    saveLocation: 'downloads',
-    screenshotHistory: []
-  });
+  // Updates must preserve user data; setup below still runs.
+  if (details.reason === 'install') {
+    chrome.storage.local.set({
+      format: 'png',
+      quality: 90,
+      saveLocation: 'downloads',
+      screenshotHistory: []
+    });
+  }
 });
 
 // Handle screenshot capture

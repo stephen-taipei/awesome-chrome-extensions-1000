@@ -3,7 +3,10 @@
   "name": "Workspace Manager",
   "version": "1.0.0",
   "description": "Create and switch between different workspaces. Each workspace has its own set of tabs and window layout.",
-  "permissions": ["storage", "tabs", "windows"],
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
