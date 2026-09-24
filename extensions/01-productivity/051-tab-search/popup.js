@@ -97,7 +97,7 @@ class TabSearch {
 
       item.innerHTML = `
         <div class="tab-favicon">
-          ${tab.favIconUrl ? `<img src="${tab.favIconUrl}" onerror="this.parentElement.textContent='🔗'">` : '🔗'}
+          ${tab.favIconUrl ? `<img src="${tab.favIconUrl}" data-fallback-icon>` : '🔗'}
         </div>
         <div class="tab-info">
           <div class="tab-title">${title}</div>
@@ -202,9 +202,7 @@ class TabSearch {
   }
 
   escapeHtml(text) {
-    const div = document.createElement('div');
-    div.textContent = text;
-    return div.innerHTML;
+    return String(text ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
   }
 
   escapeRegex(string) {
@@ -216,3 +214,11 @@ class TabSearch {
 document.addEventListener('DOMContentLoaded', () => {
   new TabSearch();
 });
+
+// Capture resource errors outside inline handlers (which MV3 blocks).
+document.addEventListener('error', event => {
+  const image = event.target;
+  if (image instanceof HTMLImageElement && image.hasAttribute('data-fallback-icon')) {
+    image.style.visibility = 'hidden';
+  }
+}, true);

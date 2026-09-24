@@ -8,6 +8,8 @@ class CookieEditor {
   renderCookies(cookies) { if (cookies.length === 0) { this.cookieList.innerHTML = '<div style="color:#9ca3af;font-size:11px;padding:10px;">No cookies found</div>'; return; } this.cookieList.innerHTML = cookies.map(c => `<div class="cookie-item"><div class="cookie-info"><div class="cookie-name">${this.escapeHtml(c.name)}</div><div class="cookie-value">${this.escapeHtml(c.value)}</div></div><div class="cookie-actions"><button class="copy-btn" data-value="${this.escapeHtml(c.value)}">Copy</button><button class="delete-btn" data-name="${this.escapeHtml(c.name)}">×</button></div></div>`).join(''); this.cookieList.querySelectorAll('.copy-btn').forEach(btn => btn.addEventListener('click', () => navigator.clipboard.writeText(btn.dataset.value))); this.cookieList.querySelectorAll('.delete-btn').forEach(btn => btn.addEventListener('click', () => this.deleteCookie(btn.dataset.name))); }
   async addCookie() { const name = this.newName.value.trim(); const value = this.newValue.value; if (!name) return; try { await chrome.cookies.set({ url: this.url, name, value }); this.newName.value = ''; this.newValue.value = ''; this.loadCookies(); } catch (e) { console.error('Failed to add cookie'); } }
   async deleteCookie(name) { try { await chrome.cookies.remove({ url: this.url, name }); this.loadCookies(); } catch (e) { console.error('Failed to delete cookie'); } }
-  escapeHtml(str) { const div = document.createElement('div'); div.textContent = str; return div.innerHTML.replace(/"/g, '&quot;'); }
+  escapeHtml(str) {
+    return String(str ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+  }
 }
 document.addEventListener('DOMContentLoaded', () => new CookieEditor());

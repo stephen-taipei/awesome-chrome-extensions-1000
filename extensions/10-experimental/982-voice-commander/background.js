@@ -1,13 +1,16 @@
 // Background service worker for Voice Commander
-chrome.runtime.onInstalled.addListener(() => {
+chrome.runtime.onInstalled.addListener((details) => {
   console.log('Voice Commander installed.');
 
-  chrome.storage.local.set({
-    wakeWord: 'hey browser',
-    continuousListening: false,
-    voiceFeedback: true,
-    customCommands: []
-  });
+  // Updates must preserve user data; setup below still runs.
+  if (details.reason === 'install') {
+    chrome.storage.local.set({
+      wakeWord: 'hey browser',
+      continuousListening: false,
+      voiceFeedback: true,
+      customCommands: []
+    });
+  }
 });
 
 // Handle voice command execution

@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
       { phrase: 'Break a leg', meaning: 'Good luck! (used before a performance)', example: 'Break a leg on your presentation today!', usage: 'Informal, friendly encouragement' },
       { phrase: 'Piece of cake', meaning: 'Something very easy to do', example: 'The test was a piece of cake.', usage: 'Casual conversation' },
       { phrase: 'Hit the hay', meaning: 'Go to bed', example: "I'm tired, I think I'll hit the hay.", usage: 'Informal, among friends/family' },
-      { phrase: 'Under the weather', meaning: 'Feeling slightly ill', example: "I'm feeling under the weather today.", usage: 'Polite way to say you're not feeling well' },
+      { phrase: 'Under the weather', meaning: 'Feeling slightly ill', example: "I'm feeling under the weather today.", usage: "Polite way to say you're not feeling well" },
       { phrase: 'Cost an arm and a leg', meaning: 'Very expensive', example: 'That new car costs an arm and a leg.', usage: 'Expressing high prices' },
       { phrase: 'On the same page', meaning: 'In agreement, having the same understanding', example: 'Let me make sure we are on the same page.', usage: 'Confirming mutual understanding' }
     ],

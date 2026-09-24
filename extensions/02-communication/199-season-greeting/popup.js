@@ -12,7 +12,9 @@ class SeasonGreeting {
   saveGreeting() { const r = this.recipientEl.value.trim(); if (!r) return; this.greetings.unshift({ id: Date.now(), season: this.seasonEl.value, recipient: r, relationship: this.relationshipEl.value.trim(), note: this.noteEl.value.trim(), wishes: this.wishesEl.value.trim(), created: Date.now() }); if (this.greetings.length > 15) this.greetings.pop(); this.saveData(); this.render(); const o = this.saveBtn.textContent; this.saveBtn.textContent = 'Saved!'; setTimeout(() => { this.saveBtn.textContent = o; }, 1500); }
   loadGreeting(id) { const g = this.greetings.find(g => g.id === id); if (g) { this.seasonEl.value = g.season || 'christmas'; this.recipientEl.value = g.recipient || ''; this.relationshipEl.value = g.relationship || ''; this.noteEl.value = g.note || ''; this.wishesEl.value = g.wishes || ''; } }
   deleteGreeting(id) { this.greetings = this.greetings.filter(g => g.id !== id); this.saveData(); this.render(); }
-  escapeHtml(t) { const d = document.createElement('div'); d.textContent = t; return d.innerHTML; }
+  escapeHtml(t) {
+    return String(t ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+  }
   truncate(t, l = 25) { return (!t || t.length <= l) ? (t || '') : t.substring(0, l) + '...'; }
   render() { if (this.greetings.length === 0) { this.listEl.innerHTML = '<div class="empty-state">No saved greetings</div>'; return; } this.listEl.innerHTML = this.greetings.map(g => `<div class="greeting-item"><div class="greeting-info"><div class="greeting-recipient">${this.escapeHtml(this.truncate(g.recipient))}</div><div class="greeting-season">${this.escapeHtml(g.season)}</div></div><div class="greeting-actions"><button class="load-btn" data-load="${g.id}">Load</button><button class="delete-btn" data-delete="${g.id}">Del</button></div></div>`).join(''); this.listEl.querySelectorAll('[data-load]').forEach(b => b.addEventListener('click', () => this.loadGreeting(parseInt(b.dataset.load)))); this.listEl.querySelectorAll('[data-delete]').forEach(b => b.addEventListener('click', () => this.deleteGreeting(parseInt(b.dataset.delete)))); }
 }

@@ -185,7 +185,7 @@ class ReadLater {
         <div class="article-header">
           <div class="article-favicon">
             ${article.favicon
-              ? `<img src="${article.favicon}" alt="" onerror="this.parentElement.innerHTML='📄'">`
+              ? `<img src="${article.favicon}" alt="" data-fallback-icon>`
               : '<span>📄</span>'}
           </div>
           <div class="article-info">
@@ -231,3 +231,11 @@ class ReadLater {
 document.addEventListener('DOMContentLoaded', () => {
   new ReadLater();
 });
+
+// Capture resource errors outside inline handlers (which MV3 blocks).
+document.addEventListener('error', event => {
+  const image = event.target;
+  if (image instanceof HTMLImageElement && image.hasAttribute('data-fallback-icon')) {
+    image.style.visibility = 'hidden';
+  }
+}, true);

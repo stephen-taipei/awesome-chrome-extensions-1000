@@ -11,7 +11,9 @@ class PartnershipProposal {
   saveProposal() { const p = this.partnerEl.value.trim(); if (!p) return; this.proposals.unshift({ id: Date.now(), type: this.typeEl.value, partner: p, company: this.companyEl.value.trim(), opportunity: this.opportunityEl.value.trim(), benefits: this.benefitsEl.value.trim(), created: Date.now() }); if (this.proposals.length > 15) this.proposals.pop(); this.saveData(); this.render(); const o = this.saveBtn.textContent; this.saveBtn.textContent = 'Saved!'; setTimeout(() => { this.saveBtn.textContent = o; }, 1500); }
   loadProposal(id) { const p = this.proposals.find(p => p.id === id); if (p) { this.typeEl.value = p.type || 'strategic'; this.partnerEl.value = p.partner || ''; this.companyEl.value = p.company || ''; this.opportunityEl.value = p.opportunity || ''; this.benefitsEl.value = p.benefits || ''; } }
   deleteProposal(id) { this.proposals = this.proposals.filter(p => p.id !== id); this.saveData(); this.render(); }
-  escapeHtml(t) { const d = document.createElement('div'); d.textContent = t; return d.innerHTML; }
+  escapeHtml(t) {
+    return String(t ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+  }
   truncate(t, l = 25) { return (!t || t.length <= l) ? (t || '') : t.substring(0, l) + '...'; }
   render() { if (this.proposals.length === 0) { this.listEl.innerHTML = '<div class="empty-state">No saved proposals</div>'; return; } this.listEl.innerHTML = this.proposals.map(p => `<div class="proposal-item"><div class="proposal-info"><div class="proposal-partner">${this.escapeHtml(this.truncate(p.partner))}</div><div class="proposal-type">${this.getTypeLabel(p.type)}</div></div><div class="proposal-actions"><button class="load-btn" data-load="${p.id}">Load</button><button class="delete-btn" data-delete="${p.id}">Del</button></div></div>`).join(''); this.listEl.querySelectorAll('[data-load]').forEach(b => b.addEventListener('click', () => this.loadProposal(parseInt(b.dataset.load)))); this.listEl.querySelectorAll('[data-delete]').forEach(b => b.addEventListener('click', () => this.deleteProposal(parseInt(b.dataset.delete)))); }
 }

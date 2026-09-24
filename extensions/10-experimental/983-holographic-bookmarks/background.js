@@ -1,13 +1,16 @@
 // Background service worker for Holographic Bookmarks
-chrome.runtime.onInstalled.addListener(() => {
+chrome.runtime.onInstalled.addListener((details) => {
   console.log('Holographic Bookmarks installed.');
 
   // Initialize spatial data
-  chrome.storage.local.set({
-    spatialPositions: {},
-    depthLayers: {},
-    accessFrequency: {}
-  });
+  // Updates must preserve user data; setup below still runs.
+  if (details.reason === 'install') {
+    chrome.storage.local.set({
+      spatialPositions: {},
+      depthLayers: {},
+      accessFrequency: {}
+    });
+  }
 });
 
 // Track bookmark access for depth layer calculations

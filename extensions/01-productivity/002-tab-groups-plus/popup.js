@@ -243,7 +243,7 @@ function renderGroups() {
         ${group.tabs.map(tab => `
           <div class="group-tab" data-tab-id="${tab.id}">
             <img class="tab-favicon" src="${tab.favIconUrl || 'data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\"/>'}"
-                 onerror="this.style.visibility='hidden'">
+                 data-fallback-icon>
             <span class="tab-title">${escapeHtml(tab.title)}</span>
           </div>
         `).join('')}
@@ -320,7 +320,7 @@ function renderUngroupedTabs() {
   const html = state.ungroupedTabs.map(tab => `
     <div class="ungrouped-tab" data-tab-id="${tab.id}">
       <img class="tab-favicon" src="${tab.favIconUrl || 'data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\"/>'}"
-           onerror="this.style.visibility='hidden'">
+           data-fallback-icon>
       <span class="tab-title">${escapeHtml(tab.title)}</span>
       <div class="tab-actions">
         <button class="group-action-btn add-to-group" title="加入群組">
@@ -689,8 +689,13 @@ function sendMessage(message) {
  * HTML 跳脫
  */
 function escapeHtml(str) {
-  if (!str) return '';
-  const div = document.createElement('div');
-  div.textContent = str;
-  return div.innerHTML;
-}
+    return String(str ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+  }
+
+// Capture resource errors outside inline handlers (which MV3 blocks).
+document.addEventListener('error', event => {
+  const image = event.target;
+  if (image instanceof HTMLImageElement && image.hasAttribute('data-fallback-icon')) {
+    image.style.visibility = 'hidden';
+  }
+}, true);

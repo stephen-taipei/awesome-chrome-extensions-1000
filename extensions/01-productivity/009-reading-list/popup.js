@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="article-header">
           <div class="article-favicon">
             <img src="https://www.google.com/s2/favicons?domain=${getDomain(article.url)}&sz=32"
-                 onerror="this.parentElement.textContent='📄'">
+                 data-fallback-icon>
           </div>
           <div class="article-info">
             <div class="article-title">${escapeHtml(article.title)}</div>
@@ -168,9 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function escapeHtml(text) {
-    const div = document.createElement('div');
-    div.textContent = text;
-    return div.innerHTML;
+    return String(text ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
   }
 
   // Event listeners
@@ -185,3 +183,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+// Capture resource errors outside inline handlers (which MV3 blocks).
+document.addEventListener('error', event => {
+  const image = event.target;
+  if (image instanceof HTMLImageElement && image.hasAttribute('data-fallback-icon')) {
+    image.style.visibility = 'hidden';
+  }
+}, true);

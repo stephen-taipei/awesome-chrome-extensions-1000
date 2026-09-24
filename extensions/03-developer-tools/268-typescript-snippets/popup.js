@@ -3,7 +3,43 @@ class TSSnippets {
   constructor() { this.snippets = [{name:'Interface',code:'interface User {\n  id: number;\n  name: string;\n  email?: string;\n}'},{name:'Type Alias',code:'type Status = "pending" | "active" | "done";'},{name:'Enum',code:'enum Direction {\n  Up = "UP",\n  Down = "DOWN",\n  Left = "LEFT",\n  Right = "RIGHT"\n}'},{name:'Generic Function',code:'function identity<T>(arg: T): T {\n  return arg;\n}'},{name:'Generic Interface',code:'interface Response<T> {\n  data: T;\n  status: number;\n  message: string;\n}'},{name:'Class',code:'class User {\n  private id: number;\n  public name: string;\n  \n  constructor(id: number, name: string) {\n    this.id = id;\n    this.name = name;\n  }\n}'},{name:'Partial',code:'type PartialUser = Partial<User>;\n// All props optional'},{name:'Required',code:'type RequiredUser = Required<User>;\n// All props required'},{name:'Pick',code:'type UserName = Pick<User, "id" | "name">;'},{name:'Omit',code:'type UserWithoutId = Omit<User, "id">;'},{name:'Record',code:'type UserMap = Record<string, User>;'},{name:'Readonly',code:'type ReadonlyUser = Readonly<User>;'},{name:'Array Types',code:'const numbers: number[] = [1, 2, 3];\nconst users: Array<User> = [];'},{name:'Tuple',code:'type Point = [number, number];\nconst coords: Point = [10, 20];'},{name:'Type Guard',code:'function isString(val: unknown): val is string {\n  return typeof val === "string";\n}'},{name:'Async Function',code:'async function fetchData(): Promise<Data> {\n  const res = await fetch(url);\n  return res.json();\n}'},{name:'Union Types',code:'type Result = Success | Error;\n\nfunction handle(r: Result) {\n  if ("data" in r) {\n    // Success\n  }\n}'},{name:'Intersection',code:'type Employee = Person & {\n  employeeId: number;\n  department: string;\n};'}]; this.initElements(); this.bindEvents(); this.render(); }
   initElements() { this.search = document.getElementById('search'); this.list = document.getElementById('snippetList'); }
   bindEvents() { this.search.addEventListener('input', () => this.render()); }
-  render() { const q = this.search.value.toLowerCase(); const filtered = this.snippets.filter(s => s.name.toLowerCase().includes(q) || s.code.toLowerCase().includes(q)); this.list.innerHTML = filtered.map(s => `<div class="snippet-item" onclick="navigator.clipboard.writeText(\`${s.code.replace(/`/g,'\\`').replace(/\\/g,'\\\\')}\`)"><div class="snippet-name">${s.name}</div><div class="snippet-code">${this.escapeHtml(s.code)}</div></div>`).join(''); }
-  escapeHtml(s) { return s.replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+  render() { const q = this.search.value.toLowerCase(); const filtered = this.snippets.filter(s => s.name.toLowerCase().includes(q) || s.code.toLowerCase().includes(q)); this.list.innerHTML = filtered.map(s => `<div class="snippet-item" data-copy="${auditCopyAttribute(s.code)}" role="button" tabindex="0"><div class="snippet-name">${s.name}</div><div class="snippet-code">${this.escapeHtml(s.code)}</div></div>`).join(''); }
+  escapeHtml(s) {
+    return String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+  }
 }
 document.addEventListener('DOMContentLoaded', () => new TSSnippets());
+
+// MV3-safe copy controls: data is never interpolated into executable handlers.
+function auditCopyAttribute(value) {
+  return String(value ?? '').replace(/[&<>"'\r\n]/g, char => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;',
+    '\r': '&#13;', '\n': '&#10;'
+  })[char]);
+}
+async function auditCopyControl(target) {
+  const control = target instanceof Element ? target.closest('[data-copy]') : null;
+  if (!control) return;
+  let status = document.getElementById('audit-copy-status');
+  if (!status) {
+    status = document.createElement('p');
+    status.id = 'audit-copy-status';
+    status.setAttribute('role', 'status');
+    status.setAttribute('aria-live', 'polite');
+    document.body.appendChild(status);
+  }
+  try {
+    await navigator.clipboard.writeText(control.dataset.copy);
+    status.textContent = 'Copied to clipboard.';
+  } catch {
+    status.textContent = 'Clipboard access was denied. Select and copy the text manually.';
+  }
+}
+document.addEventListener('click', event => { void auditCopyControl(event.target); });
+document.addEventListener('keydown', event => {
+  const control = event.target instanceof Element ? event.target.closest('[data-copy]') : null;
+  if (control && control.tagName !== 'BUTTON' && (event.key === 'Enter' || event.key === ' ')) {
+    event.preventDefault();
+    void auditCopyControl(control);
+  }
+});

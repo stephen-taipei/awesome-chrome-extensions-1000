@@ -328,7 +328,7 @@ class TabSearch {
     li.innerHTML = `
       ${tab.pinned ? '<svg class="pinned-indicator" viewBox="0 0 24 24" fill="currentColor"><path d="M16 12V4h1V2H7v2h1v8l-2 2v2h5v6l1 1 1-1v-6h5v-2l-2-2z"/></svg>' : ''}
       ${tab.audible ? '<svg class="audio-indicator" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/></svg>' : ''}
-      ${tab.favIconUrl ? `<img class="tab-favicon" src="${this.escapeHtml(tab.favIconUrl)}" onerror="this.style.display='none'">` : '<div class="tab-favicon-placeholder">?</div>'}
+      ${tab.favIconUrl ? `<img class="tab-favicon" src="${this.escapeHtml(tab.favIconUrl)}" data-fallback-icon>` : '<div class="tab-favicon-placeholder">?</div>'}
       <div class="tab-info">
         <div class="tab-title">${this.highlightText(tab.title || 'Untitled', query)}</div>
         <div class="tab-url">${this.highlightText(this.truncateUrl(tab.url), query)}</div>
@@ -394,9 +394,7 @@ class TabSearch {
   }
 
   escapeHtml(text) {
-    const div = document.createElement('div');
-    div.textContent = text || '';
-    return div.innerHTML;
+    return String(text ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
   }
 
   truncateUrl(url) {
@@ -494,3 +492,11 @@ class TabSearch {
 document.addEventListener('DOMContentLoaded', () => {
   new TabSearch();
 });
+
+// Capture resource errors outside inline handlers (which MV3 blocks).
+document.addEventListener('error', event => {
+  const image = event.target;
+  if (image instanceof HTMLImageElement && image.hasAttribute('data-fallback-icon')) {
+    image.style.visibility = 'hidden';
+  }
+}, true);

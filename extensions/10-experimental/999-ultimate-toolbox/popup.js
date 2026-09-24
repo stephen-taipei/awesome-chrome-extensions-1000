@@ -100,4 +100,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
       toolsGrid.appendChild(item);
     });
-  });
+  }
+});

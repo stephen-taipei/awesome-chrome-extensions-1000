@@ -1,14 +1,17 @@
 // Background service worker for Tab Hibernator
-chrome.runtime.onInstalled.addListener(() => {
+chrome.runtime.onInstalled.addListener((details) => {
   console.log('Tab Hibernator installed.');
 
-  chrome.storage.local.set({
-    hibernatedTabs: [],
-    whitelist: [],
-    idleTimeout: 30, // minutes
-    autoHibernate: true,
-    totalMemorySaved: 0
-  });
+  // Updates must preserve user data; setup below still runs.
+  if (details.reason === 'install') {
+    chrome.storage.local.set({
+      hibernatedTabs: [],
+      whitelist: [],
+      idleTimeout: 30, // minutes
+      autoHibernate: true,
+      totalMemorySaved: 0
+    });
+  }
 
   // Set up alarm for checking idle tabs
   chrome.alarms.create('checkIdleTabs', { periodInMinutes: 5 });

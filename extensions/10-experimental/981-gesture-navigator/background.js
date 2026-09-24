@@ -1,22 +1,25 @@
 // Background service worker for Gesture Navigator
-chrome.runtime.onInstalled.addListener(() => {
+chrome.runtime.onInstalled.addListener((details) => {
   console.log('Gesture Navigator installed.');
 
-  chrome.storage.local.set({
-    gestureTrailEnabled: true,
-    trailColor: '#3498db',
-    sensitivity: 5,
-    gestures: {
-      'L': 'back',
-      'R': 'forward',
-      'U': 'scroll_top',
-      'D': 'scroll_bottom',
-      'DR': 'close_tab',
-      'DL': 'new_tab',
-      'UD': 'refresh',
-      'LR': 'reopen_tab'
-    }
-  });
+  // Updates must preserve user data; setup below still runs.
+  if (details.reason === 'install') {
+    chrome.storage.local.set({
+      gestureTrailEnabled: true,
+      trailColor: '#3498db',
+      sensitivity: 5,
+      gestures: {
+        'L': 'back',
+        'R': 'forward',
+        'U': 'scroll_top',
+        'D': 'scroll_bottom',
+        'DR': 'close_tab',
+        'DL': 'new_tab',
+        'UD': 'refresh',
+        'LR': 'reopen_tab'
+      }
+    });
+  }
 });
 
 // Handle gesture execution

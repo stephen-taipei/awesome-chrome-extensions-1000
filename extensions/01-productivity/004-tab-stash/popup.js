@@ -214,7 +214,7 @@ function renderStashes() {
           ${stash.tabs.map((tab, index) => `
             <div class="stash-tab" data-tab-index="${index}">
               <img class="tab-favicon" src="${tab.favIconUrl || 'data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\"/>'}"
-                   onerror="this.style.visibility='hidden'">
+                   data-fallback-icon>
               <span class="tab-title" title="${escapeHtml(tab.url)}">${escapeHtml(tab.title)}</span>
               <div class="tab-actions">
                 <button class="tab-action-btn restore-tab" title="恢復">
@@ -527,11 +527,8 @@ function sendMessage(message) {
  * HTML 跳脫
  */
 function escapeHtml(str) {
-  if (!str) return '';
-  const div = document.createElement('div');
-  div.textContent = str;
-  return div.innerHTML;
-}
+    return String(str ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+  }
 
 /**
  * 格式化日期
@@ -551,3 +548,11 @@ function formatDate(date) {
     return date.toLocaleDateString('zh-TW');
   }
 }
+
+// Capture resource errors outside inline handlers (which MV3 blocks).
+document.addEventListener('error', event => {
+  const image = event.target;
+  if (image instanceof HTMLImageElement && image.hasAttribute('data-fallback-icon')) {
+    image.style.visibility = 'hidden';
+  }
+}, true);

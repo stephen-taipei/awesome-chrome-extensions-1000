@@ -162,7 +162,7 @@ class TabGroups {
 
       item.innerHTML = `
         <div class="tab-favicon">
-          ${tab.favIconUrl ? `<img src="${tab.favIconUrl}" onerror="this.parentElement.textContent='🔗'">` : '🔗'}
+          ${tab.favIconUrl ? `<img src="${tab.favIconUrl}" data-fallback-icon>` : '🔗'}
         </div>
         <span class="tab-title">${this.escapeHtml(tab.title)}</span>
         <button class="tab-add-btn" data-id="${tab.id}" title="加入群組">+</button>
@@ -272,9 +272,7 @@ class TabGroups {
   }
 
   escapeHtml(text) {
-    const div = document.createElement('div');
-    div.textContent = text;
-    return div.innerHTML;
+    return String(text ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
   }
 }
 
@@ -282,3 +280,11 @@ class TabGroups {
 document.addEventListener('DOMContentLoaded', () => {
   new TabGroups();
 });
+
+// Capture resource errors outside inline handlers (which MV3 blocks).
+document.addEventListener('error', event => {
+  const image = event.target;
+  if (image instanceof HTMLImageElement && image.hasAttribute('data-fallback-icon')) {
+    image.style.visibility = 'hidden';
+  }
+}, true);

@@ -5,7 +5,6 @@
   "description": "Manage, resize, and organize browser windows with preset layouts and quick actions",
   "permissions": [
     "storage",
-    "windows",
     "system.display"
   ],
   "action": {

@@ -1,21 +1,24 @@
 // Background service worker for Speed Dial
-chrome.runtime.onInstalled.addListener(() => {
+chrome.runtime.onInstalled.addListener((details) => {
   console.log('Speed Dial installed.');
 
   // Initialize with default speed dial entries
-  chrome.storage.local.set({
-    speedDials: [
-      { id: 1, title: 'Google', url: 'https://www.google.com', color: '#4285f4' },
-      { id: 2, title: 'YouTube', url: 'https://www.youtube.com', color: '#ff0000' },
-      { id: 3, title: 'GitHub', url: 'https://github.com', color: '#333' },
-      { id: 4, title: 'Twitter', url: 'https://twitter.com', color: '#1da1f2' }
-    ],
-    folders: [],
-    background: 'gradient',
-    showClock: true,
-    showWeather: false,
-    searchEngine: 'google'
-  });
+  // Updates must preserve user data; setup below still runs.
+  if (details.reason === 'install') {
+    chrome.storage.local.set({
+      speedDials: [
+        { id: 1, title: 'Google', url: 'https://www.google.com', color: '#4285f4' },
+        { id: 2, title: 'YouTube', url: 'https://www.youtube.com', color: '#ff0000' },
+        { id: 3, title: 'GitHub', url: 'https://github.com', color: '#333' },
+        { id: 4, title: 'Twitter', url: 'https://twitter.com', color: '#1da1f2' }
+      ],
+      folders: [],
+      background: 'gradient',
+      showClock: true,
+      showWeather: false,
+      searchEngine: 'google'
+    });
+  }
 });
 
 // Handle speed dial operations

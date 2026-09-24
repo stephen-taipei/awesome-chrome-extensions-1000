@@ -11,7 +11,9 @@ class WrapupSummary {
   saveSummary() { const t = this.titleEl.value.trim(); if (!t) return; this.summaries.unshift({ id: Date.now(), type: this.typeEl.value, title: t, achievements: this.achievementsEl.value.trim(), lessons: this.lessonsEl.value.trim(), nextActions: this.nextEl.value.trim(), created: Date.now() }); if (this.summaries.length > 15) this.summaries.pop(); this.saveData(); this.render(); const o = this.saveBtn.textContent; this.saveBtn.textContent = 'Saved!'; setTimeout(() => { this.saveBtn.textContent = o; }, 1500); }
   loadSummary(id) { const s = this.summaries.find(s => s.id === id); if (s) { this.typeEl.value = s.type || 'project'; this.titleEl.value = s.title || ''; this.achievementsEl.value = s.achievements || ''; this.lessonsEl.value = s.lessons || ''; this.nextEl.value = s.nextActions || ''; } }
   deleteSummary(id) { this.summaries = this.summaries.filter(s => s.id !== id); this.saveData(); this.render(); }
-  escapeHtml(t) { const d = document.createElement('div'); d.textContent = t; return d.innerHTML; }
+  escapeHtml(t) {
+    return String(t ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+  }
   truncate(t, l = 25) { return (!t || t.length <= l) ? (t || '') : t.substring(0, l) + '...'; }
   render() { if (this.summaries.length === 0) { this.listEl.innerHTML = '<div class="empty-state">No saved summaries</div>'; return; } this.listEl.innerHTML = this.summaries.map(s => `<div class="summary-item"><div class="summary-info"><div class="summary-title">${this.escapeHtml(this.truncate(s.title))}</div><div class="summary-type">${this.escapeHtml(s.type)}</div></div><div class="summary-actions"><button class="load-btn" data-load="${s.id}">Load</button><button class="delete-btn" data-delete="${s.id}">Del</button></div></div>`).join(''); this.listEl.querySelectorAll('[data-load]').forEach(b => b.addEventListener('click', () => this.loadSummary(parseInt(b.dataset.load)))); this.listEl.querySelectorAll('[data-delete]').forEach(b => b.addEventListener('click', () => this.deleteSummary(parseInt(b.dataset.delete)))); }
 }

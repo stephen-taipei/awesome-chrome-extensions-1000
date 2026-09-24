@@ -189,7 +189,7 @@ function renderTabs() {
     return `
       <div class="tab-item ${activeClass} ${suspendedClass}" data-tab-id="${tab.id}">
         <img class="tab-favicon" src="${tab.favIconUrl || 'data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\"/>'}"
-             onerror="this.style.visibility='hidden'">
+             data-fallback-icon>
         <div class="tab-info">
           <div class="tab-title">${escapeHtml(tab.title)}</div>
           <div class="tab-meta">
@@ -459,11 +459,8 @@ function sendMessage(message) {
  * HTML 跳脫
  */
 function escapeHtml(str) {
-  if (!str) return '';
-  const div = document.createElement('div');
-  div.textContent = str;
-  return div.innerHTML;
-}
+    return String(str ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+  }
 
 /**
  * 格式化閒置時間
@@ -479,3 +476,11 @@ function formatIdleTime(minutes) {
   }
   return `${hours} 小時 ${mins} 分鐘`;
 }
+
+// Capture resource errors outside inline handlers (which MV3 blocks).
+document.addEventListener('error', event => {
+  const image = event.target;
+  if (image instanceof HTMLImageElement && image.hasAttribute('data-fallback-icon')) {
+    image.style.visibility = 'hidden';
+  }
+}, true);

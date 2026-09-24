@@ -3,7 +3,9 @@
   "name": "Task Inbox",
   "version": "1.0.0",
   "description": "Quick capture for tasks and ideas. Simple inbox for rapid note-taking with keyboard shortcut support.",
-  "permissions": ["storage", "commands"],
+  "permissions": [
+    "storage"
+  ],
   "action": {
     "default_popup": "popup.html",
     "default_icon": {

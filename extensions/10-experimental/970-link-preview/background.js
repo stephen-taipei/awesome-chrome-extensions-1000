@@ -1,14 +1,17 @@
 // Background service worker for Link Preview
-chrome.runtime.onInstalled.addListener(() => {
+chrome.runtime.onInstalled.addListener((details) => {
   console.log('Link Preview installed.');
 
-  chrome.storage.local.set({
-    enabled: true,
-    previewSize: 'medium',
-    delay: 500,
-    blacklist: ['localhost', 'chrome://', 'chrome-extension://'],
-    showImages: true
-  });
+  // Updates must preserve user data; setup below still runs.
+  if (details.reason === 'install') {
+    chrome.storage.local.set({
+      enabled: true,
+      previewSize: 'medium',
+      delay: 500,
+      blacklist: ['localhost', 'chrome://', 'chrome-extension://'],
+      showImages: true
+    });
+  }
 });
 
 // Handle preview requests

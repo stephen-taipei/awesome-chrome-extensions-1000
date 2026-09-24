@@ -1,0 +1,4869 @@
+{
+  "scope": "Static checks only; passing does not certify behavior, security, or release readiness.",
+  "counts": {
+    "manifests": 965,
+    "html": 969,
+    "png": 2765,
+    "javascript": 1456,
+    "javascript-with-innerHTML": 429,
+    "prototypes": 386
+  },
+  "errors": [],
+  "review": [
+    {
+      "code": "broad-host-permission",
+      "path": "extensions/01-productivity/012-website-blocker/manifest.json"
+    },
+    {
+      "code": "broad-host-permission",
+      "path": "extensions/01-productivity/035-focus-mode/manifest.json"
+    },
+    {
+      "code": "broad-host-permission",
+      "path": "extensions/01-productivity/054-focus-mode/manifest.json"
+    },
+    {
+      "code": "broad-host-permission",
+      "path": "extensions/01-productivity/055-distraction-blocker/manifest.json"
+    },
+    {
+      "code": "broad-host-permission",
+      "path": "extensions/01-productivity/078-site-blocker/manifest.json"
+    },
+    {
+      "code": "broad-host-permission",
+      "path": "extensions/03-developer-tools/237-cookie-editor/manifest.json"
+    },
+    {
+      "code": "broad-host-permission",
+      "path": "extensions/03-developer-tools/239-web-request-logger/manifest.json"
+    }
+  ],
+  "extensions": [
+    {
+      "path": "extensions/01-productivity/001-tab-manager-pro",
+      "name": "Tab Manager Pro",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/002-tab-groups-plus",
+      "name": "Tab Groups Plus",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/003-tab-suspender",
+      "name": "Tab Suspender",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/004-tab-stash",
+      "name": "Tab Stash",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/005-tab-search",
+      "name": "Tab Search",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/006-quick-notes",
+      "name": "Quick Notes",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/007-task-timer",
+      "name": "Task Timer",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/008-bookmark-manager",
+      "name": "Bookmark Manager",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/009-reading-list",
+      "name": "Reading List",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/010-session-manager",
+      "name": "Session Manager",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/011-clipboard-history",
+      "name": "Clipboard History",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/012-website-blocker",
+      "name": "Website Blocker",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/013-auto-refresh",
+      "name": "Auto Refresh",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/014-page-highlighter",
+      "name": "Page Highlighter",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/015-url-shortener",
+      "name": "URL Shortener",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/016-qr-code-generator",
+      "name": "QR Code Generator",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/017-word-counter",
+      "name": "Word Counter",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/018-dark-mode-toggle",
+      "name": "Dark Mode Toggle",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/019-screenshot-capture",
+      "name": "Screenshot Capture",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/020-tab-counter",
+      "name": "Tab Counter",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/021-voice-note",
+      "name": "Voice Note",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/022-daily-journal",
+      "name": "Daily Journal",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/023-outline-notes",
+      "name": "Outline Notes",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/024-mind-map-note",
+      "name": "Mind Map Note",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/025-page-highlighter",
+      "name": "Page Highlighter",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/026-annotation-tool",
+      "name": "Annotation Tool",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/027-reading-list",
+      "name": "Reading List",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/028-bookmark-notes",
+      "name": "Bookmark Notes",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/029-note-templates",
+      "name": "Note Templates",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/030-quick-memo",
+      "name": "Quick Memo",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/031-pomodoro-timer",
+      "name": "Pomodoro Timer",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/032-time-tracker",
+      "name": "Time Tracker",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/033-simple-timer",
+      "name": "Simple Timer",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/034-stopwatch",
+      "name": "Stopwatch",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/035-focus-mode",
+      "name": "Focus Mode",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/036-break-reminder",
+      "name": "Break Reminder",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/037-world-clock",
+      "name": "World Clock",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/038-daily-goals",
+      "name": "Daily Goals",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/039-meeting-scheduler",
+      "name": "Meeting Scheduler",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/040-deadline-tracker",
+      "name": "Deadline Tracker",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/041-task-inbox",
+      "name": "Task Inbox",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/042-weekly-planner",
+      "name": "Weekly Planner",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/043-priority-matrix",
+      "name": "Priority Matrix",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/044-habit-tracker",
+      "name": "Habit Tracker",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/045-morning-routine",
+      "name": "Morning Routine",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/046-reading-list",
+      "name": "Reading List",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/047-link-organizer",
+      "name": "Link Organizer",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/048-session-manager",
+      "name": "Session Manager",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/049-tab-groups",
+      "name": "Tab Groups",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/050-tab-suspender",
+      "name": "Tab Suspender",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/051-tab-search",
+      "name": "Tab Search",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/052-workspace-manager",
+      "name": "Workspace Manager",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/053-window-manager",
+      "name": "Window Manager",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/054-focus-mode",
+      "name": "Focus Mode",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/055-distraction-blocker",
+      "name": "Distraction Blocker",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/056-break-reminder",
+      "name": "Break Reminder",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/057-eye-care-timer",
+      "name": "Eye Care Timer",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/058-water-reminder",
+      "name": "Water Reminder",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/059-posture-check",
+      "name": "Posture Check",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/060-stretch-reminder",
+      "name": "Stretch Reminder",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/061-meditation-timer",
+      "name": "Meditation Timer",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/062-breathing-exercise",
+      "name": "Breathing Exercise",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/063-daily-affirmation",
+      "name": "Daily Affirmation",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/064-gratitude-journal",
+      "name": "Gratitude Journal",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/065-mood-tracker",
+      "name": "Mood Tracker",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/066-sleep-logger",
+      "name": "Sleep Logger",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/067-daily-journal",
+      "name": "Daily Journal",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/068-goal-tracker",
+      "name": "Goal Tracker",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/069-habit-streak",
+      "name": "Habit Streak",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/070-time-zone-converter",
+      "name": "Time Zone Converter",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/071-meeting-scheduler",
+      "name": "Meeting Scheduler",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/072-email-template",
+      "name": "Email Template",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/073-clipboard-manager",
+      "name": "Clipboard Manager",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/074-quick-links",
+      "name": "Quick Links",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/075-read-later",
+      "name": "Read Later",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/076-daily-planner",
+      "name": "Daily Planner",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/077-project-timer",
+      "name": "Project Timer",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/078-site-blocker",
+      "name": "Site Blocker",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/079-text-expander",
+      "name": "Text Expander",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/080-speed-reader",
+      "name": "Speed Reader",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/081-expense-tracker",
+      "name": "Expense Tracker",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/082-invoice-generator",
+      "name": "Invoice Generator",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/083-receipt-scanner",
+      "name": "Receipt Scanner",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/084-budget-planner",
+      "name": "Budget Planner",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/085-savings-goal",
+      "name": "Savings Goal",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/086-debt-tracker",
+      "name": "Debt Tracker",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/087-work-log",
+      "name": "Work Log",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/088-shift-scheduler",
+      "name": "Shift Scheduler",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/089-freelance-timer",
+      "name": "Freelance Timer",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/090-client-manager",
+      "name": "Client Manager",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/091-quote-generator",
+      "name": "Quote Generator",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/092-task-delegator",
+      "name": "Task Delegator",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/093-calendar-widget",
+      "name": "Calendar Widget",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/094-weather-widget",
+      "name": "Weather Widget",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/095-stock-watchlist",
+      "name": "Stock Watchlist",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/096-currency-converter",
+      "name": "Currency Converter",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/097-unit-converter",
+      "name": "Unit Converter",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/098-color-picker",
+      "name": "Color Picker",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/099-screen-ruler",
+      "name": "Screen Ruler",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/01-productivity/100-text-case-converter",
+      "name": "Text Case Converter",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/101-email-signature-generator",
+      "name": "Email Signature Generator",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/102-contact-card",
+      "name": "Contact Card",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/103-quick-reply-templates",
+      "name": "Quick Reply Templates",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/104-meeting-notes",
+      "name": "Meeting Notes",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/105-emoji-keyboard",
+      "name": "Emoji Keyboard",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/106-social-media-scheduler",
+      "name": "Social Media Scheduler",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/107-greeting-cards",
+      "name": "Greeting Cards",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/108-link-shortener",
+      "name": "Link Shortener",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/109-poll-creator",
+      "name": "Poll Creator",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/110-voice-memo",
+      "name": "Voice Memo",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/111-text-expander",
+      "name": "Text Expander",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/112-message-formatter",
+      "name": "Message Formatter",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/113-announcement-creator",
+      "name": "Announcement Creator",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/114-team-directory",
+      "name": "Team Directory",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/115-status-updater",
+      "name": "Status Updater",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/116-broadcast-message",
+      "name": "Broadcast Message",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/117-newsletter-builder",
+      "name": "Newsletter Builder",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/118-comment-templates",
+      "name": "Comment Templates",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/119-quick-email",
+      "name": "Quick Email",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/120-message-translator",
+      "name": "Message Translator",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/121-chat-logger",
+      "name": "Chat Logger",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/122-response-timer",
+      "name": "Response Timer",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/123-feedback-collector",
+      "name": "Feedback Collector",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/124-survey-creator",
+      "name": "Survey Creator",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/125-quote-generator",
+      "name": "Quote Generator",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/126-invitation-manager",
+      "name": "Invitation Manager",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/127-thank-you-notes",
+      "name": "Thank You Notes",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/128-apology-writer",
+      "name": "Apology Writer",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/129-compliment-generator",
+      "name": "Compliment Generator",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/130-icebreaker-questions",
+      "name": "Icebreaker Questions",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/131-conversation-starters",
+      "name": "Conversation Starters",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/132-meeting-agenda",
+      "name": "Meeting Agenda",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/133-action-items",
+      "name": "Action Items",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/134-decision-log",
+      "name": "Decision Log",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/135-contact-notes",
+      "name": "Contact Notes",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/136-presentation-notes",
+      "name": "Presentation Notes",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/137-standup-notes",
+      "name": "Standup Notes",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/138-weekly-report",
+      "name": "Weekly Report",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/139-team-update",
+      "name": "Team Update",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/140-announcement-creator",
+      "name": "Announcement Creator",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/141-status-message",
+      "name": "Status Message",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/142-out-of-office",
+      "name": "Out of Office",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/143-signature-generator",
+      "name": "Signature Generator",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/144-greeting-cards",
+      "name": "Greeting Cards",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/145-follow-up-tracker",
+      "name": "Follow Up Tracker",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/146-message-scheduler",
+      "name": "Message Scheduler",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/147-pitch-deck-notes",
+      "name": "Pitch Deck Notes",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/148-meeting-minutes",
+      "name": "Meeting Minutes",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/149-social-bio",
+      "name": "Social Bio",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/150-post-scheduler",
+      "name": "Post Scheduler",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/151-hashtag-manager",
+      "name": "Hashtag Manager",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/152-caption-writer",
+      "name": "Caption Writer",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/153-profile-links",
+      "name": "Profile Links",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/154-dm-templates",
+      "name": "DM Templates",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/155-thread-planner",
+      "name": "Thread Planner",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/156-video-script",
+      "name": "Video Script",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/157-podcast-notes",
+      "name": "Podcast Notes",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/158-webinar-notes",
+      "name": "Webinar Notes",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/159-interview-prep",
+      "name": "Interview Prep",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/160-conference-notes",
+      "name": "Conference Notes",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/161-feedback-request",
+      "name": "Feedback Request",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/162-project-brief",
+      "name": "Project Brief",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/163-intro-script",
+      "name": "Intro Script",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/164-thank-you-note",
+      "name": "Thank You Note",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/165-apology-message",
+      "name": "Apology Message",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/166-referral-request",
+      "name": "Referral Request",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/167-leave-request",
+      "name": "Leave Request",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/168-cold-email",
+      "name": "Cold Email",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/169-speaker-bio",
+      "name": "Speaker Bio",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/170-event-invitation",
+      "name": "Event Invitation",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/171-testimonial-request",
+      "name": "Testimonial Request",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/172-collaboration-request",
+      "name": "Collaboration Request",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/173-newsletter-intro",
+      "name": "Newsletter Intro",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/174-product-description",
+      "name": "Product Description",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/175-press-release",
+      "name": "Press Release",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/176-job-posting",
+      "name": "Job Posting",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/177-client-questionnaire",
+      "name": "Client Questionnaire",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/178-crisis-response",
+      "name": "Crisis Response",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/179-status-update",
+      "name": "Status Update",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/180-meeting-request",
+      "name": "Meeting Request",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/181-conflict-resolution",
+      "name": "Conflict Resolution",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/182-escalation-notice",
+      "name": "Escalation Notice",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/183-mentorship-request",
+      "name": "Mentorship Request",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/184-peer-review",
+      "name": "Peer Review",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/185-team-announcement",
+      "name": "Team Announcement",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/186-onboarding-message",
+      "name": "Onboarding Message",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/187-exit-interview",
+      "name": "Exit Interview",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/188-customer-retention",
+      "name": "Customer Retention",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/189-upsell-pitch",
+      "name": "Upsell Pitch",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/190-renewal-notice",
+      "name": "Renewal Notice",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/191-policy-update",
+      "name": "Policy Update",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/192-rsvp-response",
+      "name": "RSVP Response",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/193-sponsorship-request",
+      "name": "Sponsorship Request",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/194-survey-invitation",
+      "name": "Survey Invitation",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/195-bug-report",
+      "name": "Bug Report",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/196-feature-request",
+      "name": "Feature Request",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/197-partnership-proposal",
+      "name": "Partnership Proposal",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/198-event-followup",
+      "name": "Event Follow-up",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/199-season-greeting",
+      "name": "Season Greeting",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/02-communication/200-wrapup-summary",
+      "name": "Wrap-up Summary",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/201-json-formatter",
+      "name": "JSON Formatter",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/202-base64-encoder",
+      "name": "Base64 Encoder",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/203-url-encoder",
+      "name": "URL Encoder",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/204-regex-tester",
+      "name": "Regex Tester",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/205-color-picker",
+      "name": "Color Picker",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/206-lorem-ipsum",
+      "name": "Lorem Ipsum",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/207-hash-generator",
+      "name": "Hash Generator",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/208-timestamp-converter",
+      "name": "Timestamp Converter",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/209-uuid-generator",
+      "name": "UUID Generator",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/210-markdown-preview",
+      "name": "Markdown Preview",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/211-html-encoder",
+      "name": "HTML Encoder",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/212-css-minifier",
+      "name": "CSS Minifier",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/213-js-minifier",
+      "name": "JS Minifier",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/214-diff-checker",
+      "name": "Diff Checker",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/215-csv-to-json",
+      "name": "CSV to JSON",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/216-json-to-csv",
+      "name": "JSON to CSV",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/217-xml-formatter",
+      "name": "XML Formatter",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/218-binary-converter",
+      "name": "Binary Converter",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/219-ascii-table",
+      "name": "ASCII Table",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/220-http-status",
+      "name": "HTTP Status Codes",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/221-code-snippets",
+      "name": "Code Snippets",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/222-password-generator",
+      "name": "Password Generator",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/223-ip-lookup",
+      "name": "IP Lookup",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/224-cron-builder",
+      "name": "Cron Builder",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/225-jwt-decoder",
+      "name": "JWT Decoder",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/226-sql-formatter",
+      "name": "SQL Formatter",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/227-yaml-formatter",
+      "name": "YAML Formatter",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/228-query-string-parser",
+      "name": "Query String Parser",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/229-unix-permissions",
+      "name": "Unix Permissions",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/230-epoch-converter",
+      "name": "Epoch Converter",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/231-hex-editor",
+      "name": "Hex Editor",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/232-font-previewer",
+      "name": "Font Previewer",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/233-gradient-generator",
+      "name": "Gradient Generator",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/234-box-shadow-gen",
+      "name": "Box Shadow Generator",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/235-border-radius-gen",
+      "name": "Border Radius Generator",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/236-http-headers",
+      "name": "HTTP Headers Reference",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/237-cookie-editor",
+      "name": "Cookie Editor",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/238-local-storage-viewer",
+      "name": "Local Storage Viewer",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/239-web-request-logger",
+      "name": "Request Logger",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/240-api-tester",
+      "name": "API Tester",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/241-mock-data-gen",
+      "name": "Mock Data Generator",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/242-schema-validator",
+      "name": "JSON Schema Validator",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/243-jwt-inspector",
+      "name": "JWT Inspector",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/244-mime-types",
+      "name": "MIME Types Reference",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/245-escape-unescape",
+      "name": "Escape/Unescape",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/246-text-case-converter",
+      "name": "Text Case Converter",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/247-string-length",
+      "name": "String Length Counter",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/248-number-base-converter",
+      "name": "Number Base Converter",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/249-unit-converter",
+      "name": "Dev Unit Converter",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/250-keyboard-shortcuts-ref",
+      "name": "Keyboard Shortcuts",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/251-regex-cheatsheet",
+      "name": "Regex Cheatsheet",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/252-css-grid-gen",
+      "name": "CSS Grid Generator",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/253-flexbox-gen",
+      "name": "Flexbox Generator",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/254-html-entities",
+      "name": "HTML Entities",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/255-emoji-picker",
+      "name": "Emoji Picker",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/256-git-commands",
+      "name": "Git Commands",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/257-npm-commands",
+      "name": "NPM Commands",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/258-docker-commands",
+      "name": "Docker Commands",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/259-linux-commands",
+      "name": "Linux Commands",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/260-vim-cheatsheet",
+      "name": "Vim Cheatsheet",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/261-bash-scripts",
+      "name": "Bash Scripts",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/262-sql-cheatsheet",
+      "name": "SQL Cheatsheet",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/263-python-snippets",
+      "name": "Python Snippets",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/264-javascript-snippets",
+      "name": "JavaScript Snippets",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/265-html-templates",
+      "name": "HTML Templates",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/266-css-templates",
+      "name": "CSS Templates",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/267-react-snippets",
+      "name": "React Snippets",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/268-typescript-snippets",
+      "name": "TypeScript Snippets",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/269-go-snippets",
+      "name": "Go Snippets",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/270-rust-snippets",
+      "name": "Rust Snippets",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/271-php-snippets",
+      "name": "PHP Snippets",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/272-ruby-snippets",
+      "name": "Ruby Snippets",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/273-swift-snippets",
+      "name": "Swift Snippets",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/274-kotlin-snippets",
+      "name": "Kotlin Snippets",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/275-csharp-snippets",
+      "name": "C# Snippets",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/276-java-snippets",
+      "name": "Java Snippets",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/277-yaml-validator",
+      "name": "YAML Validator",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/278-xml-formatter",
+      "name": "XML Formatter",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/279-toml-viewer",
+      "name": "TOML Viewer",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/280-ini-parser",
+      "name": "INI Parser",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/281-env-editor",
+      "name": "ENV Editor",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/282-cron-parser",
+      "name": "Cron Parser",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/283-semver-checker",
+      "name": "SemVer Checker",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/284-uuid-inspector",
+      "name": "UUID Inspector",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/285-hash-identifier",
+      "name": "Hash Identifier",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/286-port-lookup",
+      "name": "Port Lookup",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/287-http-status-ref",
+      "name": "HTTP Status Ref",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/288-ascii-table",
+      "name": "ASCII Table",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/289-keycode-finder",
+      "name": "Keycode Finder",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/290-unicode-lookup",
+      "name": "Unicode Lookup",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/291-ip-converter",
+      "name": "IP Converter",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/292-cidr-calculator",
+      "name": "CIDR Calculator",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/293-dns-lookup",
+      "name": "DNS Records Ref",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/294-ssl-decoder",
+      "name": "SSL/TLS Reference",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/295-jwt-decoder",
+      "name": "JWT Decoder",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/296-oauth-ref",
+      "name": "OAuth Reference",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/297-http-methods-ref",
+      "name": "HTTP Methods Ref",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/298-cors-helper",
+      "name": "CORS Reference",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/299-graphql-ref",
+      "name": "GraphQL Reference",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/03-developer-tools/300-rest-api-ref",
+      "name": "REST API Reference",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/301-dice-roller",
+      "name": "Dice Roller",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/302-coin-flip",
+      "name": "Coin Flip",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/303-random-number",
+      "name": "Random Number",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/304-magic-8ball",
+      "name": "Magic 8 Ball",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/305-rock-paper-scissors",
+      "name": "Rock Paper Scissors",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/306-tic-tac-toe",
+      "name": "Tic Tac Toe",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/307-hangman",
+      "name": "Hangman",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/308-memory-match",
+      "name": "Memory Match",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/309-simon-says",
+      "name": "Simon Says",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/310-trivia-quiz",
+      "name": "Trivia Quiz",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/311-slot-machine",
+      "name": "Slot Machine",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/312-reaction-test",
+      "name": "Reaction Test",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/313-typing-test",
+      "name": "Typing Test",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/314-color-guess",
+      "name": "Color Guess",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/315-number-guess",
+      "name": "Number Guess",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/316-word-scramble",
+      "name": "Word Scramble",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/317-math-quiz",
+      "name": "Math Quiz",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/318-flag-quiz",
+      "name": "Flag Quiz",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/319-capital-quiz",
+      "name": "Capital Quiz",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/320-emoji-quiz",
+      "name": "Emoji Quiz",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/321-sudoku",
+      "name": "Sudoku",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/322-snake-game",
+      "name": "Snake Game",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/323-breakout",
+      "name": "Breakout",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/324-minesweeper",
+      "name": "Minesweeper",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/325-2048",
+      "name": "2048",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/326-tetris",
+      "name": "Tetris",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/327-pong",
+      "name": "Pong",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/328-flappy-bird",
+      "name": "Flappy Jump",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/329-whack-a-mole",
+      "name": "Whack-a-Mole",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/330-connect-four",
+      "name": "Connect Four",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/331-checkers",
+      "name": "Checkers",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/332-puzzle-slider",
+      "name": "Puzzle Slider",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/333-click-counter",
+      "name": "Click Counter",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/334-aim-trainer",
+      "name": "Aim Trainer",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/335-color-match",
+      "name": "Color Match",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/336-word-search",
+      "name": "Word Search",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/337-crossword",
+      "name": "Crossword",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/338-maze-runner",
+      "name": "Maze Runner",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/339-pattern-match",
+      "name": "Pattern Match",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/340-bubble-pop",
+      "name": "Bubble Pop",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/341-spelling-bee",
+      "name": "Spelling Bee",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/342-piano-tiles",
+      "name": "Piano Tiles",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/343-catch-falling",
+      "name": "Catch Falling",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/344-spot-difference",
+      "name": "Spot Difference",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/345-tower-stack",
+      "name": "Tower Stack",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/346-blackjack",
+      "name": "Blackjack",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/347-word-chain",
+      "name": "Word Chain",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/348-speed-math",
+      "name": "Speed Math",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/349-emoji-memory",
+      "name": "Emoji Memory",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/350-balloon-pop",
+      "name": "Balloon Pop",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/351-solitaire",
+      "name": "Solitaire",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/352-word-guess",
+      "name": "Word Guess",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/353-duck-hunt",
+      "name": "Duck Hunt",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/354-fruit-slice",
+      "name": "Fruit Slice",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/355-color-flood",
+      "name": "Color Flood",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/356-lights-out",
+      "name": "Lights Out",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/357-number-merge",
+      "name": "Number Merge",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/358-word-finder",
+      "name": "Word Finder",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/359-escape-room",
+      "name": "Escape Room",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/360-card-war",
+      "name": "Card War",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/361-bubble-shooter",
+      "name": "Bubble Shooter",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/362-word-ladder",
+      "name": "Word Ladder",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/363-pipe-connect",
+      "name": "Pipe Connect",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/364-hex-match",
+      "name": "Hex Match",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/365-speed-typing",
+      "name": "Speed Typing",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/366-rock-stack",
+      "name": "Rock Stack",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/367-color-switch",
+      "name": "Color Switch",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/368-math-bingo",
+      "name": "Math Bingo",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/369-word-bomb",
+      "name": "Word Bomb",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/370-target-shooter",
+      "name": "Target Shooter",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/371-reaction-test",
+      "name": "Reaction Test",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/372-number-guess",
+      "name": "Number Guess",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/373-word-drop",
+      "name": "Word Drop",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/374-maze-escape",
+      "name": "Maze Escape",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/375-color-tap",
+      "name": "Color Tap",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/376-sequence-memory",
+      "name": "Sequence Memory",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/377-quick-math",
+      "name": "Quick Math",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/378-shape-match",
+      "name": "Shape Match",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/379-letter-scramble",
+      "name": "Letter Scramble",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/380-ball-bounce",
+      "name": "Ball Bounce",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/381-tap-counter",
+      "name": "Tap Counter",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/382-hot-cold",
+      "name": "Hot Cold",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/383-pattern-lock",
+      "name": "Pattern Lock",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/384-coin-stack",
+      "name": "Coin Stack",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/385-word-rain",
+      "name": "Word Rain",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/386-arrow-dodge",
+      "name": "Arrow Dodge",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/387-color-blend",
+      "name": "Color Blend",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/388-digit-span",
+      "name": "Digit Span",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/389-emoji-match",
+      "name": "Emoji Match",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/390-gravity-ball",
+      "name": "Gravity Ball",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/391-speed-click",
+      "name": "Speed Click",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/392-find-pair",
+      "name": "Find Pair",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/393-word-search",
+      "name": "Word Search",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/394-reflex-game",
+      "name": "Reflex Game",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/395-tile-slide",
+      "name": "Tile Slide",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/396-whack-emoji",
+      "name": "Whack Emoji",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/397-color-memory",
+      "name": "Color Memory",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/398-math-race",
+      "name": "Math Race",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/399-bubble-wrap",
+      "name": "Bubble Wrap",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/400-lucky-wheel",
+      "name": "Lucky Wheel",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/401-slot-machine",
+      "name": "Slot Machine",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/402-scratch-card",
+      "name": "Scratch Card",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/403-number-puzzle",
+      "name": "Number Puzzle",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/404-word-wheel",
+      "name": "Word Wheel",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/405-card-flip",
+      "name": "Card Flip",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/406-dice-poker",
+      "name": "Dice Poker",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/407-word-anagram",
+      "name": "Word Anagram",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/408-color-picker",
+      "name": "Color Picker",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/409-number-bonds",
+      "name": "Number Bonds",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/410-shape-builder",
+      "name": "Shape Builder",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/411-word-chain",
+      "name": "Word Chain",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/412-spot-diff",
+      "name": "Spot the Diff",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/413-quick-draw",
+      "name": "Quick Draw",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/414-number-order",
+      "name": "Number Order",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/415-emoji-slider",
+      "name": "Emoji Slider",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/416-letter-drop",
+      "name": "Letter Drop",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/417-color-sort",
+      "name": "Color Sort",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/418-word-connect",
+      "name": "Word Connect",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/419-math-grid",
+      "name": "Math Grid",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/420-emoji-puzzle",
+      "name": "Emoji Puzzle",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/421-tap-sequence",
+      "name": "Tap Sequence",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/422-word-morph",
+      "name": "Word Morph",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/423-color-flood",
+      "name": "Color Flood",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/424-math-chain",
+      "name": "Math Chain",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/425-symbol-match",
+      "name": "Symbol Match",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/426-binary-puzzle",
+      "name": "Binary Puzzle",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/427-word-hunt",
+      "name": "Word Hunt",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/428-speed-tap",
+      "name": "Speed Tap",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/429-color-sequence",
+      "name": "Color Sequence",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/430-math-squares",
+      "name": "Math Squares",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/431-path-finder",
+      "name": "Path Finder",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/432-word-scramble",
+      "name": "Word Scramble",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/433-color-mix",
+      "name": "Color Mix",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/434-number-memory",
+      "name": "Number Memory",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/435-shape-rotate",
+      "name": "Shape Rotate",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/436-logic-chain",
+      "name": "Logic Chain",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/437-spot-pattern",
+      "name": "Spot Pattern",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/438-quick-match",
+      "name": "Quick Match",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/439-tile-flip",
+      "name": "Tile Flip",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/440-color-code",
+      "name": "Color Code",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/441-word-ladder",
+      "name": "Word Ladder",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/442-grid-fill",
+      "name": "Grid Fill",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/443-arrow-maze",
+      "name": "Arrow Maze",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/444-count-shapes",
+      "name": "Count Shapes",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/445-speed-sort",
+      "name": "Speed Sort",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/446-emoji-decoder",
+      "name": "Emoji Decoder",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/447-pixel-draw",
+      "name": "Pixel Draw",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/448-reflex-tap",
+      "name": "Reflex Tap",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/449-balance-scale",
+      "name": "Balance Scale",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/450-chain-reaction",
+      "name": "Chain Reaction",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/451-digit-drop",
+      "name": "Digit Drop",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/452-word-rain",
+      "name": "Word Rain",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/453-shape-stack",
+      "name": "Shape Stack",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/454-rhythm-tap",
+      "name": "Rhythm Tap",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/455-sliding-puzzle",
+      "name": "Sliding Puzzle",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/456-dot-connect",
+      "name": "Dot Connect",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/457-number-path",
+      "name": "Number Path",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/458-color-flood",
+      "name": "Color Flood",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/459-letter-hunt",
+      "name": "Letter Hunt",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/460-symbol-match",
+      "name": "Symbol Match",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/461-gravity-switch",
+      "name": "Gravity Switch",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/462-word-stack",
+      "name": "Word Stack",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/463-tap-sequence",
+      "name": "Tap Sequence",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/464-block-breaker",
+      "name": "Block Breaker",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/465-math-grid",
+      "name": "Math Grid",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/466-spin-match",
+      "name": "Spin Match",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/467-bounce-ball",
+      "name": "Bounce Ball",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/468-quick-draw",
+      "name": "Quick Draw",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/469-hex-match",
+      "name": "Hex Match",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/470-tower-defense",
+      "name": "Tower Defense",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/471-card-match",
+      "name": "Card Match",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/472-laser-puzzle",
+      "name": "Laser Puzzle",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/473-word-bomb",
+      "name": "Word Bomb",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/474-color-sort",
+      "name": "Color Sort",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/475-dice-master",
+      "name": "Dice Master",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/476-pixel-race",
+      "name": "Pixel Race",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/477-orbit-tap",
+      "name": "Orbit Tap",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/478-chain-words",
+      "name": "Chain Words",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/479-light-up",
+      "name": "Light Up",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/480-pattern-lock",
+      "name": "Pattern Lock",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/481-bubble-burst",
+      "name": "Bubble Burst",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/482-rope-cut",
+      "name": "Rope Cut",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/483-drop-merge",
+      "name": "Drop Merge",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/484-target-aim",
+      "name": "Target Aim",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/485-card-war",
+      "name": "Card War",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/486-brick-stack",
+      "name": "Brick Stack",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/487-connect-pipe",
+      "name": "Connect Pipe",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/488-color-wheel",
+      "name": "Color Wheel",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/489-word-finder",
+      "name": "Word Finder",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/490-emoji-hunt",
+      "name": "Emoji Hunt",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/491-crystal-match",
+      "name": "Crystal Match",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/492-number-slide",
+      "name": "Number Slide",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/493-letter-drop",
+      "name": "Letter Drop",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/494-shape-fit",
+      "name": "Shape Fit",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/495-coin-toss",
+      "name": "Coin Toss",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/496-grid-lock",
+      "name": "Grid Lock",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/497-photo-puzzle",
+      "name": "Photo Puzzle",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/498-ring-stack",
+      "name": "Ring Stack",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/499-maze-gen",
+      "name": "Maze Gen",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/04-entertainment/500-final-challenge",
+      "name": "Final Challenge",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/05-education/501-vocabulary-builder",
+      "name": "Vocabulary Builder",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/05-education/502-word-quiz",
+      "name": "Word Quiz",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/05-education/503-spelling-practice",
+      "name": "Spelling Practice",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/05-education/504-pronunciation-guide",
+      "name": "Pronunciation Guide",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/05-education/505-grammar-checker",
+      "name": "Grammar Checker",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/05-education/506-sentence-builder",
+      "name": "Sentence Builder",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/05-education/507-synonym-finder",
+      "name": "Synonym Finder",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/05-education/508-antonym-quiz",
+      "name": "Antonym Quiz",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/05-education/509-idiom-explorer",
+      "name": "Idiom Explorer",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/05-education/510-language-flashcards",
+      "name": "Language Flashcards",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/05-education/511-word-root",
+      "name": "Word Root Explorer",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/05-education/512-verb-conjugator",
+      "name": "Verb Conjugator",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/05-education/513-reading-speed",
+      "name": "Reading Speed Trainer",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/05-education/514-text-simplifier",
+      "name": "Text Simplifier",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/05-education/515-dictionary-popup",
+      "name": "Dictionary Popup",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/05-education/516-translation-helper",
+      "name": "Translation Helper",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/05-education/517-vocabulary-tracker",
+      "name": "Vocabulary Tracker",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/05-education/518-word-of-day",
+      "name": "Word of the Day",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/05-education/519-phrase-builder",
+      "name": "Phrase Builder",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/05-education/520-accent-guide",
+      "name": "Accent Guide",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/05-education/521-article-highlighter",
+      "name": "Article Highlighter",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/05-education/522-summary-maker",
+      "name": "Summary Maker",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/05-education/523-note-taker",
+      "name": "Note Taker",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/05-education/524-bookmark-annotator",
+      "name": "Bookmark Annotator",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/05-education/525-reading-list",
+      "name": "Reading List",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/05-education/526-speed-reader",
+      "name": "Speed Reader",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/05-education/527-focus-reader",
+      "name": "Focus Reader",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/05-education/528-citation-helper",
+      "name": "Citation Helper",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/05-education/529-study-timer",
+      "name": "Study Timer",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/05-education/530-flashcard-maker",
+      "name": "Flashcard Maker",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/05-education/531-quiz-generator",
+      "name": "Quiz Generator",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/05-education/532-outline-maker",
+      "name": "Outline Maker",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/05-education/533-concept-mapper",
+      "name": "Concept Mapper",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/05-education/534-definition-finder",
+      "name": "Definition Finder",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/05-education/535-study-planner",
+      "name": "Study Planner",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/05-education/536-progress-tracker",
+      "name": "Progress Tracker",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/05-education/537-review-scheduler",
+      "name": "Review Scheduler",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/05-education/538-note-organizer",
+      "name": "Note Organizer",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/05-education/539-highlight-export",
+      "name": "Highlight Export",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/05-education/540-reading-progress",
+      "name": "Reading Progress",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/05-education/541-math-solver",
+      "name": "Math Solver",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/05-education/542-unit-converter",
+      "name": "Unit Converter",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/05-education/543-percentage-calc",
+      "name": "Percentage Calculator",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/05-education/561-code-snippets",
+      "name": "Code Snippets",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/05-education/562-regex-tester",
+      "name": "Regex Tester",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/05-education/563-json-formatter",
+      "name": "JSON Formatter",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/05-education/581-critical-thinking-guide",
+      "name": "Critical Thinking Guide",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/582-debate-skills-trainer",
+      "name": "Debate Skills Trainer",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/583-study-habit-builder",
+      "name": "Study Habit Builder",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/584-note-taking-system",
+      "name": "Note Taking System",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/585-active-reading-helper",
+      "name": "Active Reading Helper",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/586-concept-mapper",
+      "name": "Concept Mapper",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/587-quiz-creator",
+      "name": "Quiz Creator",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/588-exam-prep-assistant",
+      "name": "Exam Prep Assistant",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/589-learning-scheduler",
+      "name": "Learning Scheduler",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/590-educational-videos",
+      "name": "Educational Videos",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/591-academic-planner",
+      "name": "Academic Planner",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/592-assignment-tracker",
+      "name": "Assignment Tracker",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/593-grade-calculator",
+      "name": "Grade Calculator",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/594-gpa-tracker",
+      "name": "Gpa Tracker",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/595-scholarship-finder",
+      "name": "Scholarship Finder",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/596-college-explorer",
+      "name": "College Explorer",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/597-career-guidance",
+      "name": "Career Guidance",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/598-skill-assessment",
+      "name": "Skill Assessment",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/599-learning-analytics",
+      "name": "Learning Analytics",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/600-progress-tracker",
+      "name": "Progress Tracker",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/601-chemistry-helper",
+      "name": "Chemistry Helper",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/602-physics-calculator",
+      "name": "Physics Calculator",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/603-biology-notes",
+      "name": "Biology Notes",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/604-earth-science-guide",
+      "name": "Earth Science Guide",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/605-astronomy-viewer",
+      "name": "Astronomy Viewer",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/606-geology-explorer",
+      "name": "Geology Explorer",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/607-ecology-tracker",
+      "name": "Ecology Tracker",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/608-genetics-helper",
+      "name": "Genetics Helper",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/609-evolution-timeline",
+      "name": "Evolution Timeline",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/610-anatomy-viewer",
+      "name": "Anatomy Viewer",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/611-music-theory-guide",
+      "name": "Music Theory Guide",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/612-art-history-browser",
+      "name": "Art History Browser",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/613-literature-companion",
+      "name": "Literature Companion",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/614-poetry-analyzer",
+      "name": "Poetry Analyzer",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/615-writing-workshop",
+      "name": "Writing Workshop",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/616-speech-coach",
+      "name": "Speech Coach",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/617-debate-trainer",
+      "name": "Debate Trainer",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/618-critical-analysis",
+      "name": "Critical Analysis",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/619-research-methods",
+      "name": "Research Methods",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/620-statistics-helper",
+      "name": "Statistics Helper",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/621-data-analysis-basics",
+      "name": "Data Analysis Basics",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/622-programming-tutor",
+      "name": "Programming Tutor",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/623-algorithm-visualizer",
+      "name": "Algorithm Visualizer",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/624-coding-challenges",
+      "name": "Coding Challenges",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/625-web-dev-guide",
+      "name": "Web Dev Guide",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/626-database-basics",
+      "name": "Database Basics",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/627-network-concepts",
+      "name": "Network Concepts",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/628-cybersecurity-basics",
+      "name": "Cybersecurity Basics",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/629-ai-concepts",
+      "name": "Ai Concepts",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/630-machine-learning-intro",
+      "name": "Machine Learning Intro",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/631-logic-puzzles",
+      "name": "Logic Puzzles",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/632-critical-thinking-2",
+      "name": "Critical Thinking 2",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/633-problem-solving",
+      "name": "Problem Solving",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/634-creativity-boost",
+      "name": "Creativity Boost",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/635-mindfulness-study",
+      "name": "Mindfulness Study",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/636-focus-training",
+      "name": "Focus Training",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/637-memory-techniques",
+      "name": "Memory Techniques",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/638-speed-reading",
+      "name": "Speed Reading",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/639-comprehension-builder",
+      "name": "Comprehension Builder",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/640-vocabulary-advanced",
+      "name": "Vocabulary Advanced",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/641-grammar-deep-dive",
+      "name": "Grammar Deep Dive",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/642-writing-style-guide",
+      "name": "Writing Style Guide",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/643-academic-writing",
+      "name": "Academic Writing",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/644-research-paper-helper",
+      "name": "Research Paper Helper",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/645-citation-manager-2",
+      "name": "Citation Manager 2",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/646-bibliography-tool",
+      "name": "Bibliography Tool",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/647-plagiarism-checker-2",
+      "name": "Plagiarism Checker 2",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/648-proofreading-helper",
+      "name": "Proofreading Helper",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/649-editing-toolkit",
+      "name": "Editing Toolkit",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/650-publishing-guide",
+      "name": "Publishing Guide",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/651-economic-concepts",
+      "name": "Economic Concepts",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/652-financial-literacy",
+      "name": "Financial Literacy",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/653-investment-basics",
+      "name": "Investment Basics",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/654-business-fundamentals",
+      "name": "Business Fundamentals",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/655-marketing-concepts",
+      "name": "Marketing Concepts",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/656-management-theories",
+      "name": "Management Theories",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/657-leadership-skills",
+      "name": "Leadership Skills",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/658-entrepreneurship-guide",
+      "name": "Entrepreneurship Guide",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/659-startup-toolkit",
+      "name": "Startup Toolkit",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/660-innovation-methods",
+      "name": "Innovation Methods",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/661-design-thinking",
+      "name": "Design Thinking",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/662-agile-methodology",
+      "name": "Agile Methodology",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/663-project-management-2",
+      "name": "Project Management 2",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/664-time-management-2",
+      "name": "Time Management 2",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/665-productivity-science",
+      "name": "Productivity Science",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/666-habit-formation",
+      "name": "Habit Formation",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/667-goal-setting",
+      "name": "Goal Setting",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/668-motivation-boost",
+      "name": "Motivation Boost",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/669-growth-mindset",
+      "name": "Growth Mindset",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/670-resilience-builder",
+      "name": "Resilience Builder",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/671-emotional-intelligence",
+      "name": "Emotional Intelligence",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/672-social-skills-guide",
+      "name": "Social Skills Guide",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/673-communication-skills",
+      "name": "Communication Skills",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/674-negotiation-tips",
+      "name": "Negotiation Tips",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/675-conflict-resolution",
+      "name": "Conflict Resolution",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/676-teamwork-skills",
+      "name": "Teamwork Skills",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/677-presentation-skills",
+      "name": "Presentation Skills",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/678-public-speaking-2",
+      "name": "Public Speaking 2",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/679-interview-prep",
+      "name": "Interview Prep",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/680-job-search-guide",
+      "name": "Job Search Guide",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/681-resume-builder-2",
+      "name": "Resume Builder 2",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/682-cover-letter-helper",
+      "name": "Cover Letter Helper",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/683-networking-guide",
+      "name": "Networking Guide",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/684-personal-branding",
+      "name": "Personal Branding",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/685-professional-dev",
+      "name": "Professional Dev",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/686-continuing-education",
+      "name": "Continuing Education",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/687-online-course-finder",
+      "name": "Online Course Finder",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/688-certification-tracker",
+      "name": "Certification Tracker",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/689-skill-roadmap",
+      "name": "Skill Roadmap",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/690-learning-community",
+      "name": "Learning Community",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/691-peer-learning",
+      "name": "Peer Learning",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/692-study-group-finder",
+      "name": "Study Group Finder",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/693-tutor-finder",
+      "name": "Tutor Finder",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/694-mentorship-guide",
+      "name": "Mentorship Guide",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/695-coaching-methods",
+      "name": "Coaching Methods",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/696-feedback-techniques",
+      "name": "Feedback Techniques",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/697-self-assessment-2",
+      "name": "Self Assessment 2",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/698-portfolio-builder",
+      "name": "Portfolio Builder",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/699-achievement-tracker",
+      "name": "Achievement Tracker",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/05-education/700-lifelong-learning",
+      "name": "Lifelong Learning",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1101-screen-reader-helper",
+      "name": "Screen Reader Helper",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1102-text-magnifier",
+      "name": "Text Magnifier",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1103-high-contrast-mode",
+      "name": "High Contrast Mode",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1104-color-blind-helper",
+      "name": "Color Blind Helper",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1105-dyslexia-font",
+      "name": "Dyslexia Font",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1106-reading-ruler",
+      "name": "Reading Ruler",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1107-word-spacing-tool",
+      "name": "Word Spacing Tool",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1108-line-spacing-tool",
+      "name": "Line Spacing Tool",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1109-text-to-speech",
+      "name": "Text To Speech",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1110-speech-input",
+      "name": "Speech Input",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1111-keyboard-nav-helper",
+      "name": "Keyboard Nav Helper",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1112-focus-indicator",
+      "name": "Focus Indicator",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1113-skip-nav-links",
+      "name": "Skip Nav Links",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1114-aria-checker",
+      "name": "Aria Checker",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1115-form-labels-check",
+      "name": "Form Labels Check",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1116-image-alt-viewer",
+      "name": "Image Alt Viewer",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1117-contrast-checker",
+      "name": "Contrast Checker",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1118-heading-structure",
+      "name": "Heading Structure",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1119-landmark-highlighter",
+      "name": "Landmark Highlighter",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1120-link-underline",
+      "name": "Link Underline",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1121-cursor-magnifier",
+      "name": "Cursor Magnifier",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1122-click-target-helper",
+      "name": "Click Target Helper",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1123-timeout-extender",
+      "name": "Timeout Extender",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1124-animation-reducer",
+      "name": "Animation Reducer",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1125-captions-helper",
+      "name": "Captions Helper",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1126-audio-description",
+      "name": "Audio Description",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1127-sign-language-helper",
+      "name": "Sign Language Helper",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1128-braille-translator",
+      "name": "Braille Translator",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1129-clear-language",
+      "name": "Clear Language",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1130-reading-level-checker",
+      "name": "Reading Level Checker",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1131-cognitive-aid",
+      "name": "Cognitive Aid",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1132-memory-aid",
+      "name": "Memory Aid",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1133-attention-helper",
+      "name": "Attention Helper",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1134-anxiety-reducer",
+      "name": "Anxiety Reducer",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1135-sensory-filter",
+      "name": "Sensory Filter",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1136-photosensitivity-safe",
+      "name": "Photosensitivity Safe",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1137-noise-canceler",
+      "name": "Noise Canceler",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1138-background-sound",
+      "name": "Background Sound",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1139-voice-commands",
+      "name": "Voice Commands",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1140-eye-tracking",
+      "name": "Eye Tracking",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1141-single-switch",
+      "name": "Single Switch",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1142-head-pointer",
+      "name": "Head Pointer",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1143-mouth-stick",
+      "name": "Mouth Stick",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1144-hand-tremor-assist",
+      "name": "Hand Tremor Assist",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1145-dexterity-helper",
+      "name": "Dexterity Helper",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1146-word-prediction",
+      "name": "Word Prediction",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1147-abbreviation-expander",
+      "name": "Abbreviation Expander",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1148-symbol-vocabulary",
+      "name": "Symbol Vocabulary",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1149-picture-communication",
+      "name": "Picture Communication",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1150-aac-helper",
+      "name": "Aac Helper",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1151-dark-mode-plus",
+      "name": "Dark Mode Plus",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1152-blue-light-filter",
+      "name": "Blue Light Filter",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1153-font-size-adjuster",
+      "name": "Font Size Adjuster",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1154-line-width-limiter",
+      "name": "Line Width Limiter",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1155-paragraph-spacing",
+      "name": "Paragraph Spacing",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1156-background-color",
+      "name": "Background Color",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1157-text-color",
+      "name": "Text Color",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1158-link-color",
+      "name": "Link Color",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1159-button-size",
+      "name": "Button Size",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1160-input-enlarger",
+      "name": "Input Enlarger",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1161-dropdown-helper",
+      "name": "Dropdown Helper",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1162-popup-blocker-2",
+      "name": "Popup Blocker 2",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1163-notification-manager",
+      "name": "Notification Manager",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1164-distraction-free",
+      "name": "Distraction Free",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1165-reading-mode",
+      "name": "Reading Mode",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1166-page-simplifier",
+      "name": "Page Simplifier",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1167-content-filter",
+      "name": "Content Filter",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1168-safe-browsing",
+      "name": "Safe Browsing",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1169-parental-control",
+      "name": "Parental Control",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1170-language-simplifier",
+      "name": "Language Simplifier",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1171-summary-generator",
+      "name": "Summary Generator",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1172-key-info-extractor",
+      "name": "Key Info Extractor",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1173-action-items",
+      "name": "Action Items",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1174-todo-from-text",
+      "name": "Todo From Text",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1175-reminder-setter",
+      "name": "Reminder Setter",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1176-bookmark-helper",
+      "name": "Bookmark Helper",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1177-tab-organizer",
+      "name": "Tab Organizer",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1178-window-manager",
+      "name": "Window Manager",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1179-session-saver",
+      "name": "Session Saver",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1180-history-cleaner",
+      "name": "History Cleaner",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1181-cookie-manager",
+      "name": "Cookie Manager",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1182-password-helper",
+      "name": "Password Helper",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1183-form-filler",
+      "name": "Form Filler",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1184-autofill-plus",
+      "name": "Autofill Plus",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1185-clipboard-manager",
+      "name": "Clipboard Manager",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1186-snippet-manager",
+      "name": "Snippet Manager",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1187-note-taker",
+      "name": "Note Taker",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1188-annotation-tool",
+      "name": "Annotation Tool",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1189-highlight-tracker",
+      "name": "Highlight Tracker",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1190-reading-position",
+      "name": "Reading Position",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1191-page-navigator",
+      "name": "Page Navigator",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1192-table-reader",
+      "name": "Table Reader",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1193-code-reader",
+      "name": "Code Reader",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1194-pdf-reader-helper",
+      "name": "Pdf Reader Helper",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1195-video-helper",
+      "name": "Video Helper",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1196-audio-transcript",
+      "name": "Audio Transcript",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1197-image-describer",
+      "name": "Image Describer",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1198-math-reader",
+      "name": "Math Reader",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1199-equation-reader",
+      "name": "Equation Reader",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/06-accessibility/1200-science-reader",
+      "name": "Science Reader",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1201-news-aggregator",
+      "name": "News Aggregator",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1202-rss-reader-plus",
+      "name": "Rss Reader Plus",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1203-news-filter",
+      "name": "News Filter",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1204-fake-news-detector",
+      "name": "Fake News Detector",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1205-bias-checker",
+      "name": "Bias Checker",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1206-fact-checker-plus",
+      "name": "Fact Checker Plus",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1207-source-credibility",
+      "name": "Source Credibility",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1208-reading-time",
+      "name": "Reading Time",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1209-article-saver",
+      "name": "Article Saver",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1210-offline-reader",
+      "name": "Offline Reader",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1211-news-briefing",
+      "name": "News Briefing",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1212-topic-tracker",
+      "name": "Topic Tracker",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1213-keyword-alerts",
+      "name": "Keyword Alerts",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1214-trending-topics",
+      "name": "Trending Topics",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1215-local-news",
+      "name": "Local News",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1216-world-news",
+      "name": "World News",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1217-tech-news",
+      "name": "Tech News",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1218-science-news",
+      "name": "Science News",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1219-health-news",
+      "name": "Health News",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1220-business-news",
+      "name": "Business News",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1221-sports-news",
+      "name": "Sports News",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1222-entertainment-news",
+      "name": "Entertainment News",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1223-politics-tracker",
+      "name": "Politics Tracker",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1224-election-monitor",
+      "name": "Election Monitor",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1225-government-tracker",
+      "name": "Government Tracker",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1226-legislation-watcher",
+      "name": "Legislation Watcher",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1227-court-tracker",
+      "name": "Court Tracker",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1228-investigation-helper",
+      "name": "Investigation Helper",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1229-whistleblower-info",
+      "name": "Whistleblower Info",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1230-freedom-press",
+      "name": "Freedom Press",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1231-climate-news",
+      "name": "Climate News",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1232-environment-tracker",
+      "name": "Environment Tracker",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1233-space-news",
+      "name": "Space News",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1234-ai-news",
+      "name": "Ai News",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1235-crypto-news",
+      "name": "Crypto News",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1236-stock-news",
+      "name": "Stock News",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1237-economy-tracker",
+      "name": "Economy Tracker",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1238-market-monitor",
+      "name": "Market Monitor",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1239-currency-news",
+      "name": "Currency News",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1240-inflation-tracker",
+      "name": "Inflation Tracker",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1241-covid-tracker",
+      "name": "Covid Tracker",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1242-health-alerts",
+      "name": "Health Alerts",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1243-food-safety",
+      "name": "Food Safety",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1244-drug-news",
+      "name": "Drug News",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1245-medical-research",
+      "name": "Medical Research",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1246-mental-health-news",
+      "name": "Mental Health News",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1247-nutrition-news",
+      "name": "Nutrition News",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1248-fitness-news",
+      "name": "Fitness News",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1249-wellness-news",
+      "name": "Wellness News",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1250-lifestyle-news",
+      "name": "Lifestyle News",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1251-travel-news",
+      "name": "Travel News",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1252-culture-news",
+      "name": "Culture News",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1253-arts-news",
+      "name": "Arts News",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1254-music-news",
+      "name": "Music News",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1255-film-news",
+      "name": "Film News",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1256-gaming-news",
+      "name": "Gaming News",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1257-book-reviews",
+      "name": "Book Reviews",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1258-podcast-finder",
+      "name": "Podcast Finder",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1259-newsletter-manager",
+      "name": "Newsletter Manager",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1260-digest-creator",
+      "name": "Digest Creator",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1261-summary-news",
+      "name": "Summary News",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1262-brief-news",
+      "name": "Brief News",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1263-quick-news",
+      "name": "Quick News",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1264-flash-news",
+      "name": "Flash News",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1265-breaking-alerts",
+      "name": "Breaking Alerts",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1266-custom-feed",
+      "name": "Custom Feed",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1267-topic-feed",
+      "name": "Topic Feed",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1268-person-news",
+      "name": "Person News",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1269-company-news",
+      "name": "Company News",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1270-product-news",
+      "name": "Product News",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1271-brand-tracker",
+      "name": "Brand Tracker",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1272-competitor-monitor",
+      "name": "Competitor Monitor",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1273-market-intel",
+      "name": "Market Intel",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1274-industry-news",
+      "name": "Industry News",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1275-sector-news",
+      "name": "Sector News",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1276-job-market",
+      "name": "Job Market",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1277-salary-news",
+      "name": "Salary News",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1278-hiring-trends",
+      "name": "Hiring Trends",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1279-startup-news",
+      "name": "Startup News",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1280-vc-news",
+      "name": "Vc News",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1281-ipo-tracker",
+      "name": "Ipo Tracker",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1282-merger-news",
+      "name": "Merger News",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1283-acquisition-news",
+      "name": "Acquisition News",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1284-bankruptcy-news",
+      "name": "Bankruptcy News",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1285-recall-alerts",
+      "name": "Recall Alerts",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1286-safety-alerts",
+      "name": "Safety Alerts",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1287-weather-news",
+      "name": "Weather News",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1288-disaster-news",
+      "name": "Disaster News",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1289-emergency-info",
+      "name": "Emergency Info",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1290-crisis-tracker",
+      "name": "Crisis Tracker",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1291-security-news",
+      "name": "Security News",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1292-cyber-news",
+      "name": "Cyber News",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1293-privacy-news",
+      "name": "Privacy News",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1294-data-breach",
+      "name": "Data Breach",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1295-regulation-news",
+      "name": "Regulation News",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1296-policy-news",
+      "name": "Policy News",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1297-standard-news",
+      "name": "Standard News",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1298-certification-news",
+      "name": "Certification News",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1299-award-news",
+      "name": "Award News",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/07-news/1300-ranking-news",
+      "name": "Ranking News",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/08-shopping/1301-price-tracker",
+      "name": "Price Tracker",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/08-shopping/1302-deal-finder",
+      "name": "Deal Finder",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/08-shopping/1303-coupon-finder",
+      "name": "Coupon Finder",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/08-shopping/1304-cashback-helper",
+      "name": "Cashback Helper",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/08-shopping/1305-price-comparison",
+      "name": "Price Comparison",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/08-shopping/1306-wish-list-manager",
+      "name": "Wish List Manager",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/08-shopping/1307-gift-tracker",
+      "name": "Gift Tracker",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/08-shopping/1308-shopping-budget",
+      "name": "Shopping Budget",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/08-shopping/1309-cart-saver",
+      "name": "Cart Saver",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/08-shopping/1310-checkout-helper",
+      "name": "Checkout Helper",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/08-shopping/1311-shipping-tracker",
+      "name": "Shipping Tracker",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/08-shopping/1312-return-reminder",
+      "name": "Return Reminder",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/08-shopping/1313-review-reader",
+      "name": "Review Reader",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/08-shopping/1314-rating-analyzer",
+      "name": "Rating Analyzer",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/08-shopping/1315-fake-review-detector",
+      "name": "Fake Review Detector",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/08-shopping/1316-product-researcher",
+      "name": "Product Researcher",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/08-shopping/1317-spec-comparator",
+      "name": "Spec Comparator",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/08-shopping/1318-brand-tracker",
+      "name": "Brand Tracker",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/08-shopping/1319-sale-tracker",
+      "name": "Sale Tracker",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/08-shopping/1320-flash-deals",
+      "name": "Flash Deals",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/08-shopping/1321-black-friday",
+      "name": "Black Friday",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/08-shopping/1322-prime-day-tracker",
+      "name": "Prime Day Tracker",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/08-shopping/1323-holiday-deals",
+      "name": "Holiday Deals",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/08-shopping/1324-seasonal-sales",
+      "name": "Seasonal Sales",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/08-shopping/1325-clearance-finder",
+      "name": "Clearance Finder",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/08-shopping/1326-outlet-store",
+      "name": "Outlet Store",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/08-shopping/1327-thrift-finder",
+      "name": "Thrift Finder",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/08-shopping/1328-second-hand",
+      "name": "Second Hand",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/08-shopping/1329-refurbished-finder",
+      "name": "Refurbished Finder",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/08-shopping/1330-warranty-tracker",
+      "name": "Warranty Tracker",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/08-shopping/1331-recall-checker",
+      "name": "Recall Checker",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/08-shopping/1332-safety-checker",
+      "name": "Safety Checker",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/08-shopping/1333-ingredient-checker",
+      "name": "Ingredient Checker",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/08-shopping/1334-ethical-shopper",
+      "name": "Ethical Shopper",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/08-shopping/1335-sustainable-finder",
+      "name": "Sustainable Finder",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/08-shopping/1336-local-business",
+      "name": "Local Business",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/08-shopping/1337-small-business",
+      "name": "Small Business",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/08-shopping/1338-artisan-finder",
+      "name": "Artisan Finder",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/08-shopping/1339-handmade-finder",
+      "name": "Handmade Finder",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/08-shopping/1340-vintage-finder",
+      "name": "Vintage Finder",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/08-shopping/1341-antique-finder",
+      "name": "Antique Finder",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/08-shopping/1342-collector-helper",
+      "name": "Collector Helper",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/08-shopping/1343-limited-edition",
+      "name": "Limited Edition",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/08-shopping/1344-exclusive-deals",
+      "name": "Exclusive Deals",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/08-shopping/1345-member-benefits",
+      "name": "Member Benefits",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/08-shopping/1346-loyalty-tracker",
+      "name": "Loyalty Tracker",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/08-shopping/1347-rewards-manager",
+      "name": "Rewards Manager",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/08-shopping/1348-credit-card-benefits",
+      "name": "Credit Card Benefits",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/08-shopping/1349-debit-perks",
+      "name": "Debit Perks",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/08-shopping/1350-bank-offers",
+      "name": "Bank Offers",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/08-shopping/1351-payment-tracker",
+      "name": "Payment Tracker",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/08-shopping/1352-expense-tracker",
+      "name": "Expense Tracker",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/08-shopping/1353-purchase-history",
+      "name": "Purchase History",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/08-shopping/1354-receipt-organizer",
+      "name": "Receipt Organizer",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/08-shopping/1355-tax-deduction",
+      "name": "Tax Deduction",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/08-shopping/1356-business-expense",
+      "name": "Business Expense",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/08-shopping/1357-gift-receipt",
+      "name": "Gift Receipt",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/08-shopping/1358-price-protection",
+      "name": "Price Protection",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/08-shopping/1359-extended-warranty",
+      "name": "Extended Warranty",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/08-shopping/1360-insurance-helper",
+      "name": "Insurance Helper",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/08-shopping/1361-market-place",
+      "name": "Market Place",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/08-shopping/1362-resell-helper",
+      "name": "Resell Helper",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/08-shopping/1363-arbitrage-finder",
+      "name": "Arbitrage Finder",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/08-shopping/1364-dropship-tracker",
+      "name": "Dropship Tracker",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/08-shopping/1365-wholesale-finder",
+      "name": "Wholesale Finder",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/08-shopping/1366-bulk-order",
+      "name": "Bulk Order",
+      "status": "prototype"
+    },
+    {
+      "path": "extensions/10-experimental/1000-extension-universe",
+      "name": "Extension Universe",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/10-experimental/968-focus-timer",
+      "name": "Focus Timer",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/10-experimental/969-tab-grouper",
+      "name": "Tab Grouper",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/10-experimental/970-link-preview",
+      "name": "Link Preview",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/10-experimental/971-speed-dial",
+      "name": "Speed Dial",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/10-experimental/972-note-anywhere",
+      "name": "Note Anywhere",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/10-experimental/973-color-picker",
+      "name": "Color Picker",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/10-experimental/974-password-generator",
+      "name": "Password Generator",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/10-experimental/975-reading-mode",
+      "name": "Reading Mode",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/10-experimental/976-screenshot-master",
+      "name": "Screenshot Master",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/10-experimental/977-page-translator",
+      "name": "Page Translator",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/10-experimental/978-tab-hibernator",
+      "name": "Tab Hibernator",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/10-experimental/979-smart-clipboard",
+      "name": "Smart Clipboard",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/10-experimental/980-mind-mapper",
+      "name": "Mind Mapper",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/10-experimental/981-gesture-navigator",
+      "name": "Gesture Navigator",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/10-experimental/982-voice-commander",
+      "name": "Voice Commander",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/10-experimental/983-holographic-bookmarks",
+      "name": "Holographic Bookmarks",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/10-experimental/984-quantum-tabs",
+      "name": "Quantum Tabs",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/10-experimental/985-neural-search",
+      "name": "Neural Search",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/10-experimental/986-emotion-engine",
+      "name": "Emotion Engine",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/10-experimental/987-context-aware",
+      "name": "Context Aware",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/10-experimental/988-predictive-browser",
+      "name": "Predictive Browser",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/10-experimental/989-memory-palace",
+      "name": "Memory Palace",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/10-experimental/990-future-lab",
+      "name": "Future Lab",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/10-experimental/991-extension-sync-platform",
+      "name": "Extension Sync Platform",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/10-experimental/992-cross-browser-bridge",
+      "name": "Cross-Browser Bridge",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/10-experimental/993-profile-manager",
+      "name": "Profile Manager",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/10-experimental/994-theme-engine",
+      "name": "Theme Engine",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/10-experimental/995-plugin-marketplace",
+      "name": "Plugin Marketplace",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/10-experimental/996-analytics-dashboard",
+      "name": "Analytics Dashboard",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/10-experimental/997-extension-developer-kit",
+      "name": "Extension Developer Kit",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/10-experimental/998-community-hub",
+      "name": "Community Hub",
+      "status": "example-needs-functional-review"
+    },
+    {
+      "path": "extensions/10-experimental/999-ultimate-toolbox",
+      "name": "Ultimate Toolbox",
+      "status": "example-needs-functional-review"
+    }
+  ]
+}

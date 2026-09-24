@@ -18,20 +18,20 @@
     </div>
 
     <div class="interval-selector">
-      <label>Refresh every:</label>
+      <label for="customSeconds">Refresh every:</label>
       <div class="interval-options">
-        <button class="interval-btn" data-seconds="5">5s</button>
-        <button class="interval-btn" data-seconds="10">10s</button>
         <button class="interval-btn" data-seconds="30">30s</button>
         <button class="interval-btn" data-seconds="60">1m</button>
         <button class="interval-btn" data-seconds="300">5m</button>
         <button class="interval-btn" data-seconds="600">10m</button>
       </div>
       <div class="custom-interval">
-        <input type="number" id="customSeconds" min="1" max="3600" placeholder="Custom">
+        <input type="number" id="customSeconds" min="30" max="3600" step="1" placeholder="Custom">
         <span>seconds</span>
       </div>
     </div>
+
+    <p>Minimum 30 seconds. Chrome may delay alarms. Refresh stops when the tab closes, changes website, or the browser restarts.</p>
 
     <div class="status" id="status">
       <div class="status-icon">⏸️</div>

@@ -12,9 +12,6 @@
     "default_popup": "popup.html",
     "default_title": "Antique Finder"
   },
-  "permissions": ["storage"],
-  "background": {
-    "service_worker": "background.js"
-  },
+  "permissions": [],
   "minimum_chrome_version": "116"
 }

@@ -178,7 +178,7 @@ class QuickLinks {
       <div class="link-card" data-id="${link.id}">
         <div class="link-icon">
           ${link.favicon
-            ? `<img src="${link.favicon}" alt="" onerror="this.style.display='none'">`
+            ? `<img src="${link.favicon}" alt="" data-fallback-icon>`
             : categoryEmojis[link.category]}
         </div>
         <span class="link-name">${link.name}</span>
@@ -209,3 +209,11 @@ class QuickLinks {
 document.addEventListener('DOMContentLoaded', () => {
   new QuickLinks();
 });
+
+// Capture resource errors outside inline handlers (which MV3 blocks).
+document.addEventListener('error', event => {
+  const image = event.target;
+  if (image instanceof HTMLImageElement && image.hasAttribute('data-fallback-icon')) {
+    image.style.visibility = 'hidden';
+  }
+}, true);

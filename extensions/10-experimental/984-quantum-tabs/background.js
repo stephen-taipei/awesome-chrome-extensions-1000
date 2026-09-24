@@ -1,13 +1,16 @@
 // Background service worker for Quantum Tabs
-chrome.runtime.onInstalled.addListener(() => {
+chrome.runtime.onInstalled.addListener((details) => {
   console.log('Quantum Tabs installed.');
 
   // Initialize quantum state storage
-  chrome.storage.local.set({
-    entangledGroups: [],
-    tabStates: {},
-    probabilityModel: {}
-  });
+  // Updates must preserve user data; setup below still runs.
+  if (details.reason === 'install') {
+    chrome.storage.local.set({
+      entangledGroups: [],
+      tabStates: {},
+      probabilityModel: {}
+    });
+  }
 });
 
 // Track tab activity for probability predictions

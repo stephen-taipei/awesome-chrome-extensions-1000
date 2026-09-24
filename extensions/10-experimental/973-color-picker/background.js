@@ -1,12 +1,15 @@
 // Background service worker for Color Picker
-chrome.runtime.onInstalled.addListener(() => {
+chrome.runtime.onInstalled.addListener((details) => {
   console.log('Color Picker installed.');
 
-  chrome.storage.local.set({
-    colorHistory: [],
-    palettes: [{ id: 'default', name: 'My Palette', colors: [] }],
-    defaultFormat: 'hex'
-  });
+  // Updates must preserve user data; setup below still runs.
+  if (details.reason === 'install') {
+    chrome.storage.local.set({
+      colorHistory: [],
+      palettes: [{ id: 'default', name: 'My Palette', colors: [] }],
+      defaultFormat: 'hex'
+    });
+  }
 });
 
 // Handle color operations
