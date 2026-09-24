@@ -3,7 +3,7 @@ chrome.runtime.onInstalled.addListener((details) => {
   console.log('Extension Universe installed.');
   // Updates must preserve user data; setup below still runs.
   if (details.reason === 'install') {
-    chrome.storage.local.set({ 
+    chrome.storage.local.set({
       settings: {
         autoScan: true,
         notifications: true

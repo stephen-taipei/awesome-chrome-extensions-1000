@@ -5,9 +5,13 @@ on:
     branches: [main, dev]
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   notify:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
       - name: Trigger stephen.taipei deployment
         uses: peter-evans/repository-dispatch@v3
@@ -17,14 +21,17 @@ jobs:
           event-type: submodule-updated
           client-payload: |
             {
-              "submodule": "${{ github.repository }}",
-              "ref": "${{ github.ref }}",
-              "sha": "${{ github.sha }}",
-              "message": "${{ github.event.head_commit.message }}"
+              "submodule": ${{ toJSON(github.repository) }},
+              "ref": ${{ toJSON(github.ref) }},
+              "sha": ${{ toJSON(github.sha) }},
+              "message": ${{ toJSON(github.event.head_commit.message || '') }}
             }
 
       - name: Log notification
+        env:
+          REPOSITORY: ${{ github.repository }}
+          COMMIT_SHA: ${{ github.sha }}
+          BRANCH_REF: ${{ github.ref }}
         run: |
-          echo "Notified stephen.taipei about update in ${{ github.repository }}"
-          echo "Commit: ${{ github.sha }}"
-          echo "Branch: ${{ github.ref }}"
+          printf 'Notified stephen.taipei about update in %s\n' "$REPOSITORY"
+          printf 'Commit: %s\nBranch: %s\n' "$COMMIT_SHA" "$BRANCH_REF"

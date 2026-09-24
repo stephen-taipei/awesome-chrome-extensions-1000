@@ -49,7 +49,8 @@ def url(package):
     return f'http://127.0.0.1:{server.server_port}/{package.relative_to(ROOT)}/popup.html'
 
 with tempfile.TemporaryDirectory() as profile, sync_playwright() as playwright:
-    options = dict(headless=True, args=['--no-sandbox'])
+    # The default headless shell cannot load extensions; use full Chromium.
+    options = dict(channel='chromium', headless=True, args=['--no-sandbox'])
     if os.environ.get('BROWSER_EXECUTABLE'):
         options['executable_path'] = os.environ['BROWSER_EXECUTABLE']
     if args.native:
@@ -130,7 +131,7 @@ with tempfile.TemporaryDirectory() as profile, sync_playwright() as playwright:
     if args.native:
         page = context.new_page()
         page.goto(url(experimental))
-        page.wait_for_function("document.getElementById('password-output').value.length > 0")
+        page.wait_for_function("document.getElementById('password-output').value.length === 16")
         page.locator('#passphrase-btn').click()
         page.wait_for_function("document.getElementById('password-output').value.split('-').length === 16")
         results.append({'package': experimental.name, 'case': 'real MV3 worker generates 16-word passphrase', 'pass': True})
